@@ -11,58 +11,79 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-    body {
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url('51370CE1-5A0C-4A3A-A8AE-CF20064927BD.png') no-repeat center 25%/cover;
-    position: relative;
     color: white;
+    position: relative;
+    overflow: hidden;
+
+    /* Background image positioned high so ship is visible */
+    background:
+        url('51370CE1-5A0C-4A3A-A8AE-CF20064927BD.png')
+        no-repeat center 18% / cover;
 }
 
-/* Move content lower on page */
-.container {
+/* Dark fade only at bottom for text readability */
+body::after {
+    content: "";
     position: absolute;
-    top: 58%;      /* Adjust this number */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 700px;
-    text-align: center;
-    padding: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.0)
+    );
+    pointer-events: none;
 }
 
-/* Smaller logo in corner */
+/* Logo in top-right corner, small and clean */
 .logo {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 100px;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: auto;
+    z-index: 5;
 }
 
-    
+/* Content anchored safely at bottom */
+.container {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    z-index: 10;
+}
+
 h1 {
-    font-size: 42px;
+    font-size: 40px;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 h2 {
     font-weight: 300;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #dddddd;
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .footer {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 14px;
     color: #bbbbbb;
 }
@@ -76,7 +97,6 @@ p {
     <img src="B824C2A3-441A-47C8-A7D7-8E7B204B7194.png" class="logo" alt="Anti-Kratom Coalition Logo">
 
     <h1>ANTI-KRATOM ASSOCIATION</h1>
-    <h2>AKC</h2>
 
     <p>
         A national association supporting legislative action to prohibit the sale and distribution of kratom and its alkaloids.
