@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Anti-Kratom Association (AKA)</title>
+<title>Anti-Kratom Association</title>
 
 <style>
 * {
@@ -15,68 +14,57 @@
 
 html, body {
   height: 100%;
-}
-
-body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+}
+
+/* Background Ship Image */
+body {
+  background-image: url("IMG_5394.jpeg");
+  background-size: cover;
+  background-position: center 12%; /* keeps ship + INDONESIA visible */
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 }
 
-/* Background image layer */
-.background {
-  position: fixed;
-  inset: 0;
-  background-image: url("./51370CE1-5A0C-4A3A-A8AE-CF20064927BD.png");
-  background-size: cover;
-  background-position: center 15%; /* keeps ship visible */
-  background-repeat: no-repeat;
-  z-index: -2;
-}
-
-/* Bottom fade only */
-.overlay {
-  position: fixed;
-  inset: 0;
+/* Bottom fade only for readability */
+body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.4) 40%,
-    rgba(0,0,0,0.0) 65%
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.0)
   );
-  z-index: -1;
 }
 
-/* Logo top right */
-.logo {
+/* Text anchored under the people */
+.content {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 70px;
-}
-
-/* Text block locked to bottom */
-.container {
-  position: absolute;
-  bottom: 70px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   max-width: 700px;
   text-align: center;
+  z-index: 5;
 }
 
 h1 {
   font-size: 38px;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 h2 {
   font-weight: 300;
   margin-bottom: 20px;
-  color: #ddd;
+  color: #dddddd;
 }
 
 p {
@@ -88,32 +76,42 @@ p {
 .footer {
   margin-top: 30px;
   font-size: 14px;
-  color: #bbb;
+  color: #bbbbbb;
+}
+
+/* Logo in lower left corner */
+.logo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 75px;
+  z-index: 6;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- Logo -->
+<img src="B824C2A3-441A-47C8-A7D....jpeg" class="logo" alt="Anti-Kratom Association Logo">
 
-    <img src="B824C2A3-441A-47C8-A7D7-8E7B204B7194.png" class="logo" alt="Anti-Kratom Coalition Logo">
+<!-- Text Block -->
+<div class="content">
+  <h1>ANTI-KRATOM ASSOCIATION</h1>
+  <h2>AKA</h2>
 
-    <h1>ANTI-KRATOM ASSOCIATION</h1>
+  <p>
+    A national association supporting legislative action to prohibit the sale and distribution of kratom and its alkaloids.
+  </p>
 
-    <p>
-        A national association supporting legislative action to prohibit the sale and distribution of kratom and its alkaloids.
-    </p>
+  <p>
+    Public health. Regulatory clarity. Federal classification.
+  </p>
 
-    <p>
-        Public health. Regulatory clarity. Federal classification.
-    </p>
-
-    <div class="footer">
-        Website Launching Soon<br>
-        antikratom.org
-    </div>
-
+  <div class="footer">
+    Website Launching Soon<br>
+    antikratom.org
+  </div>
 </div>
 
 </body>
