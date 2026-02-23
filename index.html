@@ -11,19 +11,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
-body {
+}
+    body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url('51370CE1-5A0C-4A3A-A8AE-CF20064927BD.png') no-repeat center 25%/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    position: relative;
     color: white;
+}
+
+/* Move content lower on page */
+.container {
+    position: absolute;
+    top: 58%;      /* Adjust this number */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Smaller logo in corner */
@@ -34,11 +42,7 @@ body {
     width: 100px;
 }
 
-.container {
-    max-width: 700px;
-    padding: 20px;
-}
-
+    
 h1 {
     font-size: 42px;
     letter-spacing: 2px;
