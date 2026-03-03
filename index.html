@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Anti-Kratom Association</title>
@@ -11,12 +12,12 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0c0c0c;
+background:#0b0b0b;
 color:white;
 }
 
 nav{
-background:black;
+background:#000;
 padding:20px;
 display:flex;
 justify-content:space-between;
@@ -30,40 +31,65 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.hero{
-height:600px;
-background-image:url(hero.jpeg);
+.logo{
+font-weight:bold;
+color:#ff2b2b;
+}
+  .hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+url(hero.jpeg);
 background-size:cover;
 background-position:center;
 display:flex;
-flex-direction:column;
-justify-content:center;
-padding-left:80px;
+align-items:center;
+}
+
+.hero-text{
+max-width:600px;
+margin-left:80px;
 }
 
 .hero h1{
 font-size:60px;
-margin-bottom:10px;
+margin:0;
 }
 
 .hero p{
 font-size:20px;
-max-width:600px;
+margin-top:20px;
 }
 
 .button{
 display:inline-block;
-margin-top:20px;
-padding:15px 25px;
-background:#c62828;
+margin-top:25px;
+padding:16px 28px;
+background:#d62828;
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
-
-.section{
-padding:80px;
+  .section{
+padding:70px 10%;
 text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border:1px solid #333;
+}
+
+h2{
+margin-top:0;
 }
 
 </style>
@@ -74,19 +100,22 @@ text-align:center;
 
 <nav>
 
-<div><b>ANTI-KRATOM ASSOCIATION</b></div>
+<div class="logo">ANTI-KRATOM ASSOCIATION</div>
 
 <div>
+
 <a href="#">Home</a>
 <a href="#">Take Action</a>
 <a href="#">Evidence</a>
 <a href="#">News</a>
 <a href="#">About</a>
+
 </div>
 
 </nav>
-
 <div class="hero">
+
+<div class="hero-text">
 
 <h1>Parents Organizing to End Retail Kratom Sales</h1>
 
@@ -95,18 +124,51 @@ Sold in gas stations. Marketed as safe.
 Families across the country are organizing to remove it from retail shelves.
 </p>
 
-<a class="button" href="#">Take Action</a>
+<a class="button" href="#">Take Action Now</a>
+
+</div>
 
 </div>
 
 <div class="section">
 
-<h2>Take Action</h2>
+<h2>Take Action Now</h2>
 
-<p>Email your legislator • Submit public comment • Report retailers</p>
+<div class="grid">
+
+<div class="card">Email Your Legislator</div>
+
+<div class="card">Submit Public Comment</div>
+
+<div class="card">Report a Retailer</div>
+
+<div class="card">Download Testimony</div>
+
+<div class="card">Start a Parent Chapter</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>The Evidence</h2>
+
+<div class="grid">
+
+<div class="card">FDA Warnings</div>
+
+<div class="card">NDI Denial</div>
+
+<div class="card">Poison Center Data</div>
+
+<div class="card">Death Reports</div>
+
+<div class="card">Research Studies</div>
+
+</div>
 
 </div>
 
 </body>
-
 </html>
