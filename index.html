@@ -1,118 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Anti-Kratom Association</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0c0c0c;
+color:white;
 }
 
-html, body {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+nav{
+background:black;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-/* Background Ship Image */
-body {
-  background-image: url("IMG_5394.jpeg");
-  background-size: cover;
-  background-position: center 12%; /* keeps ship + INDONESIA visible */
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* Bottom fade only for readability */
-body::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 45%;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.0)
-  );
+.hero{
+height:600px;
+background-image:url(hero.jpg);
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding-left:80px;
 }
 
-/* Text anchored under the people */
-.content {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 700px;
-  text-align: center;
-  z-index: 5;
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
 }
 
-h1 {
-  font-size: 38px;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
+.hero p{
+font-size:20px;
+max-width:600px;
 }
 
-h2 {
-  font-weight: 300;
-  margin-bottom: 20px;
-  color: #dddddd;
+.button{
+display:inline-block;
+margin-top:20px;
+padding:15px 25px;
+background:#c62828;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 18px;
+.section{
+padding:80px;
+text-align:center;
 }
 
-.footer {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #bbbbbb;
-}
-
-/* Logo in lower left corner */
-.logo {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 75px;
-  z-index: 6;
-}
 </style>
+
 </head>
 
 <body>
 
-<!-- Logo -->
-<img src="B824C2A3-441A-47C8-A7D7-8E7B204B7194.png" class="logo" alt="Anti-Kratom Association Logo">
+<nav>
 
-<!-- Text Block -->
-<div class="content">
-  <h1>ANTI-KRATOM ASSOCIATION</h1>
-  <h2>AKA</h2>
+<div><b>ANTI-KRATOM ASSOCIATION</b></div>
 
-  <p>
-    A national association supporting legislative action to prohibit the sale and distribution of kratom and its alkaloids.
-  </p>
+<div>
+<a href="#">Home</a>
+<a href="#">Take Action</a>
+<a href="#">Evidence</a>
+<a href="#">News</a>
+<a href="#">About</a>
+</div>
 
-  <p>
-    Public health. Regulatory clarity. Federal classification.
-  </p>
+</nav>
 
-  <div class="footer">
-    Website Launching Soon<br>
-    antikratom.org
-  </div>
+<div class="hero">
+
+<h1>Parents Organizing to End Retail Kratom Sales</h1>
+
+<p>
+Sold in gas stations. Marketed as safe.
+Families across the country are organizing to remove it from retail shelves.
+</p>
+
+<a class="button" href="#">Take Action</a>
+
+</div>
+
+<div class="section">
+
+<h2>Take Action</h2>
+
+<p>Email your legislator • Submit public comment • Report retailers</p>
+
 </div>
 
 </body>
+
 </html>
