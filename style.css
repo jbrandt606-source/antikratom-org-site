@@ -37,7 +37,10 @@ opacity:.8;
 height:85vh;
 
 background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.75)
+),
 url("hero.jpg");
 
 background-size:cover;
