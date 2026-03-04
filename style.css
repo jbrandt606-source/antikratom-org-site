@@ -1,0 +1,153 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:black;
+}
+
+nav h2{
+margin:0;
+font-size:18px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+background:
+linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
+url("hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:900px;
+margin-left:10%;
+}
+
+.hero h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:500px;
+color:#cfcfcf;
+}
+
+.button{
+background:#d22;
+padding:14px 28px;
+display:inline-block;
+margin-top:20px;
+font-weight:bold;
+}
+
+/* SECTION BACKGROUND */
+
+.section-dark{
+background:
+linear-gradient(rgba(0,0,0,.92),rgba(0,0,0,.92)),
+url("section-bg-kratom-dark.jpg");
+
+background-size:cover;
+padding:80px 8%;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+/* ACTION CARDS */
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+padding:28px;
+text-align:center;
+transition:.25s;
+}
+
+.card:hover{
+background:rgba(255,255,255,.1);
+transform:translateY(-5px);
+}
+
+/* EVIDENCE */
+
+.section-title{
+text-align:center;
+font-size:28px;
+margin-bottom:20px;
+}
+
+.evidence-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.evidence{
+background:rgba(0,0,0,.6);
+padding:35px;
+text-align:center;
+border:1px solid rgba(255,255,255,.1);
+}
+
+/* QUOTES */
+
+.quote-section{
+margin-top:80px;
+text-align:center;
+color:#ccc;
+}
+
+.email-box{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.email-box input{
+padding:12px;
+width:250px;
+border:none;
+}
+
+.email-box button{
+background:#d22;
+border:none;
+padding:12px 24px;
+color:white;
+font-weight:bold;
+}
