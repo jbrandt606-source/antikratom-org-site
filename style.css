@@ -76,17 +76,14 @@ font-weight:bold;
 }
 
 /* SECTION */
-
 .section-dark{
-
-background:
-linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),
-url("section-bg-kratom-dark.jpg");
-
+background-image:url("section-bg-kratom-dark.jpg");
 background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
 padding:100px 0;
 }
-
 /* CONTAINER */
 
 .container{
