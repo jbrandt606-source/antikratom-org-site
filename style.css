@@ -34,47 +34,141 @@ opacity:.8;
 /* HERO */
 
 .hero{
-height:85vh;
+
+height:700px;
 
 background:
-linear-gradient(
-rgba(0,0,0,.35),
-rgba(0,0,0,.75)
-),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
 url("hero.jpg");
 
 background-size:cover;
 background-position:center;
 
+position:relative;
+
+}
+
+/* NAV */
+
+.nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 60px;
+
+color:white;
+
+}
+
+.logo{
 display:flex;
 align-items:center;
+gap:10px;
 }
+
+.aka{
+color:#e53935;
+font-weight:bold;
+font-size:28px;
+}
+
+.title{
+font-size:16px;
+letter-spacing:1px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.menu li{
+opacity:.85;
+cursor:pointer;
+}
+
+.menu .active{
+color:#5ad16a;
+}
+
+.donate{
+
+background:#e53935;
+border:none;
+padding:10px 22px;
+color:white;
+font-weight:600;
+}
+
+/* HERO CONTENT */
 
 .hero-content{
-max-width:1000px;
-margin:auto;
-padding:40px;
+
+position:absolute;
+
+left:80px;
+top:160px;
+
+max-width:650px;
+
 }
 
-.hero h1{
-font-size:70px;
-line-height:1.05;
-margin-bottom:20px;
+.hero-content h1{
+
+font-size:58px;
+line-height:1.1;
+margin-bottom:10px;
+
 }
 
-.hero p{
-max-width:500px;
-color:#ccc;
+.green{
+color:#5ad16a;
 }
 
-.button{
-background:#e11d1d;
-padding:16px 36px;
-display:inline-block;
-margin-top:25px;
-font-weight:bold;
+.hero-content h2{
+
+font-size:26px;
+font-weight:500;
+
+margin-bottom:15px;
+
 }
 
+.red{
+color:#ff3b30;
+}
+
+.hero-content p{
+
+color:#cfcfcf;
+margin-bottom:25px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+gap:15px;
+
+}
+
+.cta{
+
+background:#e53935;
+padding:14px 26px;
+font-weight:600;
+
+}
+
+.secondary{
+
+border:1px solid white;
+padding:14px 26px;
+
+}
 /* SECTION */
 .section-dark{
 background-image:url("section-bg-kratom-dark.jpg");
