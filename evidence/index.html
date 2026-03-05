@@ -1,78 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Evidence Library</title>
-
-<link rel="stylesheet" href="../style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence Library – AntiKratom.org</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Icon styling (same as other pages) */
+    .card-header .icon {
+      width: 24px;
+      height: 24px;
+      fill: #d32f2f;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+    }
+    .btn-secondary:hover {
+      background: #d32f2f;
+      color: white;
+    }
+  </style>
 </head>
-
 <body>
+  <!-- Standard header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Evidence</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="hero">
+  <main>
+    <!-- Hero section -->
+    <section class="hero" style="background-image: url('../hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Evidence <span class="red">Library</span></h1>
+        <p>
+          Scientific research, regulatory findings, poison center data,
+          surveillance reports, and mortality analyses related to kratom.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#overview">Browse Categories</a>
+          <a class="btn-secondary" href="../index.html">Home</a>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-overlay"></div>
+    <div class="container" style="margin: 2rem auto;">
+      <!-- Overview / introduction card -->
+      <section id="overview" class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+          </svg>
+          About This Library
+        </div>
+        <div class="card-body">
+          <p>
+            This section compiles primary source documents, government reports,
+            peer‑reviewed studies, and poison center data. Each page provides
+            direct access to PDFs, tables, and context.
+          </p>
+          <p>
+            Use the cards below to navigate to specific evidence categories.
+          </p>
+        </div>
+      </section>
 
-<div class="hero-content">
+      <!-- Grid of evidence categories (matching the GitHub folders) -->
+      <section class="evidence-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+        <!-- FDA Position -->
+        <a href="fdaposition/" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-header">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M1 21h22L12 2 1 21z"/>
+            </svg>
+            FDA Position
+          </div>
+          <div class="card-body">
+            <p>Official FDA statements, warnings, and regulatory letters regarding kratom.</p>
+            <span class="card-link" style="color:#d32f2f;">View documents →</span>
+          </div>
+        </a>
 
-<h1>Evidence <span>Library</span></h1>
+        <!-- NDI Denial (fdadenial) -->
+        <a href="fdadenial/" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-header">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M19 2H8C6.9 2 6 2.9 6 4v16c0 1.1.9 2 2 2h11V2z"/>
+            </svg>
+            NDI Denial
+          </div>
+          <div class="card-body">
+            <p>FDA’s denial letter for Johnson Foods’ kratom NDI submission, with analysis.</p>
+            <span class="card-link" style="color:#d32f2f;">Read the denial →</span>
+          </div>
+        </a>
 
-<p>
-Scientific research, regulatory findings, poison center data,
-and surveillance reports related to kratom.
-</p>
+        <!-- Poison Control -->
+        <a href="poisoncontrol/poisoncontrol.html" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-header">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+            </svg>
+            Poison Control Data
+          </div>
+          <div class="card-body">
+            <p>NPDS annual reports: kratom exposures, pediatric cases, and severity trends.</p>
+            <span class="card-link" style="color:#d32f2f;">View data tables →</span>
+          </div>
+        </a>
 
-<div class="hero-buttons">
+        <!-- Human Studies (research) -->
+        <a href="research/" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-header">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12 2l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/>
+            </svg>
+            Human Studies
+          </div>
+          <div class="card-body">
+            <p>Controlled clinical trials and pharmacokinetic studies – with critical analysis.</p>
+            <span class="card-link" style="color:#d32f2f;">Read the truth →</span>
+          </div>
+        </a>
 
-<a class="btn-primary" href="../index.html">
-Home
-</a>
+        <!-- Mortality Data (death) -->
+        <a href="death/" class="card" style="text-decoration: none; color: inherit;">
+          <div class="card-header">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M1 21h22L12 2 1 21z"/>
+            </svg>
+            Mortality Data
+          </div>
+          <div class="card-body">
+            <p>CDC SUDORS data, overdose deaths with mitragynine detected, and toxicology reports.</p>
+            <span class="card-link" style="color:#d32f2f;">See the numbers →</span>
+          </div>
+        </a>
+      </section>
 
-</div>
+      <!-- Note about additional files (optional) -->
+      <div class="source-note" style="background: #f9f9f9; padding: 1rem; border-radius: 4px; margin-top: 2rem;">
+        <p style="margin: 0; font-size: 0.9rem; color: #666;">
+          📁 Each folder contains PDFs, additional HTML pages, and source documents as shown in the repository.
+        </p>
+      </div>
+    </div>
+  </main>
 
-</div>
-
-</header>
-
-
-<section class="evidence-section">
-
-<h2>Evidence Sources</h2>
-
-<div class="evidence-grid">
-
-<a class="card" href="./fdaposition/">
-<h3>FDA Position</h3>
-<p>Official FDA statements and regulatory warnings.</p>
-</a>
-
-<a class="card" href="./fdadenial/">
-<h3>NDI Denial</h3>
-<p>FDA rejection of the Johnson Foods kratom submission.</p>
-</a>
-
-<a class="card" href="./poisoncontrol/poisoncontrol.html">
-<h3>Poison Control Data</h3>
-<p>National Poison Data System exposure reports.</p>
-</a>
-
-<a class="card" href="./research/">
-<h3>Human Studies</h3>
-<p>Controlled clinical and pharmacokinetic studies.</p>
-</a>
-
-<a class="card" href="./death/">
-<h3>Mortality Data</h3>
-<p>CDC surveillance and toxicology findings.</p>
-</a>
-
-</div>
-
-</section>
-
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org — Evidence Library</p>
+    </div>
+  </footer>
 </body>
 </html>
