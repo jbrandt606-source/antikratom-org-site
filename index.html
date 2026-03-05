@@ -6,7 +6,7 @@
   <title>AntiKratom.org – Parents Organizing to End Retail Sales</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Additional styles for the new homepage sections */
+    /* Additional styles for new sections – can be moved to style.css later */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -37,106 +37,62 @@
       font-weight: 500;
     }
 
+    /* Take Action cards – dark background with image */
+    .action-section {
+      background-image: url('section-bg-kratom-dark.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+      padding: 4rem 0;
+    }
+    .action-section .overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 1;
+    }
+    .action-section .container {
+      position: relative;
+      z-index: 2;
+    }
     .action-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
       margin: 2rem 0;
     }
     .action-card {
-      background: #f1f1f1;
-      padding: 1.5rem 1rem;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(4px);
+      padding: 2rem 1rem;
       border-radius: 8px;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: transform 0.2s, background 0.2s;
     }
     .action-card:hover {
+      background: rgba(255,255,255,0.2);
       transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     .action-card a {
       text-decoration: none;
-      color: #222;
+      color: white;
       font-weight: 600;
       display: block;
     }
     .action-card .emoji {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-
-    .evidence-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    .evidence-item {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      padding: 1.5rem;
-      transition: box-shadow 0.2s;
-    }
-    .evidence-item:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .evidence-item h4 {
-      color: #d32f2f;
-      margin-bottom: 0.5rem;
-    }
-    .evidence-item p {
-      color: #666;
-      font-size: 0.9rem;
-    }
-    .evidence-item a {
-      color: #d32f2f;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .testimonial {
-      background: #f9f9f9;
-      padding: 3rem 2rem;
-      border-radius: 8px;
-      margin: 3rem 0;
-      text-align: center;
-      font-style: italic;
-      border-left: 5px solid #d32f2f;
-    }
-    .testimonial p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 1rem;
-    }
-    .testimonial .author {
-      font-style: normal;
-      font-weight: 600;
-      color: #d32f2f;
-    }
-
-    .signup-form {
-      display: flex;
-      gap: 1rem;
-      max-width: 500px;
-      margin: 2rem auto 0;
-    }
-    .signup-form input {
-      flex: 1;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .signup-form button {
-      padding: 0.8rem 1.5rem;
+    .action-card h4 {
+      font-size: 1.2rem;
+      margin: 0;
     }
 
     @media (max-width: 700px) {
-      .info-grid {
+      .info-grid, .action-grid {
         grid-template-columns: 1fr;
-      }
-      .signup-form {
-        flex-direction: column;
       }
     }
   </style>
@@ -157,7 +113,7 @@
   </header>
 
   <main>
-    <!-- Hero section – more powerful headline -->
+    <!-- Hero section (unchanged, uses hero.jpg) -->
     <section class="hero" style="background-image: url('hero.jpg');">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -170,11 +126,11 @@
       </div>
     </section>
 
-    <!-- New 3‑column info section: where it's sold, who it targets, what happens -->
-    <div class="container" style="margin-top: 3rem;">
+    <!-- Three‑column info section (from image) -->
+    <div class="container">
       <div class="info-grid">
         <div class="info-box">
-          <h3>📍 WHERE IT'S SOLD</h3>
+          <h3>🔍 WHERE IT'S SOLD</h3>
           <ul class="info-list">
             <li>GAS STATIONS</li>
             <li>VAPE SHOPS</li>
@@ -182,7 +138,7 @@
           </ul>
         </div>
         <div class="info-box">
-          <h3>🎯 WHO IT TARGETS</h3>
+          <h3>👥 WHO IT TARGETS</h3>
           <ul class="info-list">
             <li>TEENS</li>
             <li>YOUNG ADULTS</li>
@@ -201,7 +157,7 @@
       </div>
     </div>
 
-    <!-- Industry section (unchanged, but you can keep it) -->
+    <!-- Industry section (dark background, unchanged) -->
     <section id="industry" class="section bg-dark">
       <div class="container">
         <h2>The Industry</h2>
@@ -215,7 +171,7 @@
           <a href="industry/oxycontin.html" class="btn btn-outline">💊 SIMILARITIES TO OXYCONTIN &gt;</a>
           <a href="industry/kansas.html" class="btn btn-outline">🌾 HOW KANSAS WAS MISLED &gt;</a>
         </div>
-        <!-- Additional industry documents (optional) -->
+        <!-- Additional PDF links -->
         <p style="margin-top: 2rem; color: #ccc; font-size: 0.9rem;">
           Additional testimonies and memos: 
           <a href="industry/Akamemorandum.pdf" style="color: white; text-decoration: underline;">AK Memo</a> · 
@@ -228,108 +184,42 @@
       </div>
     </section>
 
-    <!-- Expanded Take Action section with multiple options -->
-    <section id="action" class="section">
+    <!-- Take Action section – dark with background image and three cards -->
+    <section id="action" class="action-section">
+      <div class="overlay"></div>
       <div class="container">
-        <h2 style="text-align: center;">Take Action Now</h2>
+        <h2 style="text-align: center; color: white;">Take Action Now</h2>
         <div class="action-grid">
+          <!-- Email Your Legislator -->
           <div class="action-card">
             <a href="legislator.html">
               <div class="emoji">📧</div>
               <h4>EMAIL YOUR LEGISLATOR</h4>
             </a>
           </div>
+          <!-- Submit Public Comment -->
           <div class="action-card">
             <a href="#">
               <div class="emoji">📤</div>
               <h4>SUBMIT PUBLIC COMMENT</h4>
             </a>
           </div>
-          <div class="action-card">
-            <a href="#">
-              <div class="emoji">📣</div>
-              <h4>REPORT A RETAILER</h4>
-            </a>
-          </div>
+          <!-- Testimony Tips -->
           <div class="action-card">
             <a href="industry/testimony-tips.html">
               <div class="emoji">🔍</div>
               <h4>TESTIMONY TIPS</h4>
             </a>
           </div>
-          <div class="action-card">
-            <a href="#">
-              <div class="emoji">🕒</div>
-              <h4>START A PARENT CHAPTER</h4>
-            </a>
-          </div>
         </div>
-
-        <!-- Quick links to legislator, share, story (as before) -->
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-          <a href="legislator.html" class="btn btn-dark">CONTACT YOUR LEGISLATORS &gt;</a>
-          <a href="share.html" class="btn btn-dark">SHARE THIS ISSUE &gt;</a>
-          <a href="submit-your-story.html" class="btn btn-dark">SUBMIT YOUR STORY &gt;</a>
-        </div>
+        <!-- Optional note: media inquiries welcome (kept from original) -->
+        <p style="text-align: center; margin-top: 2rem; color: #ccc;">Media inquiries welcome.</p>
       </div>
     </section>
 
-    <!-- Evidence preview section -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 style="text-align: center;">The Evidence</h2>
-        <div class="evidence-preview">
-          <div class="evidence-item">
-            <h4>FDA WARNINGS</h4>
-            <p>Official statements on kratom risks.</p>
-            <a href="evidence/fdaposition/">Read more →</a>
-          </div>
-          <div class="evidence-item">
-            <h4>NDI DENIAL</h4>
-            <p>FDA rejection of Johnson Foods kratom.</p>
-            <a href="evidence/fdadenial/">Read more →</a>
-          </div>
-          <div class="evidence-item">
-            <h4>POISON CENTER DATA</h4>
-            <p>Exposures and severity trends.</p>
-            <a href="evidence/poisoncontrol/poisoncontrol.html">Read more →</a>
-          </div>
-          <div class="evidence-item">
-            <h4>DEATH REPORTS</h4>
-            <p>CDC SUDORS mortality data.</p>
-            <a href="evidence/death/">Read more →</a>
-          </div>
-          <div class="evidence-item">
-            <h4>RESEARCH STUDIES</h4>
-            <p>Controlled human studies – the truth.</p>
-            <a href="evidence/research/">Read more →</a>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="evidence/index.html" class="btn btn-primary">BROWSE FULL EVIDENCE LIBRARY →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Parent voices testimonial -->
-    <div class="container">
-      <div class="testimonial">
-        <p>“We didn't know what it was until it was too late. It was next to the energy drinks.”</p>
-        <p class="author">— Parent from Ohio</p>
-      </div>
-    </div>
-
-    <!-- Join the movement / newsletter signup -->
-    <section class="section" style="background: #f1f1f1; text-align: center;">
-      <div class="container">
-        <h2>Join the Movement</h2>
-        <p style="font-size: 1.2rem;">Remove retail kratom from our communities.</p>
-        <form class="signup-form">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn btn-red">JOIN US</button>
-        </form>
-      </div>
-    </section>
+    <!-- (Optional: If you want to keep the About/Contact form, you can add it here. 
+         The original had a two-col section with contact form, but it's omitted to match the clean look.) 
+         You can reinstate it below if needed. -->
   </main>
 
   <footer class="footer">
