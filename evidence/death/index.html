@@ -1,212 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Kratom Mortality Data</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kratom Mortality Data – AntiKratom.org</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* Additional inline styles for table and card refinements */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .data-table th {
+      background: #d32f2f;
+      color: white;
+      font-weight: 600;
+      padding: 1rem;
+      text-align: left;
+    }
+    .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    .data-table tr:hover {
+      background: #f9f9f9;
+    }
+    .jurisdiction-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+    .card-header .icon {
+      width: 24px;
+      height: 24px;
+      fill: #d32f2f;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+    }
+    .btn-secondary:hover {
+      background: #d32f2f;
+      color: white;
+    }
+  </style>
 </head>
-
 <body>
-
-<header class="hero">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<h1>Kratom <span>Mortality Data</span></h1>
-
-<p>
-CDC surveillance reports and federal publications describing overdose deaths
-where kratom (mitragynine) was detected in post-mortem toxicology.
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn-primary" href="#cdc">View CDC Data</a>
-
-<a class="btn-secondary" href="../../index.html">Home</a>
-
-</div>
-
-</div>
-
-</header>
-
-<main class="container">
-
-<section class="intro">
-
-<h2>Overview</h2>
-
-<p>
-Mortality surveillance systems distinguish between substances that are detected
-during toxicology testing and substances determined by medical examiners to be
-involved in the cause of death.
-</p>
-
-<p>
-Detection alone does not establish causation, but it provides important context
-for understanding patterns of substance use in overdose investigations.
-</p>
-
-</section>
-<section id="cdc">
-
-<div class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
-</svg>
-
-CDC SUDORS Mortality Analysis (2016–2017)
-
-</div>
-
-<div class="card-body">
-
-<p>
-CDC analyzed overdose deaths recorded in the State Unintentional Drug Overdose
-Reporting System (SUDORS).
-</p>
-
-<ul>
-
-<li>152 deaths had mitragynine detected on toxicology</li>
-
-<li>91 deaths were classified as kratom-involved</li>
-
-<li>Most deaths involved multiple substances</li>
-
-<li>Fentanyl was the most common co-occurring substance</li>
-
-</ul>
-
-<a class="btn-primary"
-href="./CDC Kratom 2016 2017.pdf"
-target="_blank">
-
-Open CDC Report
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M19 3H5v18h14V3z"/>
-</svg>
-
-CDC Poison Center Surveillance (2010–2015)
-
-</div>
-
-<div class="card-body">
-
-<p>
-A CDC analysis of National Poison Data System reports examined
-kratom exposures reported to poison centers across the United States.
-</p>
-
-<ul>
-
-<li>660 kratom exposure calls reported</li>
-
-<li>10-fold increase between 2010 and 2015</li>
-
-<li>Common symptoms included tachycardia, agitation, nausea and hypertension</li>
-
-</ul>
-
-<a class="btn-primary"
-href="./CDC Kratom 2010 2015.pdf"
-target="_blank">
-
-Open CDC Poison Control Study
-
-</a>
-
-</div>
-
-</div>
-<div class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M1 21h22L12 2 1 21z"/>
-</svg>
-
-Additional Federal Reports
-
-</div>
-
-<div class="card-body">
-
-<p>
-Additional CDC and federal reports provide context on kratom exposures,
-including occupational exposures and law enforcement investigations.
-</p>
-
-<a class="btn-primary"
-href="./CDC Kratom law enforcement exposure.pdf"
-target="_blank">
-
-Open Law Enforcement Exposure Report
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/>
-</svg>
-
-Interpretation
-
-</div>
-
-<div class="card-body">
-
-<ul>
-
-<li>Most kratom-positive deaths involved multiple substances.</li>
-
-<li>Polysubstance use remains a major factor in overdose fatalities.</li>
-
-<li>Surveillance data help identify emerging patterns in drug markets.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
+  <header class="hero" style="background-image: url('../../hero.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Kratom <span>Mortality Data</span></h1>
+      <p>
+        CDC surveillance reports and federal publications describing overdose deaths
+        where kratom (mitragynine) was detected in post-mortem toxicology.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#sudors">View SUDORS Data</a>
+        <a class="btn-secondary" href="../../index.html">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Introduction -->
+    <section class="intro">
+      <h2>Overview</h2>
+      <p>
+        Mortality surveillance systems distinguish between substances that are <strong>detected</strong>
+        during toxicology testing and substances determined by medical examiners to be
+        <strong>involved</strong> in the cause of death.
+      </p>
+      <p>
+        Detection alone does not establish causation, but it provides important context
+        for understanding patterns of substance use in overdose investigations.
+      </p>
+    </section>
+
+    <!-- SUDORS Table Section (new) -->
+    <section id="sudors" style="margin: 3rem 0;">
+      <h2 style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="#d32f2f">
+          <path d="M19 3H5v18h14V3z"/>
+        </svg>
+        SUDORS: Kratom/Mitragynine in Overdose Deaths (2020–2024)
+      </h2>
+      <p>
+        The <strong>State Unintentional Drug Overdose Reporting System (SUDORS)</strong> compiles detailed information
+        on unintentional and undetermined-intent overdose deaths from participating jurisdictions.
+        Abstractors collect data from death certificates, medical examiner/coroner reports, and post-mortem toxicology.
+        SUDORS is designed for <strong>signal detection</strong> and prevention planning; it does <strong>not</strong> by itself establish causation or national incidence.
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Jurisdictions Reporting</th>
+            <th>Deaths with Mitragynine Detected</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2020</td><td>32</td><td>866</td></tr>
+          <tr><td>2021</td><td>33</td><td>1,016</td></tr>
+          <tr><td>2022</td><td>34</td><td>1,017</td></tr>
+          <tr><td>2023</td><td>38</td><td>1,151</td></tr>
+          <tr><td>2024</td><td>43</td><td>995</td></tr>
+        </tbody>
+      </table>
+
+      <div class="jurisdiction-note">
+        <p><strong>2024 note:</strong> The apparent decline from 2023 to 2024 occurs despite expanded participation (43 jurisdictions). Year-to-year comparisons should consider changes in jurisdiction coverage and toxicology testing practices.</p>
+        <p>➡️ <a href="https://www.cdc.gov/drugoverdose/fatal/sudors.html" target="_blank">How to access the SUDORS dashboard</a><br>
+        <small>Read carefully: SUDORS distinguishes drugs <em>detected</em> from those <em>involved</em> (cause-listed).</small></p>
+      </div>
+    </section>
+
+    <!-- CDC Cards (existing content, enhanced) -->
+    <section id="cdc" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+      <!-- Card 1: CDC SUDORS 2016–2017 -->
+      <div class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+          </svg>
+          CDC SUDORS Mortality Analysis (2016–2017)
+        </div>
+        <div class="card-body">
+          <p>CDC analyzed overdose deaths recorded in the State Unintentional Drug Overdose Reporting System (SUDORS).</p>
+          <ul>
+            <li>152 deaths had mitragynine detected on toxicology</li>
+            <li>91 deaths were classified as kratom-involved</li>
+            <li>Most deaths involved multiple substances</li>
+            <li>Fentanyl was the most common co-occurring substance</li>
+          </ul>
+          <a class="btn-primary" href="./CDC_Kratom_2016_2017.pdf" target="_blank">Open CDC Report</a>
+        </div>
+      </div>
+
+      <!-- Card 2: CDC Poison Center Surveillance (2010–2015) -->
+      <div class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 3H5v18h14V3z"/>
+          </svg>
+          CDC Poison Center Surveillance (2010–2015)
+        </div>
+        <div class="card-body">
+          <p>A CDC analysis of National Poison Data System reports examined kratom exposures reported to poison centers across the United States.</p>
+          <ul>
+            <li>660 kratom exposure calls reported</li>
+            <li>10-fold increase between 2010 and 2015</li>
+            <li>Common symptoms included tachycardia, agitation, nausea and hypertension</li>
+          </ul>
+          <a class="btn-primary" href="./CDC_Kratom_2010_2015.pdf" target="_blank">Open CDC Poison Control Study</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Additional Federal Reports -->
+      <div class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21z"/>
+          </svg>
+          Additional Federal Reports
+        </div>
+        <div class="card-body">
+          <p>Additional CDC and federal reports provide context on kratom exposures, including occupational exposures and law enforcement investigations.</p>
+          <a class="btn-primary" href="./CDC_Kratom_law_enforcement_exposure.pdf" target="_blank">Open Law Enforcement Exposure Report</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Interpretation -->
+      <div class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/>
+          </svg>
+          Interpretation
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Most kratom-positive deaths involved multiple substances.</li>
+            <li>Polysubstance use remains a major factor in overdose fatalities.</li>
+            <li>Surveillance data help identify emerging patterns in drug markets.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Optional footer (matching homepage) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org</p>
+    </div>
+  </footer>
 </body>
 </html>
