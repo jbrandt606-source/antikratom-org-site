@@ -96,18 +96,18 @@ position:relative;
 width:100%;
 min-height:100vh;
 
-background-image:
+background:
 linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.80)),
 url("hero.jpeg");
 
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 
 display:flex;
 align-items:center;
 
-padding-left:8%;
-
+padding:0 8%;
 }
 
 
