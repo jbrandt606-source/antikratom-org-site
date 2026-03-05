@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit Your Story – AntiKratom.org</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card-header .icon {
+      width: 24px;
+      height: 24px;
+      fill: #d32f2f;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+    }
+    .btn-secondary:hover {
+      background: #d32f2f;
+      color: white;
+    }
+    .technique-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .technique-card {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 5px solid #d32f2f;
+    }
+    .technique-card h3 {
+      color: #d32f2f;
+      margin-top: 0;
+    }
+    .step-list {
+      list-style: none;
+      padding: 0;
+    }
+    .step-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+    .step-list li:before {
+      content: "✍️";
+      position: absolute;
+      left: 0;
+      color: #d32f2f;
+      font-weight: bold;
+    }
+    .template-box {
+      background: #f1f1f1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #d32f2f;
+    }
+    .template-box h4 {
+      margin-top: 0;
+      color: #222;
+    }
+    .template-box p {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .tip-box {
+      background: #ffebee;
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .refute-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .refute-table th {
+      background: #d32f2f;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .refute-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #eee;
+    }
+    .refute-table tr:last-child td {
+      border-bottom: none;
+    }
+    .refute-table tr:hover {
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <!-- Standard header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="evidence/index.html">Evidence</a>
+        <a href="contact-legislator.html">Contact Legislator</a>
+        <a href="share.html">Share</a>
+        <a href="submit-your-story.html" class="active">Your Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" style="background-image: url('hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Submit <span class="red">Your Story</span></h1>
+        <p>
+          Your experience can change hearts and votes. Learn how to write powerful testimony 
+          using techniques from history's most persuasive legislators – including Lyndon B. Johnson.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#techniques">Learn the Techniques</a>
+          <a class="btn-secondary" href="#write">Start Writing</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="margin: 2rem auto;">
+      <!-- Why your story matters -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+          </svg>
+          Why Your Story Matters
+        </div>
+        <div class="card-body">
+          <p>
+            Lawmakers are bombarded with data, statistics, and lobbyists. But a single, authentic 
+            story can break through. When you share your loss, your struggle, or your family's pain, 
+            you become a voice that no spreadsheet can silence. Parents who have lost children, 
+            individuals who have battled addiction – your testimony is the most powerful tool we have.
+          </p>
+          <div class="tip-box">
+            <strong>“The most powerful weapon in politics is a personal story.”</strong> – Anonymous legislative aide
+          </div>
+        </div>
+      </section>
+
+      <!-- Lessons from LBJ and the Masters -->
+      <section class="card" id="techniques">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21z"/>
+          </svg>
+          Persuasion Secrets of History's Greatest Legislators
+        </div>
+        <div class="card-body">
+          <p>
+            Lyndon B. Johnson, Daniel Webster, and other legendary lawmakers understood that facts alone 
+            don't move people – stories do. Here are their techniques, adapted for your testimony.
+          </p>
+
+          <div class="technique-grid">
+            <div class="technique-card">
+              <h3>🎯 1. The Johnson Treatment</h3>
+              <p>
+                LBJ would lean in close, make eye contact, and speak directly to a person's emotions. 
+                In your testimony, connect with each legislator as if they were sitting across from you. 
+                Use “you” and “your community” to make it personal.
+              </p>
+            </div>
+            <div class="technique-card">
+              <h3>📖 2. The Story Hook</h3>
+              <p>
+                Webster always opened with a vivid, human moment. Start with a single image: 
+                “I remember the last time I saw my son conscious...” That image stays in a legislator's mind.
+              </p>
+            </div>
+            <div class="technique-card">
+              <h3>⚖️ 3. The Moral Contrast</h3>
+              <p>
+                Lincoln contrasted right and wrong. Show the gap between what should be (safe communities) 
+                and what is (kratom sold like candy). Let them feel the injustice.
+              </p>
+            </div>
+            <div class="technique-card">
+              <h3>🔁 4. The Rule of Three</h3>
+              <p>
+                Cicero used triads for rhythm and memorability. For example: “This issue affects our children, 
+                our families, and our future.” It feels complete and persuasive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step‑by‑Step: Writing Your Testimony -->
+      <section class="card" id="write">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 2H9C7.9 2 7 2.9 7 4v16c0 1.1.9 2 2 2h11V2z"/>
+          </svg>
+          Write Your Testimony: A Step‑by‑Step Guide
+        </div>
+        <div class="card-body">
+          <ul class="step-list">
+            <li>
+              <strong>Step 1: Set the scene.</strong> Briefly introduce yourself and your connection to the issue. 
+              “My name is [Name], and I live in [City]. I'm here because my daughter almost died after buying kratom at a gas station.”
+            </li>
+            <li>
+              <strong>Step 2: Tell the story.</strong> Describe what happened in chronological order. Include sensory details – 
+              the call you received, the hospital waiting room, the helplessness. Keep it to 2–3 minutes when spoken.
+            </li>
+            <li>
+              <strong>Step 3: Connect to the legislation.</strong> Explain how the bill before them could prevent this from happening 
+              to another family. “This bill would remove these products from convenience stores, so no other parent gets that call.”
+            </li>
+            <li>
+              <strong>Step 4: State your ask clearly.</strong> “I urge you to vote YES on [Bill Number].” Be direct.
+            </li>
+            <li>
+              <strong>Step 5: End with a powerful closing.</strong> Repeat a key image or phrase. “Don't let another family 
+              experience the heartache we did.”
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- NEW: How to Refute Industry Claims -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21z"/>
+          </svg>
+          How to Refute Industry Claims When Testifying
+        </div>
+        <div class="card-body">
+          <p>
+            During hearings, industry representatives will present carefully crafted arguments. 
+            You don't need to be an expert – just have a few key facts ready. Below are common industry 
+            claims and simple, truthful responses you can use. For more detail, refer legislators to 
+            our <a href="evidence/index.html">Evidence Library</a>.
+          </p>
+
+          <table class="refute-table">
+            <thead>
+              <tr><th>Industry Claim</th><th>Simple Refutation</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>“Kratom is just a plant – it's natural and safe.”</strong></td>
+                <td>“Many dangerous substances are natural. The issue is how the body processes it – kratom converts into a potent opioid-like compound once inside us. Poison control centers report thousands of exposures each year.”</td>
+              </tr>
+              <tr>
+                <td><strong>“FDA denial was just about paperwork, not safety.”</strong></td>
+                <td>“The FDA explicitly said it could not even identify the ingredient, let alone conclude it was safe. That's a fundamental safety failure.”</td>
+              </tr>
+              <tr>
+                <td><strong>“Deaths involving kratom are really caused by other drugs.”</strong></td>
+                <td>“Polydrug deaths don't erase the role of each substance. Many overdose deaths involve multiple substances – we don't ignore alcohol or cocaine when they're present. Kratom contributes to toxicity.”</td>
+              </tr>
+              <tr>
+                <td><strong>“The KCPA would regulate kratom and make it safe.”</strong></td>
+                <td>“The KCPA sets labeling and age restrictions, but it doesn't address the fundamental pharmacology – the fact that the body turns it into a stronger opioid. Regulation is not the same as safety.”</td>
+              </tr>
+              <tr>
+                <td><strong>“Studies show kratom is well tolerated.”</strong></td>
+                <td>“Those studies were short‑term, in healthy adults, using pure product – nothing like the gas station kratom that families encounter. Even in those studies, participants were withdrawn due to liver enzyme elevations and severe side effects.”</td>
+              </tr>
+              <tr>
+                <td><strong>“Banning kratom will push people to fentanyl.”</strong></td>
+                <td>“That argument was used against restricting OxyContin in 2004. It didn't stop the opioid crisis – and it shouldn't stop us from removing a known danger from retail shelves.”</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tip-box" style="margin-top:1rem;">
+            <strong>Pro tip:</strong> If you're asked a question you can't answer, it's okay to say: 
+            “I can't speak to that specific study, but I can direct you to our evidence library, 
+            which compiles the official FDA, CDC, and poison control data.”
+          </div>
+        </div>
+      </section>
+
+      <!-- Sample Templates -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/>
+          </svg>
+          Sample Templates
+        </div>
+        <div class="card-body">
+          <p>Use these as starting points – but your own words will always be strongest.</p>
+
+          <div class="template-box">
+            <h4>👩‍👧 For a Parent</h4>
+            <p>
+              “Chairperson [Name], members of the committee, my name is [Name] from [City]. 
+              Two years ago, my 17‑year‑old son bought a product labeled ‘kratom’ at a local smoke shop. 
+              Within hours, he was seizing. We rushed him to the ER, where doctors told us they had no antidote. 
+              He survived, but he still struggles with addiction. I'm here today because [Bill Number] would stop 
+              these products from being sold where kids can buy them. Please vote yes.”
+            </p>
+          </div>
+
+          <div class="template-box">
+            <h4>🧑 For Someone Who Struggled with Addiction</h4>
+            <p>
+              “Good morning. I'm [Name], and I'm a recovering addict. My addiction started not with heroin, 
+              but with a legal substance called kratom, sold at a gas station near my college. I thought it was safe. 
+              I was wrong. It took me three years to break free. No one should have to go through that. 
+              This committee has the power to prevent others from falling into the same trap. Support this ban.”
+            </p>
+          </div>
+
+          <div class="template-box">
+            <h4>👵 For a Grandparent</h4>
+            <p>
+              “My name is [Name], and I'm a grandmother from [City]. I never thought I'd be speaking about drug policy, 
+              but here I am. My grandson overdosed on kratom last year. He bought it at a convenience store – 
+              the same store where he buys gum. We were lucky; he survived. But the poison control center told us 
+              calls like ours are skyrocketing. Please, protect our grandchildren. Pass this bill.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips for Delivering Testimony -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/>
+          </svg>
+          Tips for Delivering Your Testimony
+        </div>
+        <div class="card-body">
+          <div class="technique-grid" style="grid-template-columns: 1fr 1fr;">
+            <div>
+              <h3>In Person</h3>
+              <ul>
+                <li>Practice out loud – time yourself (most committees give 2‑3 minutes).</li>
+                <li>Bring printed copies for each committee member and staff.</li>
+                <li>Make eye contact, especially with the chair.</li>
+                <li>Pause for effect. Let silence work for you.</li>
+                <li>If you cry, that's okay. It's real.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Written Submission</h3>
+              <ul>
+                <li>Keep it to one page if possible.</li>
+                <li>Use bold for your “ask” so it stands out.</li>
+                <li>Include your contact information.</li>
+                <li>Attach any relevant evidence (photos, news clippings).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip-box" style="margin-top:1rem;">
+            <strong>Pro tip from LBJ's staff:</strong> “If you can make them feel it in their gut, you've already won.”
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Navigation buttons -->
+      <div style="margin: 3rem 0; text-align: center;">
+        <a class="btn-secondary" href="index.html">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          Home
+        </a>
+        <a class="btn-secondary" href="contact-legislator.html" style="margin-left: 1rem;">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+          </svg>
+          Contact Your Legislator
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org — Your Story Matters</p>
+    </div>
+  </footer>
+
+  <script>
+    // Optional: handle form submission (prevent default for demo)
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for sharing your story. We will review it and may reach out.');
+    });
+  </script>
+</body>
+</html>
