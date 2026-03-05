@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share This Issue – AntiKratom.org</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for share page */
+    .card-header .icon {
+      width: 24px;
+      height: 24px;
+      fill: #d32f2f;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+    }
+    .btn-secondary:hover {
+      background: #d32f2f;
+      color: white;
+    }
+    .share-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .share-card {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #eee;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .share-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .share-card .share-icon {
+      width: 48px;
+      height: 48px;
+      fill: #d32f2f;
+      margin-bottom: 1rem;
+    }
+    .share-card h3 {
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+    .share-card p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .copy-box {
+      display: flex;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .copy-box input {
+      flex: 1;
+      padding: 0.75rem;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+    }
+    .copy-box button {
+      background: #d32f2f;
+      color: white;
+      border: none;
+      padding: 0 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .copy-box button:hover {
+      background: #b71c1c;
+    }
+    .message-template {
+      background: #f1f1f1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+    .message-template p {
+      margin: 0;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- Standard header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="evidence/index.html">Evidence</a>
+        <a href="contact-legislator.html">Contact Legislator</a>
+        <a href="share.html" class="active">Share</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" style="background-image: url('hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Share <span class="red">This Issue</span></h1>
+        <p>
+          Help us spread the truth about kratom dangers. Use the tools below to share our resources 
+          with friends, family, and your social networks.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#social">Share on Social</a>
+          <a class="btn-secondary" href="#email">Email a Friend</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="margin: 2rem auto;">
+      <!-- Social Media Sharing -->
+      <section class="card" id="social">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+          </svg>
+          Share on Social Media
+        </div>
+        <div class="card-body">
+          <p>Click an icon to share our homepage or a specific page directly to your social networks.</p>
+          <div class="share-grid">
+            <!-- Twitter -->
+            <div class="share-card">
+              <svg class="share-icon" viewBox="0 0 24 24">
+                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+              </svg>
+              <h3>Twitter / X</h3>
+              <p>Share a tweet urging your followers to learn the truth about kratom.</p>
+              <a href="https://twitter.com/intent/tweet?text=Kratom%20is%20being%20sold%20in%20gas%20stations%20with%20no%20regulation.%20Families%20are%20paying%20the%20price.%20Learn%20more%20at%20AntiKratom.org&url=https://antikratom.org" target="_blank" class="btn-primary" style="display: inline-block;">Tweet</a>
+            </div>
+            <!-- Facebook -->
+            <div class="share-card">
+              <svg class="share-icon" viewBox="0 0 24 24">
+                <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"/>
+              </svg>
+              <h3>Facebook</h3>
+              <p>Share our page on Facebook to reach parents and community members.</p>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://antikratom.org" target="_blank" class="btn-primary" style="display: inline-block;">Share</a>
+            </div>
+            <!-- LinkedIn -->
+            <div class="share-card">
+              <svg class="share-icon" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.68-1.68-1.68a1.68 1.68 0 0 0-1.68 1.68c0 .93.75 1.68 1.68 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              <h3>LinkedIn</h3>
+              <p>Share with professionals and policymakers.</p>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://antikratom.org" target="_blank" class="btn-primary" style="display: inline-block;">Share</a>
+            </div>
+            <!-- Email -->
+            <div class="share-card">
+              <svg class="share-icon" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <h3>Email</h3>
+              <p>Send an email to friends, family, or your local media.</p>
+              <a href="mailto:?subject=Kratom%20Dangers%20-%20What%20Every%20Parent%20Should%20Know&body=Hi,%0D%0A%0D%0AI%20wanted%20to%20share%20this%20important%20resource%20about%20kratom%20being%20sold%20in%20gas%20stations.%20The%20FDA%20has%20warned%20about%20its%20risks,%20and%20poison%20control%20calls%20are%20rising.%20Learn%20more%20at%20https://antikratom.org" class="btn-primary" style="display: inline-block;">Send Email</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copy Link -->
+      <section class="card" id="copy">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+          </svg>
+          Copy Link to This Site
+        </div>
+        <div class="card-body">
+          <p>Copy the main website URL or any evidence page to share directly.</p>
+          <div class="copy-box">
+            <input type="text" id="site-url" value="https://antikratom.org" readonly>
+            <button onclick="copyUrl()">Copy</button>
+          </div>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+            You can also right‑click any link on the site and select “Copy link address”.
+          </p>
+        </div>
+      </section>
+
+      <!-- Pre-written Message Templates -->
+      <section class="card" id="templates">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-3 12H7v-2h10v2zm0-4H7V8h10v2z"/>
+          </svg>
+          Pre‑written Messages
+        </div>
+        <div class="card-body">
+          <p>Copy and paste these messages to quickly spread the word via text, email, or social media.</p>
+
+          <div class="message-template">
+            <p><strong>📱 Text Message:</strong><br>
+            “Did you know kratom is being sold in gas stations with no regulation? It’s linked to poisonings and even deaths. Check out AntiKratom.org for the facts.”</p>
+          </div>
+
+          <div class="message-template">
+            <p><strong>📧 Email to a Friend:</strong><br>
+            Subject: Important info about kratom<br><br>
+            Hi [Name],<br><br>
+            I wanted to share this website with you: AntiKratom.org. It explains why kratom products sold in convenience stores are dangerous, especially for kids. The FDA has issued warnings, and poison control centers are seeing more cases every year. Please take a look and share it with others.<br><br>
+            Thanks,<br>
+            [Your Name]</p>
+          </div>
+
+          <div class="message-template">
+            <p><strong>🐦 Twitter (X) Post:</strong><br>
+            “Kratom is sold in gas stations like candy, but it’s far from harmless. The FDA warns of addiction, toxicity, and even death. Families deserve to know. #KratomDangers #PublicHealth AntiKratom.org”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Graphics -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 2H9C7.9 2 7 2.9 7 4v16c0 1.1.9 2 2 2h10V2zM9 20V4h8v16H9zM5 6H3v16c0 1.1.9 2 2 2h10v-2H5V6z"/>
+          </svg>
+          Downloadable Graphics
+        </div>
+        <div class="card-body">
+          <p>Use these images on social media or print them as flyers.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="#" class="btn-secondary" download>📸 Infographic (PNG)</a>
+            <a href="#" class="btn-secondary" download>🖼️ Social Media Square</a>
+            <a href="#" class="btn-secondary" download>📄 Flyer (PDF)</a>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+            (Placeholder links – replace with actual file paths when available.)
+          </p>
+        </div>
+      </section>
+
+      <!-- Back to Home / Take Action -->
+      <div style="margin: 3rem 0; text-align: center;">
+        <a class="btn-secondary" href="index.html">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          Home
+        </a>
+        <a class="btn-secondary" href="contact-legislator.html" style="margin-left: 1rem;">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+          </svg>
+          Contact Your Legislator
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org — Share This Issue</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyUrl() {
+      var copyText = document.getElementById("site-url");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("URL copied to clipboard!");
+    }
+  </script>
+</body>
+</html>
