@@ -1,183 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>FDA Position on Kratom</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FDA Position on Kratom – AntiKratom.org</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* Icon styling (same as other evidence pages) */
+    .card-header .icon {
+      width: 24px;
+      height: 24px;
+      fill: #d32f2f;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+    }
+    .btn-secondary:hover {
+      background: #d32f2f;
+      color: white;
+    }
+  </style>
 </head>
-
 <body>
-
-<nav class="top-nav">
-
-<a href="../../index.html" class="nav-btn">Home</a>
-
-<a href="../index.html" class="nav-btn">Evidence</a>
-
-</nav>
-  
-<header class="hero">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<h1>
-FDA Position on <span>Kratom</span>
-</h1>
-
-<p>
-Summary of the U.S. Food and Drug Administration's official statements,
-warnings, and regulatory position regarding kratom products.
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn-primary" href="#summary">
-View Summary
-</a>
-
-<a class="btn-secondary" href="./FDAkratom.pdf" target="_blank">
-Open FDA Document
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-<main class="container">
-
-<section class="card" id="summary">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-</svg>
-
-FDA Overview
-
-</div>
-
-<div class="card-body">
-
-<p>
-The U.S. Food and Drug Administration states that there are currently
-<strong>no FDA-approved drug products containing kratom</strong>
-or its primary alkaloids.
-</p>
-
-<p>
-The agency has warned consumers not to use kratom for medical treatment
-because its safety and effectiveness have not been established through
-the FDA drug approval process.
-</p>
-
-</div>
-
-</section>
-
-
-<section class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M1 21h22L12 2 1 21z"/>
-</svg>
-
-Key FDA Findings
-
-</div>
-
-<div class="card-body">
-
-<ul>
-
-<li>Kratom products are widely sold online and in retail stores despite lacking FDA approval.</li>
-
-<li>No kratom drug products have been proven safe and effective for any medical condition.</li>
-
-<li>FDA warns of risks including liver toxicity, seizures, substance use disorder, and withdrawal.</li>
-
-<li>Kratom has been linked to neonatal withdrawal in infants exposed during pregnancy.</li>
-
-<li>Contamination with Salmonella and heavy metals has also been documented in kratom products.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-<section class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M19 2H9C7.9 2 7 2.9 7 4v16h12z"/>
-</svg>
-
-Regulatory Status
-
-</div>
-
-<div class="card-body">
-
-<p>
-FDA states that kratom is <strong>not lawfully marketed</strong> in the United
-States as a drug, dietary supplement, or food additive.
-</p>
-
-<p>
-The agency has taken enforcement actions including warning letters,
-product seizures, and collaboration with federal partners to limit
-illegal kratom products entering U.S. commerce.
-</p>
-
-</div>
-
-</section>
-
-
-<section class="card">
-
-<div class="card-header">
-
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M12 16l4-5h-3V4h-2v7H8z"/>
-</svg>
-
-Original FDA Document
-
-</div>
-
-<div class="card-body">
-
-<p>
-Read the full FDA public health document describing the agency's
-current understanding of kratom risks, regulatory status, and ongoing
-research.
-</p>
-
-<a class="btn-primary" href="./FDAkratom.pdf" target="_blank">
-Open FDA Kratom Document
-</a>
-
-</div>
-
-</section>
-
-</main>
-
+  <!-- Standard header with logo and navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="../../index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+      <nav class="nav">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Evidence</a>
+        <a href="./index.html" class="active">FDA Position</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section with background image -->
+    <section class="hero" style="background-image: url('../../hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>FDA Position on <span class="red">Kratom</span></h1>
+        <p>
+          Summary of the U.S. Food and Drug Administration's official statements,
+          warnings, and regulatory position regarding kratom products.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#summary">View Summary</a>
+          <a class="btn-secondary" href="./FDAkratom.pdf" target="_blank">Open FDA Document</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content as cards -->
+    <div class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+      <!-- Card: Overview -->
+      <section class="card" id="summary">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+          </svg>
+          FDA Overview
+        </div>
+        <div class="card-body">
+          <p>
+            The U.S. Food and Drug Administration states that there are currently
+            <strong>no FDA-approved drug products containing kratom</strong>
+            or its primary alkaloids.
+          </p>
+          <p>
+            The agency has warned consumers not to use kratom for medical treatment
+            because its safety and effectiveness have not been established through
+            the FDA drug approval process.
+          </p>
+        </div>
+      </section>
+
+      <!-- Card: Key Findings -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21z"/>
+          </svg>
+          Key FDA Findings
+        </div>
+        <div class="card-body">
+          <ul>
+            <li>Kratom products are widely sold online and in retail stores despite lacking FDA approval.</li>
+            <li>No kratom drug products have been proven safe and effective for any medical condition.</li>
+            <li>FDA warns of risks including liver toxicity, seizures, substance use disorder, and withdrawal.</li>
+            <li>Kratom has been linked to neonatal withdrawal in infants exposed during pregnancy.</li>
+            <li>Contamination with Salmonella and heavy metals has also been documented in kratom products.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Card: Regulatory Status -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 2H9C7.9 2 7 2.9 7 4v16h12z"/>
+          </svg>
+          Regulatory Status
+        </div>
+        <div class="card-body">
+          <p>
+            FDA states that kratom is <strong>not lawfully marketed</strong> in the United
+            States as a drug, dietary supplement, or food additive.
+          </p>
+          <p>
+            The agency has taken enforcement actions including warning letters,
+            product seizures, and collaboration with federal partners to limit
+            illegal kratom products entering U.S. commerce.
+          </p>
+        </div>
+      </section>
+
+      <!-- Card: Original FDA Document -->
+      <section class="card">
+        <div class="card-header">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 16l4-5h-3V4h-2v7H8z"/>
+          </svg>
+          Original FDA Document
+        </div>
+        <div class="card-body">
+          <p>
+            Read the full FDA public health document describing the agency's
+            current understanding of kratom risks, regulatory status, and ongoing
+            research.
+          </p>
+          <a class="btn-primary" href="./FDAkratom.pdf" target="_blank">
+            Open FDA Kratom Document
+          </a>
+        </div>
+      </section>
+
+      <!-- Back link (optional, but consistent with denial page) -->
+      <div style="margin: 2rem 0; text-align: center;">
+        <a class="btn-secondary" href="../index.html">
+          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
+            <path d="M15 18l-6-6 6-6v12z"></path>
+          </svg>
+          Back to Evidence
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org — FDA Position on Kratom</p>
+    </div>
+  </footer>
 </body>
 </html>
