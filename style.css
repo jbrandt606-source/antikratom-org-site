@@ -1,5 +1,4 @@
-
-{
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -11,25 +10,18 @@ background:#000;
 color:#fff;
 }
 
-
-/ NAVBAR /
+/* NAVBAR */
 
 .nav{
-
 position:absolute;
 top:0;
 left:0;
-
 width:100%;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 padding:25px 60px;
-
 z-index:10;
-
 }
 
 .logo{
@@ -72,25 +64,18 @@ font-weight:600;
 cursor:pointer;
 }
 
-
-/ HERO /
+/* HERO */
 
 .hero{
-
 height:100vh;
-
 background:
 linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.85)),
 url("hero.jpg");
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
-
 padding-left:8%;
-
 }
 
 .hero-content{
@@ -121,8 +106,7 @@ color:#ccc;
 margin-bottom:24px;
 }
 
-
-/ HERO BUTTONS /
+/* HERO BUTTONS */
 
 .hero-buttons{
 display:flex;
@@ -144,19 +128,14 @@ text-decoration:none;
 color:white;
 }
 
-
-/ EVIDENCE SECTION /
+/* EVIDENCE SECTION */
 
 .section-dark{
-
 background:
 linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.95)),
 url("section-bg-kratom-dark.jpg");
-
 background-size:cover;
-
 padding:90px 0;
-
 }
 
 .container{
@@ -171,8 +150,7 @@ font-size:36px;
 margin-bottom:40px;
 }
 
-
-/ GRID /
+/* GRID */
 
 .grid{
 display:grid;
@@ -180,29 +158,21 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:24px;
 }
 
-
-/ CARDS */
+/* CARDS */
 
 .card{
-
 background:#111;
-
 border:1px solid rgba(255,255,255,.08);
-
 padding:30px;
-
 text-align:center;
-
 text-decoration:none;
 color:white;
-
 border-radius:6px;
-
 transition:.2s;
-
 }
 
 .card:hover{
 border-color:#e23c2f;
 transform:translateY(-6px);
-background:#161616
+background:#161616;
+}
