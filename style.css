@@ -1,20 +1,28 @@
-/* RESET */
+/* =========================
+RESET
+========================= */
 
-*{
+{
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html,body{
+overflow-x:hidden;
 }
 
 body{
 font-family:Arial, Helvetica, sans-serif;
 background:#000;
 color:#fff;
-line-height:1.4;
+line-height:1.5;
 }
 
 
-/* NAVBAR */
+/ =========================
+NAVBAR
+========================= /
 
 nav{
 position:absolute;
@@ -24,24 +32,24 @@ width:100%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:25px 60px;
-z-index:5;
+padding:25px 8%;
+z-index:10;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
 }
 
 .logo .aka{
 color:#e23c2f;
 font-weight:800;
-font-size:28px;
+font-size:26px;
 }
 
 .logo .name{
-font-size:18px;
+font-size:17px;
 letter-spacing:1px;
 }
 
@@ -55,10 +63,15 @@ font-size:14px;
 .menu li{
 opacity:.9;
 cursor:pointer;
+transition:.2s;
+}
+
+.menu li:hover{
+opacity:1;
 }
 
 .menu li.active{
-color:#5fd26c;
+color:#64d36a;
 }
 
 .donate-btn{
@@ -68,21 +81,24 @@ padding:10px 24px;
 color:#fff;
 font-weight:600;
 cursor:pointer;
+border-radius:3px;
 }
 
 
-/* HERO SECTION */
+/ =========================
+HERO SECTION
+========================= /
 
 .hero{
 
 position:relative;
 
-width:100vw;
-height:100vh;
+width:100%;
+min-height:100vh;
 
 background-image:
-linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.75)),
-url("hero.jpg");
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.80)),
+url("hero.jpeg");
 
 background-size:cover;
 background-position:center;
@@ -95,10 +111,10 @@ padding-left:8%;
 }
 
 
-/* HERO TEXT BLOCK */
+/ HERO TEXT /
 
 .hero-content{
-max-width:700px;
+max-width:680px;
 }
 
 .hero-content h1{
@@ -129,7 +145,7 @@ margin-bottom:25px;
 }
 
 
-/* HERO BUTTONS */
+/ HERO BUTTONS /
 
 .hero-buttons{
 display:flex;
@@ -141,14 +157,21 @@ background:#e23c2f;
 padding:14px 28px;
 font-weight:700;
 cursor:pointer;
+border-radius:3px;
 }
 
 .secondary-btn{
 border:1px solid rgba(255,255,255,.7);
 padding:14px 28px;
 cursor:pointer;
+border-radius:3px;
 }
-}
+
+
+/ =========================
+INFO STRIP
+========================= /
+
 .info-strip{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -168,12 +191,13 @@ gap:16px;
 .info-icon svg{
 width:40px;
 height:40px;
-fill:#e02020;
+fill:#e23c2f;
 }
 
 .info-title{
-font-weight:bold;
+font-weight:700;
 margin-bottom:6px;
+letter-spacing:.5px;
 }
 
 .info-list{
@@ -181,15 +205,10 @@ color:#ccc;
 line-height:1.6;
 }
 
-@media (max-width:900px){
 
-.info-strip{
-grid-template-columns:1fr;
-}
-
-}
-
-/* SECTION BELOW HERO */
+/ =========================
+SECTION BELOW HERO
+========================= /
 
 .section-dark{
 background:
@@ -202,9 +221,6 @@ background-position:center;
 padding:90px 0;
 }
 
-
-/* CONTENT WRAPPER */
-
 .container{
 max-width:1100px;
 margin:auto;
@@ -212,7 +228,9 @@ padding:0 20px;
 }
 
 
-/* SECTION TITLES */
+/ =========================
+SECTION TITLES
+========================= /
 
 .section-title{
 text-align:center;
@@ -221,7 +239,9 @@ margin-bottom:40px;
 }
 
 
-/* GRID */
+/ =========================
+GRID
+========================= /
 
 .grid{
 display:grid;
@@ -230,7 +250,7 @@ gap:24px;
 }
 
 
-/* CARDS */
+/ ACTION CARDS /
 
 .card{
 background:#111;
@@ -249,7 +269,9 @@ background:#161616;
 }
 
 
-/* EVIDENCE GRID */
+/ =========================
+EVIDENCE GRID
+========================= /
 
 .evidence-grid{
 display:grid;
@@ -267,13 +289,16 @@ border-radius:6px;
 }
 
 
-/* EMAIL SECTION */
+/ =========================
+EMAIL SIGNUP
+========================= /
 
 .email-box{
 margin-top:40px;
 display:flex;
 justify-content:center;
 gap:10px;
+flex-wrap:wrap;
 }
 
 .email-box input{
@@ -290,10 +315,13 @@ border:none;
 padding:14px 28px;
 font-weight:600;
 color:#fff;
+cursor:pointer;
 }
 
 
-/* MOBILE */
+/ =========================
+MOBILE
+========================= */
 
 @media(max-width:900px){
 
@@ -309,7 +337,8 @@ font-size:42px;
 display:none;
 }
 
+.info-strip{
+grid-template-columns:1fr;
 }
-html,body{
-overflow-x:hidden;
+
 }
