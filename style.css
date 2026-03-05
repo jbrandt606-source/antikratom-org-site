@@ -91,7 +91,7 @@ HERO SECTION
 ============================= */
 
 .hero{
-    background-image:url("images/hero.jpg");
+    background-image:url("hero.jpg");
     background-size:cover;
     background-position:center;
     height:700px;
