@@ -1,92 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AntiKratom.org</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AntiKratom.org – Parents Organizing to End Retail Sales</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for the new homepage sections */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .info-box {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .info-box h3 {
+      color: #d32f2f;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #d32f2f;
+      padding-bottom: 0.5rem;
+    }
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+    .info-list li {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .action-card {
+      background: #f1f1f1;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .action-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .action-card a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      display: block;
+    }
+    .action-card .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .evidence-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .evidence-item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .evidence-item:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .evidence-item h4 {
+      color: #d32f2f;
+      margin-bottom: 0.5rem;
+    }
+    .evidence-item p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .evidence-item a {
+      color: #d32f2f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .testimonial {
+      background: #f9f9f9;
+      padding: 3rem 2rem;
+      border-radius: 8px;
+      margin: 3rem 0;
+      text-align: center;
+      font-style: italic;
+      border-left: 5px solid #d32f2f;
+    }
+    .testimonial p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+    }
+    .testimonial .author {
+      font-style: normal;
+      font-weight: 600;
+      color: #d32f2f;
+    }
+
+    .signup-form {
+      display: flex;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
+    .signup-form input {
+      flex: 1;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .signup-form button {
+      padding: 0.8rem 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      .signup-form {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <a href="#" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
-            <nav class="nav">
-                <a href="evidence/index.html">Evidence</a>
-                <a href="#industry">Industry</a>
-                <a href="#action">Take Action</a>
-                
-                <a href="#about">Contact</a>
-            </nav>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="evidence/index.html">Evidence</a>
+        <a href="#industry">Industry</a>
+        <a href="#action">Take Action</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section – more powerful headline -->
+    <section class="hero" style="background-image: url('hero.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>SOLD IN GAS STATIONS.<br>MARKETED AS “SAFE.”<br>DESTROYING FAMILIES.</h1>
+        <p>Unregulated psychoactive products are being sold next to energy drinks and vape cartridges. Parents across the country are speaking out.</p>
+        <div class="hero-buttons">
+          <a href="evidence/index.html" class="btn btn-light">READ THE EVIDENCE &gt;</a>
+          <a href="#action" class="btn btn-red">TAKE ACTION NOW &gt;</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero section with background image -->
-        <section class="hero" style="background-image: url('hero.jpg');">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1>KRATOM SOLD IN<br>GAS STATIONS<br>ACROSS AMERICA</h1>
-                <p>Unregulated psychoactive products are being sold next to energy drinks and vape cartridges. Parents across the country are speaking out.</p>
-                <div class="hero-buttons">
-                    <a href="evidence/index.html" class="btn btn-light">READ THE EVIDENCE &gt;</a>
-                    <a href="#action" class="btn btn-red">TAKE ACTION &gt;</a>
-                </div>
-            </div>
-        </section>
+    <!-- New 3‑column info section: where it's sold, who it targets, what happens -->
+    <div class="container" style="margin-top: 3rem;">
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>📍 WHERE IT'S SOLD</h3>
+          <ul class="info-list">
+            <li>GAS STATIONS</li>
+            <li>VAPE SHOPS</li>
+            <li>ONLINE RETAILERS</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>🎯 WHO IT TARGETS</h3>
+          <ul class="info-list">
+            <li>TEENS</li>
+            <li>YOUNG ADULTS</li>
+            <li>PEOPLE IN RECOVERY</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>⚠️ WHAT HAPPENS</h3>
+          <ul class="info-list">
+            <li>ADDICTION</li>
+            <li>WITHDRAWAL</li>
+            <li>ER VISITS</li>
+            <li>DEATHS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-       
-
-        <!-- Industry section (dark background) -->
-<section id="industry" class="section bg-dark">
-    <div class="container">
+    <!-- Industry section (unchanged, but you can keep it) -->
+    <section id="industry" class="section bg-dark">
+      <div class="container">
         <h2>The Industry</h2>
         <p class="section-lead">
-            While kratom is sold in gas stations and convenience stores, the industry behind it has systematically 
-            <strong>misled lawmakers and the public</strong> about its dangers. Below are three documented examples 
-            of how the kratom lobby has manipulated testimony and suppressed evidence.
+          While kratom is sold in gas stations and convenience stores, the industry behind it has systematically 
+          <strong>misled lawmakers and the public</strong> about its dangers. Below are three documented examples 
+          of how the kratom lobby has manipulated testimony and suppressed evidence.
         </p>
-
-        <!-- Three buttons linking to industry deception stories -->
         <div class="section-action" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-            <a href="industry/narrative.html" class="btn btn-outline">📄 THE INDUSTRY NARRATIVE &gt;</a>
-            <a href="industry/oxycontin.html" class="btn btn-outline">💊 SIMILARITIES TO OXYCONTIN &gt;</a>
-            <a href="industry/kansas.html" class="btn btn-outline">🌾 HOW KANSAS WAS MISLED &gt;</a>
+          <a href="industry/narrative.html" class="btn btn-outline">📄 THE INDUSTRY NARRATIVE &gt;</a>
+          <a href="industry/oxycontin.html" class="btn btn-outline">💊 SIMILARITIES TO OXYCONTIN &gt;</a>
+          <a href="industry/kansas.html" class="btn btn-outline">🌾 HOW KANSAS WAS MISLED &gt;</a>
         </div>
-
         <!-- Additional industry documents (optional) -->
         <p style="margin-top: 2rem; color: #ccc; font-size: 0.9rem;">
-            Additional testimonies and memos: 
-            <a href="industry/Akamemorandum.pdf" style="color: white; text-decoration: underline;">AK Memo</a> · 
-            <a href="industry/Marylandtestimony.pdf" style="color: white; text-decoration: underline;">MD Testimony</a> · 
-            <a href="industry/Michigan%20aka%20testimony.pdf" style="color: white; text-decoration: underline;">MI Testimony</a> · 
-            <a href="industry/Nebraskatestimony.pdf" style="color: white; text-decoration: underline;">NE Testimony</a> · 
-            <a href="industry/Pennsylvaniaakamemo2023.pdf" style="color: white; text-decoration: underline;">PA Memo</a> · 
-            <a href="industry/Rhodeislandtestimony.pdf" style="color: white; text-decoration: underline;">RI Testimony</a>
+          Additional testimonies and memos: 
+          <a href="industry/Akamemorandum.pdf" style="color: white; text-decoration: underline;">AK Memo</a> · 
+          <a href="industry/Marylandtestimony.pdf" style="color: white; text-decoration: underline;">MD Testimony</a> · 
+          <a href="industry/Michigan%20aka%20testimony.pdf" style="color: white; text-decoration: underline;">MI Testimony</a> · 
+          <a href="industry/Nebraskatestimony.pdf" style="color: white; text-decoration: underline;">NE Testimony</a> · 
+          <a href="industry/Pennsylvaniaakamemo2023.pdf" style="color: white; text-decoration: underline;">PA Memo</a> · 
+          <a href="industry/Rhodeislandtestimony.pdf" style="color: white; text-decoration: underline;">RI Testimony</a>
         </p>
+      </div>
+    </section>
+
+    <!-- Expanded Take Action section with multiple options -->
+    <section id="action" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">Take Action Now</h2>
+        <div class="action-grid">
+          <div class="action-card">
+            <a href="legislator.html">
+              <div class="emoji">📧</div>
+              <h4>EMAIL YOUR LEGISLATOR</h4>
+            </a>
+          </div>
+          <div class="action-card">
+            <a href="#">
+              <div class="emoji">📤</div>
+              <h4>SUBMIT PUBLIC COMMENT</h4>
+            </a>
+          </div>
+          <div class="action-card">
+            <a href="#">
+              <div class="emoji">📣</div>
+              <h4>REPORT A RETAILER</h4>
+            </a>
+          </div>
+          <div class="action-card">
+            <a href="industry/testimony-tips.html">
+              <div class="emoji">🔍</div>
+              <h4>TESTIMONY TIPS</h4>
+            </a>
+          </div>
+          <div class="action-card">
+            <a href="#">
+              <div class="emoji">🕒</div>
+              <h4>START A PARENT CHAPTER</h4>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links to legislator, share, story (as before) -->
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+          <a href="legislator.html" class="btn btn-dark">CONTACT YOUR LEGISLATORS &gt;</a>
+          <a href="share.html" class="btn btn-dark">SHARE THIS ISSUE &gt;</a>
+          <a href="submit-your-story.html" class="btn btn-dark">SUBMIT YOUR STORY &gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evidence preview section -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 style="text-align: center;">The Evidence</h2>
+        <div class="evidence-preview">
+          <div class="evidence-item">
+            <h4>FDA WARNINGS</h4>
+            <p>Official statements on kratom risks.</p>
+            <a href="evidence/fdaposition/">Read more →</a>
+          </div>
+          <div class="evidence-item">
+            <h4>NDI DENIAL</h4>
+            <p>FDA rejection of Johnson Foods kratom.</p>
+            <a href="evidence/fdadenial/">Read more →</a>
+          </div>
+          <div class="evidence-item">
+            <h4>POISON CENTER DATA</h4>
+            <p>Exposures and severity trends.</p>
+            <a href="evidence/poisoncontrol/poisoncontrol.html">Read more →</a>
+          </div>
+          <div class="evidence-item">
+            <h4>DEATH REPORTS</h4>
+            <p>CDC SUDORS mortality data.</p>
+            <a href="evidence/death/">Read more →</a>
+          </div>
+          <div class="evidence-item">
+            <h4>RESEARCH STUDIES</h4>
+            <p>Controlled human studies – the truth.</p>
+            <a href="evidence/research/">Read more →</a>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="evidence/index.html" class="btn btn-primary">BROWSE FULL EVIDENCE LIBRARY →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parent voices testimonial -->
+    <div class="container">
+      <div class="testimonial">
+        <p>“We didn't know what it was until it was too late. It was next to the energy drinks.”</p>
+        <p class="author">— Parent from Ohio</p>
+      </div>
     </div>
-</section>
 
-       <!-- Two‑column: Take Action + About / contact form -->
-<section id="action" class="section">
-    <div class="container two-col">
-        <!-- Left: Take Action -->
-        <div class="action-col">
-            <h2>Take Action</h2>
-            <p class="section-lead">Families across the country are asking lawmakers to remove kratom from retail shelves.</p>
-            <div class="action-buttons">
-                <a href="legislator.html" class="btn btn-dark btn-block">CONTACT YOUR LEGISLATORS &gt;</a>
-                <a href="share.html" class="btn btn-dark btn-block">SHARE THIS ISSUE &gt;</a>
-                <a href="testimony.html.html" class="btn btn-dark btn-block">TESTIMONY TIPS &gt;</a>
-                
-            </div>
-        </div>
-        
-</section>
+    <!-- Join the movement / newsletter signup -->
+    <section class="section" style="background: #f1f1f1; text-align: center;">
+      <div class="container">
+        <h2>Join the Movement</h2>
+        <p style="font-size: 1.2rem;">Remove retail kratom from our communities.</p>
+        <form class="signup-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-red">JOIN US</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-        <div class="container footer-container">
-            <p>&copy; AntiKratom.org</p>
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; AntiKratom.org — Parents Organizing to End Retail Sales</p>
+    </div>
+  </footer>
 </body>
 </html>
