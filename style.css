@@ -1,4 +1,5 @@
-/* style.css */
+/* style.css – AntiKratom.org (homepage + evidence library) */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header (homepage) */
 .header {
     background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -55,7 +56,7 @@ body {
     color: #d32f2f;
 }
 
-/* Hero */
+/* Hero (used on both pages) */
 .hero {
     position: relative;
     background-size: cover;
@@ -76,6 +77,9 @@ body {
     position: relative;
     z-index: 2;
     max-width: 800px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .hero-content h1 {
@@ -97,7 +101,7 @@ body {
 }
 
 /* Buttons */
-.btn {
+.btn, .btn-primary, .btn-red, .btn-light, .btn-dark, .btn-outline {
     display: inline-block;
     padding: 0.9rem 2rem;
     border-radius: 4px;
@@ -105,14 +109,16 @@ body {
     font-weight: 600;
     transition: 0.2s;
     border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
 }
 
-.btn-light {
+.btn-light, .btn-primary /* make btn-primary look like btn-light by default? we'll define separately */ {
     background: white;
     color: #222;
 }
 
-.btn-light:hover {
+.btn-light:hover, .btn-primary:hover {
     background: transparent;
     color: white;
     border-color: white;
@@ -154,12 +160,23 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Specific for evidence page button – make it match homepage red button */
+.btn-primary {
+    background: #d32f2f;
+    color: white;
+    border: 2px solid transparent;
+}
+.btn-primary:hover {
+    background: #b71c1c;
+    border-color: white;
+}
+
 /* Sections */
-.section {
+.section, .evidence-section {
     padding: 5rem 0;
 }
 
-.section h2 {
+.section h2, .evidence-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -180,28 +197,37 @@ body {
     color: #ccc;
 }
 
-/* Card grid */
-.card-grid {
+/* Card grid (homepage & evidence) */
+.card-grid, .evidence-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.card {
+.card, .evidence-grid .card {
     background: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card h3 {
+.card:hover, .evidence-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h3, .evidence-grid .card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     color: #d32f2f;
 }
 
-.card p {
-    margin-bottom: 1.5rem;
+.card p, .evidence-grid .card p {
+    margin-bottom: 0;
     color: #444;
 }
 
@@ -215,7 +241,7 @@ body {
     text-decoration: underline;
 }
 
-/* Pill group */
+/* Pill group (industry section) */
 .pill-group {
     margin: 2rem 0;
 }
@@ -236,7 +262,7 @@ body {
     margin-top: 2rem;
 }
 
-/* Two column layout */
+/* Two column layout (homepage) */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -292,7 +318,7 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .card-grid {
+    .card-grid, .evidence-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .two-col {
@@ -313,13 +339,13 @@ body {
     .nav a {
         margin: 0 0.5rem;
     }
-    .card-grid {
+    .card-grid, .evidence-grid {
         grid-template-columns: 1fr;
     }
     .hero-buttons {
         flex-direction: column;
     }
-    .btn {
+    .btn, .btn-primary {
         text-align: center;
     }
 }
