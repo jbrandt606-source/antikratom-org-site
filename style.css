@@ -149,8 +149,6 @@ padding:14px 28px;
 cursor:pointer;
 }
 }
-/* INFO STRIP UNDER HERO /
-
 .info-strip{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -171,13 +169,11 @@ gap:16px;
 width:40px;
 height:40px;
 fill:#e02020;
-flex-shrink:0;
 }
 
 .info-title{
 font-weight:bold;
-letter-spacing:.5px;
-margin-bottom:8px;
+margin-bottom:6px;
 }
 
 .info-list{
@@ -185,13 +181,12 @@ color:#ccc;
 line-height:1.6;
 }
 
-/ MOBILE */
-
 @media (max-width:900px){
 
 .info-strip{
 grid-template-columns:1fr;
-gap:30px;
+}
+
 }
 
 /* SECTION BELOW HERO */
