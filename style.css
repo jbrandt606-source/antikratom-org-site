@@ -148,7 +148,51 @@ border:1px solid rgba(255,255,255,.7);
 padding:14px 28px;
 cursor:pointer;
 }
+}
+/* INFO STRIP UNDER HERO /
 
+.info-strip{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+padding:60px 8%;
+background:#0f0f0f;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+}
+
+.info-box{
+display:flex;
+align-items:flex-start;
+gap:16px;
+}
+
+.info-icon svg{
+width:40px;
+height:40px;
+fill:#e02020;
+flex-shrink:0;
+}
+
+.info-title{
+font-weight:bold;
+letter-spacing:.5px;
+margin-bottom:8px;
+}
+
+.info-list{
+color:#ccc;
+line-height:1.6;
+}
+
+/ MOBILE */
+
+@media (max-width:900px){
+
+.info-strip{
+grid-template-columns:1fr;
+gap:30px;
+}
 
 /* SECTION BELOW HERO */
 
