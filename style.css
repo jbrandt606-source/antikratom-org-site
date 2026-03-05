@@ -1,0 +1,166 @@
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#000;
+color:white;
+line-height:1.6;
+}
+
+
+/ HERO /
+
+.hero{
+
+min-height:90vh;
+
+background:
+linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.9)),
+url("hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:700px;
+padding-left:8%;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#e23c2f;
+}
+
+.tagline{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.red{
+color:#ff3d3d;
+}
+
+.subtext{
+color:#ccc;
+margin-bottom:25px;
+}
+
+
+/ BUTTONS /
+
+.hero-buttons{
+display:flex;
+gap:12px;
+}
+
+.btn-primary{
+background:#e23c2f;
+padding:12px 20px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-secondary{
+border:1px solid white;
+padding:12px 20px;
+text-decoration:none;
+color:white;
+}
+
+
+/ EVIDENCE SECTION /
+
+.evidence-section{
+
+padding:80px 8%;
+
+background:
+linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.95)),
+url("section-bg-kratom-dark.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.evidence-section h2{
+font-size:36px;
+margin-bottom:30px;
+}
+
+
+/ GRID /
+
+.evidence-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+
+/ CARDS /
+
+.card{
+
+background:#111;
+
+border:1px solid #222;
+
+padding:28px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+color:white;
+
+transition:0.2s;
+
+}
+
+.card:hover{
+
+border-color:#e23c2f;
+
+transform:translateY(-6px);
+
+background:#151515;
+
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+.card p{
+color:#bbb;
+font-size:14px;
+}
+
+
+/ FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+color:#aaa;
+}
