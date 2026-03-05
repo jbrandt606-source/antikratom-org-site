@@ -68,13 +68,17 @@ cursor:pointer;
 
 .hero{
 height:100vh;
-background:
+
+background-image:
 linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.85)),
 url("hero.jpg");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
+
 padding-left:8%;
 }
 
