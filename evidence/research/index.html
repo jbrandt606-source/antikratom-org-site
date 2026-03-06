@@ -2,228 +2,521 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Human Kratom Studies – The Reality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Research · The Studies They Misrepresent</title>
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="../../style.css">
   <style>
-    /* Additional harsh styling – keep the same look, but we can add a warning banner */
-    .card-header .icon {
-      width: 24px;
-      height: 24px;
-      fill: #d32f2f;
-      margin-right: 0.5rem;
-      vertical-align: middle;
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid #d32f2f;
-      color: #d32f2f;
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
     }
-    .btn-secondary:hover {
-      background: #d32f2f;
+
+    /* Hero section with evidence.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('evidence.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
       color: white;
     }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Warning note / red flag box */
     .warning-note {
-      background: #ffebee;
-      border-left: 5px solid #d32f2f;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 0 8px 8px 0;
+      background: rgba(180, 43, 43, 0.2);
+      border-left: 6px solid #b42b2b;
+      padding: 20px;
+      margin: 25px 0;
     }
+
     .warning-note h3 {
-      color: #b71c1c;
+      color: #e4b23e;
       margin-top: 0;
+      margin-bottom: 10px;
     }
+
     .study-flaw {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Context link */
+    .context-link {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 18px;
+      margin: 30px 0;
+      border: 2px solid #e4b23e;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .context-link a {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #b42b2b;
+      word-break: break-word;
+    }
+
+    .context-link a:hover {
+      color: white;
+    }
+
+    /* Takeaways box */
+    .takeaways {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .takeaways h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    .takeaways ul {
+      list-style: none;
+    }
+
+    .takeaways li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .takeaways li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.3rem;
+      color: #e4b23e;
+    }
+
+    /* Callout box */
+    .callout {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 18px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+      .content-card h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Standard header -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="../../index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
       <nav class="nav">
-        <a href="../../index.html">Home</a>
-        <a href="../index.html">Evidence</a>
-        <a href="./index.html" class="active">Human Studies</a>
+        <a href="../../index.html">HOME</a>
+        <a href="../index.html">EVIDENCE</a>
+        <a href="../../industry/index.html">INDUSTRY</a>
+        <a href="../../fight-back/index.html">FIGHT BACK</a>
+        <a href="../../about/index.html">ABOUT</a>
+        <a href="../../contact/index.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero with sharper message -->
-    <section class="hero" style="background-image: url('../../hero.jpg');">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Human <span class="red">Kratom Studies</span></h1>
-        <p style="font-size: 1.3rem;">
-          Controlled trials that advocates misrepresent as "proof of safety."  
-          A closer look reveals the opposite: frequent adverse events, liver enzyme elevations, 
-          and clear signals of abuse potential – all under ideal, short-term conditions.
+  <!-- Hero with evidence.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>Human Research</span> The Studies They Misrepresent</h1>
+      <p>
+        Controlled trials that advocates misquote as "proof of safety."  
+        A closer look reveals frequent adverse events, liver damage, and clear abuse potential – 
+        all under ideal, short-term conditions.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#studies">Read the Truth</a>
+        <a class="btn btn-secondary" href="../index.html">Evidence Hub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Context link -->
+    <div class="context-link">
+      ⚠️ <strong>Industry spin:</strong> "Clinical studies prove kratom is safe." They omit the fine print: liver injuries, participant withdrawals, and funding from the companies selling the product.
+      <a href="../index.html">Return to Evidence →</a>
+    </div>
+
+    <!-- Overview card – harsh critical lens -->
+    <div class="content-card" id="overview">
+      <h2>What These Studies Actually Show</h2>
+      <p>
+        Advocates point to a handful of short-term, industry-funded trials as evidence that kratom is "safe." 
+        But a careful reading reveals serious red flags that are conveniently omitted from their talking points:
+      </p>
+      <ul>
+        <li>All studies were conducted in <strong>healthy, medically screened adults</strong> under close supervision – nothing like the gas station buyer with unknown health conditions.</li>
+        <li>Doses were carefully measured, pure leaf powder – <strong>not the adulterated, variable products sold on the street.</strong></li>
+        <li>Even under these ideal conditions, participants experienced <strong>dizziness, nausea, sedation, and clinically significant liver enzyme elevations</strong> – some requiring withdrawal from the study.</li>
+        <li>The most potent metabolite, 7‑hydroxymitragynine, is formed in the body and accumulates with repeated use – its potency raises serious concerns about dependence.</li>
+        <li>Subjective effects like "drug liking" and "high" were dose‑dependent, confirming abuse liability in a population of recreational drug users.</li>
+      </ul>
+    </div>
+
+    <!-- Studies section -->
+    <section id="studies">
+
+      <!-- Card 1: Huestis Safety Trial -->
+      <div class="content-card">
+        <h3>⛔ Huestis Safety & Tolerability Trial (2026) – The Fine Print</h3>
+        <p>
+          This industry‑funded trial (Johnson Foods) is often cited as proof of safety.  
+          But the data tell a different story:
         </p>
-        <div class="hero-buttons">
-          <a class="btn-primary" href="#studies">Read the Truth</a>
-          <a class="btn-secondary" href="../../index.html">Home</a>
+        <ul>
+          <li><strong>116 participants, but 6 were withdrawn early</strong> because of adverse events – including one with “seizure‑like activity” after a single dose.</li>
+          <li><strong>Liver enzyme elevations</strong> (ALT/AST) forced termination in multiple participants; one case met study criteria for stopping dosing.</li>
+          <li><strong>Severe adverse events</strong> included vasovagal syncope, gastroenteritis, and one case of uterine hemorrhage – the latter never before reported and unresolved at study end.</li>
+          <li><strong>Dose‑dependent increase in TEAEs</strong> – at the highest dose, <strong>98% of participants had mild events</strong> (nausea, dizziness, vomiting), and 2% moderate – in a controlled clinical setting.</li>
+        </ul>
+        <div class="warning-note">
+          <h3>⚠️ Advocates won't tell you this</h3>
+          <p>
+            The Huestis safety trial itself reported that <strong>6 participants were withdrawn early due to adverse events</strong> including elevated liver enzymes and severe gastroenteritis. 
+            The "safe and well tolerated" conclusion applies only to the very narrow conditions of the study – and even then, the data show cause for alarm.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="./Huestis%20study%202026.pdf" target="_blank">Read the Full Study (PDF)</a>
+        <div class="study-flaw">
+          Bottom line: Even under ideal conditions, kratom produced enough toxicity to halt dosing in several subjects. Imagine the same product sold indiscriminately to the public.
+        </div>
+      </div>
+
+      <!-- Card 2: Pharmacokinetic Study (2024) -->
+      <div class="content-card">
+        <h3>⛔ Human Pharmacokinetics (2024) – The Metabolite Problem</h3>
+        <p>
+          This study reveals why daily use is dangerous: the active metabolite 7‑OH‑mitragynine accumulates in the body.
+        </p>
+        <ul>
+          <li><strong>7‑OH is 13‑fold more potent at the mu‑opioid receptor</strong> than mitragynine, and it is produced internally – meaning users are effectively dosing themselves with a stronger opioid every day.</li>
+          <li><strong>Steady state takes 8–9 days</strong>, and the half‑life is extremely long (40–60 hours), leading to accumulation and increasing withdrawal risk.</li>
+          <li>Concentration ratios of 7‑OH/mitragynine were <strong>higher after single doses than after repeated doses</strong>, suggesting the body tries to limit exposure – a sign of toxicity.</li>
+        </ul>
+        <a class="btn btn-primary" href="./Huestis%20PK%202024.pdf" target="_blank">Read PK Study (PDF)</a>
+        <div class="study-flaw">
+          Advocates ignore that the “safe” parent compound is converted into a much more potent opioid inside the user.
+        </div>
+      </div>
+
+      <!-- Card 3: FDA-Registered Study (NCT06072170) -->
+      <div class="content-card">
+        <h3>⛔ FDA-Registered Clinical Study (NCT06072170)</h3>
+        <p>
+          This study enrolled <strong>recreational polydrug users with opioid experience</strong> – exactly the population susceptible to abuse. 
+          The results confirm what we already knew:
+        </p>
+        <ul>
+          <li>At the highest dose (12 g), <strong>drug liking scores were significantly elevated</strong> compared to placebo (mean 68.7 vs 50.2).</li>
+          <li><strong>"High" scores skyrocketed</strong> at the top dose (mean 46.3 vs 0.4 for placebo), with a p‑value &lt;0.001 – clear evidence of psychoactive effect.</li>
+          <li><strong>Adverse events were dose‑dependent</strong>: 5 of 6 subjects in the 8 g and 10 g cohorts reported events (somnolence, nausea, vomiting).</li>
+          <li>The study population was <strong>not representative of the general public</strong> – they were chosen because they seek out drug effects.</li>
+        </ul>
+        <a class="btn btn-primary" href="https://clinicaltrials.gov/study/NCT06072170?tab=results" target="_blank">View Results on ClinicalTrials.gov</a>
+        <div class="study-flaw">
+          This is not a safety study – it's an abuse liability study, and the results are alarming.
+        </div>
+      </div>
+
+      <!-- Card 4: The Advocates' Deception -->
+      <div class="content-card">
+        <h3>⛔ What the Advocates Won't Tell You</h3>
+        <ul>
+          <li><strong>These studies used pure, tested kratom powder – not the gas station products laced with heavy metals, salmonella, or synthetic adulterants.</strong> Real‑world kratom is far more dangerous.</li>
+          <li><strong>All participants were healthy, medically screened adults.</strong> No one with liver disease, heart conditions, or on medications – the typical consumer is excluded.</li>
+          <li><strong>Duration was only 15 days.</strong> No data on long‑term addiction, organ damage, or withdrawal severity after months of use.</li>
+          <li><strong>Industry funding (Johnson Foods) creates a clear conflict of interest.</strong> The authors are paid consultants of the company selling kratom.</li>
+          <li><strong>The very existence of these studies proves nothing about safety in the real world.</strong> They are being weaponized to lobby against regulation while the real victims – families dealing with addiction and death – are ignored.</li>
+        </ul>
+        <div class="warning-note">
+          <p style="margin:0; font-weight:600; color:#e4b23e;">
+            ⚠️ These studies, when read honestly, provide no justification for keeping kratom on retail shelves. They actually strengthen the case for a ban.
+          </p>
         </div>
       </div>
     </section>
 
-    <div class="container" style="margin: 2rem auto;">
-      <!-- Overview card – now with a critical lens -->
-      <section class="card" id="overview">
-        <div class="card-header">
-          <svg class="icon" viewBox="0 0 24 24">
-            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
-          </svg>
-          What These Studies Actually Show
-        </div>
-        <div class="card-body">
-          <p>
-            Advocates point to a handful of short-term, industry-funded trials as evidence that kratom is "safe." 
-            But a careful reading reveals serious red flags that are conveniently omitted from their talking points:
-          </p>
-          <ul>
-            <li>All studies were conducted in <strong>healthy, medically screened adults</strong> under close supervision – nothing like the gas station buyer with unknown health conditions.</li>
-            <li>Doses were carefully measured, pure leaf powder – <strong>not the adulterated, variable products sold on the street.</strong></li>
-            <li>Even under these ideal conditions, participants experienced <strong>dizziness, nausea, sedation, and clinically significant liver enzyme elevations</strong> – some requiring withdrawal from the study.</li>
-            <li>The most potent metabolite, 7‑hydroxymitragynine, is formed in the body and accumulates with repeated use – its potency raises serious concerns about dependence.</li>
-            <li>Subjective effects like "drug liking" and "high" were dose‑dependent, confirming abuse liability in a population of recreational drug users.</li>
-          </ul>
-          <div class="warning-note">
-            <h3>⚠️ Advocates won't tell you this</h3>
-            <p>
-              The Huestis safety trial itself reported that <strong>6 participants were withdrawn early due to adverse events</strong> including elevated liver enzymes and severe gastroenteritis. 
-              The "safe and well tolerated" conclusion applies only to the very narrow conditions of the study – and even then, the data show cause for alarm.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Studies section with harsh commentary -->
-      <section id="studies">
-        <!-- Card 1: Huestis Safety Trial -->
-        <div class="card">
-          <div class="card-header">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M19 2H9C7.9 2 7 2.9 7 4v16h12z"/>
-            </svg>
-            Huestis Safety & Tolerability Trial (2026) – The Fine Print
-          </div>
-          <div class="card-body">
-            <p>
-              This industry‑funded trial (Johnson Foods) is often cited as proof of safety.  
-              But the data tell a different story:
-            </p>
-            <ul>
-              <li><strong>116 participants, but 6 were withdrawn early</strong> because of adverse events – including one with “seizure‑like activity” after a single dose.</li>
-              <li><strong>Liver enzyme elevations</strong> (ALT/AST) forced termination in multiple participants; one case met study criteria for stopping dosing.</li>
-              <li><strong>Severe adverse events</strong> included vasovagal syncope, gastroenteritis, and one case of uterine hemorrhage – the latter never before reported and unresolved at study end.</li>
-              <li><strong>Dose‑dependent increase in TEAEs</strong> – at the highest dose, <strong>98% of participants had mild events</strong> (nausea, dizziness, vomiting), and 2% moderate – in a controlled clinical setting.</li>
-            </ul>
-            <p class="study-flaw">
-              Bottom line: Even under ideal conditions, kratom produced enough toxicity to halt dosing in several subjects. 
-              Imagine the same product sold indiscriminately to the public.
-            </p>
-            <a class="btn-primary" href="./Huestis%20study%202026.pdf" target="_blank">Read the Full Study (PDF)</a>
-          </div>
-        </div>
-
-        <!-- Card 2: Pharmacokinetic Study (2024) -->
-        <div class="card">
-          <div class="card-header">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-            </svg>
-            Human Pharmacokinetics (2024) – The Metabolite Problem
-          </div>
-          <div class="card-body">
-            <p>
-              This study reveals why daily use is dangerous: the active metabolite 7‑OH‑mitragynine accumulates in the body.
-            </p>
-            <ul>
-              <li><strong>7‑OH is 13‑fold more potent at the mu‑opioid receptor</strong> than mitragynine, and it is produced internally – meaning users are effectively dosing themselves with a stronger opioid every day.</li>
-              <li><strong>Steady state takes 8–9 days</strong>, and the half‑life is extremely long (40–60 hours), leading to accumulation and increasing withdrawal risk.</li>
-              <li>Concentration ratios of 7‑OH/mitragynine were <strong>higher after single doses than after repeated doses</strong>, suggesting the body tries to limit exposure – a sign of toxicity.</li>
-            </ul>
-            <p class="study-flaw">
-              Advocates ignore that the “safe” parent compound is converted into a much more potent opioid inside the user.
-            </p>
-            <a class="btn-primary" href="./Huestis%20PK%202024.pdf" target="_blank">Read PK Study (PDF)</a>
-          </div>
-        </div>
-
-        <!-- Card 3: FDA-Registered Study (NCT06072170) -->
-        <div class="card">
-          <div class="card-header">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M1 21h22L12 2 1 21z"/>
-            </svg>
-            FDA-Registered Clinical Study (NCT06072170)
-          </div>
-          <div class="card-body">
-            <p>
-              This study enrolled <strong>recreational polydrug users with opioid experience</strong> – exactly the population susceptible to abuse. 
-              The results confirm what we already knew:
-            </p>
-            <ul>
-              <li>At the highest dose (12 g), <strong>drug liking scores were significantly elevated</strong> compared to placebo (mean 68.7 vs 50.2).</li>
-              <li><strong>"High" scores skyrocketed</strong> at the top dose (mean 46.3 vs 0.4 for placebo), with a p‑value &lt;0.001 – clear evidence of psychoactive effect.</li>
-              <li><strong>Adverse events were dose‑dependent</strong>: 5 of 6 subjects in the 8 g and 10 g cohorts reported events (somnolence, nausea, vomiting).</li>
-              <li>The study population was <strong>not representative of the general public</strong> – they were chosen because they seek out drug effects.</li>
-            </ul>
-            <p class="study-flaw">
-              This is not a safety study – it's an abuse liability study, and the results are alarming.
-            </p>
-            <a class="btn-primary" href="https://clinicaltrials.gov/study/NCT06072170?tab=results" target="_blank">View Results on ClinicalTrials.gov</a>
-          </div>
-        </div>
-
-        <!-- Card 4: The Advocates' Deception -->
-        <div class="card">
-          <div class="card-header">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M12 2l4 8 8 4-8 4-4 8-4-8-8-4 8-4z"/>
-            </svg>
-            What the Advocates Won't Tell You
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>These studies used pure, tested kratom powder – not the gas station products laced with heavy metals, salmonella, or synthetic adulterants.</strong> Real‑world kratom is far more dangerous.</li>
-              <li><strong>All participants were healthy, medically screened adults.</strong> No one with liver disease, heart conditions, or on medications – the typical consumer is excluded.</li>
-              <li><strong>Duration was only 15 days.</strong> No data on long‑term addiction, organ damage, or withdrawal severity after months of use.</li>
-              <li><strong>Industry funding (Johnson Foods) creates a clear conflict of interest.</strong> The authors are paid consultants of the company selling kratom.</li>
-              <li><strong>The very existence of these studies proves nothing about safety in the real world.</strong> They are being weaponized to lobby against regulation while the real victims – families dealing with addiction and death – are ignored.</li>
-            </ul>
-            <div style="background: #f9f9f9; padding: 1rem; border-radius: 4px; margin-top: 1rem;">
-              <p style="margin: 0; font-weight: 600; color: #b71c1c;">
-                ⚠️ These studies, when read honestly, provide no justification for keeping kratom on retail shelves. They actually strengthen the case for a ban.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Back to Evidence link -->
-      <div style="margin: 3rem 0; text-align: center;">
-        <a class="btn-secondary" href="../index.html">
-          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
-            <path d="M15 18l-6-6 6-6v12z"></path>
-          </svg>
-          Back to Evidence Library
-        </a>
-      </div>
+    <!-- Key Takeaways -->
+    <div class="takeaways">
+      <h3>⛔ Key Takeaways</h3>
+      <ul>
+        <li><strong>Even in controlled settings, people get sick.</strong> Liver damage, seizures, and severe nausea – all documented in the industry's own studies.</li>
+        <li><strong>The metabolite problem is hidden.</strong> Users don't know they're being exposed to a potent opioid agonist formed inside their own bodies.</li>
+        <li><strong>Abuse potential is real.</strong> The FDA‑registered study proves that people seek out and enjoy kratom's psychoactive effects – that's not "wellness," it's drug abuse.</li>
+        <li><strong>Industry funding taints the science.</strong> Every study cited as "proof of safety" was paid for by the companies that profit from kratom sales.</li>
+        <li><strong>Real‑world use is far riskier.</strong> Contaminated products, unknown doses, and lack of medical supervision make gas station kratom a public health menace.</li>
+      </ul>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <p>&copy; AntiKratom.org — Human Studies: The Uncomfortable Truth</p>
+    <!-- Fact-check industry lies -->
+    <div class="callout">
+      <div class="callout-title">📢 The industry’s talking points, fact‑checked</div>
+      <p><strong>Industry lie:</strong> "Clinical trials prove kratom is safe."<br> 
+      <strong>Truth:</strong> Those same trials show participants withdrawing due to liver injury and severe adverse events. That's not safety – that's a warning.</p>
+      <p><strong>Industry lie:</strong> "Kratom doesn't act like an opioid."<br> 
+      <strong>Truth:</strong> The pharmacokinetic study shows it's metabolized into a potent mu‑opioid agonist. The clinical study shows users experience a "high." That's opioid activity.</p>
+      <p><strong>Industry lie:</strong> "More research is needed before regulating."<br> 
+      <strong>Truth:</strong> The research already exists – and it confirms kratom is dangerous. "More research" is just a delay tactic.</p>
     </div>
-  </footer>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="../index.html">← Back to Evidence</a>
+      <a class="btn btn-primary" href="./Huestis%20study%202026.pdf" target="_blank">Open Key Study</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">← Back to Evidence Hub</a> | <a href="../../industry/index.html">Industry Narratives</a></p>
+      <p style="margin-top:10px;">Hero image: evidence.jpg — the studies they twist.</p>
+    </div>
+  </div>
 </body>
 </html>
