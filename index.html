@@ -236,7 +236,7 @@
       margin-right: 12px;
     }
 
-    /* TAKE ACTION NOW section (like image 3) */
+    /* TAKE ACTION NOW section (updated with new items) */
     .action-section {
       background-color: #0c151f;
       color: white;
@@ -256,31 +256,31 @@
 
     .action-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 25px;
-      margin: 50px 0 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 50px 0 30px;
     }
 
     .action-item {
       background: rgba(255, 255, 255, 0.05);
-      padding: 28px 12px;
+      padding: 24px 16px;
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       transition: 0.2s;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
 
     .action-item:hover {
-      background: rgba(180, 43, 43, 0.3);
+      background: rgba(180, 43, 43, 0.4);
       border-color: #e4b23e;
     }
 
     .action-item a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.15rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
       display: block;
     }
 
@@ -512,67 +512,46 @@
       </div>
     </section>
 
-    <div class="container">
-      <!-- three-column info (where sold / who targeted / what happens) -->
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>WHERE IT’S SOLD</h3>
-          <ul class="info-list">
-            <li>Gas stations</li>
-            <li>Vape shops</li>
-            <li>Online retailers</li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h3>WHO IT TARGETS</h3>
-          <ul class="info-list">
-            <li>Teens & young adults</li>
-            <li>People in recovery</li>
-            <li>Unsuspecting consumers</li>
-          </ul>
-        </div>
-        <div class="info-card">
-          <h3>WHAT HAPPENS</h3>
-          <ul class="info-list">
-            <li>Addiction & withdrawal</li>
-            <li>ER visits / poison control calls</li>
-            <li>Deaths with kratom detected</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAKE ACTION NOW section (Fight Back) -->
-    <section class="action-section">
-      <div class="container">
-        <h2>TAKE ACTION NOW</h2>
-        <div style="width: 80px; height: 4px; background: #e4b23e; margin-bottom: 30px;"></div>
-        <div class="action-grid">
-          <div class="action-item"><a href="#">📧 EMAIL YOUR LEGISLATOR</a></div>
-          <div class="action-item"><a href="#">📤 SUBMIT PUBLIC COMMENT</a></div>
-          <div class="action-item"><a href="#">📣 REPORT A RETAILER</a></div>
-          <div class="action-item"><a href="#">🔍 DOWNLOAD TESTIMONY</a></div>
-          <div class="action-item"><a href="#">🕊️ START A PARENT CHAPTER</a></div>
-        </div>
-        <p style="color: #cfddee; margin-top: 40px; font-size: 1.2rem; max-width: 800px;">Contact federal officials, state legislators, health departments, and boards of pharmacy. Use our templates.</p>
-      </div>
-    </section>
-
-    <div class="container">
+  <div class="container">
       <!-- evidence + voices row (like image 3) -->
       <div class="evidence-row">
         <div class="evidence-block">
           <h3>THE EVIDENCE</h3>
           <ul class="evidence-list">
-            <li><a href="#">FDA warnings & NDI denial (Johnson Foods)</a></li>
+            <li><a href="#">FDA Position</a></li>
+            <li><a href="#">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
             <li><a href="#">CDC SUDORS death data</a></li>
             <li><a href="#">Poison control center reports</a></li>
-            <li><a href="#">Adverse events / liver injury, seizures</a></li>
+            <li><a href="#">FDA Reported adverse events</a></li>
             <li><a href="#">Human research / addiction liability</a></li>
-            <li><a href="#">Industry spin & KCPA exposed →</a></li>
+            
           </ul>
         </div>
         <div>
+
+    <!-- TAKE ACTION NOW section (updated with specific action items, no icons) -->
+    <section class="action-section">
+      <div class="container">
+        <h2>TAKE ACTION NOW</h2>
+        <div style="width: 80px; height: 4px; background: #e4b23e; margin-bottom: 30px;"></div>
+        <div class="action-grid">
+          <div class="action-item"><a href="#">EMAIL YOUR LEGISLATOR</a></div>
+          <div class="action-item"><a href="#">WRITE A TESTIMONY</a></div>
+          <div class="action-item"><a href="#">DOWNLOAD FLYERS & ONE‑PAGE HANDOUTS</a></div>
+          <div class="action-item"><a href="#">CONTACT YOUR STATE BOARD OF PHARMACY</a></div>
+          <div class="action-item"><a href="#">CONTACT YOUR STATE HEALTH DEPARTMENT</a></div>
+          <div class="action-item"><a href="#">CONTACT MEDICAL SOCIETIES IN YOUR STATE</a></div>
+        </div>
+        <p style="color: #cfddee; margin-top: 40px; font-size: 1.2rem; max-width: 800px;">
+          Use our templates and toolkits to contact federal officials, state legislators, and health agencies.
+        </p>
+      </div>
+    </section>
+
+    
+
+
+          
           <div class="testimonial">
             <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
             <div class="attribution">— Ohio parent, 2024</div>
