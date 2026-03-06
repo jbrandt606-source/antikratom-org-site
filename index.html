@@ -1,1 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti‑Kratom Association · Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f2f5f9;
+      /* background.jpg as a subtle fixed overlay — assuming placed in /assets/images/ */
+      background-image: url('assets/images/background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      line-height: 1.5;
+      color: #1e2b37;
+    }
+
+    /* semi‑transparent layer over background for readability */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.88);
+      z-index: -1;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header – simple, authoritative */
+    .site-header {
+      background-color: #0b1a2a; /* dark navy */
+      color: white;
+      padding: 16px 0;
+      border-bottom: 4px solid #c4282b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .org-name {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .org-name span {
+      color: #e8b13e;
+      font-weight: 400;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .nav-links a:hover {
+      color: #e8b13e;
+      border-bottom: 2px solid #c4282b;
+    }
+
+    /* hero section with hero.jpg */
+    .hero {
+      background: linear-gradient(rgba(0, 20, 30, 0.75), rgba(0, 10, 20, 0.8)), url('assets/images/hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      color: white;
+      padding: 100px 0 90px;
+      margin-bottom: 40px;
+      border-bottom: 6px solid #c4282b;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero-subhead {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      border-left: 6px solid #c4282b;
+      padding-left: 24px;
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      padding: 12px 24px;
+    }
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      font-weight: 600;
+      background-color: #c4282b;
+      display: inline-block;
+      padding: 12px 32px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 8px 0 #0b1a2a;
+    }
+
+    /* features / hero sections (four cards) */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0b1a2a;
+      margin: 48px 0 24px;
+      border-bottom: 3px solid #c4282b;
+      padding-bottom: 8px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin: 40px 0 60px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.2);
+      padding: 28px 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 6px solid #c4282b;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-left: 1px solid #eaeef2;
+      border-right: 1px solid #eaeef2;
+      border-bottom: 1px solid #d0d9e2;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -10px rgba(160, 30, 30, 0.3);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #0f293b;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #e8b13e;
+      padding-bottom: 8px;
+    }
+
+    .problem-list {
+      list-style: none;
+      margin: 16px 0 20px;
+      flex-grow: 1;
+    }
+
+    .problem-list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .problem-list li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      color: #2e4053;
+      margin: 12px 0 20px;
+      flex-grow: 1;
+      font-weight: 400;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0b1a2a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-align: center;
+      transition: background 0.2s, transform 0.1s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 12px;
+      border-left: 4px solid #e8b13e;
+    }
+
+    .btn:hover {
+      background-color: #c4282b;
+      border-left-color: white;
+    }
+
+    .btn-evidence {
+      background-color: #1b4f6e;
+    }
+
+    .btn-industry {
+      background-color: #8a6d2f;
+    }
+
+    .btn-fight {
+      background-color: #b1422d;
+    }
+
+    /* quick impact strip (archive/advocacy feel) */
+    .impact-strip {
+      background-color: #0b1a2a;
+      color: white;
+      padding: 32px 0;
+      text-align: center;
+      margin: 40px 0;
+      border-radius: 60px 0 60px 0;
+      background-image: url('assets/images/background.jpg');
+      background-blend-mode: overlay;
+      background-size: cover;
+      border-left: 10px solid #e8b13e;
+    }
+
+    .impact-strip p {
+      font-size: 1.8rem;
+      font-weight: 200;
+      max-width: 900px;
+      margin: 0 auto;
+      text-shadow: 2px 2px 0 #00000040;
+    }
+    .impact-strip strong {
+      color: #e8b13e;
+      font-weight: 700;
+    }
+
+    /* footer */
+    .site-footer {
+      background-color: #0b1a2a;
+      color: #ccc;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      border-top: 6px solid #c4282b;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: #e8b13e;
+      text-decoration: none;
+      margin-right: 28px;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* responsive */
+    @media (max-width: 1024px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero-subhead {
+        font-size: 1.3rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="logo-area">
+        <span class="logo-icon">⚖️📋</span>
+        <div class="org-name">
+          ANTI‑KRATOM ASSOCIATION <span>public health · evidence · action</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#">HOME</a>
+        <a href="#">EVIDENCE</a>
+        <a href="#">INDUSTRY</a>
+        <a href="#">FIGHT BACK</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero section with hero.jpg -->
+    <section class="hero">
+      <div class="wrapper hero-content">
+        <h1>Gas‑Station Drugs Are Flooding Our Communities</h1>
+        <div class="hero-subhead">
+          Kratom is sold in vape shops and gas stations across the United States despite federal safety warnings.
+        </div>
+        <div class="hero-tagline">
+          Unsafe. Unregulated. Unfit for human consumption.<br>Communities are fighting back.
+        </div>
+      </div>
+    </section>
+
+    <!-- four core "Hero Sections" (cards) exactly as sitemap -->
+    <div class="wrapper">
+      <h2 class="section-title">⏹︎ THE FIGHT IN FOUR FRONTS</h2>
+      <div class="card-grid">
+        <!-- 1. The Problem card (with bullet details) -->
+        <div class="feature-card">
+          <div class="card-icon">🚨</div>
+          <h3>The Problem</h3>
+          <ul class="problem-list">
+            <li>Kratom sold in gas stations & vape shops</li>
+            <li>No FDA approval</li>
+            <li>Increasing poison control calls</li>
+            <li>Deaths with kratom detected</li>
+          </ul>
+          <a href="#" class="btn" style="margin-top: auto;">READ WARNINGS →</a>
+        </div>
+
+        <!-- 2. The Evidence card (links to Evidence page) -->
+        <div class="feature-card">
+          <div class="card-icon">🔬📊</div>
+          <h3>The Evidence</h3>
+          <div class="card-description">
+            Government & scientific sources: FDA position, CDC SUDORS data, poison control, adverse events, human research.
+          </div>
+          <a href="#" class="btn btn-evidence" style="margin-top: auto;">VIEW EVIDENCE ARCHIVE →</a>
+        </div>
+
+        <!-- 3. Industry Spin card (Industry Narratives page) -->
+        <div class="feature-card">
+          <div class="card-icon">🏭🎭</div>
+          <h3>Industry Spin</h3>
+          <div class="card-description">
+            Expose AKA lobbying, Henningfield ties, KCPA tactics, and parallels to tobacco industry deception.
+          </div>
+          <a href="#" class="btn btn-industry" style="margin-top: auto;">UNCOVER NARRATIVES →</a>
+        </div>
+
+        <!-- 4. Fight Back card (Action page) -->
+        <div class="feature-card">
+          <div class="card-icon">✊📢</div>
+          <h3>Fight Back</h3>
+          <div class="card-description">
+            Contact federal/state officials, health departments, boards of pharmacy. Templates, scripts, and testimony guides.
+          </div>
+          <a href="#" class="btn btn-fight" style="margin-top: auto;">TAKE ACTION NOW →</a>
+        </div>
+      </div>
+
+      <!-- extra strip that reinforces investigative + advocacy vibe -->
+      <div class="impact-strip">
+        <p><strong>INVESTIGATIVE ARCHIVE · ADVOCACY CAMPAIGN · ACTION HUB</strong><br>
+        ⚠️ 1,827+ poison control calls · kratom detected in 657 overdose deaths (CDC SUDORS) · zero FDA approval</p>
+      </div>
+
+      <!-- mini section for credibility: quick links to key evidence topics (optional but keeps archive feel) -->
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; background: rgba(11,26,42,0.02); padding: 32px 24px; border-radius: 20px; margin: 48px 0;">
+        <div style="max-width: 300px;">
+          <h3 style="color:#0b1a2a; border-left: 6px solid #c4282b; padding-left: 16px;">📁 FDA DOCUMENTS</h3>
+          <ul style="margin-top: 12px; list-style: none;">
+            <li style="margin-bottom: 8px;">→ FDA warning letters</li>
+            <li style="margin-bottom: 8px;">→ NDI denial (Johnson Foods)</li>
+            <li style="margin-bottom: 8px;">→ “not a dietary supplement”</li>
+          </ul>
+        </div>
+        <div style="max-width: 300px;">
+          <h3 style="color:#0b1a2a; border-left: 6px solid #e8b13e; padding-left: 16px;">📈 POISON CONTROL</h3>
+          <ul style="margin-top: 12px; list-style: none;">
+            <li style="margin-bottom: 8px;">→ 2,340 exposures (2023)</li>
+            <li style="margin-bottom: 8px;">→ seizures, withdrawal, liver injury</li>
+            <li style="margin-bottom: 8px;">→ AAPCC reports</li>
+          </ul>
+        </div>
+        <div style="max-width: 300px;">
+          <h3 style="color:#0b1a2a; border-left: 6px solid #c4282b; padding-left: 16px;">⚖️ KCPA EXPOSED</h3>
+          <ul style="margin-top: 12px; list-style: none;">
+            <li style="margin-bottom: 8px;">→ industry‑backed “regulation”</li>
+            <li style="margin-bottom: 8px;">→ market protection, not health</li>
+            <li style="margin-bottom: 8px;">→ model legislation tricks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper footer-inner">
+      <div class="footer-links">
+        <a href="#">EVIDENCE</a>
+        <a href="#">INDUSTRY NARRATIVES</a>
+        <a href="#">FIGHT BACK</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+        <a href="#">TESTIMONY TEMPLATE</a>
+      </div>
+      <div class="copyright">
+        © 2025 Anti‑Kratom Association. All rights reserved.<br>
+        <span style="font-size:0.8rem;">Unsafe. Unregulated. Unfit.</span>
+      </div>
+    </div>
+    <div class="wrapper" style="text-align: center; margin-top: 32px; font-size: 0.9rem; color: #aaa; border-top: 1px solid #2a3f52; padding-top: 20px;">
+      <span>📍 Background image: background.jpg | Hero image: hero.jpg — both sourced from jbrandt606. Used to document the gas‑station crisis.</span>
+    </div>
+  </footer>
+
+  <!-- subtle design note: the images are referenced but not literally present — assume they live in /assets/images/ -->
+</body>
+</html>
