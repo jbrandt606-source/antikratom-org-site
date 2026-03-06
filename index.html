@@ -97,7 +97,7 @@
       border-bottom: 2px solid #b42b2b;
     }
 
-    /* HERO section with hero.jpg – sharper, more memorable message */
+    /* HERO section with hero.jpg */
     .hero {
       background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
       color: white;
@@ -319,7 +319,109 @@
       background-color: #8f2020;
     }
 
-    /* TAKE ACTION NOW section – now with action.jpg background (matching industry style) */
+    /* EVIDENCE SPOTLIGHT section (uses evidence.jpg) – new, before action */
+    .evidence-spotlight {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('evidence.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      margin: 40px 0;
+      border-top: 6px solid #b42b2b;
+      border-bottom: 6px solid #b42b2b;
+    }
+
+    .evidence-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .evidence-left h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .evidence-left h2 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .evidence-spotlight .evidence-list {
+      list-style: none;
+    }
+
+    .evidence-spotlight .evidence-list li {
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+      border-bottom: 1px dotted rgba(255,255,255,0.3);
+      padding-bottom: 12px;
+    }
+
+    .evidence-spotlight .evidence-list a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.2s;
+    }
+
+    .evidence-spotlight .evidence-list a::after {
+      content: "→";
+      color: #e4b23e;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .evidence-spotlight .evidence-list a:hover {
+      color: #e4b23e;
+    }
+
+    .evidence-right {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-left: 6px solid #e4b23e;
+    }
+
+    .evidence-right .testimonial {
+      background: transparent;
+      padding: 0;
+      color: white;
+      border-left: none;
+    }
+
+    .evidence-right .testimonial p {
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .evidence-right .testimonial .attribution {
+      font-weight: 700;
+      color: #e4b23e;
+      text-transform: uppercase;
+    }
+
+    .evidence-right .more-voices {
+      margin-top: 25px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-left: 4px solid #b42b2b;
+      color: white;
+    }
+
+    .evidence-right .more-voices strong {
+      color: #e4b23e;
+    }
+
+    /* TAKE ACTION NOW section – with action.jpg background */
     .action-section {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('action.jpg') center center / cover no-repeat;
       color: white;
@@ -372,80 +474,6 @@
       color: white;
       text-decoration: none;
       display: block;
-    }
-
-    /* evidence + voices row */
-    .evidence-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      margin: 60px 0 40px;
-    }
-
-    .evidence-block {
-      background: white;
-      padding: 32px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
-      border-left: 6px solid #b42b2b;
-    }
-
-    .evidence-block h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0c151f;
-      margin-bottom: 24px;
-    }
-
-    .evidence-list {
-      list-style: none;
-    }
-
-    .evidence-list li {
-      margin-bottom: 18px;
-      font-size: 1.1rem;
-      border-bottom: 1px dotted #ccc;
-      padding-bottom: 10px;
-    }
-
-    .evidence-list a {
-      text-decoration: none;
-      color: #1a2a3a;
-      font-weight: 500;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .evidence-list a::after {
-      content: "→";
-      color: #b42b2b;
-      font-weight: 700;
-      font-size: 1.3rem;
-    }
-
-    .evidence-list a:hover {
-      color: #b42b2b;
-    }
-
-    .testimonial {
-      background: #f4f7fa;
-      padding: 32px;
-      font-style: normal;
-      border-left: 6px solid #e4b23e;
-    }
-
-    .testimonial p {
-      font-size: 1.35rem;
-      font-weight: 400;
-      line-height: 1.4;
-      color: #0c151f;
-      margin-bottom: 20px;
-    }
-
-    .testimonial .attribution {
-      font-weight: 700;
-      color: #b42b2b;
-      text-transform: uppercase;
     }
 
     /* email signup */
@@ -537,12 +565,10 @@
         grid-template-columns: 1fr;
         gap: 25px;
       }
-      .industry-content {
+      .industry-content,
+      .evidence-content {
         grid-template-columns: 1fr;
         gap: 30px;
-      }
-      .evidence-row {
-        grid-template-columns: 1fr;
       }
       .hero h2 {
         font-size: 3rem;
@@ -595,7 +621,7 @@
   </header>
 
   <main>
-    <!-- hero with hero.jpg background – sharper, more memorable message -->
+    <!-- hero with hero.jpg background -->
     <section class="hero">
       <div class="container hero-content">
         <h2>GAS-STATION DRUGS ARE POISONING OUR COMMUNITIES</h2>
@@ -665,7 +691,35 @@
       </div>
     </section>
 
-    <!-- TAKE ACTION NOW section – now with action.jpg background -->
+    <!-- EVIDENCE SPOTLIGHT section using evidence.jpg (now before Action) -->
+    <section class="evidence-spotlight">
+      <div class="container">
+        <div class="evidence-content">
+          <div class="evidence-left">
+            <h2><span>THE</span> EVIDENCE</h2>
+            <ul class="evidence-list">
+              <li><a href="#">FDA Position</a></li>
+              <li><a href="#">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
+              <li><a href="#">CDC SUDORS death data</a></li>
+              <li><a href="#">Poison control center reports</a></li>
+              <li><a href="#">FDA Reported adverse events</a></li>
+              <li><a href="#">Human research / addiction liability</a></li>
+            </ul>
+          </div>
+          <div class="evidence-right">
+            <div class="testimonial">
+              <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
+              <div class="attribution">— Ohio parent, 2024</div>
+            </div>
+            <div class="more-voices">
+              <p><strong>More parents’ voices:</strong> “My son started buying it at a vape shop. Within a year he was in the ER.” — T. Reynolds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKE ACTION NOW section – with action.jpg background -->
     <section class="action-section">
       <div class="container">
         <h2>TAKE ACTION NOW</h2>
@@ -685,30 +739,6 @@
     </section>
 
     <div class="container">
-      <!-- evidence + voices row -->
-      <div class="evidence-row">
-        <div class="evidence-block">
-          <h3>THE EVIDENCE</h3>
-          <ul class="evidence-list exact">
-            <li><a href="#">FDA Position</a></li>
-            <li><a href="#">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
-            <li><a href="#">CDC SUDORS death data</a></li>
-            <li><a href="#">Poison control center reports</a></li>
-            <li><a href="#">FDA Reported adverse events</a></li>
-            <li><a href="#">Human research / addiction liability</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="testimonial">
-            <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
-            <div class="attribution">— Ohio parent, 2024</div>
-          </div>
-          <div style="margin-top: 25px; background: #fafcfc; padding: 20px; border-left: 4px solid #b42b2b;">
-            <p style="font-size: 1.1rem;"><strong>More parents’ voices:</strong> “My son started buying it at a vape shop. Within a year he was in the ER.” — T. Reynolds</p>
-          </div>
-        </div>
-      </div>
-
       <!-- JOIN THE MOVEMENT email signup -->
       <div class="signup-box">
         <p>JOIN THE MOVEMENT<br><span style="font-size: 1.1rem; font-weight: normal;">Remove retail kratom from our communities</span></p>
@@ -736,7 +766,7 @@
       </div>
     </div>
     <div class="container" style="text-align: left; margin-top: 32px; font-size: 0.85rem; color: #5f7485; border-top: 1px solid #1e3444; padding-top: 20px;">
-      <span>Background: background.jpg | Hero: hero.jpg | Industry: industry.jpg | Action: action.jpg — advocacy use.</span>
+      <span>Background: background.jpg | Hero: hero.jpg | Industry: industry.jpg | Evidence: evidence.jpg | Action: action.jpg — advocacy use.</span>
     </div>
   </footer>
 </body>
