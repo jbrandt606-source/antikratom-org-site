@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adverse Events · The Data They Suppress</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with fda.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('fda.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Stats grid for adverse numbers */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .stat-item {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border: 1px solid #b42b2b;
+      text-align: center;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #e4b23e;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .stat-small {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    /* Source note */
+    .source-note {
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 4px;
+      color: #ccc;
+      margin-top: 20px;
+    }
+
+    .source-note a {
+      color: #e4b23e;
+      word-break: break-word;
+    }
+
+    /* Takeaways box */
+    .takeaways {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .takeaways h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    .takeaways ul {
+      list-style: none;
+    }
+
+    .takeaways li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .takeaways li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.3rem;
+      color: #e4b23e;
+    }
+
+    /* Callout box */
+    .callout {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    /* Context link */
+    .context-link {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 18px;
+      margin: 30px 0;
+      border: 2px solid #e4b23e;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .context-link a {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #b42b2b;
+      word-break: break-word;
+    }
+
+    .context-link a:hover {
+      color: white;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 18px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+      .content-card h2 {
+        font-size: 1.8rem;
+      }
+      .takeaways h3 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../../index.html">HOME</a>
+        <a href="../index.html">EVIDENCE</a>
+        <a href="../../industry/index.html">INDUSTRY</a>
+        <a href="../../fight-back/index.html">FIGHT BACK</a>
+        <a href="../../about/index.html">ABOUT</a>
+        <a href="../../contact/index.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with fda.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>FAERS & CAERS</span> The Data They Can't Spin</h1>
+      <p>
+        FDA's own adverse event databases are filled with reports of death, hospitalization, and serious injury.
+        The industry calls them "anecdotal." We call them evidence they've been hiding.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#caers">See CAERS</a>
+        <a class="btn btn-primary" href="#faers">See FAERS</a>
+        <a class="btn btn-secondary" href="../index.html">Evidence Hub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Context link -->
+    <div class="context-link">
+      ⚠️ <strong>Industry spin:</strong> "Adverse event reports aren't science." Then why does the FDA collect them? Why do they keep issuing warnings? Because each report is a person who suffered.
+      <a href="../index.html">Return to Evidence →</a>
+    </div>
+
+    <!-- Harsh intro -->
+    <div class="content-card">
+      <h2>The Industry's Hidden Files</h2>
+      <p>
+        The kratom industry loves to say there's "no evidence of harm." But the FDA maintains two massive databases – CAERS for dietary supplements, FAERS for drugs – where doctors, patients, and manufacturers are required to report adverse events. And kratom is all over them.
+      </p>
+      <p>
+        <span style="color:#e4b23e;">The industry's response?</span> "Spontaneous reporting systems can't prove causation." True – but they exist precisely to detect signals. And the signal from kratom is deafening: hundreds dead, thousands hospitalized, and an industry that does everything it can to keep these numbers out of the news.
+      </p>
+    </div>
+
+    <!-- CAERS Section -->
+    <section id="caers" class="content-card">
+      <h2>FDA CAERS Data (Foods & Dietary Supplements)</h2>
+      <p><strong style="color:#e4b23e;">Kratom / Mitragynine only</strong></p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Total Reports</div>
+          <div class="stat-number">743</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Deaths</div>
+          <div class="stat-number">258</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Hospitalizations</div>
+          <div class="stat-number">191</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Serious Cases</div>
+          <div class="stat-number">404</div>
+        </div>
+      </div>
+
+      <div class="source-note">
+        <strong>What CAERS is:</strong> The FDA's Center for Food Safety and Applied Nutrition Adverse Event Reporting System. It collects reports of adverse events related to foods, dietary supplements, and cosmetics. These 743 reports are just the tip – many more go unreported.<br>
+        <strong>Open CAERS yourself:</strong> <a href="#" target="_blank">CAERS JSON (uploaded to MAHA)</a> – Scope: Kratom/Mitragynine only.
+      </div>
+    </section>
+
+    <!-- FAERS Section -->
+    <section id="faers" class="content-card">
+      <h2>FDA FAERS Data (Drugs & Biologics)</h2>
+      <p><strong style="color:#e4b23e;">Kratom / Mitragynine only</strong></p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Total Reports</div>
+          <div class="stat-number">1,470</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Deaths</div>
+          <div class="stat-number">722</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Hospitalizations</div>
+          <div class="stat-number">370</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">% with Death</div>
+          <div class="stat-number">49%</div>
+        </div>
+      </div>
+
+      <div class="source-note">
+        <strong>What FAERS is:</strong> The FDA Adverse Event Reporting System – a database that supports the FDA's post-marketing safety surveillance program for drugs and therapeutic biologics. Nearly half of all kratom reports involve death.<br>
+        <strong>Open FAERS yourself:</strong> <a href="#" target="_blank">FAERS line listing provided to MAHA</a> – Scope: Kratom/Mitragynine only.
+      </div>
+    </section>
+
+    <!-- Important context note -->
+    <div class="callout">
+      <div class="callout-title">📢 Important context – the industry's favorite evasion</div>
+      <p>
+        Both FAERS and CAERS are spontaneous reporting systems. Figures reflect what was reported; they help identify signals but do not establish incidence or causation. Underreporting is massive. The industry seizes on this to dismiss the numbers entirely.
+      </p>
+      <p>
+        But here's what they won't say: These are the <em>only</em> national systems tracking harm. When over 2,200 adverse event reports (including nearly 1,000 deaths) pour in for a single unregulated substance, it's not "anecdote" – it's a public health emergency. The FDA uses these same databases to regulate prescription drugs. Kratom gets no such scrutiny.
+      </p>
+    </div>
+
+    <!-- Harsh reality: What the numbers mean -->
+    <div class="content-card">
+      <h2>What These Numbers Really Mean</h2>
+      <ul>
+        <li><strong>2,213 total reports</strong> across CAERS and FAERS – and that's only what got reported. For every report, dozens more suffer in silence.</li>
+        <li><strong>980 deaths</strong> – almost a thousand people dead, and the industry still says "more research is needed."</li>
+        <li><strong>561 hospitalizations</strong> – people sick enough to require medical care, often in ICUs, because of a product sold next to energy drinks.</li>
+        <li><strong>404 "serious" cases in CAERS alone</strong> – a category that includes life-threatening events, disability, and congenital anomalies.</li>
+      </ul>
+      <p>
+        The industry will tell you these numbers are "unverified" or "could be duplicates." But every single report represents a real person, a real family, a real tragedy. The FDA doesn't collect fairy tales.
+      </p>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="takeaways">
+      <h3>⛔ Key Takeaways</h3>
+      <ul>
+        <li><strong>The data exists.</strong> The FDA has been collecting adverse event reports on kratom for years. The industry just doesn't want you to see them.</li>
+        <li><strong>Nearly 1,000 deaths.</strong> That's not a "signal" – it's a body count. How many more before the industry admits the truth?</li>
+        <li><strong>Hospitalizations in the hundreds.</strong> People aren't just calling poison centers – they're being admitted, sometimes for days or weeks.</li>
+        <li><strong>"Spontaneous reporting" is not an excuse.</strong> If kratom were safe, these databases would be empty. They're not. They're overflowing.</li>
+      </ul>
+    </div>
+
+    <!-- Fact-check industry lies -->
+    <div class="callout">
+      <div class="callout-title">📢 The industry’s talking points, fact‑checked</div>
+      <p><strong>Industry lie:</strong> "Adverse event reports are just anecdotes, not science."<br> 
+      <strong>Truth:</strong> They're the frontline of pharmacovigilance. The FDA relies on them to detect safety signals for every drug on the market. Kratom should be no exception.</p>
+      <p><strong>Industry lie:</strong> "Most reports are duplicates or unverified."<br> 
+      <strong>Truth:</strong> The FDA cleans and processes these data. The numbers we present are conservative. If anything, they undercount the true toll.</p>
+      <p><strong>Industry lie:</strong> "Kratom is safer than aspirin."<br> 
+      <strong>Truth:</strong> Aspirin doesn't have 2,200 adverse event reports and nearly 1,000 deaths. Kratom does.</p>
+    </div>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="../index.html">← Back to Evidence</a>
+      <a class="btn btn-primary" href="#">Download Raw Data (MAHA)</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">← Back to Evidence Hub</a> | <a href="../../industry/index.html">Industry Narratives</a></p>
+      <p style="margin-top:10px;">Hero image: fda.jpg — the agency that collects the evidence the industry ignores.</p>
+      <p style="margin-top:5px;">Data sources: CAERS JSON (MAHA), FAERS line listing (MAHA) – updated January 2026.</p>
+    </div>
+  </div>
+</body>
+</html>
