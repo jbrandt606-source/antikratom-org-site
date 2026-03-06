@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Your Reps · Make Your Voice Heard</title>
+  <!-- Link to main stylesheet (optional) -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with action.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('action.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Tips boxes */
+    .tip-box {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .tip-box h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    .tip-box p, .tip-box li {
+      color: #f0f0f0;
+    }
+
+    /* Template box */
+    .template-box {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #b42b2b;
+      padding: 25px;
+      margin: 30px 0;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      color: #e4b23e;
+    }
+
+    /* Callout */
+    .callout {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">HOME</a>
+        <a href="../evidence/index.html">EVIDENCE</a>
+        <a href="../industry/index.html">INDUSTRY</a>
+        <a href="index.html">FIGHT BACK</a>
+        <a href="../about/index.html">ABOUT</a>
+        <a href="../contact/index.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with action.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>WRITE TO YOUR</span> REPRESENTATIVES</h1>
+      <p>
+        Lawmakers hear from industry lobbyists every day. They rarely hear from constituents like you.
+        One email can tip the balance. Here's how to make yours count.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#federal">Federal Officials</a>
+        <a class="btn btn-primary" href="#state">State Legislators</a>
+        <a class="btn btn-secondary" href="index.html">More Actions</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Why it matters -->
+    <div class="content-card">
+      <h2>Why Your Voice Matters</h2>
+      <p>
+        The kratom industry floods statehouses with paid consultants, former congressmen, and slick presentations.
+        They claim "consumer protection" while fighting every real regulation. Lawmakers rarely hear the other side –
+        unless you speak up.
+      </p>
+      <p>
+        <span style="color:#e4b23e;">The industry's strategy:</span> overwhelm legislators with misinformation.
+        Your job: drown them out with truth, backed by the evidence on this site.
+      </p>
+    </div>
+
+    <!-- Federal representatives -->
+    <div id="federal" class="content-card">
+      <h2>Contact Your Federal Representatives</h2>
+      <p>
+        Your U.S. Senators and House member can influence federal policy, including FDA enforcement and DEA scheduling.
+        Find them using the links below.
+      </p>
+      <ul>
+        <li><strong>Find your representative:</strong> <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" style="color:#e4b23e;">house.gov</a></li>
+        <li><strong>Find your senators:</strong> <a href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" style="color:#e4b23e;">senate.gov</a></li>
+        <li><strong>FDA contact:</strong> <a href="https://www.fda.gov/about-fda/contact-fda" target="_blank" style="color:#e4b23e;">FDA Comment Portal</a></li>
+        <li><strong>DEA contact:</strong> <a href="https://www.deadiversion.usdoj.gov/contact_us.html" target="_blank" style="color:#e4b23e;">DEA Diversion Control</a></li>
+      </ul>
+    </div>
+
+    <!-- State legislators -->
+    <div id="state" class="content-card">
+      <h2>Contact Your State Legislators</h2>
+      <p>
+        State laws determine where kratom can be sold. Most "Kratom Consumer Protection Acts" are pushed by industry
+        to preempt real bans. Your state representative needs to hear why these bills are dangerous.
+      </p>
+      <ul>
+        <li><strong>Find your state legislator:</strong> <a href="https://www.ncsl.org/about-us/find-your-state-legislator" target="_blank" style="color:#e4b23e;">NCSL Legislator Lookup</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Tips for persuasive emails -->
+    <div class="tip-box">
+      <h3>⛔ Tips to Make Your Email Get Read</h3>
+      <ul>
+        <li><strong>Subject line matters:</strong> Use “URGENT: Please support ban on unregulated kratom” or “Constituent concern: dangerous kratom sales.” Avoid generic subjects.</li>
+        <li><strong>Identify yourself:</strong> Include your full name and address so they know you're a constituent.</li>
+        <li><strong>Keep it short:</strong> Legislators' staff skim. One page max. Bullet points help.</li>
+        <li><strong>Tell a personal story:</strong> If you or someone you know has been harmed, share it briefly. Personal stories stick.</li>
+        <li><strong>Cite evidence – briefly:</strong> Mention FDA warnings, CDC death data, poison center calls. Link to our evidence pages.</li>
+        <li><strong>Be clear about what you want:</strong> “I urge you to co-sponsor/introduce legislation to ban the retail sale of kratom.” or “Please vote NO on industry-backed KCPA bills.”</li>
+        <li><strong>Be polite but firm:</strong> Angry emails get ignored. Respectful passion gets attention.</li>
+        <li><strong>Follow up:</strong> If you don't hear back in two weeks, send a brief follow-up.</li>
+      </ul>
+    </div>
+
+    <!-- Sample email template -->
+    <div class="content-card">
+      <h2>Sample Email to a State Legislator</h2>
+      <p>Use this as a starting point – personalize it with your story and local details.</p>
+      <div class="template-box">
+Subject: Urgent: Protect our community from unregulated kratom
+
+Dear Representative [Last Name],
+
+My name is [Your Name], and I am a constituent living at [your address]. I am writing to urge you to take action against the unregulated sale of kratom in our state.
+
+Kratom is a psychoactive substance sold in gas stations and vape shops, often marketed as a "natural supplement." But the FDA has issued repeated warnings: kratom is not approved for any medical use, has been linked to liver failure, seizures, and addiction, and is associated with hundreds of overdose deaths nationwide. Just last year, poison control centers received over 1,600 kratom-related calls – including 149 involving children.
+
+The industry claims that so-called "Kratom Consumer Protection Acts" will make the product safe. But those bills are written by the industry itself and do nothing to prevent addiction or warn consumers about opioid-like withdrawal. They are a smokescreen to keep profits flowing.
+
+I respectfully ask you to:
+- Reject any industry-backed "regulation" that preempts a full ban.
+- Support legislation that removes kratom from retail shelves.
+- Hold hearings to investigate the harm kratom is causing in our communities.
+
+Our families deserve better than unapproved drugs sold next to energy drinks. Thank you for your service, and I look forward to your response.
+
+Sincerely,
+[Your Full Name]
+[Your Phone Number]
+[Your Email]
+      </div>
+      <p style="margin-top:15px;">
+        For federal officials, adapt the same template – focus on FDA/DEA action, interstate commerce, and national data.
+      </p>
+    </div>
+
+    <!-- Extra tips for persuasive arguments -->
+    <div class="tip-box">
+     <h3>⛔ Building a Persuasive Argument – Make It Personal</h3>
+<ul>
+  <li><strong>You're not just a constituent – you're a parent, a neighbor, a community member.</strong> Start by introducing yourself that way. “I'm a mother of two who shops at the same gas station where kratom is sold next to the candy.” Legislators remember people, not issues.</li>
+  <li><strong>Share what you've seen in your own town.</strong> Point to the vape shop on Main Street, the gas station by the school, the friend whose kid ended up in the ER. Local details make it impossible to dismiss as “some other community's problem.”</li>
+  <li><strong>Frame it as protection, not politics.</strong> You're not asking for a partisan fight – you're asking them to protect the kids on their street, the families in their district, the first responders who keep getting called to the same addresses.</li>
+  <li><strong>Use the evidence – but connect it to people.</strong> Don't just cite “1,645 poison control calls.” Say: “That's 1,645 families – 149 of them with children under six – who had to watch someone they love seize, vomit, or stop breathing because of something sold legally down the road.”</li>
+  <li><strong>Emphasize the industry's deception, and how it affects your neighbors.</strong> “They're funding fake science and lobbying against warnings – while the dad next door has no idea his teenager bought an opioid at a vape shop.”</li>
+  <li><strong>Challenge “regulation not prohibition” with your own reality.</strong> “You're asking me to trust that an industry which hides liver failure and death will regulate itself? I'm asking you to trust the parents who've already buried their children.”</li>
+  <li><strong>Bring it home with one clear image.</strong> “The same kratom sold in our gas stations is showing up in our ERs, our poison center logs, and our obituaries. I don't want to read another one.”</li>
+  <li><strong>End with what you want – and why it matters to you personally.</strong> “Please vote to ban retail kratom. Do it for the kids on the bus my daughter rides. Do it so no other parent has to learn about this the way I did.”</li>
+</ul>
+
+    <!-- Final call -->
+    <div class="callout">
+      <div class="callout-title">📢 Your email could be the one that changes a vote</div>
+      <p>
+        Legislators hear from industry lobbyists every day – but they rarely hear from constituents. A single thoughtful email can shift a undecided lawmaker. Don't underestimate your power.
+      </p>
+      <p style="margin-top:15px;">
+        <a href="#federal" style="color:#e4b23e;">→ Find your federal reps</a><br>
+        <a href="#state" style="color:#e4b23e;">→ Find your state reps</a>
+      </p>
+    </div>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="index.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="index.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: action.jpg — your voice is the weapon.</p>
+    </div>
+  </div>
+</body>
+</html>
