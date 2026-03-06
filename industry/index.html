@@ -16,41 +16,26 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: url('industry.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #0c151f; /* solid dark background for rest of page */
       color: #fff;
       line-height: 1.6;
-      position: relative;
     }
 
-    /* Dark overlay over the entire page to ensure text readability */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(10, 18, 28, 0.75); /* dark, matches overlay from homepage industry section */
-      z-index: -1;
+    /* Hero section with industry.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.75), rgba(10, 18, 28, 0.7)), url('industry.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      border-bottom: 4px solid #b42b2b;
     }
 
-    /* Container for content */
-    .container {
+    .hero-container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 0 24px;
     }
 
-    /* Hero section (smaller, integrated with page background) */
-    .page-header {
-      text-align: left;
-      padding: 60px 0 20px 0;
-      border-bottom: 4px solid #b42b2b;
-      margin-bottom: 40px;
-    }
-
-    .page-header h1 {
+    .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
       line-height: 1.1;
@@ -59,13 +44,13 @@
       margin-bottom: 20px;
     }
 
-    .page-header h1 span {
+    .hero h1 span {
       color: #e4b23e;
       border-bottom: 4px solid #b42b2b;
       padding-bottom: 8px;
     }
 
-    .page-header p {
+    .hero p {
       font-size: 1.3rem;
       max-width: 800px;
       background: rgba(0, 0, 0, 0.3);
@@ -113,9 +98,16 @@
       color: #0c151f;
     }
 
+    /* Container for content below hero */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
     /* Main content area – cards or blocks */
     .content-section {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5); /* slightly darker to stand out on dark background */
       padding: 40px;
       border-left: 6px solid #b42b2b;
       margin: 40px 0;
@@ -173,9 +165,9 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header / Hero area -->
-    <div class="page-header">
+  <!-- Hero section with industry.jpg -->
+  <section class="hero">
+    <div class="hero-container">
       <h1>The <span>Industry Narrative</span></h1>
       <p>
         How kratom trade organizations frame the policy debate
@@ -186,8 +178,17 @@
         <a class="btn btn-secondary" href="../evidence/index.html">Evidence</a>
       </div>
     </div>
+  </section>
 
-    <!-- Main content -->
+  <!-- Main content (dark background, text remains white) -->
+  <div class="container">
+    <!-- Reference to homepage industry section (optional) -->
+    <div class="industry-reference">
+      ⚠️ <strong>Context:</strong> This page expands on the 
+      <a href="../index.html#industry-spotlight">Industry Spotlight section</a> 
+      from our homepage — where we expose the tactics used by kratom trade groups.
+    </div>
+
     <section class="content-section">
       <h2>Industry Testimony and Policy Arguments</h2>
       <p>
@@ -205,9 +206,6 @@
       </p>
     </section>
 
- 
-
-    <!-- rAdditional placeholder for deeper content (could be expanded) -->
     <section class="content-section">
       <h2>Key Players & Messages</h2>
       <ul style="color:white; font-size:1.2rem; list-style-type: none;">
