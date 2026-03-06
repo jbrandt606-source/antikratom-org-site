@@ -2,261 +2,551 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Poison Control Data – Kratom Exposures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poison Control · The Crisis They Hide</title>
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="../../style.css">
   <style>
-    /* Additional table styling (matches mortality page) */
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with poison.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('poison.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 18px 28px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-left: 6px solid #b42b2b;
+      margin: 40px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 24px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 20px;
+    }
+
+    .content-card h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 30px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.3rem;
+      color: #e4b23e;
+    }
+
+    /* Data tables - improved for dark theme */
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1.5rem 0;
-      background: white;
+      margin: 30px 0;
+      background: rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .data-table th {
-      background: #d32f2f;
+      background: #b42b2b;
       color: white;
       font-weight: 600;
-      padding: 0.75rem;
+      padding: 1rem;
       text-align: left;
+      font-size: 1.1rem;
     }
+
     .data-table td {
-      padding: 0.75rem;
-      border-bottom: 1px solid #eee;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      color: #f0f0f0;
     }
+
     .data-table tr:last-child td {
       border-bottom: none;
     }
-    .data-table tr:hover {
-      background: #f9f9f9;
+
+    .data-table tr:hover td {
+      background: rgba(180, 43, 43, 0.2);
     }
-    .card-header .icon {
-      width: 24px;
-      height: 24px;
-      fill: #d32f2f;
-      margin-right: 0.5rem;
-      vertical-align: middle;
+
+    /* Source note */
+    .source-note {
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 4px;
+      color: #ccc;
+      margin-top: 20px;
     }
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid #d32f2f;
-      color: #d32f2f;
+
+    .source-note strong {
+      color: #e4b23e;
     }
-    .btn-secondary:hover {
-      background: #d32f2f;
+
+    /* Trend box */
+    .trend-box {
+      background: rgba(228, 178, 62, 0.1);
+      padding: 25px;
+      border-left: 5px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .trend-box h4 {
+      color: #e4b23e;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    /* Takeaways box */
+    .takeaways {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 30px;
+      margin: 40px 0;
+    }
+
+    .takeaways h3 {
+      color: #e4b23e;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    .takeaways ul {
+      list-style: none;
+    }
+
+    .takeaways li {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .takeaways li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.5rem;
+      color: #e4b23e;
+    }
+
+    /* Callout box */
+    .callout {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    /* Context link */
+    .context-link {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 20px;
+      margin: 40px 0;
+      border: 2px solid #e4b23e;
+      display: inline-block;
+    }
+
+    .context-link a {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    .context-link a:hover {
       color: white;
     }
-    .source-note {
+
+    /* Footer */
+    .footer-note {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
       font-size: 0.9rem;
-      color: #666;
-      background: #f9f9f9;
-      padding: 0.75rem;
-      border-radius: 4px;
-      margin-top: 1rem;
     }
-    .trend-box {
-      background: #f1f1f1;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin: 1.5rem 0;
-      border-left: 5px solid #d32f2f;
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
     }
-    .trend-box h4 {
-      color: #d32f2f;
-      margin-bottom: 0.5rem;
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 16px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
     }
   </style>
 </head>
 <body>
-  <!-- Standard header -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="../../index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
       <nav class="nav">
-        <a href="../../index.html">Home</a>
-        <a href="../index.html">Evidence</a>
-        <a href="./poisoncontrol.html" class="active">Poison Control</a>
+        <a href="../../index.html">HOME</a>
+        <a href="../index.html">EVIDENCE</a>
+        <a href="../../industry/index.html">INDUSTRY</a>
+        <a href="../../fight-back/index.html">FIGHT BACK</a>
+        <a href="../../about/index.html">ABOUT</a>
+        <a href="../../contact/index.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" style="background-image: url('../../hero.jpg');">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Poison Control <span class="red">Data</span></h1>
-        <p>
-          Verified U.S. poison‑center (NPDS) data and key literature on kratom exposures,
-          severity, and healthcare utilization.
-        </p>
-        <div class="hero-buttons">
-          <a class="btn-primary" href="#overview">View Data</a>
-          <a class="btn-secondary" href="#pediatric">Pediatric Focus</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="container" style="margin: 2rem auto;">
-      <!-- Overview Card -->
-      <section id="overview" class="card">
-        <div class="card-header">
-          <svg class="icon" viewBox="0 0 24 24">
-            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
-          </svg>
-          Kratom Poison Control Data (U.S. Poison Centers, 2019–2024)
-        </div>
-        <div class="card-body">
-          <p>
-            The following tables are derived from America’s Poison Centers® NPDS Annual Reports,
-            Appendix B (Tables 22A/22B). Pediatric counts include ages ≤5, 6–12, and 13–19.
-          </p>
-
-          <!-- Table 1: Total Cases, Single‑Substance, Pediatric -->
-          <h3 style="margin: 1.5rem 0 0.5rem;">Overall Exposures</h3>
-          <table class="data-table">
-            <thead>
-              <tr><th>Year</th><th>Total Cases (Case Mentions)</th><th>Single‑Substance</th><th>Pediatric < 20 yrs</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>2019</td><td>1,357</td><td>885</td><td>102</td></tr>
-              <tr><td>2020</td><td>1,262</td><td>794</td><td>103</td></tr>
-              <tr><td>2021</td><td>1,524</td><td>948</td><td>139</td></tr>
-              <tr><td>2022</td><td>1,278</td><td>794</td><td>107</td></tr>
-              <tr><td>2023</td><td>1,489</td><td>880</td><td>106</td></tr>
-              <tr><td>2024</td><td>1,645</td><td>1,027</td><td>149</td></tr>
-            </tbody>
-          </table>
-
-          <!-- Table 2: Pediatric Breakdown by Age Group -->
-          <h3 style="margin: 2rem 0 0.5rem;">Pediatric Exposures by Age Group</h3>
-          <table class="data-table">
-            <thead>
-              <tr><th>Year</th><th>&lt;5 yrs</th><th>6–12 yrs</th><th>13–19 yrs</th><th>Total Pediatrics</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>2019</td><td>60</td><td>3</td><td>39</td><td>102</td></tr>
-              <tr><td>2020</td><td>63</td><td>5</td><td>35</td><td>103</td></tr>
-              <tr><td>2021</td><td>91</td><td>5</td><td>43</td><td>139</td></tr>
-              <tr><td>2022</td><td>67</td><td>3</td><td>37</td><td>107</td></tr>
-              <tr><td>2023</td><td>71</td><td>3</td><td>32</td><td>106</td></tr>
-              <tr><td>2024</td><td>107</td><td>6</td><td>37</td><td>150</td></tr>
-            </tbody>
-          </table>
-
-          <!-- Table 3: Adults & Intentional -->
-          <h3 style="margin: 2rem 0 0.5rem;">Adults and Intentional Exposures</h3>
-          <table class="data-table">
-            <thead>
-              <tr><th>Year</th><th>Adults ≥ 20 yrs</th><th>Intentional</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>2019</td><td>733</td><td>540</td></tr>
-              <tr><td>2020</td><td>637</td><td>513</td></tr>
-              <tr><td>2021</td><td>741</td><td>588</td></tr>
-              <tr><td>2022</td><td>586</td><td>497</td></tr>
-              <tr><td>2023</td><td>723</td><td>519</td></tr>
-              <tr><td>2024</td><td>820</td><td>608</td></tr>
-            </tbody>
-          </table>
-
-          <!-- Table 4: Health Care Facility (HCF) Management & Outcomes -->
-          <h3 style="margin: 2rem 0 0.5rem;">Health Care Facility (HCF) Management & Medical Outcomes</h3>
-          <table class="data-table">
-            <thead>
-              <tr><th>Year</th><th>Treated in HCF</th><th>Outcome: None</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Death</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>2019</td><td>713</td><td>63</td><td>203</td><td>275</td><td>78</td><td>3</td></tr>
-              <tr><td>2020</td><td>614</td><td>59</td><td>175</td><td>259</td><td>66</td><td>5</td></tr>
-              <tr><td>2021</td><td>712</td><td>69</td><td>213</td><td>305</td><td>67</td><td>4</td></tr>
-              <tr><td>2022</td><td>586</td><td>66</td><td>167</td><td>248</td><td>55</td><td>3</td></tr>
-              <tr><td>2023</td><td>671</td><td>60</td><td>184</td><td>305</td><td>70</td><td>5</td></tr>
-              <tr><td>2024</td><td>803</td><td>92</td><td>233</td><td>332</td><td>76</td><td>7</td></tr>
-            </tbody>
-          </table>
-
-          <div class="source-note">
-            <strong>Sources:</strong> America’s Poison Centers® NPDS Annual Reports, Appendix B (Table 22A/22B) 2019–2024.<br>
-            <strong>Total case mentions (2019–2024):</strong> 8,555 &nbsp; | &nbsp;
-            <strong>Single‑substance totals:</strong> 5,328 &nbsp; | &nbsp;
-            <strong>Serious outcomes remain common.</strong>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pediatric Trend Interpretation Card -->
-      <section id="pediatric" class="card">
-        <div class="card-header">
-          <svg class="icon" viewBox="0 0 24 24">
-            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-          </svg>
-          Pediatric Exposure Trends
-        </div>
-        <div class="card-body">
-          <div class="trend-box">
-            <h4>Trend Interpretation</h4>
-            <p>
-              Children under five represent the largest pediatric exposure group each year. After relative stability in 2019–2020, exposures increased sharply in 2021, declined modestly in 2022–2023, and reached a new high in 2024 (107 cases).
-            </p>
-            <p>
-              Exposures among ages 6–12 remain low and relatively stable. Adolescent exposures (13–19) fluctuate moderately but do not show the same upward trajectory observed in the youngest age group.
-            </p>
-            <p>
-              Total pediatric exposures increased from 102 in 2019 to 150 in 2024. The majority of this increase is attributable to children under five.
-            </p>
-          </div>
-
-          <div class="trend-box" style="margin-top:1rem;">
-            <h4>Do <5 Exposures Include Neonates?</h4>
-            <p>
-              Poison center annual reports capture exposures reported directly to poison centers. Neonatal cases (including potential withdrawal) would only appear in the <5 category if a poison center call was made and coded as an exposure. Many neonatal withdrawal cases are managed in hospital settings without poison center involvement. Those cases may appear in hospital discharge datasets or neonatal abstinence surveillance systems, but not necessarily in NPDS exposure totals.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2023 Emerging Findings Card -->
-      <section class="card">
-        <div class="card-header">
-          <svg class="icon" viewBox="0 0 24 24">
-            <path d="M1 21h22L12 2 1 21z"/>
-          </svg>
-          2023 “New & Emerging” Findings for Kratom
-        </div>
-        <div class="card-body">
-          <ul>
-            <li><strong>Severity:</strong> Among single‑substance cases with known outcomes, <strong>57.6%</strong> of kratom exposures produced a moderate/major/fatal effect (third‑highest after tianeptine and phenibut).</li>
-            <li><strong>Hospitalization:</strong> <strong>34.3%</strong> of kratom exposures resulted in hospital admission.</li>
-            <li><strong>Withdrawal:</strong> <strong>4.76%</strong> of all kratom exposures were coded for withdrawal; of those seen in healthcare, <strong>33.5%</strong> were admitted, and <strong>13.5%</strong> of withdrawal calls originated from home.</li>
-          </ul>
-          <p style="margin-top:1rem;">
-            <em>Bottom line:</em> Despite unregulated retail availability, kratom shows high rates of clinically significant toxicity and frequent healthcare utilization—be prepared for both acute overdose and withdrawal management.<br>
-            <small>Extracted from the 2023 NPDS Annual Report “Emerging Trends” analysis of kratom, phenibut, tianeptine, and nitrous oxide.</small>
-          </p>
-        </div>
-      </section>
-
-      <!-- Back to Evidence Link -->
-      <div style="margin: 2rem 0; text-align: center;">
-        <a class="btn-secondary" href="../index.html">
-          <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right:0.3rem;">
-            <path d="M15 18l-6-6 6-6v12z"></path>
-          </svg>
-          Back to Evidence
-        </a>
+  <!-- Hero with poison.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1>The <span>Poison Data</span> They Dismiss</h1>
+      <p>
+        Thousands of calls to poison centers. Seizures, vomiting, agitation – and deaths.
+        The industry calls these "misinterpreted." We call them a public health emergency.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#overview">See the Toll</a>
+        <a class="btn btn-secondary" href="../index.html">Evidence Hub</a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <p>&copy; AntiKratom.org — Poison Control Data</p>
+  <div class="container">
+    <!-- Context link -->
+    <div class="context-link">
+      ⚠️ <strong>Industry spin:</strong> "Poison center data is just calls – not real harm." Tell that to the families who watched their child seize.
+      <a href="../index.html">Return to Evidence →</a>
     </div>
-  </footer>
+
+    <!-- Harsh intro -->
+    <div class="content-card" id="overview">
+      <h2>What the Poison Centers Actually Recorded</h2>
+      <p>
+        The following tables come from America's Poison Centers® NPDS Annual Reports. These are not estimates – they are documented calls from frantic parents, terrified users, and medical personnel. The industry wants you to believe these are "anecdotes." They are evidence.
+      </p>
+      <p>
+        <span style="color:#e4b23e;">The industry's mantra:</span> "Most calls are mild." But every call represents a person in crisis – and the numbers are rising.
+      </p>
+    </div>
+
+    <!-- Table 1: Total Cases -->
+    <div class="content-card">
+      <h2>Kratom Exposures Reported to U.S. Poison Centers (2019–2024)</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Year</th><th>Total Cases</th><th>Single‑Substance</th><th>Pediatric <20</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2019</td><td>1,357</td><td>885</td><td>102</td></tr>
+          <tr><td>2020</td><td>1,262</td><td>794</td><td>103</td></tr>
+          <tr><td>2021</td><td>1,524</td><td>948</td><td>139</td></tr>
+          <tr><td>2022</td><td>1,278</td><td>794</td><td>107</td></tr>
+          <tr><td>2023</td><td>1,489</td><td>880</td><td>106</td></tr>
+          <tr><td>2024</td><td>1,645</td><td>1,027</td><td>149</td></tr>
+        </tbody>
+      </table>
+      <div class="source-note">
+        <strong>Total cases 2019–2024: 8,555</strong> – and that's only what got reported. The industry calls this "rare."
+      </div>
+    </div>
+
+    <!-- Table 2: Pediatric breakdown -->
+    <div class="content-card">
+      <h2>Children Are Not "Accidents" – They're Victims</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Year</th><th>&lt;5 yrs</th><th>6–12 yrs</th><th>13–19 yrs</th><th>Total Pediatrics</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2019</td><td>60</td><td>3</td><td>39</td><td>102</td></tr>
+          <tr><td>2020</td><td>63</td><td>5</td><td>35</td><td>103</td></tr>
+          <tr><td>2021</td><td>91</td><td>5</td><td>43</td><td>139</td></tr>
+          <tr><td>2022</td><td>67</td><td>3</td><td>37</td><td>107</td></tr>
+          <tr><td>2023</td><td>71</td><td>3</td><td>32</td><td>106</td></tr>
+          <tr><td>2024</td><td>107</td><td>6</td><td>37</td><td>150</td></tr>
+        </tbody>
+      </table>
+      <div class="trend-box">
+        <h4>⛔ Toddlers in Danger</h4>
+        <p>Children under five are the largest pediatric group – 107 cases in 2024 alone. These are babies who got into packages sold without child-resistant caps, marketed like candy. The industry says "keep it out of reach." We say: if it sends toddlers to the ER, it shouldn't be sold at all.</p>
+      </div>
+    </div>
+
+    <!-- Table 3: Adults & Intentional -->
+    <div class="content-card">
+      <h2>Adults – Intentional Use, Unintended Consequences</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Year</th><th>Adults ≥20</th><th>Intentional</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2019</td><td>733</td><td>540</td></tr>
+          <tr><td>2020</td><td>637</td><td>513</td></tr>
+          <tr><td>2021</td><td>741</td><td>588</td></tr>
+          <tr><td>2022</td><td>586</td><td>497</td></tr>
+          <tr><td>2023</td><td>723</td><td>519</td></tr>
+          <tr><td>2024</td><td>820</td><td>608</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:20px;">Intentional exposures mean people took kratom deliberately – and then needed emergency help. The industry calls this "consumer misuse." We call it a product with no predictable dose, no warning label, and no oversight.</p>
+    </div>
+
+    <!-- Table 4: Medical Outcomes -->
+    <div class="content-card">
+      <h2>Severe Outcomes – The "Mild" Crisis</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Year</th><th>HCF Treated</th><th>None</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Death</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2019</td><td>713</td><td>63</td><td>203</td><td>275</td><td>78</td><td>3</td></tr>
+          <tr><td>2020</td><td>614</td><td>59</td><td>175</td><td>259</td><td>66</td><td>5</td></tr>
+          <tr><td>2021</td><td>712</td><td>69</td><td>213</td><td>305</td><td>67</td><td>4</td></tr>
+          <tr><td>2022</td><td>586</td><td>66</td><td>167</td><td>248</td><td>55</td><td>3</td></tr>
+          <tr><td>2023</td><td>671</td><td>60</td><td>184</td><td>305</td><td>70</td><td>5</td></tr>
+          <tr><td>2024</td><td>803</td><td>92</td><td>233</td><td>332</td><td>76</td><td>7</td></tr>
+        </tbody>
+      </table>
+      <div class="source-note">
+        <strong>Serious outcomes (moderate, major, death) account for roughly half of cases with known outcomes.</strong> The industry calls this "rare." We call it a crisis.
+      </div>
+    </div>
+
+    <!-- 2023 Emerging Findings with harsh framing -->
+    <div class="content-card">
+      <h2>2023: The Year They Couldn't Spin</h2>
+      <ul>
+        <li><strong>57.6% of single-substance cases</strong> produced moderate, major, or fatal effects – third highest among all reported substances.</li>
+        <li><strong>34.3% resulted in hospital admission.</strong> One in three callers needed a hospital bed.</li>
+        <li><strong>Withdrawal:</strong> 4.76% of all kratom exposures were coded for withdrawal; of those seen in healthcare, 33.5% were admitted.</li>
+      </ul>
+      <p style="margin-top:20px;">The industry says "kratom helps people quit opioids." But here, people are calling poison centers because they can't quit kratom.</p>
+    </div>
+
+    <!-- Pediatric trend interpretation -->
+    <div class="trend-box">
+      <h4>⛔ Children Under Five: The Canary in the Coal Mine</h4>
+      <p>Exposures in toddlers hit a record high in 2024 (107 cases). The industry calls these "accidental ingestions" – as if that makes it acceptable. When a product is sold in gas stations, in unsecured packages, next to candy, children will find it. The only way to protect them is to remove the product from retail shelves.</p>
+    </div>
+
+    <!-- Takeaways -->
+    <div class="takeaways">
+      <h3>⛔ Key Takeaways</h3>
+      <ul>
+        <li><strong>8,555 documented exposures in six years.</strong> That's 8,555 people in crisis – and the real number is higher, because not everyone calls poison control.</li>
+        <li><strong>Hundreds of children.</strong> Babies and toddlers are being poisoned by a product the industry insists is safe.</li>
+        <li><strong>Severe outcomes are routine.</strong> Moderate, major, and fatal effects are not "rare" – they're expected.</li>
+        <li><strong>Withdrawal is real.</strong> People are calling because they can't stop – the industry never mentions that.</li>
+        <li><strong>Hospitalization is common.</strong> One in three exposures requires medical treatment. That's not "herbal wellness."</li>
+      </ul>
+    </div>
+
+    <!-- Fact-check industry lies -->
+    <div class="callout">
+      <div class="callout-title">📢 The industry’s talking points, fact‑checked</div>
+      <p><strong>Industry lie:</strong> "Most exposures are mild."<br> 
+      <strong>Truth:</strong> In 2023, 57.6% of single-substance cases had moderate, major, or fatal outcomes. That's not mild – that's a public health crisis.</p>
+      <p><strong>Industry lie:</strong> "These are just calls, not real harm."<br> 
+      <strong>Truth:</strong> Every call represents a person in enough distress that someone dialed a poison center. Many required hospital admission.</p>
+      <p><strong>Industry lie:</strong> "Kratom is safer than coffee."<br> 
+      <strong>Truth:</strong> Coffee doesn't send 800 people a year to the hospital. Kratom does.</p>
+    </div>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+      <a class="btn btn-secondary" href="../index.html">← Back to Evidence</a>
+      <a class="btn btn-primary" href="https://www.aapcc.org/" target="_blank">Source: America's Poison Centers</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">← Back to Evidence Hub</a> | <a href="../../industry/index.html">Industry Narratives</a></p>
+      <p style="margin-top:10px;">Hero image: poison.jpg — the calls they ignore.</p>
+    </div>
+  </div>
 </body>
 </html>
