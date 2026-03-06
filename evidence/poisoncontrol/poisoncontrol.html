@@ -158,14 +158,22 @@
       color: #e4b23e;
     }
 
+    /* Scrollable table wrapper */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
     /* Data tables - improved for dark theme */
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
       background: rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       overflow: hidden;
+      min-width: 600px; /* forces scroll on mobile if needed */
     }
 
     .data-table th {
@@ -175,12 +183,14 @@
       padding: 1rem;
       text-align: left;
       font-size: 1.1rem;
+      white-space: nowrap;
     }
 
     .data-table td {
       padding: 1rem;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       color: #f0f0f0;
+      white-space: nowrap;
     }
 
     .data-table tr:last-child td {
@@ -361,6 +371,16 @@
       color: #e4b23e;
       border-bottom: 2px solid #b42b2b;
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -417,19 +437,21 @@
     <!-- Table 1: Total Cases -->
     <div class="content-card">
       <h2>Kratom Exposures Reported to U.S. Poison Centers (2019–2024)</h2>
-      <table class="data-table">
-        <thead>
-          <tr><th>Year</th><th>Total Cases</th><th>Single‑Substance</th><th>Pediatric <20</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2019</td><td>1,357</td><td>885</td><td>102</td></tr>
-          <tr><td>2020</td><td>1,262</td><td>794</td><td>103</td></tr>
-          <tr><td>2021</td><td>1,524</td><td>948</td><td>139</td></tr>
-          <tr><td>2022</td><td>1,278</td><td>794</td><td>107</td></tr>
-          <tr><td>2023</td><td>1,489</td><td>880</td><td>106</td></tr>
-          <tr><td>2024</td><td>1,645</td><td>1,027</td><td>149</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>Year</th><th>Total Cases</th><th>Single‑Substance</th><th>Pediatric <20</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2019</td><td>1,357</td><td>885</td><td>102</td></tr>
+            <tr><td>2020</td><td>1,262</td><td>794</td><td>103</td></tr>
+            <tr><td>2021</td><td>1,524</td><td>948</td><td>139</td></tr>
+            <tr><td>2022</td><td>1,278</td><td>794</td><td>107</td></tr>
+            <tr><td>2023</td><td>1,489</td><td>880</td><td>106</td></tr>
+            <tr><td>2024</td><td>1,645</td><td>1,027</td><td>149</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="source-note">
         <strong>Total cases 2019–2024: 8,555</strong> – and that's only what got reported. The industry calls this "rare."
       </div>
@@ -438,19 +460,21 @@
     <!-- Table 2: Pediatric breakdown -->
     <div class="content-card">
       <h2>Children Are Not "Accidents" – They're Victims</h2>
-      <table class="data-table">
-        <thead>
-          <tr><th>Year</th><th>&lt;5 yrs</th><th>6–12 yrs</th><th>13–19 yrs</th><th>Total Pediatrics</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2019</td><td>60</td><td>3</td><td>39</td><td>102</td></tr>
-          <tr><td>2020</td><td>63</td><td>5</td><td>35</td><td>103</td></tr>
-          <tr><td>2021</td><td>91</td><td>5</td><td>43</td><td>139</td></tr>
-          <tr><td>2022</td><td>67</td><td>3</td><td>37</td><td>107</td></tr>
-          <tr><td>2023</td><td>71</td><td>3</td><td>32</td><td>106</td></tr>
-          <tr><td>2024</td><td>107</td><td>6</td><td>37</td><td>150</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>Year</th><th>&lt;5 yrs</th><th>6–12 yrs</th><th>13–19 yrs</th><th>Total Pediatrics</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2019</td><td>60</td><td>3</td><td>39</td><td>102</td></tr>
+            <tr><td>2020</td><td>63</td><td>5</td><td>35</td><td>103</td></tr>
+            <tr><td>2021</td><td>91</td><td>5</td><td>43</td><td>139</td></tr>
+            <tr><td>2022</td><td>67</td><td>3</td><td>37</td><td>107</td></tr>
+            <tr><td>2023</td><td>71</td><td>3</td><td>32</td><td>106</td></tr>
+            <tr><td>2024</td><td>107</td><td>6</td><td>37</td><td>150</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="trend-box">
         <h4>⛔ Toddlers in Danger</h4>
         <p>Children under five are the largest pediatric group – 107 cases in 2024 alone. These are babies who got into packages sold without child-resistant caps, marketed like candy. The industry says "keep it out of reach." We say: if it sends toddlers to the ER, it shouldn't be sold at all.</p>
@@ -460,38 +484,42 @@
     <!-- Table 3: Adults & Intentional -->
     <div class="content-card">
       <h2>Adults – Intentional Use, Unintended Consequences</h2>
-      <table class="data-table">
-        <thead>
-          <tr><th>Year</th><th>Adults ≥20</th><th>Intentional</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2019</td><td>733</td><td>540</td></tr>
-          <tr><td>2020</td><td>637</td><td>513</td></tr>
-          <tr><td>2021</td><td>741</td><td>588</td></tr>
-          <tr><td>2022</td><td>586</td><td>497</td></tr>
-          <tr><td>2023</td><td>723</td><td>519</td></tr>
-          <tr><td>2024</td><td>820</td><td>608</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>Year</th><th>Adults ≥20</th><th>Intentional</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2019</td><td>733</td><td>540</td></tr>
+            <tr><td>2020</td><td>637</td><td>513</td></tr>
+            <tr><td>2021</td><td>741</td><td>588</td></tr>
+            <tr><td>2022</td><td>586</td><td>497</td></tr>
+            <tr><td>2023</td><td>723</td><td>519</td></tr>
+            <tr><td>2024</td><td>820</td><td>608</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p style="margin-top:20px;">Intentional exposures mean people took kratom deliberately – and then needed emergency help. The industry calls this "consumer misuse." We call it a product with no predictable dose, no warning label, and no oversight.</p>
     </div>
 
     <!-- Table 4: Medical Outcomes -->
     <div class="content-card">
       <h2>Severe Outcomes – The "Mild" Crisis</h2>
-      <table class="data-table">
-        <thead>
-          <tr><th>Year</th><th>HCF Treated</th><th>None</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Death</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2019</td><td>713</td><td>63</td><td>203</td><td>275</td><td>78</td><td>3</td></tr>
-          <tr><td>2020</td><td>614</td><td>59</td><td>175</td><td>259</td><td>66</td><td>5</td></tr>
-          <tr><td>2021</td><td>712</td><td>69</td><td>213</td><td>305</td><td>67</td><td>4</td></tr>
-          <tr><td>2022</td><td>586</td><td>66</td><td>167</td><td>248</td><td>55</td><td>3</td></tr>
-          <tr><td>2023</td><td>671</td><td>60</td><td>184</td><td>305</td><td>70</td><td>5</td></tr>
-          <tr><td>2024</td><td>803</td><td>92</td><td>233</td><td>332</td><td>76</td><td>7</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr><th>Year</th><th>HCF Treated</th><th>None</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Death</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2019</td><td>713</td><td>63</td><td>203</td><td>275</td><td>78</td><td>3</td></tr>
+            <tr><td>2020</td><td>614</td><td>59</td><td>175</td><td>259</td><td>66</td><td>5</td></tr>
+            <tr><td>2021</td><td>712</td><td>69</td><td>213</td><td>305</td><td>67</td><td>4</td></tr>
+            <tr><td>2022</td><td>586</td><td>66</td><td>167</td><td>248</td><td>55</td><td>3</td></tr>
+            <tr><td>2023</td><td>671</td><td>60</td><td>184</td><td>305</td><td>70</td><td>5</td></tr>
+            <tr><td>2024</td><td>803</td><td>92</td><td>233</td><td>332</td><td>76</td><td>7</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="source-note">
         <strong>Serious outcomes (moderate, major, death) account for roughly half of cases with known outcomes.</strong> The industry calls this "rare." We call it a crisis.
       </div>
