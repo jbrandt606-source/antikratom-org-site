@@ -13,13 +13,14 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #fafcfc;
+      background-color: #d9e8d3; /* light green base – not white */
       color: #1a1e24;
       line-height: 1.5;
       font-weight: 400;
+      position: relative;
     }
 
-    /* background.jpg as subtle page background (low opacity) */
+    /* background.jpg as a fixed, low‑opacity overlay – visible behind everything */
     body::before {
       content: '';
       position: fixed;
@@ -31,7 +32,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0.06;
+      opacity: 0.15; /* subtle so text remains readable */
       pointer-events: none;
       z-index: -1;
     }
@@ -337,6 +338,11 @@
       color: #b42b2b;
     }
 
+    /* updated evidence list to match IMG_5596.png exactly */
+    .evidence-list.exact li a {
+      justify-content: space-between;
+    }
+
     .testimonial {
       background: #f4f7fa;
       padding: 32px;
@@ -512,22 +518,35 @@
       </div>
     </section>
 
-  <div class="container">
-      <!-- evidence + voices row (like image 3) -->
-      <div class="evidence-row">
-        <div class="evidence-block">
-          <h3>THE EVIDENCE</h3>
-          <ul class="evidence-list">
-            <li><a href="#">FDA Position</a></li>
-            <li><a href="#">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
-            <li><a href="#">CDC SUDORS death data</a></li>
-            <li><a href="#">Poison control center reports</a></li>
-            <li><a href="#">FDA Reported adverse events</a></li>
-            <li><a href="#">Human research / addiction liability</a></li>
-            
+    <div class="container">
+      <!-- three-column info (where sold / who targeted / what happens) -->
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>WHERE IT’S SOLD</h3>
+          <ul class="info-list">
+            <li>Gas stations</li>
+            <li>Vape shops</li>
+            <li>Online retailers</li>
           </ul>
         </div>
-        <div>
+        <div class="info-card">
+          <h3>WHO IT TARGETS</h3>
+          <ul class="info-list">
+            <li>Teens & young adults</li>
+            <li>People in recovery</li>
+            <li>Unsuspecting consumers</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>WHAT HAPPENS</h3>
+          <ul class="info-list">
+            <li>Addiction & withdrawal</li>
+            <li>ER visits / poison control calls</li>
+            <li>Deaths with kratom detected</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- TAKE ACTION NOW section (updated with specific action items, no icons) -->
     <section class="action-section">
@@ -548,10 +567,21 @@
       </div>
     </section>
 
-    
-
-
-          
+    <div class="container">
+      <!-- evidence + voices row (evidence list updated to match IMG_5596.png exactly) -->
+      <div class="evidence-row">
+        <div class="evidence-block">
+          <h3>THE EVIDENCE</h3>
+          <ul class="evidence-list exact">
+            <li><a href="#">FDA Position</a></li>
+            <li><a href="#">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
+            <li><a href="#">CDC SUDORS death data</a></li>
+            <li><a href="#">Poison control center reports</a></li>
+            <li><a href="#">FDA Reported adverse events</a></li>
+            <li><a href="#">Human research / addiction liability</a></li>
+          </ul>
+        </div>
+        <div>
           <div class="testimonial">
             <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
             <div class="attribution">— Ohio parent, 2024</div>
