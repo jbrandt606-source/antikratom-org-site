@@ -1,4 +1,4 @@
-/* style.css – AntiKratom.org (homepage + evidence library) */
+/* style.css – AntiKratom.org (minimal, text‑driven design) */
 
 * {
     margin: 0;
@@ -10,6 +10,7 @@ body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: #222;
+    background: #fff;
 }
 
 .container {
@@ -18,10 +19,10 @@ body {
     padding: 0 20px;
 }
 
-/* Header (homepage) */
+/* Header */
 .header {
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -56,7 +57,22 @@ body {
     color: #d32f2f;
 }
 
-/* Hero (used on both pages) */
+/* Donate button (optional) */
+.btn-donate {
+    background: #d32f2f;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+.btn-donate:hover {
+    background: #b71c1c;
+}
+
+/* Hero section */
 .hero {
     position: relative;
     background-size: cover;
@@ -100,25 +116,25 @@ body {
     flex-wrap: wrap;
 }
 
-/* Buttons */
-.btn, .btn-primary, .btn-red, .btn-light, .btn-dark, .btn-outline {
+/* Simple buttons (no shadows, no transforms) */
+.btn {
     display: inline-block;
-    padding: 0.9rem 2rem;
+    padding: 0.8rem 2rem;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.2s;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
     border: 2px solid transparent;
     cursor: pointer;
     text-align: center;
 }
 
-.btn-light, .btn-primary /* make btn-primary look like btn-light by default? we'll define separately */ {
+.btn-light {
     background: white;
     color: #222;
+    border-color: white;
 }
-
-.btn-light:hover, .btn-primary:hover {
+.btn-light:hover {
     background: transparent;
     color: white;
     border-color: white;
@@ -127,19 +143,11 @@ body {
 .btn-red {
     background: #d32f2f;
     color: white;
+    border-color: #d32f2f;
 }
-
 .btn-red:hover {
     background: #b71c1c;
-}
-
-.btn-dark {
-    background: #222;
-    color: white;
-}
-
-.btn-dark:hover {
-    background: #000;
+    border-color: #b71c1c;
 }
 
 .btn-outline {
@@ -147,105 +155,53 @@ body {
     border: 2px solid white;
     color: white;
 }
-
 .btn-outline:hover {
     background: white;
     color: #222;
 }
 
-.btn-block {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+.btn-outline-red {
+    background: transparent;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
 }
-
-/* Specific for evidence page button – make it match homepage red button */
-.btn-primary {
+.btn-outline-red:hover {
     background: #d32f2f;
     color: white;
-    border: 2px solid transparent;
-}
-.btn-primary:hover {
-    background: #b71c1c;
-    border-color: white;
 }
 
-/* Sections */
-.section, .evidence-section {
-    padding: 5rem 0;
+/* Section spacing */
+.section {
+    padding: 3rem 0;
 }
 
-.section h2, .evidence-section h2 {
-    font-size: 2.5rem;
+/* Section titles */
+.section h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .section-lead {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
     max-width: 700px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
+/* Dark background section (industry) */
 .bg-dark {
     background: #1a1a1a;
     color: white;
 }
-
 .bg-dark .section-lead {
     color: #ccc;
 }
 
-/* Card grid (homepage & evidence) */
-.card-grid, .evidence-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.card, .evidence-grid .card {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover, .evidence-grid .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.card h3, .evidence-grid .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #d32f2f;
-}
-
-.card p, .evidence-grid .card p {
-    margin-bottom: 0;
-    color: #444;
-}
-
-.card-link {
-    color: #d32f2f;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.card-link:hover {
-    text-decoration: underline;
-}
-
-/* Pill group (industry section) */
+/* Pill group (industry) */
 .pill-group {
     margin: 2rem 0;
 }
-
 .pill {
     display: inline-block;
     background: rgba(255,255,255,0.1);
@@ -258,36 +214,25 @@ body {
     border: 1px solid rgba(255,255,255,0.3);
 }
 
-.section-action {
-    margin-top: 2rem;
-}
-
-/* Two column layout (homepage) */
+/* Two‑column layout (for about/contact on other pages) */
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
 
-.action-buttons {
-    margin-top: 2rem;
-}
-
-/* Form */
+/* Form styling (used on contact page) */
 .contact-form {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
-
 .form-group {
     margin-bottom: 1.5rem;
 }
-
 .form-group label {
     display: block;
     font-weight: 600;
     margin-bottom: 0.3rem;
 }
-
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -296,13 +241,11 @@ body {
     border-radius: 4px;
     font-family: inherit;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
     outline: 2px solid #d32f2f;
     border-color: transparent;
 }
-
 .form-note {
     margin-top: 1rem;
     color: #777;
@@ -316,6 +259,143 @@ body {
     text-align: center;
 }
 
+/* --- Homepage specific styles (no cards, no backgrounds) --- */
+
+/* Three‑column info row (WHERE / WHO / WHAT) */
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+.info-col {
+    flex: 1 1 200px;
+}
+.info-col h3 {
+    color: #d32f2f;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #d32f2f;
+    padding-bottom: 0.3rem;
+    font-weight: 600;
+}
+.info-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.info-col li {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Take Action list */
+.action-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+}
+.action-list li {
+    margin-bottom: 0.75rem;
+}
+.action-list a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.action-list a:hover {
+    text-decoration: underline;
+}
+
+/* Evidence list (grid of links) */
+.evidence-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.evidence-item a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+.evidence-item a:hover {
+    color: #b71c1c;
+}
+
+/* Testimonial */
+.testimonial {
+    border-left: 5px solid #d32f2f;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.testimonial-author {
+    font-style: normal;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-top: 0.5rem;
+}
+
+/* Join form */
+.join-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem 0;
+}
+.join-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- Styles for evidence subpages (cards, etc.) – preserved but not used on homepage --- */
+.card-grid, .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.card, .evidence-grid .card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover, .evidence-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card h3, .evidence-grid .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #d32f2f;
+}
+.card p, .evidence-grid .card p {
+    margin-bottom: 0;
+    color: #444;
+}
+.card-link {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 600;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+/* End of card styles */
+
 /* Responsive */
 @media (max-width: 900px) {
     .card-grid, .evidence-grid {
@@ -327,6 +407,12 @@ body {
     }
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+    .info-row {
+        flex-direction: column;
+    }
+    .join-form {
+        flex-direction: column;
     }
 }
 
@@ -345,42 +431,7 @@ body {
     .hero-buttons {
         flex-direction: column;
     }
-    .btn, .btn-primary {
+    .btn {
         text-align: center;
     }
-}
-/* Enhance primary button */
-.btn-primary {
-  background: #d32f2f;
-  color: white;
-  border: 2px solid #d32f2f;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.btn-primary:hover {
-  background: #b71c1c;
-  border-color: #b71c1c;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Enhance secondary (outline) button */
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #d32f2f;
-  color: #d32f2f;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.btn-secondary:hover {
-  background: #d32f2f;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Optional: add a little icon spacing if you decide to use icons */
-.btn-primary svg, .btn-secondary svg {
-  margin-right: 0.3rem;
-  vertical-align: middle;
 }
