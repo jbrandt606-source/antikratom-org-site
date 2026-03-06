@@ -25,18 +25,18 @@
     .hero {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('death.jpg') center center / cover no-repeat;
       color: white;
-      padding: 100px 0;
+      padding: 80px 0;
       border-bottom: 4px solid #b42b2b;
     }
 
     .hero-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       font-weight: 800;
       line-height: 1.1;
       text-transform: uppercase;
@@ -51,23 +51,23 @@
     }
 
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 800px;
       background: rgba(0, 0, 0, 0.3);
       border-left: 6px solid #e4b23e;
-      padding: 18px 28px;
+      padding: 16px 24px;
       margin-bottom: 20px;
     }
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       margin-top: 30px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 32px;
+      padding: 12px 24px;
       font-weight: 700;
       text-decoration: none;
       text-transform: uppercase;
@@ -75,7 +75,7 @@
       border: none;
       cursor: pointer;
       transition: all 0.2s;
-      font-size: 1rem;
+      font-size: 0.95rem;
       display: inline-block;
     }
 
@@ -103,35 +103,35 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 30px 20px;
     }
 
     /* Content cards */
     .content-card {
       background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
+      padding: 30px 25px;
       border-left: 6px solid #b42b2b;
-      margin: 40px 0;
+      margin: 30px 0;
     }
 
     .content-card h2 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       border-left: 5px solid #e4b23e;
-      padding-left: 20px;
+      padding-left: 16px;
     }
 
     .content-card h3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: #e4b23e;
-      margin: 30px 0 15px;
+      margin: 25px 0 15px;
     }
 
     .content-card p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 20px;
       color: #f0f0f0;
     }
@@ -142,9 +142,9 @@
     }
 
     .content-card ul li {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      padding-left: 30px;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
       position: relative;
       color: #f0f0f0;
     }
@@ -154,32 +154,43 @@
       position: absolute;
       left: 0;
       top: -2px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #e4b23e;
+    }
+
+    /* Scrollable table wrapper */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0;
+      border-radius: 8px;
     }
 
     /* Data table */
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
       background: rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       overflow: hidden;
+      min-width: 500px; /* forces scroll on narrow screens */
     }
 
     .data-table th {
       background: #b42b2b;
       color: white;
       font-weight: 600;
-      padding: 1rem;
+      padding: 0.9rem;
       text-align: left;
+      font-size: 1rem;
+      white-space: nowrap;
     }
 
     .data-table td {
-      padding: 1rem;
+      padding: 0.9rem;
       border-bottom: 1px solid rgba(255,255,255,0.1);
       color: #f0f0f0;
+      white-space: nowrap;
     }
 
     .data-table tr:last-child td {
@@ -192,7 +203,7 @@
 
     /* Jurisdiction note */
     .jurisdiction-note {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       background: rgba(255,255,255,0.05);
       padding: 15px;
       border-radius: 4px;
@@ -202,20 +213,21 @@
 
     .jurisdiction-note a {
       color: #e4b23e;
+      word-break: break-word;
     }
 
     /* Takeaways box */
     .takeaways {
       background: rgba(228, 178, 62, 0.1);
       border: 2px solid #e4b23e;
-      padding: 30px;
-      margin: 40px 0;
+      padding: 25px;
+      margin: 30px 0;
     }
 
     .takeaways h3 {
       color: #e4b23e;
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
       border-left: 5px solid #b42b2b;
       padding-left: 15px;
     }
@@ -225,9 +237,9 @@
     }
 
     .takeaways li {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      padding-left: 30px;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
       position: relative;
     }
 
@@ -236,7 +248,7 @@
       position: absolute;
       left: 0;
       top: -2px;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: #e4b23e;
     }
 
@@ -250,7 +262,7 @@
 
     .callout-title {
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #e4b23e;
       margin-bottom: 10px;
     }
@@ -258,10 +270,11 @@
     /* Context link */
     .context-link {
       background: rgba(180, 43, 43, 0.2);
-      padding: 20px;
-      margin: 40px 0;
+      padding: 18px;
+      margin: 30px 0;
       border: 2px solid #e4b23e;
       display: inline-block;
+      width: 100%;
     }
 
     .context-link a {
@@ -269,6 +282,7 @@
       font-weight: 600;
       text-decoration: none;
       border-bottom: 2px solid #b42b2b;
+      word-break: break-word;
     }
 
     .context-link a:hover {
@@ -277,12 +291,12 @@
 
     /* Footer */
     .footer-note {
-      margin-top: 60px;
+      margin-top: 50px;
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.2);
       text-align: center;
       color: #ccc;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .footer-note a {
@@ -294,7 +308,7 @@
     .site-header {
       background-color: #0c151f;
       color: #fff;
-      padding: 16px 0;
+      padding: 12px 0;
       border-bottom: 4px solid #b42b2b;
     }
 
@@ -303,14 +317,14 @@
       align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 20px;
     }
 
     .logo h1 {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       line-height: 1.2;
@@ -318,7 +332,7 @@
 
     .logo span {
       display: block;
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       font-weight: 400;
       color: #bfc9d4;
       letter-spacing: 0.3px;
@@ -327,7 +341,7 @@
 
     .nav {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       flex-wrap: wrap;
       align-items: center;
     }
@@ -336,7 +350,7 @@
       color: #fff;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       transition: color 0.2s;
@@ -345,6 +359,48 @@
     .nav a:hover {
       color: #e4b23e;
       border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 18px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+      .content-card h2 {
+        font-size: 1.8rem;
+      }
+      .takeaways h3 {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* Featured block for the key question */
+    .feature-block {
+      background: rgba(228, 178, 62, 0.15);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .feature-block p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .feature-block .mantra {
+      font-size: 1.6rem;
+      color: #e4b23e;
+      font-style: italic;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -382,6 +438,12 @@
   </section>
 
   <div class="container">
+    <!-- Featured block from screenshot -->
+    <div class="feature-block">
+      <p>Why is antikratom.org a good place to turn to for information on the dangers of using kratom?</p>
+      <div class="mantra">The industry's mantra: "It's always something else." Tell that to the families counting empty chairs.</div>
+    </div>
+
     <!-- Context link -->
     <div class="context-link">
       ⚠️ <strong>Industry spin:</strong> “Most deaths involve other drugs.” That’s not an excuse — it’s an indictment. Kratom is sold with no warnings about lethal interactions.
@@ -399,29 +461,31 @@
       </p>
     </div>
 
-    <!-- SUDORS Table -->
+    <!-- SUDORS Table with mobile scroll -->
     <section id="sudors" class="content-card">
       <h2>SUDORS: Kratom/Mitragynine in Overdose Deaths (2020–2024)</h2>
       <p>
         The <strong>State Unintentional Drug Overdose Reporting System (SUDORS)</strong> compiles detailed information on overdose deaths. These are not estimates — they are real people, counted by medical examiners. The industry dismisses them as “polydrug cases” while ignoring that kratom was present.
       </p>
 
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Jurisdictions Reporting</th>
-            <th>Deaths with Mitragynine Detected</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>2020</td><td>32</td><td>866</td></tr>
-          <tr><td>2021</td><td>33</td><td>1,016</td></tr>
-          <tr><td>2022</td><td>34</td><td>1,017</td></tr>
-          <tr><td>2023</td><td>38</td><td>1,151</td></tr>
-          <tr><td>2024</td><td>43</td><td>995</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Jurisdictions Reporting</th>
+              <th>Deaths with Mitragynine Detected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2020</td><td>32</td><td>866</td></tr>
+            <tr><td>2021</td><td>33</td><td>1,016</td></tr>
+            <tr><td>2022</td><td>34</td><td>1,017</td></tr>
+            <tr><td>2023</td><td>38</td><td>1,151</td></tr>
+            <tr><td>2024</td><td>43</td><td>995</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <div class="jurisdiction-note">
         <p><strong>2024 note:</strong> The apparent decline from 2023 to 2024 occurs despite expanded participation (43 jurisdictions). The industry will cherry-pick this number — but the cumulative toll is thousands dead with kratom in their systems.</p>
@@ -430,10 +494,10 @@
     </section>
 
     <!-- CDC Cards with harsh framing -->
-    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0;">
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0;">
       
       <!-- Card 1: SUDORS 2016–2017 -->
-      <div class="content-card" style="padding: 30px;">
+      <div class="content-card" style="padding: 25px;">
         <h3 style="color:#e4b23e; margin-bottom:15px;">⛔ CDC SUDORS 2016–2017</h3>
         <ul>
           <li><strong>152 deaths</strong> with mitragynine detected</li>
@@ -445,7 +509,7 @@
       </div>
 
       <!-- Card 2: Poison Center Surveillance -->
-      <div class="content-card" style="padding: 30px;">
+      <div class="content-card" style="padding: 25px;">
         <h3 style="color:#e4b23e; margin-bottom:15px;">⛔ Poison Control 2010–2015</h3>
         <ul>
           <li><strong>660 exposure calls</strong> — and that's just what got reported</li>
@@ -456,7 +520,7 @@
       </div>
 
       <!-- Card 3: Additional Reports -->
-      <div class="content-card" style="padding: 30px;">
+      <div class="content-card" style="padding: 25px;">
         <h3 style="color:#e4b23e; margin-bottom:15px;">⛔ Law Enforcement & More</h3>
         <ul>
           <li>Reports of law enforcement exposures after handling kratom — because it's potent enough to affect trained officers</li>
@@ -503,7 +567,7 @@
     </div>
 
     <!-- Back links -->
-    <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
       <a class="btn btn-secondary" href="../index.html">← Back to Evidence</a>
       <a class="btn btn-primary" href="./CDC%20Kratom%202016%202017.pdf" target="_blank">Open Key Report</a>
     </div>
