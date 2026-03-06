@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anti‑Kratom Association · Home</title>
+  <title>Anti‑Kratom Association | home</title>
   <style>
     * {
       margin: 0;
@@ -12,19 +12,14 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background-color: #f2f5f9;
-      /* background.jpg as a subtle fixed overlay — assuming placed in /assets/images/ */
-      background-image: url('assets/images/background.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafcfc;
+      color: #1a1e24;
       line-height: 1.5;
-      color: #1e2b37;
+      font-weight: 400;
     }
 
-    /* semi‑transparent layer over background for readability */
+    /* background.jpg as subtle page background (low opacity) */
     body::before {
       content: '';
       position: fixed;
@@ -32,271 +27,393 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.88);
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
       z-index: -1;
     }
 
-    .wrapper {
+    .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 32px;
     }
 
-    /* header – simple, authoritative */
+    /* header – dark, serious */
     .site-header {
-      background-color: #0b1a2a; /* dark navy */
-      color: white;
+      background-color: #0c151f; /* very dark navy/almost black */
+      color: #fff;
       padding: 16px 0;
-      border-bottom: 4px solid #c4282b;
+      border-bottom: 4px solid #b42b2b;
     }
 
     .header-inner {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-icon {
-      font-size: 2rem;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-    }
-
-    .org-name {
+    .logo h1 {
+      font-size: 1.7rem;
       font-weight: 700;
-      font-size: 1.5rem;
       letter-spacing: -0.02em;
       line-height: 1.2;
     }
-    .org-name span {
-      color: #e8b13e;
-      font-weight: 400;
-      font-size: 1rem;
+
+    .logo span {
       display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
     }
 
-    .nav-links {
+    .nav {
       display: flex;
       gap: 2rem;
-      font-weight: 500;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    .nav-links a:hover {
-      color: #e8b13e;
-      border-bottom: 2px solid #c4282b;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    /* hero section with hero.jpg */
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* HERO section with hero.jpg */
     .hero {
-      background: linear-gradient(rgba(0, 20, 30, 0.75), rgba(0, 10, 20, 0.8)), url('assets/images/hero.jpg');
-      background-size: cover;
-      background-position: center 30%;
+      background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
       color: white;
-      padding: 100px 0 90px;
-      margin-bottom: 40px;
-      border-bottom: 6px solid #c4282b;
+      padding: 120px 0 100px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #b42b2b;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 950px;
     }
 
-    .hero h1 {
-      font-size: 3.4rem;
+    .hero h2 {
+      font-size: 3.5rem;
       font-weight: 800;
       line-height: 1.1;
-      letter-spacing: -0.02em;
       text-transform: uppercase;
-      margin-bottom: 24px;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .hero-subhead {
+    .hero-sub {
       font-size: 1.7rem;
       font-weight: 400;
-      margin-bottom: 20px;
-      border-left: 6px solid #c4282b;
-      padding-left: 24px;
-      background: rgba(0,0,0,0.3);
+      margin-bottom: 25px;
+      border-left: 6px solid #b42b2b;
+      padding-left: 28px;
+      background: rgba(0, 0, 0, 0.3);
       display: inline-block;
-      padding: 12px 24px;
+      padding: 16px 28px;
     }
 
     .hero-tagline {
-      font-size: 1.5rem;
-      font-weight: 600;
-      background-color: #c4282b;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background-color: #b42b2b;
       display: inline-block;
-      padding: 12px 32px;
-      margin-top: 20px;
+      padding: 14px 36px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      box-shadow: 0 8px 0 #0b1a2a;
+      box-shadow: 0 6px 0 #0c151f;
+      margin-top: 20px;
     }
 
-    /* features / hero sections (four cards) */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #0b1a2a;
-      margin: 48px 0 24px;
-      border-bottom: 3px solid #c4282b;
-      padding-bottom: 8px;
-      display: inline-block;
-      text-transform: uppercase;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-      margin: 40px 0 60px;
-    }
-
-    .feature-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.2);
-      padding: 28px 20px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border-top: 6px solid #c4282b;
+    .hero-buttons {
       display: flex;
-      flex-direction: column;
-      height: 100%;
-      border-left: 1px solid #eaeef2;
-      border-right: 1px solid #eaeef2;
-      border-bottom: 1px solid #d0d9e2;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px -10px rgba(160, 30, 30, 0.3);
-    }
-
-    .card-icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-    }
-
-    .feature-card h3 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #0f293b;
-      margin-bottom: 16px;
-      border-bottom: 2px solid #e8b13e;
-      padding-bottom: 8px;
-    }
-
-    .problem-list {
-      list-style: none;
-      margin: 16px 0 20px;
-      flex-grow: 1;
-    }
-
-    .problem-list li {
-      margin-bottom: 12px;
-      padding-left: 28px;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .problem-list li::before {
-      content: "⚠️";
-      position: absolute;
-      left: 0;
-      top: -2px;
-      font-size: 1.2rem;
-    }
-
-    .card-description {
-      color: #2e4053;
-      margin: 12px 0 20px;
-      flex-grow: 1;
-      font-weight: 400;
+      gap: 24px;
+      margin-top: 48px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      display: inline-block;
-      background-color: #0b1a2a;
-      color: white;
+      padding: 16px 36px;
+      font-weight: 700;
       text-decoration: none;
-      padding: 12px 20px;
-      font-weight: 600;
-      border-radius: 4px;
-      text-align: center;
-      transition: background 0.2s, transform 0.1s;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       border: none;
       cursor: pointer;
+      transition: all 0.2s;
       font-size: 1rem;
+      display: inline-block;
+      background-color: white;
+      color: #0c151f;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* three-column info section (Where it's sold / who it targets / what happens) */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin: 70px 0 60px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 32px 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      border-bottom: 4px solid #b42b2b;
+      border-radius: 0;
+      transition: transform 0.15s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -10px rgba(170, 40, 40, 0.15);
+    }
+
+    .info-card h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0c1b28;
+      margin-bottom: 24px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 18px;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      margin-bottom: 16px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #1e2d3a;
+      padding-left: 0;
+      position: relative;
+    }
+
+    .info-list li::before {
+      content: "—";
+      color: #b42b2b;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+
+    /* TAKE ACTION NOW section (like image 3) */
+    .action-section {
+      background-color: #0c151f;
+      color: white;
+      padding: 70px 0 70px;
+      margin: 40px 0 40px;
+      border-top: 6px solid #b42b2b;
+      border-bottom: 6px solid #b42b2b;
+    }
+
+    .action-section h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 25px;
+      margin: 50px 0 20px;
+    }
+
+    .action-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 28px 12px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.2s;
+    }
+
+    .action-item:hover {
+      background: rgba(180, 43, 43, 0.3);
+      border-color: #e4b23e;
+    }
+
+    .action-item a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.15rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      margin-top: 12px;
-      border-left: 4px solid #e8b13e;
+      display: block;
     }
 
-    .btn:hover {
-      background-color: #c4282b;
-      border-left-color: white;
+    /* evidence + voices row */
+    .evidence-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin: 60px 0 40px;
     }
 
-    .btn-evidence {
-      background-color: #1b4f6e;
+    .evidence-block {
+      background: white;
+      padding: 32px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+      border-left: 6px solid #b42b2b;
     }
 
-    .btn-industry {
-      background-color: #8a6d2f;
-    }
-
-    .btn-fight {
-      background-color: #b1422d;
-    }
-
-    /* quick impact strip (archive/advocacy feel) */
-    .impact-strip {
-      background-color: #0b1a2a;
-      color: white;
-      padding: 32px 0;
-      text-align: center;
-      margin: 40px 0;
-      border-radius: 60px 0 60px 0;
-      background-image: url('assets/images/background.jpg');
-      background-blend-mode: overlay;
-      background-size: cover;
-      border-left: 10px solid #e8b13e;
-    }
-
-    .impact-strip p {
-      font-size: 1.8rem;
-      font-weight: 200;
-      max-width: 900px;
-      margin: 0 auto;
-      text-shadow: 2px 2px 0 #00000040;
-    }
-    .impact-strip strong {
-      color: #e8b13e;
+    .evidence-block h3 {
+      font-size: 2rem;
       font-weight: 700;
+      color: #0c151f;
+      margin-bottom: 24px;
+    }
+
+    .evidence-list {
+      list-style: none;
+    }
+
+    .evidence-list li {
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 10px;
+    }
+
+    .evidence-list a {
+      text-decoration: none;
+      color: #1a2a3a;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .evidence-list a::after {
+      content: "→";
+      color: #b42b2b;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .evidence-list a:hover {
+      color: #b42b2b;
+    }
+
+    .testimonial {
+      background: #f4f7fa;
+      padding: 32px;
+      font-style: normal;
+      border-left: 6px solid #e4b23e;
+    }
+
+    .testimonial p {
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #0c151f;
+      margin-bottom: 20px;
+    }
+
+    .testimonial .attribution {
+      font-weight: 700;
+      color: #b42b2b;
+      text-transform: uppercase;
+    }
+
+    /* email signup */
+    .signup-box {
+      background: #eaeef2;
+      padding: 40px;
+      margin: 40px 0 60px;
+      border-radius: 0;
+      border-left: 8px solid #b42b2b;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .signup-box p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0c151f;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .email-form input {
+      padding: 16px 20px;
+      width: 280px;
+      max-width: 100%;
+      border: 2px solid #ccc;
+      font-size: 1rem;
+      background: white;
+    }
+
+    .email-form button {
+      padding: 16px 32px;
+      background-color: #b42b2b;
+      color: white;
+      border: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+    }
+
+    .email-form button:hover {
+      background-color: #8f2020;
     }
 
     /* footer */
     .site-footer {
-      background-color: #0b1a2a;
-      color: #ccc;
-      padding: 40px 0 20px;
-      margin-top: 60px;
-      border-top: 6px solid #c4282b;
+      background-color: #0c151f;
+      color: #aaa;
+      padding: 50px 0 30px;
+      border-top: 6px solid #b42b2b;
     }
 
     .footer-inner {
@@ -304,65 +421,69 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      gap: 30px;
     }
 
     .footer-links a {
-      color: #e8b13e;
+      color: #e4b23e;
       text-decoration: none;
       margin-right: 28px;
+      font-size: 0.95rem;
       font-weight: 500;
     }
+
     .footer-links a:hover {
       text-decoration: underline;
     }
 
     .copyright {
       font-size: 0.9rem;
-      opacity: 0.8;
+      color: #7f8c98;
     }
 
     /* responsive */
-    @media (max-width: 1024px) {
-      .card-grid {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 900px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
       }
-      .hero h1 {
-        font-size: 2.8rem;
+      .evidence-row {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+      .hero-sub {
+        font-size: 1.4rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
-    @media (max-width: 680px) {
-      .header-inner {
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+      .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 16px;
       }
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero-subhead {
-        font-size: 1.3rem;
-      }
-      .card-grid {
-        grid-template-columns: 1fr;
+      .btn {
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="wrapper header-inner">
-      <div class="logo-area">
-        <span class="logo-icon">⚖️📋</span>
-        <div class="org-name">
-          ANTI‑KRATOM ASSOCIATION <span>public health · evidence · action</span>
-        </div>
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
       </div>
-      <nav class="nav-links">
+      <nav class="nav">
         <a href="#">HOME</a>
         <a href="#">EVIDENCE</a>
         <a href="#">INDUSTRY</a>
@@ -374,105 +495,107 @@
   </header>
 
   <main>
-    <!-- hero section with hero.jpg -->
+    <!-- hero with hero.jpg background -->
     <section class="hero">
-      <div class="wrapper hero-content">
-        <h1>Gas‑Station Drugs Are Flooding Our Communities</h1>
-        <div class="hero-subhead">
+      <div class="container hero-content">
+        <h2>GAS-STATION DRUGS ARE FLOODING OUR COMMUNITIES</h2>
+        <div class="hero-sub">
           Kratom is sold in vape shops and gas stations across the United States despite federal safety warnings.
         </div>
         <div class="hero-tagline">
-          Unsafe. Unregulated. Unfit for human consumption.<br>Communities are fighting back.
+          UNSAFE. UNREGULATED. UNFIT FOR HUMAN CONSUMPTION.<br>COMMUNITIES ARE FIGHTING BACK.
+        </div>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">TAKE ACTION NOW →</a>
+          <a href="#" class="btn btn-outline">READ THE EVIDENCE →</a>
         </div>
       </div>
     </section>
 
-    <!-- four core "Hero Sections" (cards) exactly as sitemap -->
-    <div class="wrapper">
-      <h2 class="section-title">⏹︎ THE FIGHT IN FOUR FRONTS</h2>
-      <div class="card-grid">
-        <!-- 1. The Problem card (with bullet details) -->
-        <div class="feature-card">
-          <div class="card-icon">🚨</div>
-          <h3>The Problem</h3>
-          <ul class="problem-list">
-            <li>Kratom sold in gas stations & vape shops</li>
-            <li>No FDA approval</li>
-            <li>Increasing poison control calls</li>
+    <div class="container">
+      <!-- three-column info (where sold / who targeted / what happens) -->
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>WHERE IT’S SOLD</h3>
+          <ul class="info-list">
+            <li>Gas stations</li>
+            <li>Vape shops</li>
+            <li>Online retailers</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>WHO IT TARGETS</h3>
+          <ul class="info-list">
+            <li>Teens & young adults</li>
+            <li>People in recovery</li>
+            <li>Unsuspecting consumers</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>WHAT HAPPENS</h3>
+          <ul class="info-list">
+            <li>Addiction & withdrawal</li>
+            <li>ER visits / poison control calls</li>
             <li>Deaths with kratom detected</li>
           </ul>
-          <a href="#" class="btn" style="margin-top: auto;">READ WARNINGS →</a>
         </div>
+      </div>
+    </div>
 
-        <!-- 2. The Evidence card (links to Evidence page) -->
-        <div class="feature-card">
-          <div class="card-icon">🔬📊</div>
-          <h3>The Evidence</h3>
-          <div class="card-description">
-            Government & scientific sources: FDA position, CDC SUDORS data, poison control, adverse events, human research.
-          </div>
-          <a href="#" class="btn btn-evidence" style="margin-top: auto;">VIEW EVIDENCE ARCHIVE →</a>
+    <!-- TAKE ACTION NOW section (Fight Back) -->
+    <section class="action-section">
+      <div class="container">
+        <h2>TAKE ACTION NOW</h2>
+        <div style="width: 80px; height: 4px; background: #e4b23e; margin-bottom: 30px;"></div>
+        <div class="action-grid">
+          <div class="action-item"><a href="#">📧 EMAIL YOUR LEGISLATOR</a></div>
+          <div class="action-item"><a href="#">📤 SUBMIT PUBLIC COMMENT</a></div>
+          <div class="action-item"><a href="#">📣 REPORT A RETAILER</a></div>
+          <div class="action-item"><a href="#">🔍 DOWNLOAD TESTIMONY</a></div>
+          <div class="action-item"><a href="#">🕊️ START A PARENT CHAPTER</a></div>
         </div>
+        <p style="color: #cfddee; margin-top: 40px; font-size: 1.2rem; max-width: 800px;">Contact federal officials, state legislators, health departments, and boards of pharmacy. Use our templates.</p>
+      </div>
+    </section>
 
-        <!-- 3. Industry Spin card (Industry Narratives page) -->
-        <div class="feature-card">
-          <div class="card-icon">🏭🎭</div>
-          <h3>Industry Spin</h3>
-          <div class="card-description">
-            Expose AKA lobbying, Henningfield ties, KCPA tactics, and parallels to tobacco industry deception.
-          </div>
-          <a href="#" class="btn btn-industry" style="margin-top: auto;">UNCOVER NARRATIVES →</a>
+    <div class="container">
+      <!-- evidence + voices row (like image 3) -->
+      <div class="evidence-row">
+        <div class="evidence-block">
+          <h3>THE EVIDENCE</h3>
+          <ul class="evidence-list">
+            <li><a href="#">FDA warnings & NDI denial (Johnson Foods)</a></li>
+            <li><a href="#">CDC SUDORS death data</a></li>
+            <li><a href="#">Poison control center reports</a></li>
+            <li><a href="#">Adverse events / liver injury, seizures</a></li>
+            <li><a href="#">Human research / addiction liability</a></li>
+            <li><a href="#">Industry spin & KCPA exposed →</a></li>
+          </ul>
         </div>
-
-        <!-- 4. Fight Back card (Action page) -->
-        <div class="feature-card">
-          <div class="card-icon">✊📢</div>
-          <h3>Fight Back</h3>
-          <div class="card-description">
-            Contact federal/state officials, health departments, boards of pharmacy. Templates, scripts, and testimony guides.
+        <div>
+          <div class="testimonial">
+            <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
+            <div class="attribution">— Ohio parent, 2024</div>
           </div>
-          <a href="#" class="btn btn-fight" style="margin-top: auto;">TAKE ACTION NOW →</a>
+          <div style="margin-top: 25px; background: #fafcfc; padding: 20px; border-left: 4px solid #b42b2b;">
+            <p style="font-size: 1.1rem;"><strong>More parents’ voices:</strong> “My son started buying it at a vape shop. Within a year he was in the ER.” — T. Reynolds</p>
+          </div>
         </div>
       </div>
 
-      <!-- extra strip that reinforces investigative + advocacy vibe -->
-      <div class="impact-strip">
-        <p><strong>INVESTIGATIVE ARCHIVE · ADVOCACY CAMPAIGN · ACTION HUB</strong><br>
-        ⚠️ 1,827+ poison control calls · kratom detected in 657 overdose deaths (CDC SUDORS) · zero FDA approval</p>
-      </div>
-
-      <!-- mini section for credibility: quick links to key evidence topics (optional but keeps archive feel) -->
-      <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; background: rgba(11,26,42,0.02); padding: 32px 24px; border-radius: 20px; margin: 48px 0;">
-        <div style="max-width: 300px;">
-          <h3 style="color:#0b1a2a; border-left: 6px solid #c4282b; padding-left: 16px;">📁 FDA DOCUMENTS</h3>
-          <ul style="margin-top: 12px; list-style: none;">
-            <li style="margin-bottom: 8px;">→ FDA warning letters</li>
-            <li style="margin-bottom: 8px;">→ NDI denial (Johnson Foods)</li>
-            <li style="margin-bottom: 8px;">→ “not a dietary supplement”</li>
-          </ul>
-        </div>
-        <div style="max-width: 300px;">
-          <h3 style="color:#0b1a2a; border-left: 6px solid #e8b13e; padding-left: 16px;">📈 POISON CONTROL</h3>
-          <ul style="margin-top: 12px; list-style: none;">
-            <li style="margin-bottom: 8px;">→ 2,340 exposures (2023)</li>
-            <li style="margin-bottom: 8px;">→ seizures, withdrawal, liver injury</li>
-            <li style="margin-bottom: 8px;">→ AAPCC reports</li>
-          </ul>
-        </div>
-        <div style="max-width: 300px;">
-          <h3 style="color:#0b1a2a; border-left: 6px solid #c4282b; padding-left: 16px;">⚖️ KCPA EXPOSED</h3>
-          <ul style="margin-top: 12px; list-style: none;">
-            <li style="margin-bottom: 8px;">→ industry‑backed “regulation”</li>
-            <li style="margin-bottom: 8px;">→ market protection, not health</li>
-            <li style="margin-bottom: 8px;">→ model legislation tricks</li>
-          </ul>
+      <!-- JOIN THE MOVEMENT email signup -->
+      <div class="signup-box">
+        <p>JOIN THE MOVEMENT<br><span style="font-size: 1.1rem; font-weight: normal;">Remove retail kratom from our communities</span></p>
+        <div class="email-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">JOIN US</button>
         </div>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper footer-inner">
+    <div class="container footer-inner">
       <div class="footer-links">
         <a href="#">EVIDENCE</a>
         <a href="#">INDUSTRY NARRATIVES</a>
@@ -483,14 +606,12 @@
       </div>
       <div class="copyright">
         © 2025 Anti‑Kratom Association. All rights reserved.<br>
-        <span style="font-size:0.8rem;">Unsafe. Unregulated. Unfit.</span>
+        <span style="font-size: 0.8rem;">Unsafe. Unregulated. Unfit.</span>
       </div>
     </div>
-    <div class="wrapper" style="text-align: center; margin-top: 32px; font-size: 0.9rem; color: #aaa; border-top: 1px solid #2a3f52; padding-top: 20px;">
-      <span>📍 Background image: background.jpg | Hero image: hero.jpg — both sourced from jbrandt606. Used to document the gas‑station crisis.</span>
+    <div class="container" style="text-align: left; margin-top: 32px; font-size: 0.85rem; color: #5f7485; border-top: 1px solid #1e3444; padding-top: 20px;">
+      <span>Background image: background.jpg | Hero image: hero.jpg — advocacy use.</span>
     </div>
   </footer>
-
-  <!-- subtle design note: the images are referenced but not literally present — assume they live in /assets/images/ -->
 </body>
 </html>
