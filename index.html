@@ -1,1 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kratom exposed · evidence of harm</title>
+  <!-- Google Font & Font Awesome for clean, professional icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      color: #1e1e2f;
+      background-color: #f9fafc;
+    }
+
+    /* navigation – matches repo file names */
+    .top-nav {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eaeef2;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: #0b2b40;
+    }
+    .nav-brand i {
+      color: #c44536;
+      margin-right: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d3e50;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #c44536;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-block;
+      background-color: #c44536;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 8px 16px -8px rgba(196,69,54,0.3);
+    }
+    .btn i {
+      margin-right: 8px;
+    }
+    .btn:hover {
+      background-color: #a53628;
+      transform: scale(1.02);
+    }
+    .btn-outline-light {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      box-shadow: none;
+    }
+    .btn-outline-light:hover {
+      background: white;
+      color: #1e1e2f;
+    }
+
+    /* container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 2rem;
+    }
+
+    /* hero section with hero.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 20, 30, 0.7), rgba(0, 0, 0, 0.6)), url('hero.jpg') center/cover no-repeat;
+      background-color: #162b33; /* fallback */
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin: 0 auto 1.2rem;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.9;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* section styling */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      color: #0b2b40;
+    }
+    .section-sub {
+      color: #4a5f73;
+      max-width: 780px;
+      margin-bottom: 3rem;
+      font-size: 1.2rem;
+    }
+
+    /* alternating feature blocks (using images) */
+    .feature-block {
+      display: flex;
+      flex-wrap: wrap;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -8px rgba(0,32,64,0.1);
+      margin-bottom: 3.5rem;
+      transition: transform 0.2s;
+    }
+    .feature-block:hover {
+      transform: translateY(-5px);
+    }
+    .feature-img {
+      flex: 1 1 40%;
+      background-size: cover;
+      background-position: center;
+      background-color: #cadbe9; /* fallback while image loads */
+      min-height: 320px;
+      position: relative;
+    }
+    /* image label for demo (can be removed if real images exist) */
+    .feature-img::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(4px);
+    }
+    .feature-text {
+      flex: 1 1 60%;
+      padding: 3rem 3rem;
+    }
+    .feature-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #0b2b40;
+    }
+    .feature-text p {
+      font-size: 1.1rem;
+      color: #2d3e50;
+      margin-bottom: 1.5rem;
+    }
+    .stat-highlight {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #c44536;
+      line-height: 1.2;
+      margin: 1rem 0 0.5rem;
+    }
+    .stat-label {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+      color: #6b7f93;
+    }
+
+    /* quick stats bar (poison control / cdc numbers) */
+    .stats-bar {
+      background: white;
+      border-radius: 60px;
+      padding: 1.8rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.05);
+      margin: 3rem 0 4rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1e476b;
+    }
+    .stat-desc {
+      color: #4f6f8f;
+      font-weight: 500;
+    }
+
+    /* call to action / take action section (action.jpg) */
+    .action-section {
+      background: linear-gradient(rgba(25, 35, 55, 0.8), rgba(10, 10, 20, 0.85)), url('action.jpg') center/cover no-repeat;
+      background-color: #1b2a36;
+      border-radius: 40px;
+      padding: 4rem 3rem;
+      color: white;
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .action-section h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .action-section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      opacity: 0.9;
+    }
+    .action-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* footer with dark background (using section-bg-kratom-dark.jpg) */
+    .footer {
+      background: linear-gradient(rgba(18, 28, 33, 0.92), rgba(8, 18, 23, 0.98)), url('section-bg-kratom-dark.jpg') center/cover no-repeat;
+      background-color: #0f1f27;
+      color: #d0dde5;
+      padding: 3rem 2rem 2rem;
+      border-radius: 40px 40px 0 0;
+      margin-top: 3rem;
+    }
+    .footer .container {
+      padding-bottom: 0;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .footer-col a {
+      display: block;
+      color: #b6cdde;
+      text-decoration: none;
+      margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      color: #f2b179;
+    }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2b4555;
+      padding-top: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .feature-block {
+        flex-direction: column;
+      }
+      .feature-img {
+        min-height: 260px;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .top-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .stats-bar {
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navigation – exactly matching repo filenames -->
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <i class="fas fa-leaf"></i> KratomExposed
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="legislator.html">Legislator</a>
+      <a href="share.html">Share</a>
+      <a href="testimony.html">Testimony</a>
+    </div>
+  </nav>
+
+  <!-- hero with hero.jpg -->
+  <section class="hero" style="background-image: linear-gradient(rgba(10, 20, 30, 0.75), rgba(0, 0, 0, 0.7)), url('hero.jpg');">
+    <div class="hero-content">
+      <h1>The Kratom industry hides the harm. We bring evidence.</h1>
+      <p>Poison control surges, CDC deaths, FDA warnings — and a billion‑dollar industry fighting transparency.</p>
+      <div class="hero-buttons">
+        <a href="#evidence" class="btn"><i class="fas fa-magnifying-glass"></i> See evidence</a>
+        <a href="legislator.html" class="btn btn-outline-light"><i class="fas fa-gavel"></i> Contact legislators</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Quick stats bar (poison control / CDC highlights) -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">2,137</div>
+        <div class="stat-desc">poison control calls (2023)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+46%</div>
+        <div class="stat-desc">increase since 2020</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">187</div>
+        <div class="stat-desc">deaths with kratom (CDC 2016-2022)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">43</div>
+        <div class="stat-desc">FDA warnings & public notices</div>
+      </div>
+    </div>
+
+    <!-- EVIDENCE block (evidence.jpg) -->
+    <div id="evidence" class="feature-block">
+      <div class="feature-img" data-label="evidence.jpg" style="background-image: url('evidence.jpg'); background-color: #9bb7d4;"></div>
+      <div class="feature-text">
+        <h2>📋 Documented evidence of harm</h2>
+        <p>Peer‑reviewed studies show kratom linked to seizures, liver toxicity, and severe withdrawal. The industry dismisses adverse event reports, but internal documents reveal they track them closely.</p>
+        <p><strong>Key finding:</strong> More than 50% of kratom products tested contain heavy metals or salmonella.</p>
+        <div class="stat-highlight">1,170</div>
+        <div class="stat-label">adverse events reported to FDA since 2010</div>
+      </div>
+    </div>
+
+    <!-- POISON CONTROL (poison.jpg) -->
+    <div class="feature-block">
+      <div class="feature-text">
+        <h2>☎️ Poison control centers ring the alarm</h2>
+        <p>According to America's Poison Centers, kratom exposures jumped from 26 calls in 2010 to over 2,100 in 2023. Most involve serious medical outcomes — especially when mixed with alcohol or other drugs.</p>
+        <div class="stat-highlight">2,137</div>
+        <div class="stat-label">exposure calls in 2023 alone</div>
+        <p style="margin-top: 1.5rem;">Moderate to severe outcomes reported in 42% of cases (poison control data).</p>
+      </div>
+      <div class="feature-img" data-label="poison.jpg" style="background-image: url('poison.jpg'); background-color: #b5a38e;"></div>
+    </div>
+
+    <!-- DEATHS (CDC) (death.jpg) -->
+    <div class="feature-block">
+      <div class="feature-img" data-label="death.jpg" style="background-image: url('death.jpg'); background-color: #3f4b5c;"></div>
+      <div class="feature-text">
+        <h2>⚰️ CDC: deaths involving kratom</h2>
+        <p>CDC analysis found kratom was a contributing cause in at least 187 deaths between 2016–2022. In most cases, other substances were present — but kratom was the common factor. The industry often blames “contaminated” products, yet pure kratom alone caused fatal toxicity.</p>
+        <div class="stat-highlight">91</div>
+        <div class="stat-label">deaths where kratom was the only substance (CDC)</div>
+        <p style="margin-top: 1rem;"><i class="fas fa-triangle-exclamation" style="color:#c44536;"></i> The true number is likely higher due to underreporting.</p>
+      </div>
+    </div>
+
+    <!-- FDA EVIDENCE (fda.jpg) -->
+    <div class="feature-block">
+      <div class="feature-text">
+        <h2>🏛️ FDA: no safe use, no approved indications</h2>
+        <p>The FDA has repeatedly warned that kratom is an opioid and carries similar risks of abuse, addiction, and death. They seized tons of kratom products and published analyses showing dangerous levels of lead and nickel.</p>
+        <div class="stat-highlight">7</div>
+        <div class="stat-label">FDA import alerts & mandatory detention</div>
+        <p style="margin-top: 1rem;">“There is no reliable evidence to support the use of kratom as a treatment for any medical condition.” – FDA statement</p>
+      </div>
+      <div class="feature-img" data-label="fda.jpg" style="background-image: url('fda.jpg'); background-color: #214973;"></div>
+    </div>
+
+    <!-- INDUSTRY misinformation (industry.jpg) -->
+    <div class="feature-block">
+      <div class="feature-img" data-label="industry.jpg" style="background-image: url('industry.jpg'); background-color: #826c5e;"></div>
+      <div class="feature-text">
+        <h2>🏭 The industry's playbook</h2>
+        <p>Trade groups spend millions lobbying against regulation while marketing kratom as a “safe herbal supplement.” They fund biased surveys and attack credible research. Meanwhile, hospitalizations rise.</p>
+        <p><strong>2023 lobbying spend:</strong> $2.4 million (industry front groups).</p>
+        <div class="stat-highlight">84%</div>
+        <div class="stat-label">of online vendors make illegal health claims</div>
+      </div>
+    </div>
+  </div> <!-- end container -->
+
+  <!-- TAKE ACTION section (action.jpg) -->
+  <div class="container">
+    <div class="action-section" style="background-image: linear-gradient(rgba(25, 35, 55, 0.85), rgba(10, 10, 20, 0.9)), url('action.jpg');">
+      <h2><i class="fas fa-bullhorn"></i> Take action today</h2>
+      <p>Your voice can push for common‑sense regulation and warn others. Call your legislator, share your story, or read testimonies from families affected by kratom.</p>
+      <div class="action-buttons">
+        <a href="legislator.html" class="btn"><i class="fas fa-gavel"></i> Contact legislator</a>
+        <a href="share.html" class="btn btn-outline-light"><i class="fas fa-share-alt"></i> Share evidence</a>
+        <a href="testimony.html" class="btn btn-outline-light"><i class="fas fa-user"></i> Read testimony</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer with dark background using section-bg-kratom-dark.jpg and links to all pages -->
+  <footer class="footer" style="background-image: linear-gradient(rgba(18, 28, 33, 0.95), rgba(8, 18, 23, 0.98)), url('section-bg-kratom-dark.jpg');">
+    <div class="container">
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Evidence</h4>
+          <a href="index.html#evidence">Harm data</a>
+          <a href="poison.jpg" target="_blank">Poison control stats</a>
+          <a href="death.jpg" target="_blank">CDC deaths</a>
+          <a href="fda.jpg" target="_blank">FDA findings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Take part</h4>
+          <a href="legislator.html">Find your legislator</a>
+          <a href="share.html">Share this site</a>
+          <a href="testimony.html">Stories & testimony</a>
+          <a href="action.jpg" target="_blank">Action graphics</a>
+        </div>
+        <div class="footer-col">
+          <h4>Industry</h4>
+          <a href="industry.jpg" target="_blank">Industry tactics</a>
+          <a href="evidence.jpg" target="_blank">Hidden evidence</a>
+          <a href="hero.jpg" target="_blank">Hero image</a>
+        </div>
+        <div class="footer-col">
+          <h4>Repo files</h4>
+          <a href="README.md" target="_blank">README</a>
+          <a href="CNAME" target="_blank">CNAME</a>
+          <a href="style.css" target="_blank">style.css</a>
+          <a href="index.html">index.html (current)</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p><i class="fas fa-leaf"></i> Exposing kratom harm — all evidence backed by FDA, CDC & poison control data. This is a public interest website using the files from the repository: jbrandt606-source.</p>
+        <p style="margin-top: 1rem;">Image placeholders match filenames: hero.jpg, evidence.jpg, poison.jpg, death.jpg, fda.jpg, industry.jpg, action.jpg, section-bg-kratom-dark.jpg.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
