@@ -3,312 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AntiKratom.org – Parents Organizing to End Retail Sales</title>
+  <title>ANTI-KRATOM ASSOCIATION</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Minimal custom overrides to match the second image */
+    /* Minimal overrides to match the image exactly */
     body {
       background: #fff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.5;
+      color: #000;
     }
-    .section {
-      padding: 3rem 0;
-    }
-    .bg-dark {
-      background: #1a1a1a;
-      color: #fff;
-    }
-    .bg-dark h2, .bg-dark .section-lead {
-      color: #fff;
-    }
-    .info-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin: 2rem 0;
-      justify-content: space-between;
-    }
-    .info-col {
-      flex: 1 1 200px;
-    }
-    .info-col h3 {
-      color: #d32f2f;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #d32f2f;
-      padding-bottom: 0.3rem;
-    }
-    .info-col ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .info-col li {
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-    .action-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 2rem;
-    }
-    .action-list li {
-      margin-bottom: 0.75rem;
-    }
-    .action-list a {
-      color: #d32f2f;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    .action-list a:hover {
-      text-decoration: underline;
-    }
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-    .pill {
-      background: rgba(255,255,255,0.1);
-      color: white;
-      padding: 0.6rem 1.5rem;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.3);
-      font-size: 1.1rem;
-    }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.2s;
-    }
-    .btn-outline:hover {
+    .header {
       background: white;
-      color: #222;
-    }
-    .btn-outline-red {
-      background: transparent;
-      border: 2px solid #d32f2f;
-      color: #d32f2f;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .btn-outline-red:hover {
-      background: #d32f2f;
-      color: white;
-    }
-    .evidence-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .evidence-item a {
-      color: #d32f2f;
-      text-decoration: none;
-      font-weight: 600;
-      display: block;
-      padding: 0.5rem 0;
       border-bottom: 1px solid #eee;
+      padding: 1rem 0;
     }
-    .evidence-item a:hover {
-      color: #b71c1c;
-    }
-    .testimonial {
-      border-left: 5px solid #d32f2f;
-      padding: 1.5rem 2rem;
-      margin: 2rem 0;
-      font-style: italic;
-      font-size: 1.2rem;
-      background: transparent;
-    }
-    .testimonial-author {
-      font-style: normal;
-      font-weight: 600;
-      color: #d32f2f;
-      margin-top: 0.5rem;
-    }
-    .join-form {
+    .header-container {
       display: flex;
-      gap: 1rem;
-      max-width: 500px;
-      margin: 2rem 0;
-    }
-    .join-form input {
-      flex: 1;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .header .btn-donate {
-      background: #d32f2f;
-      color: white;
-      padding: 0.4rem 1rem;
-      border-radius: 4px;
-      margin-left: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    .header .btn-donate:hover {
-      background: #b71c1c;
-    }
-    @media (max-width: 700px) {
-      .info-row {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      .join-form {
-        flex-direction: column;
-      }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">ANTI<span class="red">KRATOM</span>.ORG</a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="evidence/index.html">Evidence</a>
-        <a href="#industry">Industry</a>
-        <a href="#action">Take Action</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      
+  <!-- Top bar with AKA and navigation exactly as shown -->
+  <div style="background: white; border-bottom: 1px solid #ddd; padding: 0.5rem 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0.25rem;">AKA</div>
+      <div style="font-weight: bold; font-size: 1.5rem; margin-bottom: 0.75rem;">ANTI-KRATOM ASSOCIATION</div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="display: flex; gap: 2rem; font-weight: 500;">
+          <span>HOME</span>
+          <span>TAKE ACTION</span>
+          <span>EVIDENCE</span>
+          <span>NEWS</span>
+          <span>ABOUT</span>
+          <span>CONTACT</span>
+        </div>
+        <div style="background: #d32f2f; color: white; padding: 0.3rem 1.5rem; border-radius: 4px; font-weight: 600;">DONATE</div>
+      </div>
     </div>
-  </header>
+  </div>
 
   <main>
-    <!-- Hero section -->
-    <section class="hero" style="background-image: url('hero.jpg');">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>SOLD IN GAS STATIONS.<br>MARKETED AS “SAFE.”<br>DESTROYING FAMILIES.</h1>
-        <p>Unregulated psychoactive products are being sold next to energy drinks and vape cartridges. Parents across the country are speaking out.</p>
-        <div class="hero-buttons">
-          <a href="evidence/index.html" class="btn btn-light">READ THE EVIDENCE</a>
-          <a href="#action" class="btn btn-red">TAKE ACTION NOW →</a>
+    <!-- Hero section with dark overlay -->
+    <div style="background-image: url('hero.jpg'); background-size: cover; background-position: center; position: relative; color: white; padding: 5rem 0;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7);"></div>
+      <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="font-size: 1.2rem; font-weight: 500; margin-bottom: 1rem;">THE ANTI-KRATOM ASSOCIATION</div>
+        <div style="font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">PARENTS ORGANIZING TO END<br>RETAIL SALES IN AMERICA</div>
+        <div style="font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 2rem;">SOLD IN GAS STATIONS.<br>MARKETED AS "SAFE."<br>DESTROYING FAMILIES.</div>
+        <div style="display: flex; gap: 2rem; font-size: 1.2rem; font-weight: 600;">
+          <span>TAKE ACTION NOW →</span>
+          <span>READ THE EVIDENCE</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Three‑column info section (no white background) -->
-    <div class="container">
-      <div class="info-row">
-        <div class="info-col">
-          <h3>📍 WHERE IT'S SOLD</h3>
-          <ul>
-            <li>GAS STATIONS</li>
-            <li>VAPE SHOPS</li>
-            <li>ONLINE RETAILERS</li>
+    <!-- Three column section (WHERE / WHO / WHAT) -->
+    <div style="max-width: 1200px; margin: 3rem auto; padding: 0 20px;">
+      <div style="display: flex; gap: 4rem; flex-wrap: wrap;">
+        <!-- WHERE IT'S SOLD -->
+        <div style="flex: 1 1 200px;">
+          <div style="color: #d32f2f; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #d32f2f; padding-bottom: 0.3rem;">WHERE IT'S SOLD</div>
+          <ul style="list-style: none; padding: 0; font-weight: 600;">
+            <li style="margin-bottom: 0.5rem;">GAS STATIONS</li>
+            <li style="margin-bottom: 0.5rem;">VAPE SHOPS</li>
+            <li style="margin-bottom: 0.5rem;">ONLINE RETAILERS</li>
           </ul>
         </div>
-        <div class="info-col">
-          <h3>👥 WHO IT TARGETS</h3>
-          <ul>
-            <li>TEENS</li>
-            <li>YOUNG ADULTS</li>
-            <li>PEOPLE IN RECOVERY</li>
+        <!-- WHO IT TARGETS -->
+        <div style="flex: 1 1 200px;">
+          <div style="color: #d32f2f; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #d32f2f; padding-bottom: 0.3rem;">WHO IT TARGETS</div>
+          <ul style="list-style: none; padding: 0; font-weight: 600;">
+            <li style="margin-bottom: 0.5rem;">TEENS</li>
+            <li style="margin-bottom: 0.5rem;">YOUNG ADULTS</li>
+            <li style="margin-bottom: 0.5rem;">PEOPLE IN RECOVERY</li>
           </ul>
         </div>
-        <div class="info-col">
-          <h3>⚠️ WHAT HAPPENS</h3>
-          <ul>
-            <li>ADDICTION</li>
-            <li>WITHDRAWAL</li>
-            <li>ER VISITS</li>
-            <li>DEATHS</li>
+        <!-- WHAT HAPPENS -->
+        <div style="flex: 1 1 200px;">
+          <div style="color: #d32f2f; font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #d32f2f; padding-bottom: 0.3rem;">WHAT HAPPENS</div>
+          <ul style="list-style: none; padding: 0; font-weight: 600;">
+            <li style="margin-bottom: 0.5rem;">ADDICTION</li>
+            <li style="margin-bottom: 0.5rem;">WITHDRAWAL</li>
+            <li style="margin-bottom: 0.5rem;">ER VISITS</li>
+            <li style="margin-bottom: 0.5rem;">DEATHS</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Industry section – dark background with pills (exactly as second image) -->
-    <section id="industry" class="section bg-dark">
-      <div class="container">
-        <h2>The Industry</h2>
-        <p class="section-lead">
-          Kratom products are currently sold in gas stations, smoke shops, and convenience stores across the United States with little regulatory oversight.
-        </p>
-        <div class="pill-group">
-          <span class="pill">Gas Stations</span>
-          <span class="pill">Smoke Shops</span>
-          <span class="pill">Vape Stores</span>
-          <span class="pill">Convenience Stores</span>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-          <a href="industry/narrative.html" class="btn-outline">SEE HOW IT IS SOLD →</a>
-        </div>
-        <!-- Optional: keep the PDF links if desired, but second image doesn't show them.
-             I'll omit them to keep it clean. -->
-      </div>
-    </section>
+    <!-- TAKE ACTION NOW section -->
+    <div style="max-width: 1200px; margin: 3rem auto; padding: 0 20px;">
+      <div style="color: #d32f2f; font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">TAKE ACTION NOW</div>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 0.75rem;"><a href="legislator.html" style="color: #d32f2f; text-decoration: none; font-weight: 600;">EMAIL YOUR LEGISLATOR</a></li>
+        <li style="margin-bottom: 0.75rem;"><span style="color: #d32f2f; font-weight: 600;">SUBMIT PUBLIC COMMENT</span></li>
+        <li style="margin-bottom: 0.75rem;"><span style="color: #d32f2f; font-weight: 600;">REPORT A RETAILER</span></li>
+        <li style="margin-bottom: 0.75rem;"><a href="testimony.html" style="color: #d32f2f; text-decoration: none; font-weight: 600;">DOWNLOAD TESTIMONY</a></li>
+        <li style="margin-bottom: 0.75rem;"><span style="color: #d32f2f; font-weight: 600;">START A PARENT CHAPTER</span></li>
+      </ul>
+    </div>
 
-    <!-- Take Action Now – simple list, no white background -->
-    <section id="action" class="section">
-      <div class="container">
-        <h2>TAKE ACTION NOW</h2>
-        <ul class="action-list">
-          <li><a href="legislator.html">📧 EMAIL YOUR LEGISLATOR →</a></li>
-          <li><a href="#">📤 SUBMIT PUBLIC COMMENT</a> <span style="color:#999;">(coming soon)</span></li>
-          <li><a href="share.html">📣 SHARE THIS ISSUE →</a></li>
-          <li><a href="testimony.html">🔍 TESTIMONY TIPS →</a></li>
-          <li><a href="submit-your-story.html">📝 SUBMIT YOUR STORY →</a></li>
-        </ul>
-      </div>
-    </section>
+    <!-- THE EVIDENCE section -->
+    <div style="max-width: 1200px; margin: 3rem auto; padding: 0 20px;">
+      <div style="color: #d32f2f; font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;">THE EVIDENCE</div>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin-bottom: 0.75rem;"><a href="evidence/fdaposition/" style="color: #d32f2f; text-decoration: none; font-weight: 600;">FDA WARNINGS</a></li>
+        <li style="margin-bottom: 0.75rem;"><a href="evidence/fdadenial/" style="color: #d32f2f; text-decoration: none; font-weight: 600;">NDI DENIAL (JOHNSON FOODS)</a></li>
+        <li style="margin-bottom: 0.75rem;"><a href="evidence/poisoncontrol/poisoncontrol.html" style="color: #d32f2f; text-decoration: none; font-weight: 600;">POISON CENTER DATA</a></li>
+        <li style="margin-bottom: 0.75rem;"><a href="evidence/death/" style="color: #d32f2f; text-decoration: none; font-weight: 600;">DEATH REPORTS</a></li>
+        <li style="margin-bottom: 0.75rem;"><a href="evidence/research/" style="color: #d32f2f; text-decoration: none; font-weight: 600;">RESEARCH STUDIES</a></li>
+      </ul>
+    </div>
 
-    <!-- The Evidence – simple list -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2>THE EVIDENCE</h2>
-        <div class="evidence-list">
-          <div class="evidence-item"><a href="evidence/fdaposition/">FDA WARNINGS →</a></div>
-          <div class="evidence-item"><a href="evidence/fdadenial/">NDI DENIAL (JOHNSON FOODS) →</a></div>
-          <div class="evidence-item"><a href="evidence/poisoncontrol/poisoncontrol.html">POISON CENTER DATA →</a></div>
-          <div class="evidence-item"><a href="evidence/death/">DEATH REPORTS →</a></div>
-          <div class="evidence-item"><a href="evidence/research/">RESEARCH STUDIES →</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Parent testimonial (no background) -->
-    <div class="container">
-      <div class="testimonial">
-        <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
-        <div class="testimonial-author">— Parent from Ohio</div>
+    <!-- PARENTS' VOICES testimonial -->
+    <div style="max-width: 1200px; margin: 3rem auto; padding: 0 20px;">
+      <div style="border-left: 5px solid #d32f2f; padding: 1.5rem 2rem;">
+        <div style="font-size: 1.3rem; font-style: italic;">“We didn’t know what it was until it was too late.”</div>
+        <div style="color: #d32f2f; font-weight: 600; margin-top: 0.5rem;">— Parent from Ohio</div>
       </div>
     </div>
 
-    <!-- Join the movement / sign‑up form -->
-    <section class="section">
-      <div class="container">
-        <h2>JOIN THE MOVEMENT</h2>
-        <p>Remove retail kratom from our communities.</p>
-        <form class="join-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn-outline-red">JOIN US</button>
-        </form>
-        <p style="color:#666; font-size:0.9rem;">We'll keep you updated on legislative actions and ways to help.</p>
+    <!-- JOIN THE MOVEMENT -->
+    <div style="max-width: 1200px; margin: 3rem auto; padding: 0 20px;">
+      <div style="color: #d32f2f; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">JOIN THE MOVEMENT</div>
+      <div style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem;">REMOVE RETAIL KRATOM FROM OUR COMMUNITIES</div>
+      <div style="display: flex; gap: 1rem; max-width: 500px;">
+        <input type="email" placeholder="Enter your email" style="flex: 1; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+        <button style="background: transparent; border: 2px solid #d32f2f; color: #d32f2f; padding: 0.8rem 1.5rem; border-radius: 4px; font-weight: 600;">JOIN US</button>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-container">
-      <p>&copy; AntiKratom.org — Parents Organizing to End Retail Sales</p>
+  <!-- Simple footer -->
+  <footer style="background: #222; color: #ccc; padding: 2rem 0; text-align: center; margin-top: 3rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      © AntiKratom.org — Parents Organizing to End Retail Sales
     </div>
   </footer>
 </body>
