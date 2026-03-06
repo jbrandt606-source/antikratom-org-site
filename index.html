@@ -32,7 +32,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0.15; /* subtle so text remains readable */
+      opacity: 0.15;
       pointer-events: none;
       z-index: -1;
     }
@@ -45,7 +45,7 @@
 
     /* header – dark, serious */
     .site-header {
-      background-color: #0c151f; /* very dark navy/almost black */
+      background-color: #0c151f;
       color: #fff;
       padding: 16px 0;
       border-bottom: 4px solid #b42b2b;
@@ -97,7 +97,7 @@
       border-bottom: 2px solid #b42b2b;
     }
 
-    /* HERO section with hero.jpg – sharper, more memorable headline */
+    /* HERO section with hero.jpg – sharper, more memorable message */
     .hero {
       background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
       color: white;
@@ -243,7 +243,83 @@
       margin-right: 12px;
     }
 
-    /* TAKE ACTION NOW section (updated with new items) */
+    /* NEW: INDUSTRY SPOTLIGHT section (uses industry.jpg) */
+    .industry-spotlight {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('industry.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      margin: 40px 0;
+      border-top: 6px solid #b42b2b;
+      border-bottom: 6px solid #b42b2b;
+    }
+
+    .industry-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .industry-left h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .industry-left h2 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .industry-list {
+      list-style: none;
+      margin: 30px 0 20px;
+    }
+
+    .industry-list li {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .industry-list li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.5rem;
+      color: #e4b23e;
+    }
+
+    .industry-right {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      border-left: 6px solid #b42b2b;
+    }
+
+    .industry-right p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .industry-right .btn-industry {
+      background-color: #b42b2b;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    .industry-right .btn-industry:hover {
+      background-color: #8f2020;
+    }
+
+    /* TAKE ACTION NOW section */
     .action-section {
       background-color: #0c151f;
       color: white;
@@ -342,11 +418,6 @@
 
     .evidence-list a:hover {
       color: #b42b2b;
-    }
-
-    /* updated evidence list to match IMG_5596.png exactly */
-    .evidence-list.exact li a {
-      justify-content: space-between;
     }
 
     .testimonial {
@@ -459,6 +530,10 @@
         grid-template-columns: 1fr;
         gap: 25px;
       }
+      .industry-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
       .evidence-row {
         grid-template-columns: 1fr;
       }
@@ -561,7 +636,29 @@
       </div>
     </div>
 
-    <!-- TAKE ACTION NOW section (updated with specific action items, no icons) -->
+    <!-- NEW: INDUSTRY SPOTLIGHT section using industry.jpg -->
+    <section class="industry-spotlight">
+      <div class="container">
+        <div class="industry-content">
+          <div class="industry-left">
+            <h2><span>INDUSTRY</span> SPIN & DECEPTION</h2>
+            <ul class="industry-list">
+              <li>American Kratom Association lobbying</li>
+              <li>Jack Henningfield & OxyContin parallels</li>
+              <li>KCPA: market protection, not public health</li>
+              <li>Same tactics as Big Tobacco</li>
+            </ul>
+          </div>
+          <div class="industry-right">
+            <p>The kratom industry uses sophisticated messaging to block regulation. They push "consumer protection" bills that actually protect their profits.</p>
+            <p>Learn how they mislead lawmakers and the media — and how you can expose the truth.</p>
+            <a href="#" class="btn btn-industry">UNCOVER INDUSTRY SPIN →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKE ACTION NOW section -->
     <section class="action-section">
       <div class="container">
         <h2>TAKE ACTION NOW</h2>
@@ -581,7 +678,7 @@
     </section>
 
     <div class="container">
-      <!-- evidence + voices row (evidence list updated to match IMG_5596.png exactly) -->
+      <!-- evidence + voices row -->
       <div class="evidence-row">
         <div class="evidence-block">
           <h3>THE EVIDENCE</h3>
@@ -632,7 +729,7 @@
       </div>
     </div>
     <div class="container" style="text-align: left; margin-top: 32px; font-size: 0.85rem; color: #5f7485; border-top: 1px solid #1e3444; padding-top: 20px;">
-      <span>Background image: background.jpg | Hero image: hero.jpg — advocacy use.</span>
+      <span>Background image: background.jpg | Hero image: hero.jpg | Industry image: industry.jpg — advocacy use.</span>
     </div>
   </footer>
 </body>
