@@ -6,9 +6,19 @@
   <title>AntiKratom.org – Parents Organizing to End Retail Sales</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Override card styles to reduce white boxes and shadows */
+    /* Minimal custom overrides to match the second image */
+    body {
+      background: #fff;
+    }
     .section {
       padding: 3rem 0;
+    }
+    .bg-dark {
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .bg-dark h2, .bg-dark .section-lead {
+      color: #fff;
     }
     .info-row {
       display: flex;
@@ -53,6 +63,50 @@
     .action-list a:hover {
       text-decoration: underline;
     }
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .pill {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 1.1rem;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #222;
+    }
+    .btn-outline-red {
+      background: transparent;
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-outline-red:hover {
+      background: #d32f2f;
+      color: white;
+    }
     .evidence-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -71,12 +125,12 @@
       color: #b71c1c;
     }
     .testimonial {
-      background: transparent;
       border-left: 5px solid #d32f2f;
       padding: 1.5rem 2rem;
       margin: 2rem 0;
       font-style: italic;
       font-size: 1.2rem;
+      background: transparent;
     }
     .testimonial-author {
       font-style: normal;
@@ -96,20 +150,6 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-    .btn-outline-red {
-      background: transparent;
-      border: 2px solid #d32f2f;
-      color: #d32f2f;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .btn-outline-red:hover {
-      background: #d32f2f;
-      color: white;
-    }
     .header .btn-donate {
       background: #d32f2f;
       color: white;
@@ -118,6 +158,7 @@
       margin-left: 1rem;
       font-weight: 600;
       text-decoration: none;
+      font-size: 0.9rem;
     }
     .header .btn-donate:hover {
       background: #b71c1c;
@@ -145,13 +186,12 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <!-- Optional donate button (no linked page yet) -->
       <a href="#" class="btn-donate">DONATE</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero section (matching image) -->
+    <!-- Hero section -->
     <section class="hero" style="background-image: url('hero.jpg');">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -164,7 +204,7 @@
       </div>
     </section>
 
-    <!-- Three‑column info section (Where, Who, What) -->
+    <!-- Three‑column info section (no white background) -->
     <div class="container">
       <div class="info-row">
         <div class="info-col">
@@ -195,7 +235,28 @@
       </div>
     </div>
 
-    <!-- Take Action Now section (with action list) -->
+    <!-- Industry section – dark background with pills (exactly as second image) -->
+    <section id="industry" class="section bg-dark">
+      <div class="container">
+        <h2>The Industry</h2>
+        <p class="section-lead">
+          Kratom products are currently sold in gas stations, smoke shops, and convenience stores across the United States with little regulatory oversight.
+        </p>
+        <div class="pill-group">
+          <span class="pill">Gas Stations</span>
+          <span class="pill">Smoke Shops</span>
+          <span class="pill">Vape Stores</span>
+          <span class="pill">Convenience Stores</span>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="industry/narrative.html" class="btn-outline">SEE HOW IT IS SOLD →</a>
+        </div>
+        <!-- Optional: keep the PDF links if desired, but second image doesn't show them.
+             I'll omit them to keep it clean. -->
+      </div>
+    </section>
+
+    <!-- Take Action Now – simple list, no white background -->
     <section id="action" class="section">
       <div class="container">
         <h2>TAKE ACTION NOW</h2>
@@ -203,17 +264,13 @@
           <li><a href="legislator.html">📧 EMAIL YOUR LEGISLATOR →</a></li>
           <li><a href="#">📤 SUBMIT PUBLIC COMMENT</a> <span style="color:#999;">(coming soon)</span></li>
           <li><a href="share.html">📣 SHARE THIS ISSUE →</a></li>
-          <li><a href="testimony.html">🔍 DOWNLOAD TESTIMONY TIPS →</a></li>
-          <li><a href="#">🕒 START A PARENT CHAPTER</a> <span style="color:#999;">(coming soon)</span></li>
+          <li><a href="testimony.html">🔍 TESTIMONY TIPS →</a></li>
+          <li><a href="submit-your-story.html">📝 SUBMIT YOUR STORY →</a></li>
         </ul>
-        <!-- Additional quick links (optional) -->
-        <p style="margin-top: 1rem;">
-          <a href="submit-your-story.html" style="color:#d32f2f;">SUBMIT YOUR STORY →</a>
-        </p>
       </div>
     </section>
 
-    <!-- The Evidence section (list of links) -->
+    <!-- The Evidence – simple list -->
     <section class="section bg-light">
       <div class="container">
         <h2>THE EVIDENCE</h2>
@@ -227,7 +284,7 @@
       </div>
     </section>
 
-    <!-- Parent testimonial -->
+    <!-- Parent testimonial (no background) -->
     <div class="container">
       <div class="testimonial">
         <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
@@ -235,7 +292,7 @@
       </div>
     </div>
 
-    <!-- Join the movement / sign-up form -->
+    <!-- Join the movement / sign‑up form -->
     <section class="section">
       <div class="container">
         <h2>JOIN THE MOVEMENT</h2>
@@ -247,8 +304,6 @@
         <p style="color:#666; font-size:0.9rem;">We'll keep you updated on legislative actions and ways to help.</p>
       </div>
     </section>
-
-    <!-- Original two‑column Take Action section removed to avoid redundancy. -->
   </main>
 
   <footer class="footer">
