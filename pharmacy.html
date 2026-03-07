@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Your State Board of Pharmacy · Demand Action</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with action.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('action.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Callout boxes */
+    .callout-box {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    .tip-box {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .tip-box h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    /* Sample script box */
+    .script-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #b42b2b;
+      padding: 25px;
+      margin: 25px 0;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      color: #e4b23e;
+      border-left: 6px solid #e4b23e;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">HOME</a>
+        <a href="../evidence/index.html">EVIDENCE</a>
+        <a href="../industry/index.html">INDUSTRY</a>
+        <a href="index.html">FIGHT BACK</a>
+        <a href="../about/index.html">ABOUT</a>
+        <a href="../contact/index.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with action.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>CONTACT YOUR</span> STATE BOARD OF PHARMACY</h1>
+      <p>
+        They regulate what can be sold in pharmacies and, in many states, have the power to initiate scheduling or ban dangerous substances.
+        The industry hopes you'll never call them. Prove them wrong.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#what-to-ask">What to Ask</a>
+        <a class="btn btn-secondary" href="#find-board">Find Your Board</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Why the board matters -->
+    <div class="content-card">
+      <h2>Why the Pharmacy Board Has Power</h2>
+      <p>
+        State boards of pharmacy don't just license pharmacists – they enforce drug laws, investigate illegal sales, and can recommend or directly schedule substances as controlled dangerous substances. When they act, retailers and distributors pay attention.
+      </p>
+      <p>
+        <span style="color:#e4b23e;">The industry's fear:</span> that a state board will look at the same FDA warnings, poison control data, and death reports you've seen – and decide that kratom has no place on retail shelves.
+      </p>
+    </div>
+
+    <!-- Find your board link -->
+    <div id="find-board" class="callout-box" style="text-align:center;">
+      <div class="callout-title">📍 Locate Your Board</div>
+      <p style="font-size:1.2rem;">
+        <a href="https://nabp.pharmacy/about/boards-of-pharmacy/" target="_blank" style="color:#e4b23e; text-decoration:underline;">
+          National Association of Boards of Pharmacy – State Board Directory
+        </a>
+      </p>
+      <p>Find contact info, email addresses, and public meeting schedules.</p>
+    </div>
+
+    <!-- What you can ask for -->
+    <div id="what-to-ask" class="content-card">
+      <h2>What to Demand From Your Board</h2>
+      <ul>
+        <li><strong>Initiate rulemaking to classify kratom as a controlled substance.</strong> Many state boards have the authority to schedule drugs not yet scheduled federally. Use the evidence: FDA denial, CDC death data, poison center reports.</li>
+        <li><strong>Support or introduce a retail ban on kratom products.</strong> Ask them to publicly endorse legislation that removes kratom from gas stations, vape shops, and convenience stores.</li>
+        <li><strong>Enforce existing adulteration laws.</strong> Remind them that the FDA has declared kratom products adulterated under the FD&C Act. Demand they use their inspection and enforcement powers to seize products and fine retailers.</li>
+        <li><strong>Issue a public health advisory.</strong> Request that the board publish a warning to consumers and healthcare providers about the risks of kratom – addiction, withdrawal, and contamination.</li>
+        <li><strong>Hold a public hearing.</strong> Ask them to invite testimony from affected families, medical experts, and law enforcement. Public hearings generate media coverage and political pressure.</li>
+      </ul>
+      <div class="tip-box" style="margin-top:20px;">
+        <h3 style="font-size:1.4rem;">⛔ The industry's worst nightmare</h3>
+        <p>Pharmacy boards are composed of pharmacists, regulators, and sometimes public members. They are not lobbyists – they are licensed professionals who took an oath to protect the public. Remind them of that oath.</p>
+      </div>
+    </div>
+
+    <!-- Sample email/phone script -->
+    <div class="content-card">
+      <h2>Sample Message to Your Board</h2>
+      <p>Use this as a starting point – adapt it with your local details and personal story.</p>
+      <div class="script-box">
+To: [State Board of Pharmacy contact email]
+
+Subject: URGENT: Request to schedule/ban kratom (mitragynine)
+
+Dear Members of the [State] Board of Pharmacy,
+
+My name is [Your Name], and I am a resident of [City, State]. I am writing to demand that the Board take immediate action against the unregulated sale of kratom in our state.
+
+Kratom (mitragynine) is a psychoactive substance with opioid-like effects. The FDA has repeatedly warned that it is not approved for any medical use, has been linked to liver failure, seizures, and addiction, and is associated with hundreds of overdose deaths nationwide. The FDA has also declared kratom products adulterated under the Federal Food, Drug, and Cosmetic Act.
+
+In our state, kratom is sold openly in gas stations, vape shops, and convenience stores – often near candy and energy drinks. Poison control centers report thousands of exposures, including young children. Yet there are no warnings, no age restrictions that are enforced, and no oversight.
+
+I ask the Board to use its full authority to:
+
+- Initiate rulemaking to classify kratom as a controlled dangerous substance.
+- Publicly support legislation to ban retail sales of kratom.
+- Enforce state adulteration laws against retailers selling these products.
+- Issue a public health advisory warning consumers of the risks.
+
+The industry that profits from this crisis has spent millions on lobbyists and biased research. They count on you doing nothing. Please prove them wrong.
+
+Thank you for your service to the public.
+
+[Your Name]
+[Your Phone Number]
+[Your Email]
+      </div>
+    </div>
+
+    <!-- Additional tips -->
+    <div class="tip-box">
+      <h3>⛔ Tips for Maximum Impact</h3>
+      <ul>
+        <li><strong>Be specific.</strong> Mention the exact actions you want: scheduling, ban, enforcement.</li>
+        <li><strong>Cite local data.</strong> If your state poison control center has numbers, include them. If a local news story covered a kratom death or seizure, link to it.</li>
+        <li><strong>Follow up.</strong> Boards meet periodically. Call before meetings to remind them of your request. Show up to public meetings and speak.</li>
+        <li><strong>Bring friends.</strong> One email is good. Ten emails from the same town is a movement. Share this page with neighbors.</li>
+        <li><strong>Connect with other advocates.</strong> Join our mailing list to coordinate efforts.</li>
+      </ul>
+    </div>
+
+    <!-- Callout for urgency -->
+    <div class="callout-box">
+      <div class="callout-title">⏳ The Industry Is Counting on Inaction</div>
+      <p>
+        They know that pharmacy boards are overworked and understaffed. They hope your email will be buried. But a steady stream of calls and messages from concerned citizens – from parents, from grandparents, from people who've lost loved ones – cannot be ignored.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="index.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="index.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: action.jpg — the board is listening.</p>
+    </div>
+  </div>
+</body>
+</html>
