@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Your Health Department · Stop Adulterated Sales</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with action.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('action.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Callout boxes */
+    .callout-box {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    .tip-box {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .tip-box h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    /* Sample script box */
+    .script-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #b42b2b;
+      padding: 25px;
+      margin: 25px 0;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      color: #e4b23e;
+      border-left: 6px solid #e4b23e;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">HOME</a>
+        <a href="../evidence/index.html">EVIDENCE</a>
+        <a href="../industry/index.html">INDUSTRY</a>
+        <a href="index.html">FIGHT BACK</a>
+        <a href="../about/index.html">ABOUT</a>
+        <a href="../contact/index.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with action.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>CONTACT YOUR</span> STATE HEALTH DEPARTMENT</h1>
+      <p>
+        They enforce food and drug safety laws. They have the power to stop the sale of adulterated products.
+        The industry's "KCPA" doesn't change that. Make them do their job.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#why-health">Why Health Departments?</a>
+        <a class="btn btn-secondary" href="#find-health">Find Yours</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Why health departments matter -->
+    <div id="why-health" class="content-card">
+      <h2>Why Your State Health Department Has the Power</h2>
+      <p>
+        Every state has its own Food, Drug, and Cosmetic Act – laws that mirror the federal standard.
+        These laws define a product as <strong>adulterated</strong> if it contains a poisonous or deleterious substance
+        that may render it injurious to health. The FDA has already determined that kratom products meet this definition.
+      </p>
+      <p>
+        <span style="color:#e4b23e;">Key point:</span> A state "Kratom Consumer Protection Act" (KCPA) does <strong>not</strong> make an adulterated product unadulterated.
+        Industry-written KCPAs create labeling rules and age limits, but they do not override the state's existing food safety laws.
+        Kratom remains adulterated – and therefore illegal to sell – regardless of what a KCPA says.
+      </p>
+      <div class="callout-box" style="margin-top:20px;">
+        <div class="callout-title">⛔ The Industry's Dirty Secret</div>
+        <p>They push KCPAs to create the illusion of legality. But your health department's adulteration laws are still on the books – and they are being ignored. Demand enforcement.</p>
+      </div>
+    </div>
+
+    <!-- Find your health department -->
+    <div id="find-health" class="callout-box" style="text-align:center;">
+      <div class="callout-title">📍 Locate Your State Health Department</div>
+      <p style="font-size:1.2rem;">
+        <a href="https://www.cdc.gov/publichealthgateway/healthdirectories/healthdepartments.html" target="_blank" style="color:#e4b23e; text-decoration:underline;">
+          CDC Directory of State & Territorial Health Departments
+        </a>
+      </p>
+      <p>Find contact info, complaint forms, and enforcement divisions.</p>
+    </div>
+
+    <!-- What you can ask for -->
+    <div class="content-card">
+      <h2>What to Demand From Your Health Department</h2>
+      <ul>
+        <li><strong>Enforce state adulteration laws.</strong> Remind them that under state FD&C acts, kratom is an adulterated food/drug. Demand they issue cease-and-desist letters to retailers, seize products, and levy fines.</li>
+        <li><strong>Issue a public health advisory.</strong> Ask them to warn consumers that kratom products are adulterated, unapproved, and linked to serious harm – regardless of any KCPA.</li>
+        <li><strong>Investigate complaints.</strong> If you know a specific store selling kratom, file a formal complaint. Demand an investigation and enforcement action.</li>
+        <li><strong>Reject industry claims that KCPA legalizes kratom.</strong> Ask for a written opinion: Does the KCPA override the state's adulteration provisions? The answer is no – but they need to say it publicly.</li>
+        <li><strong>Support legislation to explicitly ban sales.</strong> Ask the health department to testify in favor of a true ban, not industry-written "regulation."</li>
+      </ul>
+    </div>
+
+    <!-- Sample message -->
+    <div class="content-card">
+      <h2>Sample Email to Your Health Department</h2>
+      <p>Use this to start the conversation – adapt with local details.</p>
+      <div class="script-box">
+To: [State Health Department contact email]
+
+Subject: URGENT: Enforce adulteration laws against kratom products
+
+Dear [Commissioner/Director],
+
+My name is [Your Name], and I am a resident of [City, State]. I am writing to demand that your department enforce [State]'s Food, Drug, and Cosmetic Act against retailers selling kratom.
+
+Under [State Code reference if known], a food or drug is adulterated if it contains a substance that may render it injurious to health. The FDA has repeatedly declared kratom products adulterated under the federal FD&C Act. Kratom contains mitragynine and 7‑hydroxymitragynine, compounds with opioid-like activity, and has been linked to liver failure, seizures, addiction, and death.
+
+I am aware that [State] has passed a "Kratom Consumer Protection Act." However, that law does not – and cannot – override our state's adulteration provisions. A product cannot be "regulated" into being unadulterated. The KCPA sets labeling rules, but the underlying product remains adulterated and therefore illegal to sell.
+
+I ask your department to:
+
+- Issue a public advisory stating that kratom products remain adulterated under state law.
+- Investigate retailers selling kratom and enforce our adulteration laws.
+- Provide a written opinion clarifying that the KCPA does not legalize the sale of an adulterated substance.
+
+The industry hopes you will ignore your own laws. Please do not let them succeed.
+
+Thank you for protecting the health of our communities.
+
+[Your Name]
+[Your Phone Number]
+[Your Email]
+      </div>
+    </div>
+
+    <!-- Additional tips -->
+    <div class="tip-box">
+      <h3>⛔ Tips for Maximum Impact</h3>
+      <ul>
+        <li><strong>Know your state law.</strong> Search for "[State] Food Drug and Cosmetic Act adulteration definition." Quote it in your message.</li>
+        <li><strong>Cite the FDA.</strong> Mention that the FDA has already declared kratom adulterated – this gives your state health department federal backing.</li>
+        <li><strong>Reference New York's contradiction.</strong> In New York, the KCPA passed while older adulteration law remains on the books – creating legal chaos. Use that as a warning: "Don't let our state have the same contradiction."</li>
+        <li><strong>File a formal complaint.</strong> Most health departments have online forms for reporting unsafe products. File one for every retailer you know.</li>
+        <li><strong>Ask for a response.</strong> Request that they clarify in writing how they interpret the interaction between the KCPA and the adulteration statute.</li>
+      </ul>
+    </div>
+
+    <!-- Callout for urgency -->
+    <div class="callout-box">
+      <div class="callout-title">⏳ The Industry Is Counting on Confusion</div>
+      <p>
+        They want health departments to believe that a KCPA "fixes" everything. It doesn't.
+        Your job is to force your health department to read their own laws – and act on them.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="index.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="index.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: action.jpg — adulteration doesn't care about KCPAs.</p>
+    </div>
+  </div>
+</body>
+</html>
