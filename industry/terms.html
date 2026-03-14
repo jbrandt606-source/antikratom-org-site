@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fine Print They Hide · Industry Confessions</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with industry.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('industry.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Callout box */
+    .callout-box {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 25px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #e4b23e;
+      margin-bottom: 10px;
+    }
+
+    /* Tip box */
+    .tip-box {
+      background: rgba(228, 178, 62, 0.1);
+      border: 2px solid #e4b23e;
+      padding: 25px;
+      margin: 30px 0;
+    }
+
+    .tip-box h3 {
+      color: #e4b23e;
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      border-left: 5px solid #b42b2b;
+      padding-left: 15px;
+    }
+
+    /* Context link */
+    .context-link {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 18px;
+      margin: 30px 0;
+      border: 2px solid #e4b23e;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .context-link a {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #b42b2b;
+      word-break: break-word;
+    }
+
+    .context-link a:hover {
+      color: white;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Source link styling */
+    .source-link {
+      color: #e4b23e;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../../index.html">HOME</a>
+        <a href="../../evidence/index.html">EVIDENCE</a>
+        <a href="../index.html" class="active">INDUSTRY</a>
+        <a href="../../fight-back/index.html">FIGHT BACK</a>
+        <a href="../../about/index.html">ABOUT</a>
+        <a href="../../contact/index.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with industry.jpg -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>THE FINE PRINT</span> THEY HIDE</h1>
+      <p>
+        Kratom vendors market their products as safe, natural, and harmless. But in documents meant for lawyers – not customers – the truth slips out. Here's what they make you agree to before you buy.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#confession">Read Their Confession</a>
+        <a class="btn btn-secondary" href="../index.html">Industry Hub</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Context link -->
+    <div class="context-link">
+      ⚠️ <strong>Source:</strong> This information was identified by the End Kratom Addiction team from <a href="https://happyhippo.com/policies/terms-of-service" target="_blank" class="source-link">Happy Hippo Herbals' Terms of Service</a>. The industry speaks differently when it thinks no one is looking.
+    </div>
+
+    <!-- The confession -->
+    <div id="confession" class="content-card">
+      <h2>What the Company Makes Customers Admit</h2>
+      <p>
+        Before you can buy, you must check a box agreeing that kratom:
+      </p>
+      <ul>
+        <li><strong>Acts on opioid receptors</strong> in the brain – the same receptors targeted by prescription painkillers and heroin.</li>
+        <li><strong>Can cause dependence</strong> – their own words, not a critic's.</li>
+        <li><strong>Can cause withdrawal symptoms</strong> – the shakes, nausea, insomnia, and agony they never mention on the product page.</li>
+        <li><strong>May lead to serious adverse reactions</strong> – a blanket warning that covers everything from seizures to liver failure.</li>
+        <li><strong>Is not approved by the FDA</strong> for any medical use – no safety, no efficacy, no oversight.</li>
+      </ul>
+      <p>
+        Then, they make you <strong>assume the risk</strong>. If you're harmed, it's your fault – even though they sold it to you.
+      </p>
+    </div>
+
+    <!-- The legal trap -->
+    <div class="content-card">
+      <h2>The Legal Trap They've Built</h2>
+      <p>
+        The Terms of Service aren't just a list of warnings. They're a carefully constructed legal shield designed to make it nearly impossible to hold the company accountable.
+      </p>
+      <ul>
+        <li><strong>Forced Arbitration:</strong> If you're injured, you can't sue. You're forced into private arbitration – a system that favors companies, keeps outcomes secret, and rarely awards victims what they deserve.</li>
+        <li><strong>No Class Actions:</strong> You waive the right to join with others. Every injured customer must fight alone – an expensive, exhausting, and often impossible task.</li>
+        <li><strong>Idaho Jurisdiction:</strong> Disputes are governed by Idaho law and must be handled in Ada County, Idaho. If you live in Florida, Texas, or Ohio – too bad. You travel to Idaho, or you drop your case.</li>
+        <li><strong>Assumption of Risk:</strong> By checking "I agree," you've admitted that you understood the risks and chose to buy anyway. In court, that's a powerful defense – even if you never actually read the fine print.</li>
+      </ul>
+    </div>
+
+    <!-- The contradiction -->
+    <div class="tip-box">
+      <h3>⛔ The Question They Can't Answer</h3>
+      <p>
+        If kratom is truly a safe herbal supplement, why do companies force customers to acknowledge:
+      </p>
+      <ul>
+        <li>opioid-receptor activity</li>
+        <li>addiction potential</li>
+        <li>withdrawal symptoms</li>
+        <li>serious health complications</li>
+      </ul>
+      <p style="margin-top:15px;">— before they can buy the product? The only honest answer is that they know exactly what they're selling. They just don't want you to know until it's too late.</p>
+    </div>
+
+    <!-- Credit and further research -->
+    <div class="callout-box">
+      <div class="callout-title">🔍 Credit & Further Research</div>
+      <p>
+        This information was identified by the <strong>End Kratom Addiction</strong> team. Their ongoing work highlights industry documents and disclosures that consumers rarely see before purchasing kratom products.
+      </p>
+      <p style="margin-top:15px;">
+        <a href="https://www.endkratomaddiction.org" target="_blank" style="color:#e4b23e; font-weight:600;">Visit End Kratom Addiction →</a>
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="../index.html">← Back to Industry Hub</a>
+      <a class="btn btn-primary" href="narrative.html">AKA Narrative</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../../index.html">Home</a> | <a href="../../evidence/index.html">Evidence</a> | <a href="../index.html">Industry</a> | <a href="../../fight-back/index.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: industry.jpg — the fine print they hide.</p>
+    </div>
+  </div>
+</body>
+</html>
