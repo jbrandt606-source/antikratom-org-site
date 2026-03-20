@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
+    gtag('config','G-P31PD1SSTD');
+  </script>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Toolkit · Anti‑Kratom Association</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ----- consistent dark theme (red/gold accents) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with action.jpg */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('action.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* Content cards */
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #e4b23e;
+      margin: 25px 0 15px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    /* Feature preview grid */
+    .feature-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .feature-item {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border: 1px solid #b42b2b;
+    }
+
+    .feature-item h3 {
+      color: #e4b23e;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    /* Media toolkit specific styles */
+    .toolkit-subsection {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 4px solid #e4b23e;
+    }
+
+    .toolkit-subsection h4 {
+      color: #e4b23e;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .template-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #b42b2b;
+      padding: 20px;
+      margin: 20px 0;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      color: #e4b23e;
+      border-left: 6px solid #e4b23e;
+    }
+
+    /* Credibility line */
+    .credibility-line {
+      text-align: center;
+      font-size: 1rem;
+      color: #e4b23e;
+      margin: 20px 0 30px;
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Reminder note */
+    .reminder-note {
+      background: rgba(180, 43, 43, 0.2);
+      padding: 20px;
+      border: 2px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    /* Footer */
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .content-card h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">HOME</a>
+        <a href="../evidence/index.html">EVIDENCE</a>
+        <a href="../industry/index.html">INDUSTRY</a>
+        <a href="index.html">FIGHT BACK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="../contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with action.jpg - UPDATED TONE -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>MEDIA TOOLKIT</span> FOR JOURNALISTS</h1>
+      <p>
+        Evidence and context for reporting on kratom. Verified data and background for journalists covering kratom in your community.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#toolkit">Access Toolkit</a>
+        <a class="btn btn-secondary" href="index.html">Other Actions</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Credibility line - NEW -->
+    <div class="credibility-line">
+      All data cited from FDA, CDC, DEA, and peer-reviewed literature. Sources available upon request.
+    </div>
+
+    <!-- Overview card -->
+    <div class="content-card">
+      <h2>📺 Media Toolkit</h2>
+      <p>
+        These resources are designed to help journalists, editorial writers, and news directors understand the kratom crisis and report on it accurately. Use them to craft stories, respond to industry press releases, and inform the public.
+      </p>
+    </div>
+
+    <!-- Key Reporting Points - RENAMED and REFRAMED -->
+    <div id="toolkit" class="toolkit-subsection">
+      <h4>🗣️ Key Reporting Points</h4>
+      <ul>
+        <li><strong>FDA has not established kratom as safe.</strong> In 2023, the FDA explicitly denied a New Dietary Ingredient application, stating it could not establish safety or even basic identity.</li>
+        <li><strong>Overdose deaths with kratom detected exceed 5,000 since 2020.</strong> CDC SUDORS data show more than 5,000 deaths with mitragynine present – and that's only from participating jurisdictions.</li>
+        <li><strong>Poison control centers received 8,555 kratom-related calls from 2019–2024.</strong> In 2024 alone, there were over 1,600 exposures, including 150 pediatric cases. Children under five are the fastest-growing group.</li>
+        <li><strong>Some studies use controlled conditions that differ from retail products.</strong> Industry-funded research uses pure product in healthy adults for short periods – unlike the adulterated, variable kratom sold in gas stations.</li>
+        <li><strong>Kratom Consumer Protection Acts (KCPAs) are often drafted by industry advocates.</strong> These bills create an illusion of regulation but do not require warnings about addiction, withdrawal, or opioid-like effects.</li>
+        <li><strong>Law enforcement cannot currently test for 7‑hydroxymitragynine,</strong> the more potent metabolite formed in the body, making impaired driving cases difficult to prosecute.</li>
+      </ul>
+    </div>
+
+    <!-- What to Verify - NEW SECTION -->
+    <div class="toolkit-subsection">
+      <h4>🔍 What to Verify</h4>
+      <ul>
+        <li><strong>FDA NDI denial:</strong> Johnson Foods' 2023 application was rejected – the agency could not establish identity or safety. (Source: FDA denial letter)</li>
+        <li><strong>CDC SUDORS definitions:</strong> SUDORS distinguishes between substances "detected" and those "involved" in the cause of death. Both metrics are tracked separately.</li>
+        <li><strong>Poison control NPDS data:</strong> Annual reports from America's Poison Centers include case counts, severity, and pediatric exposures. These are verified, not estimates.</li>
+        <li><strong>Adverse event reports:</strong> FAERS and CAERS databases contain over 2,200 kratom-related reports, including nearly 1,000 deaths. These are spontaneous reports and signal potential risks.</li>
+      </ul>
+    </div>
+
+    <!-- Press Release Template -->
+    <div class="toolkit-subsection">
+      <h4>📝 Press Release Template</h4>
+      <p>Use this template to announce local actions, events, or respond to industry announcements.</p>
+      <div class="template-box">
+FOR IMMEDIATE RELEASE
+Contact: [Your Name/Organization]
+[Email] | [Phone]
+
+[HEADLINE: e.g., LOCAL PARENTS CITE CDC DATA IN CALL FOR KRATOM BAN]
+
+[CITY, State] – [Date] – A coalition of parents and public health advocates today called on state lawmakers to address the retail sale of kratom, citing data from the CDC showing [specific local/state data if available, otherwise national trends].
+
+"Kratom is sold next to energy drinks, but FDA documents show the agency has not found it safe for human consumption," said [Spokesperson Name]. "Consumers deserve to know what's in these products."
+
+According to America's Poison Centers, kratom exposures have increased [X]% over the past five years, with [X] cases reported in [State] alone. Pediatric exposures – including children under five – reached record highs in 2024.
+
+Advocates point to FDA denial letters, CDC mortality data, and poison control records as key sources for understanding the substance's risks.
+
+"We have the evidence. We need action," said [Spokesperson]. "We urge [Governor/Legislature] to review the data and take appropriate steps."
+
+The group will hold a [press conference/rally/hearing] on [date] at [location]. For more information, visit [website].
+
+# # #
+      </div>
+    </div>
+
+    <!-- Backgrounder for Journalists -->
+    <div class="toolkit-subsection">
+      <h4>📄 Backgrounder: Key Facts Every Journalist Should Know</h4>
+      <ul>
+        <li><strong>What is kratom?</strong> A tropical tree (Mitragyna speciosa) whose leaves contain mitragynine and 7‑hydroxymitragynine, compounds that bind to mu‑opioid receptors.</li>
+        <li><strong>Legal status:</strong> No FDA-approved drug products. Not a lawful dietary ingredient. FDA has issued multiple import alerts.</li>
+        <li><strong>Industry lobbying:</strong> The American Kratom Association has promoted state-level "KCPA" bills that preempt bans but do not require warnings about addiction or withdrawal.</li>
+        <li><strong>Key data sources:</strong>
+          <ul>
+            <li>FDA CAERS/FAERS: over 2,200 adverse event reports, nearly 1,000 deaths.</li>
+            <li>CDC SUDORS: 5,000+ overdose deaths with mitragynine detected (2020–2024).</li>
+            <li>Poison control: 8,555 exposures (2019–2024), including 700+ pediatric cases.</li>
+          </ul>
+        </li>
+        <li><strong>Human research:</strong> Clinical trials show dose‑dependent increases in subjective drug effects, liver enzyme elevations, and adverse events requiring participant withdrawal.</li>
+        <li><strong>What consumers don't see:</strong> Kratom is metabolized into a more potent opioid (7‑OH) inside the user. Retail products often lack quality control – testing has found contamination with heavy metals, salmonella, and synthetic substances.</li>
+      </ul>
+    </div>
+
+    <!-- Downloadable resources -->
+    <div class="reminder-note" style="text-align:center;">
+      <h3 style="color:#e4b23e;">📂 Download Ready‑to‑Use Files</h3>
+      <p style="margin-top:10px;">
+        <a href="legislative/index.html" style="color:#e4b23e;">Legislative Flyer Toolkit</a> • 
+        <a href="talking-points.pdf" style="color:#e4b23e;">Key Reporting Points (PDF)</a> • 
+        <a href="press-release-template.docx" style="color:#e4b23e;">Press Release Template (DOCX)</a>
+      </p>
+      <p style="font-size:0.9rem; margin-top:15px;">*Some files are being finalized – check back soon.</p>
+    </div>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="index.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="index.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: action.jpg — verified data for accurate reporting.</p>
+    </div>
+  </div>
+</body>
+</html>
