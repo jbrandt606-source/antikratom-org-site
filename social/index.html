@@ -14,9 +14,8 @@
     
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Graphics · Visual Toolkit</title>
-  <!-- Link to main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <title>Social Graphics · Anti‑Kratom Association</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
     /* ----- consistent dark theme (red/gold accents) ----- */
     * {
@@ -34,7 +33,7 @@
 
     /* Hero section with action.jpg */
     .hero {
-      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('action.jpg') center center / cover no-repeat;
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('../action.jpg') center center / cover no-repeat;
       color: white;
       padding: 80px 0;
       border-bottom: 4px solid #b42b2b;
@@ -117,38 +116,51 @@
       padding: 30px 20px;
     }
 
-    /* Section headers */
-    .campaign-section {
-      margin: 50px 0 30px;
+    /* Campaign section */
+    .campaign {
+      margin-bottom: 70px;
     }
-    .campaign-section h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-      border-left: 5px solid #e4b23e;
-      padding-left: 16px;
-      display: inline-block;
+
+    .campaign-header {
+      background-color: #b42b2b;
+      padding: 12px 24px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .campaign-section h2 span {
+
+    .campaign-header h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: white;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .campaign-count {
+      background: rgba(0,0,0,0.3);
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
       color: #e4b23e;
     }
 
     /* Image grid */
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
     }
 
     .image-card {
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid #b42b2b;
-      border-bottom: 4px solid #b42b2b;
-      padding: 15px;
-      transition: transform 0.2s;
-      text-align: center;
+      background: #0c151f;
+      border: 2px solid rgba(255,255,255,0.1);
+      transition: transform 0.2s, border-color 0.2s;
     }
 
     .image-card:hover {
@@ -159,30 +171,37 @@
     .image-card img {
       width: 100%;
       height: auto;
-      border: 2px solid rgba(255,255,255,0.1);
-      background: #0c151f;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .image-card .info {
+      padding: 15px;
+      text-align: center;
     }
 
     .image-card .filename {
-      margin-top: 10px;
       font-size: 0.9rem;
       color: #e4b23e;
+      margin-bottom: 12px;
       word-break: break-all;
     }
 
-    .image-card .download-link {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 5px 10px;
-      background: #b42b2b;
+    .image-card .download-btn {
+      background-color: #b42b2b;
       color: white;
       text-decoration: none;
+      padding: 8px 16px;
       font-size: 0.8rem;
+      font-weight: 600;
       text-transform: uppercase;
-      border-radius: 3px;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      transition: background 0.2s;
     }
-    .image-card .download-link:hover {
-      background: #8f2020;
+
+    .image-card .download-btn:hover {
+      background-color: #8f2020;
     }
 
     /* Footer */
@@ -262,6 +281,12 @@
       .hero h1 {
         font-size: 2.2rem;
       }
+      .campaign-header h2 {
+        font-size: 1.4rem;
+      }
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -273,17 +298,16 @@
         <span>public health · evidence · action</span>
       </div>
       <nav class="nav">
-        <a href="index.html">HOME</a>
-        <a href="evidence/index.html">EVIDENCE</a>
-        <a href="industry/index.html">INDUSTRY</a>
-        <a href="action.html">FIGHT BACK</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="../index.html">HOME</a>
+        <a href="../evidence/index.html">EVIDENCE</a>
+        <a href="../industry/index.html">INDUSTRY</a>
+        <a href="../action.html">FIGHT BACK</a>
+        <a href="../about.html">ABOUT</a>
+        <a href="../contact.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero with action.jpg -->
   <section class="hero">
     <div class="hero-container">
       <h1><span>SOCIAL GRAPHICS</span> VISUAL TOOLKIT</h1>
@@ -292,143 +316,178 @@
       </p>
       <div class="nav-links">
         <a class="btn btn-primary" href="#brutal">Brutally Honest</a>
-        <a class="btn btn-primary" href="#opms">Opioid Plant Marketing Scam</a>
+        <a class="btn btn-primary" href="#opms">OPMS Scam</a>
         <a class="btn btn-secondary" href="#misc">Miscellaneous</a>
       </div>
     </div>
   </section>
 
   <div class="container">
-    <!-- Introduction -->
-    <div class="content-card" style="text-align:center;">
-      <h2>📸 Use These Graphics</h2>
-      <p>
-        Right-click and save, or click the download button. Tag us when you post – together we drown out their lies.
-      </p>
-    </div>
-
     <!-- ========== BRUTALLY HONEST CAMPAIGN ========== -->
-    <div id="brutal" class="campaign-section">
-      <h2><span>🔥</span> BRUTALLY HONEST CAMPAIGN</h2>
+    <div id="brutal" class="campaign">
+      <div class="campaign-header">
+        <h2>BRUTALLY HONEST CAMPAIGN</h2>
+        <div class="campaign-count">9 graphics</div>
+      </div>
       <div class="image-grid">
         <!-- Brutal1.png to Brutal9.jpeg -->
         <div class="image-card">
-          <img src="social/Brutal1.png" alt="Brutal1" loading="lazy">
-          <div class="filename">Brutal1.png</div>
-          <a class="download-link" href="social/Brutal1.png" download>Download</a>
+          <img src="Brutal1.png" alt="Brutal1">
+          <div class="info">
+            <div class="filename">Brutal1.png</div>
+            <a class="download-btn" href="Brutal1.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal2.png" alt="Brutal2" loading="lazy">
-          <div class="filename">Brutal2.png</div>
-          <a class="download-link" href="social/Brutal2.png" download>Download</a>
+          <img src="Brutal2.png" alt="Brutal2">
+          <div class="info">
+            <div class="filename">Brutal2.png</div>
+            <a class="download-btn" href="Brutal2.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal3.png" alt="Brutal3" loading="lazy">
-          <div class="filename">Brutal3.png</div>
-          <a class="download-link" href="social/Brutal3.png" download>Download</a>
+          <img src="Brutal3.png" alt="Brutal3">
+          <div class="info">
+            <div class="filename">Brutal3.png</div>
+            <a class="download-btn" href="Brutal3.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal4.png" alt="Brutal4" loading="lazy">
-          <div class="filename">Brutal4.png</div>
-          <a class="download-link" href="social/Brutal4.png" download>Download</a>
+          <img src="Brutal4.png" alt="Brutal4">
+          <div class="info">
+            <div class="filename">Brutal4.png</div>
+            <a class="download-btn" href="Brutal4.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal5.png" alt="Brutal5" loading="lazy">
-          <div class="filename">Brutal5.png</div>
-          <a class="download-link" href="social/Brutal5.png" download>Download</a>
+          <img src="Brutal5.png" alt="Brutal5">
+          <div class="info">
+            <div class="filename">Brutal5.png</div>
+            <a class="download-btn" href="Brutal5.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal6.png" alt="Brutal6" loading="lazy">
-          <div class="filename">Brutal6.png</div>
-          <a class="download-link" href="social/Brutal6.png" download>Download</a>
+          <img src="Brutal6.png" alt="Brutal6">
+          <div class="info">
+            <div class="filename">Brutal6.png</div>
+            <a class="download-btn" href="Brutal6.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal7.png" alt="Brutal7" loading="lazy">
-          <div class="filename">Brutal7.png</div>
-          <a class="download-link" href="social/Brutal7.png" download>Download</a>
+          <img src="Brutal7.png" alt="Brutal7">
+          <div class="info">
+            <div class="filename">Brutal7.png</div>
+            <a class="download-btn" href="Brutal7.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal8.png" alt="Brutal8" loading="lazy">
-          <div class="filename">Brutal8.png</div>
-          <a class="download-link" href="social/Brutal8.png" download>Download</a>
+          <img src="Brutal8.png" alt="Brutal8">
+          <div class="info">
+            <div class="filename">Brutal8.png</div>
+            <a class="download-btn" href="Brutal8.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Brutal9.jpeg" alt="Brutal9" loading="lazy">
-          <div class="filename">Brutal9.jpeg</div>
-          <a class="download-link" href="social/Brutal9.jpeg" download>Download</a>
+          <img src="Brutal9.jpeg" alt="Brutal9">
+          <div class="info">
+            <div class="filename">Brutal9.jpeg</div>
+            <a class="download-btn" href="Brutal9.jpeg" download>DOWNLOAD</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- ========== OPMS SCAM SERIES ========== -->
-    <div id="opms" class="campaign-section">
-      <h2><span>⛔</span> Opioid Plant Marketing SCAM SERIES</h2>
+    <div id="opms" class="campaign">
+      <div class="campaign-header">
+        <h2>OPMS SCAM SERIES</h2>
+        <div class="campaign-count">6 graphics</div>
+      </div>
       <div class="image-grid">
-        <!-- Scam.png, Scam2.jpeg, scam3.jpeg, scam4.png, Scam5.png, Scam6.jpeg -->
         <div class="image-card">
-          <img src="social/Scam.png" alt="Scam" loading="lazy">
-          <div class="filename">Scam.png</div>
-          <a class="download-link" href="social/Scam.png" download>Download</a>
+          <img src="Scam.png" alt="Scam">
+          <div class="info">
+            <div class="filename">Scam.png</div>
+            <a class="download-btn" href="Scam.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Scam2.jpeg" alt="Scam2" loading="lazy">
-          <div class="filename">Scam2.jpeg</div>
-          <a class="download-link" href="social/Scam2.jpeg" download>Download</a>
+          <img src="Scam2.jpeg" alt="Scam2">
+          <div class="info">
+            <div class="filename">Scam2.jpeg</div>
+            <a class="download-btn" href="Scam2.jpeg" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/scam3.jpeg" alt="scam3" loading="lazy">
-          <div class="filename">scam3.jpeg</div>
-          <a class="download-link" href="social/scam3.jpeg" download>Download</a>
+          <img src="scam3.jpeg" alt="scam3">
+          <div class="info">
+            <div class="filename">scam3.jpeg</div>
+            <a class="download-btn" href="scam3.jpeg" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/scam4.png" alt="scam4" loading="lazy">
-          <div class="filename">scam4.png</div>
-          <a class="download-link" href="social/scam4.png" download>Download</a>
+          <img src="scam4.png" alt="scam4">
+          <div class="info">
+            <div class="filename">scam4.png</div>
+            <a class="download-btn" href="scam4.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Scam5.png" alt="Scam5" loading="lazy">
-          <div class="filename">Scam5.png</div>
-          <a class="download-link" href="social/Scam5.png" download>Download</a>
+          <img src="Scam5.png" alt="Scam5">
+          <div class="info">
+            <div class="filename">Scam5.png</div>
+            <a class="download-btn" href="Scam5.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Scam6.jpeg" alt="Scam6" loading="lazy">
-          <div class="filename">Scam6.jpeg</div>
-          <a class="download-link" href="social/Scam6.jpeg" download>Download</a>
+          <img src="Scam6.jpeg" alt="Scam6">
+          <div class="info">
+            <div class="filename">Scam6.jpeg</div>
+            <a class="download-btn" href="Scam6.jpeg" download>DOWNLOAD</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- ========== MISCELLANEOUS ========== -->
-    <div id="misc" class="campaign-section">
-      <h2><span>📁</span> MISCELLANEOUS</h2>
+    <div id="misc" class="campaign">
+      <div class="campaign-header">
+        <h2>MISCELLANEOUS</h2>
+        <div class="campaign-count">3 graphics</div>
+      </div>
       <div class="image-grid">
-        <!-- Confusion.png, Trucker.jpeg, kcp1.png -->
         <div class="image-card">
-          <img src="social/Confusion.png" alt="Confusion" loading="lazy">
-          <div class="filename">Confusion.png</div>
-          <a class="download-link" href="social/Confusion.png" download>Download</a>
+          <img src="Confusion.png" alt="Confusion">
+          <div class="info">
+            <div class="filename">Confusion.png</div>
+            <a class="download-btn" href="Confusion.png" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/Trucker.jpeg" alt="Trucker" loading="lazy">
-          <div class="filename">Trucker.jpeg</div>
-          <a class="download-link" href="social/Trucker.jpeg" download>Download</a>
+          <img src="Trucker.jpeg" alt="Trucker">
+          <div class="info">
+            <div class="filename">Trucker.jpeg</div>
+            <a class="download-btn" href="Trucker.jpeg" download>DOWNLOAD</a>
+          </div>
         </div>
         <div class="image-card">
-          <img src="social/kcp1.png" alt="kcp1" loading="lazy">
-          <div class="filename">kcp1.png</div>
-          <a class="download-link" href="social/kcp1.png" download>Download</a>
+          <img src="kcp1.png" alt="kcp1">
+          <div class="info">
+            <div class="filename">kcp1.png</div>
+            <a class="download-btn" href="kcp1.png" download>DOWNLOAD</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Back links -->
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
-      <a class="btn btn-secondary" href="action.html">← Back to Action Hub</a>
-      <a class="btn btn-primary" href="evidence/index.html">Review the Evidence</a>
+      <a class="btn btn-secondary" href="../action.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
     </div>
 
     <div class="footer-note">
-      <p><a href="index.html">Home</a> | <a href="evidence/index.html">Evidence</a> | <a href="industry/index.html">Industry</a> | <a href="action.html">Fight Back</a></p>
+      <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="../action.html">Fight Back</a></p>
       <p style="margin-top:10px;">Hero image: action.jpg — spread the truth.</p>
     </div>
   </div>
