@@ -204,35 +204,38 @@
       background-color: #8f2020;
     }
 
-    /* Share buttons */
+    /* Share buttons - simple text style */
     .share-buttons {
       margin-top: 15px;
       display: flex;
       justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 16px;
     }
 
     .share-btn {
       background: transparent;
-      border: 1px solid #e4b23e;
+      border: none;
       color: #e4b23e;
       text-decoration: none;
-      padding: 6px 12px;
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
       cursor: pointer;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+      transition: color 0.2s;
+      padding: 0 2px;
+      font-family: monospace;
+      text-transform: none;
     }
 
     .share-btn:hover {
-      background: #e4b23e;
-      color: #0c151f;
+      color: #b42b2b;
+      text-decoration: underline;
+    }
+
+    .share-note {
+      font-size: 0.7rem;
+      color: #ccc;
+      margin-top: 8px;
+      text-align: center;
     }
 
     /* Footer */
@@ -441,7 +444,7 @@
     <div id="opms" class="campaign">
       <div class="campaign-header">
         <h2>Opioid Plant Marketing SCAM SERIES</h2>
-        <div class="campaign-count">6 graphics</div>
+        <div class="campaign-count">5 graphics</div>
       </div>
       <div class="image-grid">
         <div class="image-card" data-image="Scam.png">
@@ -510,8 +513,8 @@
             <div class="share-buttons"></div>
           </div>
         </div>
-        <div class="image-card" data-image="kcpa1.png">
-          <img src="kcpa1.png" alt="kcpa1">
+        <div class="image-card" data-image="kcp1.png">
+          <img src="kcp1.png" alt="kcp1">
           <div class="info">
             <div class="filename">kcp1.png</div>
             <a class="download-btn" href="kcp1.png" download>DOWNLOAD</a>
@@ -535,7 +538,7 @@
 
   <script>
     (function() {
-      // Construct absolute URL for current page (for sharing)
+      // Base URL of the current page (to construct absolute image URLs)
       const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
       const shareText = encodeURIComponent("Expose the truth about kratom. This graphic says it all. #KratomIsNotSafe #ProtectOurKids");
 
@@ -553,7 +556,7 @@
         xBtn.target = '_blank';
         xBtn.rel = 'noopener noreferrer';
         xBtn.className = 'share-btn';
-        xBtn.innerHTML = '𝕏';
+        xBtn.textContent = 'x';
         xBtn.title = 'Share on X';
 
         // Facebook
@@ -562,7 +565,7 @@
         fbBtn.target = '_blank';
         fbBtn.rel = 'noopener noreferrer';
         fbBtn.className = 'share-btn';
-        fbBtn.innerHTML = '📘';
+        fbBtn.textContent = 'f';
         fbBtn.title = 'Share on Facebook';
 
         // LinkedIn
@@ -571,13 +574,13 @@
         liBtn.target = '_blank';
         liBtn.rel = 'noopener noreferrer';
         liBtn.className = 'share-btn';
-        liBtn.innerHTML = '🔗';
+        liBtn.textContent = 'in';
         liBtn.title = 'Share on LinkedIn';
 
-        // Instagram (no direct share URL; copy link to clipboard)
+        // Instagram – copy link
         const igBtn = document.createElement('button');
         igBtn.className = 'share-btn';
-        igBtn.innerHTML = '📸';
+        igBtn.textContent = '@';
         igBtn.title = 'Copy link to share on Instagram';
         igBtn.onclick = function(e) {
           e.preventDefault();
@@ -592,6 +595,12 @@
         shareDiv.appendChild(fbBtn);
         shareDiv.appendChild(liBtn);
         shareDiv.appendChild(igBtn);
+
+        // Add a small note for Facebook
+        const note = document.createElement('div');
+        note.className = 'share-note';
+        note.textContent = '↓ For best results, download & upload manually on Facebook';
+        shareDiv.appendChild(note);
       }
 
       const cards = document.querySelectorAll('.image-card');
