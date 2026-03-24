@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Congress · Protect Our Kids from Kratom</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* consistent dark theme (red/gold accents) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section with your homepage hero image */
+    .hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('hero.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #e4b23e;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #b42b2b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #8f2020;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background-color: white;
+      color: #0c151f;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .content-card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 25px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+    }
+
+    .content-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+      border-left: 5px solid #e4b23e;
+      padding-left: 16px;
+    }
+
+    .content-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .content-card ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-card ul li {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: #f0f0f0;
+    }
+
+    .content-card ul li::before {
+      content: "⛔";
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-size: 1.2rem;
+      color: #e4b23e;
+    }
+
+    .letter-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #b42b2b;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 6px solid #e4b23e;
+    }
+
+    .letter-box textarea {
+      width: 100%;
+      min-height: 450px;
+      background: #0c151f;
+      border: 1px solid #e4b23e;
+      color: #fff;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      resize: vertical;
+    }
+
+    .letter-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-note {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.85rem;
+    }
+
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 12px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">HOME</a>
+        <a href="evidence/index.html">EVIDENCE</a>
+        <a href="industry/index.html">INDUSTRY</a>
+        <a href="action.html">FIGHT BACK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <h1><span>TELL CONGRESS</span> SCHEDULE KRATOM NOW</h1>
+      <p>
+        The FDA has rejected kratom as unsafe. Poison centers are flooded. Families are burying their children. Congress must act.
+      </p>
+      <div class="nav-links">
+        <a class="btn btn-primary" href="#letter">Send Your Letter</a>
+        <a class="btn btn-secondary" href="evidence/index.html">See the Evidence</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Why this matters -->
+    <div class="content-card">
+      <h2>Why Your Voice Is Urgently Needed</h2>
+      <p>
+        The kratom industry spends millions on lobbyists and high‑profile campaigns. They tell Congress that kratom is “natural” and “safe” – while their own legal disclaimers admit it acts on opioid receptors and can cause dependence and withdrawal.
+      </p>
+      <ul>
+        <li><strong>FDA:</strong> Rejected kratom as a dietary ingredient, stating it could not establish basic safety.</li>
+        <li><strong>CDC:</strong> Over 5,000 overdose deaths with mitragynine detected since 2020.</li>
+        <li><strong>Poison control:</strong> 8,555 exposures (2019‑2024), including 700+ children.</li>
+        <li><strong>Industry “regulation”:</strong> KCPA bills hide addiction risks and leave children at risk.</li>
+      </ul>
+      <p>
+        Lawmakers hear from industry representatives every day. They need to hear from the people they serve. <strong>Your letter can tip the balance.</strong>
+      </p>
+    </div>
+
+    <!-- Pre-written letter with Johnson‑style personalization -->
+    <div id="letter" class="content-card">
+      <h2>✍️ Your Letter to Congress</h2>
+      <p>
+        Copy and paste this into your representative’s contact form, or use it to guide a phone call. Add your personal story – it makes the letter impossible to ignore.
+      </p>
+      <div class="letter-box">
+        <textarea id="emailBody" readonly>
+Dear [Representative/Senator’s Name],
+
+My name is [Your Name] and I am a constituent in [City, Zip]. I am writing to ask you to support scheduling kratom as a controlled substance and banning its retail sale.
+
+I wish this were a letter about something else. But like too many families, I have seen what kratom does.
+
+[Personalize here – share your own experience if you have one. For example:
+“Last fall, my 16‑year‑old bought kratom at a gas station near our high school. He thought it was just an energy booster. Two hours later I was driving him to the ER while he seized.”]
+
+If you don’t have a personal story, you can use this:
+“I am a parent and a voter who shops at the same gas stations where kratom is sold next to candy. I’ve read the FDA warnings. I’ve seen the poison control data. I know that this product is not safe – and the industry’s public relations campaign should not stand in the way of protecting our kids.”
+
+The industry claims kratom is “well‑tolerated” and “should be regulated, not banned.” But the FDA has rejected kratom as a dietary ingredient because it could not even establish basic safety. Poison control centers logged over 1,600 kratom exposures in 2024 alone – including 150 children under five.
+
+Industry‑backed “Kratom Consumer Protection Acts” do nothing to warn consumers about opioid‑like withdrawal or addiction. They are designed to keep products on shelves, not to protect families.
+
+I am not asking for more studies. We have enough evidence. I am asking you to act.
+
+Please do not let the industry’s lobbyists drown out the truth. Schedule kratom. Ban its retail sale. Protect our kids.
+
+Thank you for your service. I look forward to your response.
+
+Sincerely,
+[Your Name]
+[Your Address]
+[Your Phone]
+        </textarea>
+        <div class="letter-actions">
+          <button id="copyBtn" class="btn btn-primary">📋 Copy Letter</button>
+          <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" class="btn btn-secondary">Find Your Representative</a>
+          <a href="https://www.senate.gov/senators/senators-contact.htm" target="_blank" class="btn btn-secondary">Find Your Senators</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: Flyer suggestion and one‑page rule -->
+    <div class="content-card">
+      <h2>📄 Include a Flyer (Keep It One Page)</h2>
+      <p>
+        A short, evidence‑backed flyer can make your message even more powerful. Use one from our <strong><a href="media.html" style="color:#e4b23e;">Media & Flyers Toolkit</a></strong> – but remember to keep it to <strong>one page</strong>. Legislators and their staff are overwhelmed. A single, sharp page of key facts is more likely to be read and kept.
+      </p>
+      <ul>
+        <li><strong>Pick the most relevant flyer:</strong> FDA warnings, CDC death data, pediatric poisonings, or the legal failures of KCPAs.</li>
+        <li><strong>Attach it to your email</strong> with a brief note: “Attached is a one‑page summary of federal data.”</li>
+        <li><strong>If you’re calling, offer to send it afterward.</strong> “I have a one‑page summary of FDA and CDC data – I’d be happy to email it to your staff.”</li>
+      </ul>
+      <p style="margin-top:15px;">👉 <a href="media.html" style="color:#e4b23e; font-weight:600;">Go to Media & Flyers Toolkit →</a></p>
+    </div>
+
+    <!-- Additional tips -->
+    <div class="content-card">
+      <h2>🎯 How to Make Your Letter Count</h2>
+      <ul>
+        <li><strong>Personalize it.</strong> Share your story or local details. A letter that mentions a specific store or a local poison control call is far more memorable.</li>
+        <li><strong>Be specific.</strong> Ask them to support scheduling kratom or to cosponsor a ban. Vague asks get vague responses.</li>
+        <li><strong>Mention your town.</strong> “I live in [City] and shop at the gas station on Main Street where kratom is sold.”</li>
+        <li><strong>Keep it under one page.</strong> If you attach a flyer, it should also be one page. Respect their time.</li>
+        <li><strong>Follow up.</strong> If you don’t hear back in two weeks, call their office. A follow‑up call can move a letter from the “read” pile to the “act” pile.</li>
+      </ul>
+    </div>
+
+    <!-- Call to action for other advocacy -->
+    <div class="content-card" style="text-align:center;">
+      <h2>📢 Don’t Stop Here</h2>
+      <p>
+        One letter is powerful. A flood of letters is unstoppable.
+      </p>
+      <p>
+        Share this page with friends, family, and neighbors. Post it in community groups. Ask them to tell Congress: no more gas‑station heroin.
+      </p>
+      <div style="margin-top:20px;">
+        <a class="btn btn-primary" href="action.html">More Ways to Fight Back →</a>
+      </div>
+    </div>
+
+    <!-- Back links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; margin-top: 40px;">
+      <a class="btn btn-secondary" href="action.html">← Back to Action Hub</a>
+      <a class="btn btn-primary" href="evidence/index.html">Review the Evidence</a>
+    </div>
+
+    <div class="footer-note">
+      <p><a href="index.html">Home</a> | <a href="evidence/index.html">Evidence</a> | <a href="industry/index.html">Industry</a> | <a href="action.html">Fight Back</a></p>
+      <p style="margin-top:10px;">Hero image: hero.jpg — your voice is the weapon.</p>
+    </div>
+  </div>
+
+  <script>
+    // Copy button functionality
+    const copyBtn = document.getElementById('copyBtn');
+    const textarea = document.getElementById('emailBody');
+
+    copyBtn.addEventListener('click', () => {
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // For mobile
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        copyBtn.textContent = '✓ Copied!';
+        setTimeout(() => {
+          copyBtn.textContent = '📋 Copy Letter';
+        }, 2000);
+      }).catch(err => {
+        alert('Could not copy. Please select and copy manually.');
+      });
+    });
+  </script>
+</body>
+</html>
