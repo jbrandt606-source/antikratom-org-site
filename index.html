@@ -488,6 +488,51 @@
       display: block;
     }
 
+    /* NEW: Federal Action Section – matches content-card style */
+    .federal-action {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 30px;
+      border-left: 6px solid #b42b2b;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .federal-action h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .federal-action h2 span {
+      color: #e4b23e;
+    }
+
+    .federal-action p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #f0f0f0;
+    }
+
+    .federal-action .btn-federal {
+      background-color: #b42b2b;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      transition: background 0.2s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .federal-action .btn-federal:hover {
+      background-color: #8f2020;
+    }
+
     /* email signup */
     .signup-box {
       background: #eaeef2;
@@ -751,7 +796,27 @@
       </div>
     </section>
 
-   
+    <!-- NEW: Federal Action Section -->
+    <div class="container">
+      <div class="federal-action">
+        <h2><span>⚡ LET’S TAKE</span> FEDERAL ACTION NOW</h2>
+        <p>
+          State fights are crucial, but real change requires federal action. Congress can schedule kratom and stop this dangerous substance from being sold in every gas station and vape shop across the country.
+        </p>
+        <a href="congress.html" class="btn-federal">CONTACT CONGRESS →</a>
+      </div>
+    </div>
+
+    <!-- email signup (optional, kept as is) -->
+    <div class="container">
+      <div class="signup-box">
+        <p>JOIN THE MOVEMENT<br><span style="font-size: 1.1rem; font-weight: normal;">Remove retail kratom from our communities</span></p>
+        <div class="email-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">JOIN US</button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -767,7 +832,7 @@
         © 2025 Anti‑Kratom Association. All rights reserved.<br>
         <span style="font-size: 0.8rem;">Unsafe. Unregulated. Unfit.</span>
       </div>
-    
+    </div>
   </footer>
 </body>
 </html>
