@@ -11,7 +11,7 @@
     gtag('js', new Date());
     gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
     gtag('config','G-P31PD1SSTD');
-  </script
+  </script>
     
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -255,6 +255,74 @@
       margin-right: 12px;
     }
 
+    /* URGENT ETHANOL BOX – new addition */
+    .urgent-box {
+      background: #1e2a2f;
+      border-left: 8px solid #e4b23e;
+      border-radius: 20px;
+      margin: 30px 0 60px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    .urgent-box .urgent-icon {
+      flex-shrink: 0;
+      width: 100px;
+      text-align: center;
+    }
+    .urgent-box .urgent-icon img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #e4b23e;
+      background: white;
+      padding: 4px;
+    }
+    .urgent-box .urgent-content {
+      flex: 1;
+    }
+    .urgent-box .urgent-content h4 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #e4b23e;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .urgent-box .urgent-content p {
+      font-size: 1.15rem;
+      color: #f0f0f0;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .urgent-box .urgent-link {
+      display: inline-block;
+      background: #b42b2b;
+      color: white;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+    .urgent-box .urgent-link:hover {
+      background: #8f2020;
+    }
+    @media (max-width: 750px) {
+      .urgent-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      .urgent-box .urgent-icon {
+        width: 140px;
+      }
+    }
+
     /* INDUSTRY SPOTLIGHT section (uses industry.jpg) */
     .industry-spotlight {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('industry.jpg') center center / cover no-repeat;
@@ -488,7 +556,7 @@
       display: block;
     }
 
-    /* NEW: Federal Action Section – matches content-card style */
+    /* Federal Action Section */
     .federal-action {
       background: rgba(0, 0, 0, 0.5);
       padding: 40px 30px;
@@ -725,6 +793,19 @@
           </ul>
         </div>
       </div>
+
+      <!-- 🚨 NEW URGENT CALL BOX – ETHANOL DETECTED (right below "what happens") -->
+      <div class="urgent-box">
+        <div class="urgent-icon">
+          <img src="etoh.png" alt="Ethanol warning">
+        </div>
+        <div class="urgent-content">
+          <h4>⚠️ URGENT: ETHANOL DETECTED IN RETAIL KRATOM SHOTS</h4>
+          <p>Independent lab tests have identified ethanol in multiple kratom extract products—some at levels far exceeding accepted limits for ingestible goods. In Kansas, similar products were treated as alcoholic beverages after testing.</p>
+          <p><strong>Are these products being sold in your state without alcohol oversight?</strong><br> ➡️ Review the evidence and contact your state alcohol board now.</p>
+          <a href="etoh.html" class="urgent-link">Review the evidence →</a>
+        </div>
+      </div>
     </div>
 
     <!-- INDUSTRY SPOTLIGHT section using industry.jpg -->
@@ -749,20 +830,20 @@
       </div>
     </section>
 
-    <!-- EVIDENCE SPOTLIGHT section using evidence.jpg (now before Action) -->
+    <!-- EVIDENCE SPOTLIGHT section using evidence.jpg -->
     <section class="evidence-spotlight">
       <div class="container">
         <div class="evidence-content">
           <div class="evidence-left">
             <h2><span>THE</span> EVIDENCE</h2>
-           <ul class="evidence-list">
-  <li><a href="evidence/fdaposition/index.html">FDA Position</a></li>
-  <li><a href="evidence/fdadenial/index.html">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
-  <li><a href="evidence/death/index.html">CDC SUDORS death data</a></li>
-  <li><a href="evidence/poisoncontrol/poisoncontrol.html">Poison control center reports</a></li>
-  <li><a href="evidence/adverse.html">FDA Reported adverse events</a></li>
-  <li><a href="evidence/research/index.html">Human research / addiction liability</a></li>
-</ul>
+            <ul class="evidence-list">
+              <li><a href="evidence/fdaposition/index.html">FDA Position</a></li>
+              <li><a href="evidence/fdadenial/index.html">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
+              <li><a href="evidence/death/index.html">CDC SUDORS death data</a></li>
+              <li><a href="evidence/poisoncontrol/poisoncontrol.html">Poison control center reports</a></li>
+              <li><a href="evidence/adverse.html">FDA Reported adverse events</a></li>
+              <li><a href="evidence/research/index.html">Human research / addiction liability</a></li>
+            </ul>
           </div>
           <div class="evidence-right">
             <div class="testimonial">
@@ -797,7 +878,7 @@
       </div>
     </section>
 
-    <!-- NEW: Federal Action Section -->
+    <!-- Federal Action Section -->
     <div class="container">
       <div class="federal-action">
         <h2><span>⚡ LET’S TAKE</span> FEDERAL ACTION NOW</h2>
@@ -808,7 +889,7 @@
       </div>
     </div>
 
-    <!-- email signup (optional, kept as is) -->
+    <!-- email signup -->
     <div class="container">
       <div class="signup-box">
         <p>JOIN THE MOVEMENT<br><span style="font-size: 1.1rem; font-weight: normal;">Remove retail kratom from our communities</span></p>
