@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
+    gtag('config','G-P31PD1SSTD');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kratom, Lead & Pregnancy Risk · Anti‑Kratom Association</title>
+  <meta name="description" content="Lead contamination in kratom + neonatal withdrawal case reports = pregnancy risk ignored by industry. Evidence for legislators and families.">
+  
+  <!-- Main site styles (relative to root) -->
+  <link rel="stylesheet" href="../../style.css">
+  
+  <style>
+    /* evidence page specific – dark, readable, matches antikratom.org theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c151f;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* header (consistent with main site) */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 16px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* page title & meta */
+    .page-header {
+      margin-bottom: 2rem;
+    }
+    .eyebrow {
+      color: #e4b23e;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0.5rem 0 1rem;
+    }
+    .dek {
+      font-size: 1.3rem;
+      color: #ccd6f0;
+      border-left: 4px solid #b42b2b;
+      padding-left: 1.2rem;
+      margin: 1rem 0;
+    }
+    .meta {
+      color: #9aaec0;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 2rem;
+    }
+    .tag {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 40px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      color: #e4b23e;
+    }
+
+    /* content blocks */
+    .content-section {
+      background: rgba(0, 0, 0, 0.45);
+      border-left: 4px solid #b42b2b;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 16px 16px 0;
+    }
+    .content-section h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+      border-left: 5px solid #e4b23e;
+      padding-left: 1rem;
+    }
+    .content-section p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: #eef2ff;
+    }
+    .callout {
+      background: rgba(180, 43, 43, 0.2);
+      border-left: 6px solid #e4b23e;
+      padding: 1.2rem 1.8rem;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+    }
+    .danger-callout {
+      background: rgba(184, 50, 39, 0.25);
+      border-left-color: #b42b2b;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #e4b23e;
+      margin-bottom: 0.5rem;
+    }
+    .document-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .doc-card {
+      background: #0f1a22;
+      border: 1px solid #b42b2b;
+      border-radius: 20px;
+      padding: 1rem 1.5rem;
+      flex: 1 1 180px;
+      text-align: center;
+      transition: 0.2s;
+    }
+    .doc-card:hover {
+      background: #172734;
+      transform: translateY(-3px);
+    }
+    .doc-card a {
+      color: #e4b23e;
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    .doc-card .doc-icon {
+      font-size: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.8rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      text-align: left;
+    }
+    th {
+      background: #1e2a36;
+      color: #e4b23e;
+    }
+    .btn-download {
+      display: inline-block;
+      background: #b42b2b;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin: 0.5rem 0.2rem;
+      transition: 0.2s;
+    }
+    .btn-download:hover {
+      background: #8f2020;
+    }
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+    .footer-note a {
+      color: #e4b23e;
+      text-decoration: none;
+    }
+    @media (max-width: 750px) {
+      .container { padding: 20px; }
+      h1 { font-size: 2rem; }
+      .content-section { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- header matches antikratom.org -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="../../index.html">HOME</a>
+        <a href="../index.html">EVIDENCE</a>
+        <a href="../../industry/index.html">INDUSTRY</a>
+        <a href="../../action.html">FIGHT BACK</a>
+        <a href="../../congress.html">CONGRESS</a>
+        <a href="../../about.html">ABOUT</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="eyebrow">EVIDENCE · PREGNANCY & HEAVY METALS</div>
+      <h1>Kratom, Lead, and the Pregnancy Risk No One Is Owning</h1>
+      <p class="dek">
+        Lead contamination in kratom products + published neonatal withdrawal case reports = 
+        a double‑layered risk that industry and regulators have ignored.
+      </p>
+      <div class="tag-list">
+        <span class="tag">Kratom</span>
+        <span class="tag">Lead Exposure</span>
+        <span class="tag">Pregnancy Loss</span>
+        <span class="tag">Neonatal Withdrawal (NAS)</span>
+        <span class="tag">Heavy Metals</span>
+      </div>
+      <div class="meta">
+        Anti‑Kratom Association | Updated May 2026 | Based on independent lab reports and peer‑reviewed case studies
+      </div>
+    </div>
+
+    <!-- bottom line callout -->
+    <div class="callout danger-callout">
+      <strong>⚠️ The bottom line:</strong> Kratom is not just an opioid‑like botanical. 
+      It contains measurable lead. Published case reports confirm pregnant women use kratom daily, 
+      meaning fetuses are exposed to lead during critical development <em>while also risking neonatal withdrawal</em>. 
+      This is a preventable harm.
+    </div>
+
+    <!-- Section 1: Lead and pregnancy -->
+    <div class="content-section">
+      <h2>Lead cross the placenta. Lead causes pregnancy loss.</h2>
+      <p>
+        Lead is not a theoretical risk. It crosses the placenta, has been detected in fetal tissue, 
+        and is associated with spontaneous abortion, preterm birth, low birth weight, and impaired 
+        neurodevelopment. These findings are basic maternal‑fetal toxicology, not fringe science.
+      </p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-number">Placenta transfer</div>
+          <p>Lead can reach the fetus from maternal blood as early as the first trimester.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Miscarriage risk</div>
+          <p>Elevated maternal lead levels are linked to spontaneous abortion.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Neurodevelopment</div>
+          <p>Prenatal lead exposure is associated with long‑term cognitive and behavioral deficits.</p>
+        </div>
+      </div>
+      <div class="document-grid">
+        <div class="doc-card">
+          <div class="doc-icon">📄</div>
+          <a href="Leadstudy1.pdf" download>Lead Study 1 (PDF)</a>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon">📄</div>
+          <a href="Leadstudy2.pdf" download>Lead Study 2 (PDF)</a>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon">📄</div>
+          <a href="Leadstudy3.pdf" download>Lead Study 3 (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Lead found in kratom products -->
+    <div class="content-section">
+      <h2>Measurable lead in commercial kratom products</h2>
+      <p>
+        Independent Certificates of Analysis show quantifiable lead in powdered kratom and capsules. 
+        These are not one‑off outliers. At typical user doses (3–6 grams per day), repeated ingestion 
+        translates into daily lead intake with no safety buffer.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Product / Sample</th><th>Lead level</th><th>Implication</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Golden Monk White Powder</td><td>0.960 µg/g</td><td>~5 µg lead per 5g dose</td></tr>
+          <tr><td>Golden Monk Red Powder</td><td>1.015 µg/g</td><td>Similar contamination across batch</td></tr>
+          <tr><td>Nature’s Gold Green</td><td>467.2 ppb (0.467 µg/g)</td><td>Consistent with heavy metal pattern</td></tr>
+          <tr><td>Kratom Capsules</td><td>0.597 µg/g</td><td>Capsules do not remove lead</td></tr>
+        </tbody>
+      </table>
+      <div class="document-grid">
+        <div class="doc-card">
+          <div class="doc-icon">🔬</div>
+          <a href="Powderedkratomcoa.pdf" download>Complete COA (Powdered kratom)</a>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>How lead adds up:</strong> At 1 µg/g lead, a 5‑gram dose delivers 5 µg lead. 
+        Two doses per day = 10 µg/day. Repeated daily exposure during pregnancy — confirmed by 
+        neonatal case reports — means the fetus receives lead every single day of gestation.
+      </div>
+    </div>
+
+    <!-- Section 3: Neonatal withdrawal = proof of prenatal exposure -->
+    <div class="content-section">
+      <h2>Neonatal case reports: proof that pregnant women are using kratom</h2>
+      <p>
+        Published case reports describe neonates born with withdrawal symptoms (neonatal abstinence syndrome, NAS) 
+        after in‑utero kratom exposure. These infants required NICU care and, in some cases, morphine therapy. 
+        <strong>Every such case also proves that the mother ingested kratom daily throughout pregnancy — and therefore 
+        exposed the fetus to lead.</strong>
+      </p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-number">NAS case 1</div>
+          <p>High‑pitched crying, tremors, mottling, irregular breathing. Clear evidence of prenatal kratom use.</p>
+          <a href="neonate1.pdf" download class="btn-download">Download case 1</a>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">NICU + morphine</div>
+          <p>Infant required pharmacologic treatment for withdrawal. Confirms daily maternal ingestion.</p>
+          <a href="neonate2.pdf" download class="btn-download">Download case 2</a>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Literature review</div>
+          <p>Majority of kratom‑exposed neonates developed NAS; >50% needed drug therapy. Each represents chronic prenatal lead co‑exposure.</p>
+          <a href="neonate3.pdf" download class="btn-download">Download review</a>
+        </div>
+      </div>
+      <div class="callout danger-callout">
+        <strong>Key takeaway for policymakers:</strong> Neonatal abstinence syndrome is not just a withdrawal event. 
+        It is <em>documentation</em> that pregnant women are consuming kratom daily. Because kratom contains lead, 
+        those fetuses were also exposed to a known reproductive toxicant throughout development. The lead risk 
+        does not start at birth — it starts the first day of maternal use.
+      </div>
+    </div>
+
+    <!-- Section 4: The missing warning label -->
+    <div class="content-section">
+      <h2>What a real warning label would say</h2>
+      <p>
+        If kratom were regulated like any ingestible product that poses pregnancy risk, the label would 
+        be blunt. Below is what the evidence demands.
+      </p>
+      <ul style="margin-left: 2rem; color:#ccd6f0;">
+        <li>⚠️ <strong>Pregnancy warning:</strong> May cause fetal lead exposure. Lead crosses the placenta and is associated with miscarriage, low birth weight, and developmental harm.</li>
+        <li>⚠️ <strong>Neonatal withdrawal risk:</strong> Regular use during pregnancy can cause neonatal abstinence syndrome requiring hospitalization.</li>
+        <li>⚠️ <strong>Heavy metal contamination:</strong> Independent testing has detected lead in commercial kratom products at levels that, with daily use, result in chronic lead ingestion.</li>
+      </ul>
+      <p>
+        Instead, kratom is sold in gas stations, vape shops, and online with no such warnings. 
+        The industry continues to market it as "natural" while ignoring the reproductive toxicology 
+        that has been documented in peer‑reviewed literature.
+      </p>
+    </div>
+
+    <!-- Section 5: Chain of evidence summary -->
+    <div class="content-section">
+      <h2>Putting it all together</h2>
+      <p>
+        The evidence chain is complete and public:
+      </p>
+      <ol style="margin-left: 2rem; color:#eef2ff;">
+        <li>Lead is a reproductive toxicant that crosses the placenta and increases miscarriage risk.</li>
+        <li>Commercial kratom products contain quantifiable lead (see COA above).</li>
+        <li>Published case reports confirm that pregnant women use kratom daily — proven by neonatal withdrawal.</li>
+        <li>Therefore, daily kratom use during pregnancy means daily fetal lead exposure plus opioid‑like withdrawal risk.</li>
+      </ol>
+      <div class="callout">
+        This is not an opinion. It is a straightforward public health conclusion based on lab reports, 
+        toxicology studies, and neonatal case files. Legislators and health agencies have all the information 
+        they need to act.
+      </div>
+    </div>
+
+    <!-- Download all evidence box -->
+    <div class="content-section" style="text-align: center;">
+      <h2>📁 Download all source documents</h2>
+      <p>Use these files in legislative testimony, media reports, or agency complaints. All PDFs are now hosted in the <code>/evidence/lead/</code> directory.</p>
+      <div class="document-grid">
+        <div class="doc-card"><a href="Leadstudy1.pdf" download>Lead Study 1</a></div>
+        <div class="doc-card"><a href="Leadstudy2.pdf" download>Lead Study 2</a></div>
+        <div class="doc-card"><a href="Leadstudy3.pdf" download>Lead Study 3</a></div>
+        <div class="doc-card"><a href="Powderedkratomcoa.pdf" download>Kratom COA (Lead)</a></div>
+        <div class="doc-card"><a href="neonate1.pdf" download>Neonatal Case 1</a></div>
+        <div class="doc-card"><a href="neonate2.pdf" download>Neonatal Case 2</a></div>
+        <div class="doc-card"><a href="neonate3.pdf" download>Neonatal Review</a></div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <a href="../../index.html">← Anti‑Kratom Association Home</a> | 
+      <a href="../index.html">Evidence Index</a> | 
+      <a href="../../industry/index.html">Expose the Industry</a>
+    </div>
+  </div>
+</body>
+</html>
