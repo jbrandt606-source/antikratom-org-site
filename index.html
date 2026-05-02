@@ -25,14 +25,13 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #d9e8d3; /* light green base – not white */
+      background-color: #d9e8d3;
       color: #1a1e24;
       line-height: 1.5;
       font-weight: 400;
       position: relative;
     }
 
-    /* background.jpg as a fixed, low‑opacity overlay – visible behind everything */
     body::before {
       content: '';
       position: fixed;
@@ -55,7 +54,6 @@
       padding: 0 32px;
     }
 
-    /* header – dark, serious */
     .site-header {
       background-color: #0c151f;
       color: #fff;
@@ -109,7 +107,6 @@
       border-bottom: 2px solid #b42b2b;
     }
 
-    /* HERO section with hero.jpg */
     .hero {
       background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
       color: white;
@@ -204,7 +201,6 @@
       color: #0c151f;
     }
 
-    /* three-column info section (Where it's sold / who it targets / what happens) */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -255,7 +251,6 @@
       margin-right: 12px;
     }
 
-    /* URGENT ETHANOL BOX – new addition */
     .urgent-box {
       background: #1e2a2f;
       border-left: 8px solid #e4b23e;
@@ -323,7 +318,87 @@
       }
     }
 
-    /* INDUSTRY SPOTLIGHT section (uses industry.jpg) */
+    /* NEW: State action hub (added from states/index.html style) */
+    .state-hub {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 48px 32px;
+      margin: 40px 0;
+      border-radius: 24px;
+      border-top: 4px solid #b42b2b;
+      border-bottom: 4px solid #b42b2b;
+    }
+    .state-hub h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .state-hub h2 span {
+      color: #e4b23e;
+    }
+    .state-hub .hub-sub {
+      text-align: center;
+      color: #cfddee;
+      margin-bottom: 48px;
+      font-size: 1.2rem;
+    }
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .state-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-left: 6px solid #b42b2b;
+      border-radius: 0 16px 16px 0;
+      padding: 1.8rem 1.5rem;
+      transition: 0.2s;
+    }
+    .state-card:hover {
+      transform: translateY(-5px);
+      background: rgba(180, 43, 43, 0.2);
+      border-left-color: #e4b23e;
+    }
+    .state-card h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #e4b23e;
+      margin-bottom: 0.75rem;
+    }
+    .state-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      color: #eef2ff;
+    }
+    .state-badge {
+      display: inline-block;
+      background: #b42b2b;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .state-action-btn {
+      display: inline-block;
+      background: #b42b2b;
+      color: white;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+    .state-action-btn:hover {
+      background: #8f2020;
+    }
+
     .industry-spotlight {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('industry.jpg') center center / cover no-repeat;
       color: white;
@@ -399,7 +474,6 @@
       background-color: #8f2020;
     }
 
-    /* EVIDENCE SPOTLIGHT section (uses evidence.jpg) – new, before action */
     .evidence-spotlight {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('evidence.jpg') center center / cover no-repeat;
       color: white;
@@ -501,7 +575,6 @@
       color: #e4b23e;
     }
 
-    /* TAKE ACTION NOW section – with action.jpg background */
     .action-section {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('action.jpg') center center / cover no-repeat;
       color: white;
@@ -556,7 +629,6 @@
       display: block;
     }
 
-    /* Federal Action Section */
     .federal-action {
       background: rgba(0, 0, 0, 0.5);
       padding: 40px 30px;
@@ -601,57 +673,6 @@
       background-color: #8f2020;
     }
 
-    /* email signup */
-    .signup-box {
-      background: #eaeef2;
-      padding: 40px;
-      margin: 40px 0 60px;
-      border-radius: 0;
-      border-left: 8px solid #b42b2b;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .signup-box p {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #0c151f;
-    }
-
-    .email-form {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .email-form input {
-      padding: 16px 20px;
-      width: 280px;
-      max-width: 100%;
-      border: 2px solid #ccc;
-      font-size: 1rem;
-      background: white;
-    }
-
-    .email-form button {
-      padding: 16px 32px;
-      background-color: #b42b2b;
-      color: white;
-      border: none;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-    }
-
-    .email-form button:hover {
-      background-color: #8f2020;
-    }
-
-    /* footer */
     .site-footer {
       background-color: #0c151f;
       color: #aaa;
@@ -684,7 +705,6 @@
       color: #7f8c98;
     }
 
-    /* responsive */
     @media (max-width: 900px) {
       .info-grid {
         grid-template-columns: 1fr;
@@ -747,7 +767,6 @@
   </header>
 
   <main>
-    <!-- hero with hero.jpg background -->
     <section class="hero">
       <div class="container hero-content">
         <h2>GAS-STATION DRUGS ARE POISONING OUR COMMUNITIES</h2>
@@ -766,7 +785,6 @@
     </section>
 
     <div class="container">
-      <!-- three-column info (where sold / who targeted / what happens) -->
       <div class="info-grid">
         <div class="info-card">
           <h3>WHERE IT’S SOLD</h3>
@@ -794,7 +812,6 @@
         </div>
       </div>
 
-      <!-- 🚨 NEW URGENT CALL BOX – ETHANOL DETECTED (right below "what happens") -->
       <div class="urgent-box">
         <div class="urgent-icon">
           <img src="etoh.png" alt="Ethanol warning">
@@ -806,9 +823,40 @@
           <a href="etoh.html" class="urgent-link">Review the evidence →</a>
         </div>
       </div>
+
+      <!-- NEW STATE ACTION HUB (added from states/index.html content) -->
+      <div class="state-hub">
+        <h2><span>⚡ STATE ACTION HUB</span> — URGENT</h2>
+        <div class="hub-sub">Pick your state. Call your representative. Demand a full ban on kratom. No more gas‑station opioids.</div>
+        <div class="state-grid">
+          <div class="state-card">
+            <div class="state-badge">⚠️ ACTIVE BILL</div>
+            <h3>South Carolina</h3>
+            <p>HB 4641 is a fake ban — it only outlaws synthetic kratom (which doesn't exist) and leaves natural leaf legal. We need a <strong>full retail ban</strong>.</p>
+            <a href="states/southcarolina.html" class="state-action-btn">TAKE ACTION IN SC →</a>
+          </div>
+          <div class="state-card">
+            <div class="state-badge">⚠️ SCHEDULE I BILL</div>
+            <h3>Michigan</h3>
+            <p>HB 5537 would put kratom on Schedule I — a complete ban. The industry is terrified. Call your senator.</p>
+            <a href="states/michigan.html" class="state-action-btn">TAKE ACTION IN MI →</a>
+          </div>
+          <div class="state-card">
+            <div class="state-badge">⚠️ TWO BANS MOVING</div>
+            <h3>Iowa</h3>
+            <p>SF 2192 and HF 2133 would prohibit kratom. The industry is screaming "blanket ban" — exactly what we need.</p>
+            <a href="states/iowa.html" class="state-action-btn">TAKE ACTION IN IA →</a>
+          </div>
+          <div class="state-card">
+            <div class="state-badge">⚠️ SCHEDULE IV NEEDED</div>
+            <h3>North Carolina</h3>
+            <p>The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV.</p>
+            <a href="states/nc.html" class="state-action-btn">TAKE ACTION IN NC →</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- INDUSTRY SPOTLIGHT section using industry.jpg -->
     <section class="industry-spotlight">
       <div class="container">
         <div class="industry-content">
@@ -830,7 +878,6 @@
       </div>
     </section>
 
-    <!-- EVIDENCE SPOTLIGHT section using evidence.jpg -->
     <section class="evidence-spotlight">
       <div class="container">
         <div class="evidence-content">
@@ -859,7 +906,6 @@
       </div>
     </section>
 
-    <!-- TAKE ACTION NOW section – with action.jpg background -->
     <section class="action-section">
       <div class="container">
         <h2>TAKE ACTION NOW</h2>
@@ -878,7 +924,6 @@
       </div>
     </section>
 
-    <!-- Federal Action Section -->
     <div class="container">
       <div class="federal-action">
         <h2><span>⚡ LET’S TAKE</span> FEDERAL ACTION NOW</h2>
@@ -889,16 +934,7 @@
       </div>
     </div>
 
-    <!-- email signup -->
-    <div class="container">
-      <div class="signup-box">
-        <p>JOIN THE MOVEMENT<br><span style="font-size: 1.1rem; font-weight: normal;">Remove retail kratom from our communities</span></p>
-        <div class="email-form">
-          <input type="email" placeholder="Your email address">
-          <button type="submit">JOIN US</button>
-        </div>
-      </div>
-    </div>
+    <!-- EMAIL SIGNUP BOX REMOVED as requested -->
   </main>
 
   <footer class="site-footer">
