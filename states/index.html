@@ -1,458 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
-    gtag('config','G-P31PD1SSTD');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anti‑Kratom Association · State Action Hub</title>
   <meta name="description" content="Urgent state‑by‑state actions: South Carolina, Michigan, Iowa, North Carolina. Call your legislators now to ban kratom.">
-  <link rel="stylesheet" href="../style.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Basic styles for readability */
     body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background-color: #0c151f;
-      color: #fff;
+      font-family: system-ui, -apple-system, sans-serif;
       line-height: 1.5;
-    }
-
-    /* Hero with action.jpg (action.jpg is in the root folder) */
-    .hero {
-      background: linear-gradient(rgba(10, 18, 28, 0.75), rgba(10, 18, 28, 0.65)), url('../action.jpg') center center / cover no-repeat;
+      background: #0c151f;
       color: white;
-      padding: 140px 0 120px;
-      border-bottom: 6px solid #b42b2b;
+      margin: 0;
+      padding: 2rem;
     }
-
-    .hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 4.2rem;
-      font-weight: 800;
-      line-height: 1.1;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #e4b23e;
-      border-bottom: 4px solid #b42b2b;
-      padding-bottom: 8px;
-    }
-
-    .hero p {
-      font-size: 1.5rem;
-      max-width: 800px;
-      margin: 0 auto;
-      background: rgba(0, 0, 0, 0.45);
-      border-left: 6px solid #e4b23e;
-      padding: 18px 28px;
-    }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 48px 24px;
     }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 16px;
-      border-left: none;
-    }
-
-    .section-title span {
-      color: #e4b23e;
-    }
-
-    .section-sub {
-      text-align: center;
-      color: #bfd9ff;
-      max-width: 700px;
-      margin: 0 auto 48px;
-      font-size: 1.2rem;
-    }
-
     .state-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin: 2rem 0;
     }
-
     .state-card {
-      background: rgba(0, 0, 0, 0.5);
-      border-left: 6px solid #b42b2b;
-      border-radius: 0 16px 16px 0;
-      padding: 2rem 1.5rem;
-      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border-left: 5px solid #b42b2b;
     }
-
-    .state-card:hover {
-      transform: translateY(-5px);
-      background: rgba(180, 43, 43, 0.2);
-      border-left-color: #e4b23e;
-    }
-
     .state-card h2 {
-      font-size: 2rem;
-      font-weight: 700;
       color: #e4b23e;
-      margin-bottom: 1rem;
+      margin-top: 0;
     }
-
-    .state-card p {
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      color: #eef2ff;
-    }
-
     .state-badge {
       display: inline-block;
       background: #b42b2b;
-      padding: 0.2rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      padding: 0.1rem 0.8rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
       margin-bottom: 1rem;
     }
-
     .action-btn {
       display: inline-block;
       background: #b42b2b;
       color: white;
-      font-weight: 700;
-      padding: 10px 24px;
-      border-radius: 40px;
       text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 0.85rem;
-      margin-top: 0.8rem;
-      transition: background 0.2s;
-    }
-
-    .action-btn:hover {
-      background: #8f2020;
-    }
-
-    .callout {
-      background: #1c2a36;
-      border-left: 8px solid #e4b23e;
-      padding: 32px;
-      margin: 48px 0;
-      text-align: center;
-    }
-
-    .callout h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .callout .btn-large {
-      background: #b42b2b;
-      color: white;
-      padding: 14px 32px;
-      font-size: 1.2rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
       margin-top: 1rem;
+      font-weight: bold;
     }
-
-    /* Flyers / media section */
     .flyers-section {
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 24px;
-      padding: 48px 32px;
-      margin: 48px 0;
-      border-top: 4px solid #b42b2b;
-      border-bottom: 4px solid #b42b2b;
-    }
-
-    .flyers-section h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 12px;
-      color: white;
-    }
-
-    .flyers-section h2 span {
-      color: #e4b23e;
-    }
-
-    .flyers-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 0.5rem;
       margin: 2rem 0;
     }
-
-    .flyer-card {
-      background: rgba(0, 0, 0, 0.5);
-      border-left: 6px solid #b42b2b;
-      border-radius: 0 16px 16px 0;
-      padding: 1.8rem 1.5rem;
-      text-align: center;
-      transition: 0.2s;
-    }
-
-    .flyer-card:hover {
-      transform: translateY(-5px);
-      background: rgba(180, 43, 43, 0.2);
-      border-left-color: #e4b23e;
-    }
-
-    .flyer-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .flyer-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #e4b23e;
-      margin-bottom: 0.75rem;
-    }
-
-    .flyer-card p {
-      font-size: 0.9rem;
-      margin-bottom: 1.2rem;
-      color: #eef2ff;
-    }
-
-    .flyers-tip {
-      background: #1c2a36;
-      border-left: 8px solid #e4b23e;
-      padding: 20px;
-      margin-top: 32px;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .flyers-tip strong {
-      color: #e4b23e;
-    }
-
-    .footer-note {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      text-align: center;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-
-    .footer-note a {
-      color: #e4b23e;
-      text-decoration: none;
-    }
-
-    .site-header {
-      background-color: #0c151f;
-      padding: 16px 0;
-      border-bottom: 4px solid #b42b2b;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .logo h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .logo span {
-      display: block;
-      font-size: 0.85rem;
-      color: #bfc9d4;
-      margin-top: 4px;
-    }
-
-    .nav {
+    .flyers-grid {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
+      margin: 1rem 0;
     }
-
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      text-transform: uppercase;
+    .flyer-card {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      flex: 1;
     }
-
-    .nav a:hover {
+    .flyers-tip {
+      background: #1c2a36;
+      padding: 1rem;
+      border-left: 5px solid #e4b23e;
+      margin-top: 1.5rem;
+    }
+    a {
       color: #e4b23e;
-      border-bottom: 2px solid #b42b2b;
+      text-decoration: none;
     }
-
-    @media (max-width: 750px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1.2rem; }
-      .section-title { font-size: 2rem; }
-      .flyers-section { padding: 32px 20px; }
+    a:hover {
+      text-decoration: underline;
+    }
+    .stats {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .stat-box {
+      background: rgba(0,0,0,0.4);
+      padding: 1.5rem;
+      border-left: 4px solid #b42b2b;
+      flex: 1;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e4b23e;
+    }
+    hr {
+      margin: 2rem 0;
+      border-color: #333;
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <h1>ANTI-KRATOM ASSOCIATION</h1>
-        <span>public health · evidence · action</span>
-      </div>
-      <nav class="nav">
-        <a href="../index.html">HOME</a>
-        <a href="../evidence/index.html">EVIDENCE</a>
-        <a href="../industry/index.html">INDUSTRY</a>
-        <a href="../action.html">FIGHT BACK</a>
-        <a href="../congress.html">CONGRESS</a>
-        <a href="../about.html">ABOUT</a>
-      </nav>
+<div class="container">
+  <h1>🔥 STATE ACTION HUB — URGENT</h1>
+  <p>Pick your state. Call your representative. Demand a full ban on kratom. No more gas‑station opioids.</p>
+
+  <div class="state-grid">
+    <div class="state-card">
+      <div class="state-badge">⚠️ ACTIVE BILL</div>
+      <h2>South Carolina</h2>
+      <p>HB 4641 is a fake ban — it only outlaws synthetic kratom (which doesn't exist) and leaves natural leaf legal. The industry wrote this loophole. We need a <strong>full retail ban</strong>.</p>
+      <a href="southcarolina.html" class="action-btn">TAKE ACTION IN SC →</a>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-container">
-      <h1>TIME IS RUNNING OUT. <span>ACT NOW.</span></h1>
-      <p>State legislatures are voting on kratom bans — the industry is spending millions to stop them. Your calls, emails, and testimony can tip the balance.</p>
+    <div class="state-card">
+      <div class="state-badge">⚠️ SCHEDULE I BILL</div>
+      <h2>Michigan</h2>
+      <p>HB 5537 would put kratom on Schedule I — a complete ban. The kratom industry is fighting it with aggressive lobbying. Call your senator to demand a YES vote.</p>
+      <a href="michigan.html" class="action-btn">TAKE ACTION IN MI →</a>
     </div>
-  </section>
-
-  <div class="container">
-    <div class="section-title">🔥 <span>STATE ACTION HUB</span> — URGENT</div>
-    <div class="section-sub">Pick your state. Call your representative. Demand a full ban on kratom. No more gas‑station opioids.</div>
-
-    <div class="state-grid">
-      <!-- South Carolina -->
-      <div class="state-card">
-        <div class="state-badge">⚠️ ACTIVE BILL</div>
-        <h2>South Carolina</h2>
-        <p>HB 4641 is a fake ban — it only outlaws synthetic kratom (which doesn't exist) and leaves natural leaf legal. The industry wrote this loophole. We need a <strong>full retail ban</strong>.</p>
-        <a href="southcarolina.html" class="action-btn">TAKE ACTION IN SC →</a>
-      </div>
-
-      <!-- Michigan — Fact‑checked, removed unverified billionaire claim -->
-      <div class="state-card">
-        <div class="state-badge">⚠️ SCHEDULE I BILL</div>
-        <h2>Michigan</h2>
-        <p>HB 5537 would put kratom on Schedule I — a complete ban. The kratom industry is fighting it with aggressive lobbying. Call your senator to demand a YES vote.</p>
-        <a href="michigan.html" class="action-btn">TAKE ACTION IN MI →</a>
-      </div>
-
-      <!-- Iowa -->
-      <div class="state-card">
-        <div class="state-badge">⚠️ TWO BANS MOVING</div>
-        <h2>Iowa</h2>
-        <p>SF 2192 and HF 2133 would prohibit kratom. The industry is screaming "blanket ban" — exactly what we need. Contact your legislator now.</p>
-        <a href="iowa.html" class="action-btn">TAKE ACTION IN IA →</a>
-      </div>
-
-      <!-- North Carolina -->
-      <div class="state-card">
-        <div class="state-badge">⚠️ SCHEDULE IV NEEDED</div>
-        <h2>North Carolina</h2>
-        <p>The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV. House members must hear from you.</p>
-        <a href="nc.html" class="action-btn">TAKE ACTION IN NC →</a>
-      </div>
+    <div class="state-card">
+      <div class="state-badge">⚠️ TWO BANS MOVING</div>
+      <h2>Iowa</h2>
+      <p>SF 2192 and HF 2133 would prohibit kratom. The industry is screaming "blanket ban" — exactly what we need. Contact your legislator now.</p>
+      <a href="iowa.html" class="action-btn">TAKE ACTION IN IA →</a>
     </div>
-
-    <div class="callout">
-      <h3>⚡ DON'T SEE YOUR STATE?</h3>
-      <p>Every call to a legislator matters. Use our national toolkit — email templates, phone scripts, and evidence packets — to start the fight wherever you live.</p>
-      <a href="../action.html" class="btn-large">NATIONAL ACTION TOOLKIT →</a>
-    </div>
-
-    <!-- NEW: FLYERS & HANDOUTS SECTION -->
-    <div class="flyers-section">
-      <h2>📁 <span>READY‑TO‑USE MATERIALS</span></h2>
-      <div class="section-sub">Download and attach when emailing your state legislators — <strong>real evidence changes votes</strong>.</div>
-      <div class="flyers-grid">
-        <div class="flyer-card">
-          <div class="flyer-icon">📄</div>
-          <h3>Legislator Handouts</h3>
-          <p>One‑page leave‑behind documents with FDA warnings, death data, and poison control stats. Perfect for meetings and office visits.</p>
-          <a href="../media.html" class="action-btn">DOWNLOAD →</a>
-        </div>
-        <div class="flyer-card">
-          <div class="flyer-icon">🖼️</div>
-          <h3>Social Graphics</h3>
-          <p>Shareable images exposing industry lies. Post on Facebook, Instagram, or X to pressure legislators publicly.</p>
-          <a href="../media.html" class="action-btn">DOWNLOAD →</a>
-        </div>
-        <div class="flyer-card">
-          <div class="flyer-icon">📧</div>
-          <h3>Email Templates</h3>
-          <p>Copy‑paste scripts to email your representative. Add flyers as attachments to make your case undeniable.</p>
-          <a href="../email.html" class="action-btn">USE TEMPLATE →</a>
-        </div>
-      </div>
-      <div class="flyers-tip">
-        <strong>💡 Pro tip:</strong> When emailing your state legislator, <strong>always attach a one‑page handout</strong>. Staffers print these for the member to review. Facts on paper are harder to ignore than words on a screen.
-        <br><br>
-        👉 <a href="../media.html" style="color: #e4b23e;">Visit the full Media & Flyers Toolkit →</a>
-      </div>
-    </div>
-
-    <div class="section-title">📢 <span>WHY THIS FIGHT CAN'T WAIT</span></div>
-    <div class="section-sub">The kratom industry is spending record amounts to keep gas‑station opioids on shelves.</div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
-      <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-left: 4px solid #b42b2b;">
-        <div style="font-size: 2rem; font-weight: 800; color: #e4b23e;">$1M+</div>
-        <div>Lobbying spent by AKA in past decade</div>
-      </div>
-      <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-left: 4px solid #b42b2b;">
-        <div style="font-size: 2rem; font-weight: 800; color: #e4b23e;">500+</div>
-        <div>Deaths with mitragynine detected (CDC)</div>
-      </div>
-      <div style="background: rgba(0,0,0,0.4); padding: 1.5rem; border-left: 4px solid #b42b2b;">
-        <div style="font-size: 2rem; font-weight: 800; color: #e4b23e;">15-16%</div>
-        <div>Ethanol in popular kratom shots (legally alcoholic)</div>
-      </div>
-    </div>
-
-    <div class="footer-note">
-      <a href="../index.html">← Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry Hub</a> | <a href="../action.html">Fight Back</a>
+    <div class="state-card">
+      <div class="state-badge">⚠️ SCHEDULE IV NEEDED</div>
+      <h2>North Carolina</h2>
+      <p>The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV. House members must hear from you.</p>
+      <a href="nc.html" class="action-btn">TAKE ACTION IN NC →</a>
     </div>
   </div>
+
+  <div class="callout">
+    <h2>⚡ DON'T SEE YOUR STATE?</h2>
+    <p>Every call to a legislator matters. Use our national toolkit — email templates, phone scripts, and evidence packets — to start the fight wherever you live.</p>
+    <a href="../action.html" class="action-btn">NATIONAL ACTION TOOLKIT →</a>
+  </div>
+
+  <!-- START: NEW FLYERS & HANDOUTS SECTION -->
+  <div class="flyers-section">
+    <h2>📁 <span style="color:#e4b23e;">READY‑TO‑USE MATERIALS</span></h2>
+    <p style="text-align: center;">Download and attach when emailing your state legislators — <strong>real evidence changes votes</strong>.</p>
+    <div class="flyers-grid">
+      <div class="flyer-card">
+        <h3 style="color:#e4b23e;">📱 Social Flyers</h3>
+        <p>Shareable images for Facebook, Instagram, and X. Expose industry lies, spread the truth, and pressure legislators publicly.</p>
+        <a href="/social/index.html" class="action-btn">DOWNLOAD SOCIAL FLYERS →</a>
+      </div>
+      <div class="flyer-card">
+        <h3 style="color:#e4b23e;">📄 Legislative Handouts</h3>
+        <p>One‑page data sheets built to put in front of lawmakers. Includes FDA warnings, death data, poison stats, and enforcement failures.</p>
+        <a href="/legislative/index.html" class="action-btn">GET LEGISLATIVE HANDOUTS →</a>
+      </div>
+    </div>
+    <div class="flyers-tip">
+      <strong>💡 Pro tip:</strong> When emailing your state legislator, <strong>always attach a one‑page handout</strong>. Staffers print these for the member to review. Facts on paper are harder to ignore than words on a screen.
+    </div>
+  </div>
+  <!-- END: NEW FLYERS & HANDOUTS SECTION -->
+
+  <hr>
+
+  <div class="section-title">📢 <span>WHY THIS FIGHT CAN'T WAIT</span></div>
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-number">$1M+</div>
+      <div>Lobbying spent by AKA in past decade</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">500+</div>
+      <div>Deaths with mitragynine detected (CDC)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">15-16%</div>
+      <div>Ethanol in popular kratom shots (legally alcoholic)</div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <p><a href="../index.html">← Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry Hub</a> | <a href="../action.html">Fight Back</a></p>
+  </div>
+</div>
 </body>
 </html>
