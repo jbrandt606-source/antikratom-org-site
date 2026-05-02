@@ -201,6 +201,66 @@
       color: #0c151f;
     }
 
+    /* State quick navigation (dropdown + link) */
+    .state-quick-nav {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin: 30px 0 20px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+    .state-quick-nav p {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: #fff;
+      font-weight: 600;
+    }
+    .dropdown-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      align-items: center;
+    }
+    .state-select {
+      background: #0c151f;
+      color: white;
+      border: 2px solid #b42b2b;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      min-width: 220px;
+    }
+    .dropdown-row .btn-small {
+      background-color: #b42b2b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dropdown-row .btn-small:hover {
+      background-color: #8f2020;
+    }
+    .state-index-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 0.95rem;
+    }
+    .state-index-link:hover {
+      color: white;
+    }
+
     .info-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -318,7 +378,7 @@
       }
     }
 
-    /* NEW: State action hub (added from states/index.html style) */
+    /* State action hub cards (existing) */
     .state-hub {
       background: rgba(0, 0, 0, 0.35);
       padding: 48px 32px;
@@ -785,6 +845,24 @@
     </section>
 
     <div class="container">
+      <!-- START: NEW STATE QUICK NAVIGATION (dropdown + link to index) -->
+      <div class="state-quick-nav">
+        <p>⚡ FIND YOUR STATE & ACT NOW ⚡</p>
+        <div class="dropdown-row">
+          <select id="stateDropdown" class="state-select">
+            <option value="">— Select a state —</option>
+            <option value="states/southcarolina.html">South Carolina (HB 4641 – fake ban)</option>
+            <option value="states/michigan.html">Michigan (HB 5537 – Schedule I)</option>
+            <option value="states/iowa.html">Iowa (SF 2192 / HF 2133)</option>
+            <option value="states/nc.html">North Carolina (Schedule IV needed)</option>
+            <!-- Add more states here as pages are built -->
+          </select>
+          <button id="goToStateBtn" class="btn-small">GO →</button>
+        </div>
+        <a href="states/index.html" class="state-index-link">📋 VIEW ALL STATE ACTIONS & RESOURCES →</a>
+      </div>
+      <!-- END: NEW STATE QUICK NAVIGATION -->
+
       <div class="info-grid">
         <div class="info-card">
           <h3>WHERE IT’S SOLD</h3>
@@ -824,7 +902,7 @@
         </div>
       </div>
 
-      <!-- NEW STATE ACTION HUB (added from states/index.html content) -->
+      <!-- STATE ACTION HUB (detailed cards) -->
       <div class="state-hub">
         <h2><span>⚡ STATE ACTION HUB</span> — URGENT</h2>
         <div class="hub-sub">Pick your state. Call your representative. Demand a full ban on kratom. No more gas‑station opioids.</div>
@@ -933,8 +1011,6 @@
         <a href="congress.html" class="btn-federal">CONTACT CONGRESS →</a>
       </div>
     </div>
-
-    <!-- EMAIL SIGNUP BOX REMOVED as requested -->
   </main>
 
   <footer class="site-footer">
@@ -953,5 +1029,21 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Handle dropdown navigation
+    const goButton = document.getElementById('goToStateBtn');
+    const dropdown = document.getElementById('stateDropdown');
+    if (goButton && dropdown) {
+      goButton.addEventListener('click', function() {
+        const selected = dropdown.value;
+        if (selected && selected !== '') {
+          window.location.href = selected;
+        } else {
+          alert('Please select a state from the dropdown.');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
