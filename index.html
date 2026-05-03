@@ -378,87 +378,6 @@
       }
     }
 
-    /* State action hub cards (existing) */
-    .state-hub {
-      background: rgba(0, 0, 0, 0.35);
-      padding: 48px 32px;
-      margin: 40px 0;
-      border-radius: 24px;
-      border-top: 4px solid #b42b2b;
-      border-bottom: 4px solid #b42b2b;
-    }
-    .state-hub h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 12px;
-      color: white;
-    }
-    .state-hub h2 span {
-      color: #e4b23e;
-    }
-    .state-hub .hub-sub {
-      text-align: center;
-      color: #cfddee;
-      margin-bottom: 48px;
-      font-size: 1.2rem;
-    }
-    .state-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .state-card {
-      background: rgba(0, 0, 0, 0.5);
-      border-left: 6px solid #b42b2b;
-      border-radius: 0 16px 16px 0;
-      padding: 1.8rem 1.5rem;
-      transition: 0.2s;
-    }
-    .state-card:hover {
-      transform: translateY(-5px);
-      background: rgba(180, 43, 43, 0.2);
-      border-left-color: #e4b23e;
-    }
-    .state-card h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #e4b23e;
-      margin-bottom: 0.75rem;
-    }
-    .state-card p {
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
-      color: #eef2ff;
-    }
-    .state-badge {
-      display: inline-block;
-      background: #b42b2b;
-      padding: 0.2rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-    }
-    .state-action-btn {
-      display: inline-block;
-      background: #b42b2b;
-      color: white;
-      font-weight: 700;
-      padding: 8px 20px;
-      border-radius: 40px;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 0.8rem;
-      transition: background 0.2s;
-    }
-    .state-action-btn:hover {
-      background: #8f2020;
-    }
-
     .industry-spotlight {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('industry.jpg') center center / cover no-repeat;
       color: white;
@@ -845,7 +764,7 @@
     </section>
 
     <div class="container">
-      <!-- START: NEW STATE QUICK NAVIGATION (dropdown + link to index) -->
+      <!-- STATE QUICK NAVIGATION (dropdown + link to index) -->
       <div class="state-quick-nav">
         <p>⚡ FIND YOUR STATE & ACT NOW ⚡</p>
         <div class="dropdown-row">
@@ -855,13 +774,12 @@
             <option value="states/michigan.html">Michigan (HB 5537 – Schedule I)</option>
             <option value="states/iowa.html">Iowa (SF 2192 / HF 2133)</option>
             <option value="states/nc.html">North Carolina (Schedule IV needed)</option>
-            <!-- Add more states here as pages are built -->
+            <option value="states/delaware.html">Delaware (SB 262 – full ban)</option>
           </select>
           <button id="goToStateBtn" class="btn-small">GO →</button>
         </div>
         <a href="states/index.html" class="state-index-link">📋 VIEW ALL STATE ACTIONS & RESOURCES →</a>
       </div>
-      <!-- END: NEW STATE QUICK NAVIGATION -->
 
       <div class="info-grid">
         <div class="info-card">
@@ -902,37 +820,7 @@
         </div>
       </div>
 
-      <!-- STATE ACTION HUB (detailed cards) -->
-      <div class="state-hub">
-        <h2><span>⚡ STATE ACTION HUB</span> — URGENT</h2>
-        <div class="hub-sub">Pick your state. Call your representative. Demand a full ban on kratom. No more gas‑station opioids.</div>
-        <div class="state-grid">
-          <div class="state-card">
-            <div class="state-badge">⚠️ ACTIVE BILL</div>
-            <h3>South Carolina</h3>
-            <p>HB 4641 is a fake ban — it only outlaws synthetic kratom (which doesn't exist) and leaves natural leaf legal. We need a <strong>full retail ban</strong>.</p>
-            <a href="states/southcarolina.html" class="state-action-btn">TAKE ACTION IN SC →</a>
-          </div>
-          <div class="state-card">
-            <div class="state-badge">⚠️ SCHEDULE I BILL</div>
-            <h3>Michigan</h3>
-            <p>HB 5537 would put kratom on Schedule I — a complete ban. The industry is terrified. Call your senator.</p>
-            <a href="states/michigan.html" class="state-action-btn">TAKE ACTION IN MI →</a>
-          </div>
-          <div class="state-card">
-            <div class="state-badge">⚠️ TWO BANS MOVING</div>
-            <h3>Iowa</h3>
-            <p>SF 2192 and HF 2133 would prohibit kratom. The industry is screaming "blanket ban" — exactly what we need.</p>
-            <a href="states/iowa.html" class="state-action-btn">TAKE ACTION IN IA →</a>
-          </div>
-          <div class="state-card">
-            <div class="state-badge">⚠️ SCHEDULE IV NEEDED</div>
-            <h3>North Carolina</h3>
-            <p>The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV.</p>
-            <a href="states/nc.html" class="state-action-btn">TAKE ACTION IN NC →</a>
-          </div>
-        </div>
-      </div>
+      <!-- DUPLICATE STATE ACTION HUB REMOVED (as requested) -->
     </div>
 
     <section class="industry-spotlight">
