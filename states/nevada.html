@@ -31,10 +31,13 @@
       line-height: 1.6;
     }
 
+    /* Hero section with nevada.png – FIXED: better positioning, less cropping */
     .hero {
-      background: linear-gradient(rgba(10, 18, 28, 0.60), rgba(10, 18, 28, 0.55)), url('nevada.png') center center / cover no-repeat;
+      background: linear-gradient(rgba(10, 18, 28, 0.60), rgba(10, 18, 28, 0.55)), url('nevada.png') no-repeat center center / cover;
+      background-position: center 25%; /* Moves focus down to avoid cutting off top/head elements */
+      min-height: 480px;
       color: white;
-      padding: 140px 0;
+      padding: 100px 0;
       border-bottom: 4px solid #b42b2b;
     }
 
