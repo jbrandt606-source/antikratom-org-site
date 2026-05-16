@@ -284,6 +284,27 @@
       top: -2px;
     }
 
+    /* FULL IMAGE BANNER (user's kratomproducts.jpeg) */
+    .full-image-banner {
+      margin: 40px 0 32px;
+      text-align: center;
+      background: #ffffff10;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.25);
+      transition: transform 0.2s;
+    }
+    .full-image-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+      border: 1px solid #e4b23e55;
+    }
+    .full-image-banner:hover {
+      transform: scale(1.01);
+    }
+
     /* message sections – minimal borders, no heavy boxes */
     .message-section {
       margin: 48px 0;
@@ -365,7 +386,7 @@
       text-decoration: underline;
     }
 
-    /* industry / evidence / action sections — full width, but less boxy (soft backgrounds) */
+    /* industry / evidence / action sections — full width, less boxy (soft backgrounds) */
     .full-width-section {
       background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
       background-size: cover;
@@ -644,7 +665,12 @@
       </div>
     </div>
 
-    <!-- SAME PLANT SECTION (moved BEFORE ethanol) – no box, elegant left border -->
+    <!-- ✨ USER'S IMAGE: kratomproducts.jpeg as full banner ✨ -->
+    <div class="full-image-banner">
+      <img src="kratomproducts.jpeg" alt="Different names, same substance – Kratom. Ban the plant.">
+    </div>
+
+    <!-- "The Plant is the Problem" section (appears directly after the image) -->
     <div class="message-section with-icon">
       <div class="msg-icon">
         <img src="kratomproducts.jpeg" alt="Kratom product variety">
