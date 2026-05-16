@@ -305,44 +305,21 @@
       transform: scale(1.01);
     }
 
-    /* message sections – minimal borders, no heavy boxes */
+    /* message section – now without icon, just clean text */
     .message-section {
       margin: 48px 0;
       border-left: 4px solid #e4b23e;
       padding: 8px 0 8px 28px;
       background: transparent;
     }
-    .message-section.with-icon {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 28px;
-      align-items: center;
-      border-left-color: #b42b2b;
-      padding: 16px 0 16px 28px;
-    }
-    .msg-icon {
-      flex-shrink: 0;
-      width: 110px;
-      text-align: center;
-    }
-    .msg-icon img {
-      max-width: 100%;
-      border-radius: 12px;
-      border: 1px solid #c3cab3;
-      background: white;
-      padding: 4px;
-    }
-    .msg-content {
-      flex: 1;
-    }
-    .msg-content h3 {
+    .message-section h3 {
       font-size: 1.8rem;
       font-weight: 800;
       color: #1f3b2c;
       margin-bottom: 12px;
       letter-spacing: -0.2px;
     }
-    .msg-content p {
+    .message-section p {
       font-size: 1.1rem;
       margin-bottom: 16px;
       color: #1e2d2a;
@@ -362,6 +339,7 @@
     .msg-link:hover {
       background: #8f2020;
     }
+
     .simple-alert {
       padding: 8px 0 8px 28px;
       border-left: 3px solid #e4b23e;
@@ -591,8 +569,7 @@
     @media (max-width: 600px) {
       .hero h2 { font-size: 2rem; }
       .hero-sub { font-size: 1.1rem; }
-      .message-section.with-icon { flex-direction: column; text-align: center; padding-left: 0; border-left: none; }
-      .msg-icon { width: 100px; margin: 0 auto; }
+      .message-section { padding-left: 20px; }
     }
   </style>
 </head>
@@ -665,21 +642,16 @@
       </div>
     </div>
 
-    <!-- ✨ USER'S IMAGE: kratomproducts.jpeg as full banner ✨ -->
+    <!-- FULL WIDTH BANNER (your image kratomproducts.jpeg) -->
     <div class="full-image-banner">
       <img src="kratomproducts.jpeg" alt="Different names, same substance – Kratom. Ban the plant.">
     </div>
 
-    <!-- "The Plant is the Problem" section (appears directly after the image) -->
-    <div class="message-section with-icon">
-      <div class="msg-icon">
-        <img src="kratomproducts.jpeg" alt="Kratom product variety">
-      </div>
-      <div class="msg-content">
-        <h3>THE PLANT IS THE PROBLEM</h3>
-        <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
-        <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
-      </div>
+    <!-- "The Plant is the Problem" section – no small icon, clean text only -->
+    <div class="message-section">
+      <h3>THE PLANT IS THE PROBLEM</h3>
+      <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
+      <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
     </div>
 
     <!-- ETHANOL URGENT (simplified, no heavy box) -->
