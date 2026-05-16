@@ -378,6 +378,74 @@
       }
     }
 
+    /* NEW: Kratom Products educational callout */
+    .products-callout {
+      background: linear-gradient(135deg, #1a2a2f 0%, #0f1a22 100%);
+      border-left: 8px solid #e4b23e;
+      border-radius: 24px;
+      margin: 40px 0 60px;
+      padding: 32px 36px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 36px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+    .products-callout .products-icon {
+      flex-shrink: 0;
+      width: 160px;
+      text-align: center;
+    }
+    .products-callout .products-icon img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 2px solid #e4b23e;
+      background: #00000055;
+      padding: 8px;
+    }
+    .products-callout .products-content {
+      flex: 1;
+    }
+    .products-callout .products-content h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #e4b23e;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .products-callout .products-content p {
+      font-size: 1.1rem;
+      color: #f0f0f0;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+    .products-callout .products-btn {
+      display: inline-block;
+      background: #b42b2b;
+      color: white;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .products-callout .products-btn:hover {
+      background: #8f2020;
+    }
+    @media (max-width: 750px) {
+      .products-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+      }
+      .products-callout .products-icon {
+        width: 140px;
+      }
+    }
+
     .industry-spotlight {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.75)), url('industry.jpg') center center / cover no-repeat;
       color: white;
@@ -764,7 +832,6 @@
     </section>
 
     <div class="container">
-      <!-- STATE QUICK NAVIGATION (dropdown + link to index) - UPDATED with all active states -->
       <div class="state-quick-nav">
         <p>⚡ FIND YOUR STATE & ACT NOW ⚡</p>
         <div class="dropdown-row">
@@ -772,7 +839,6 @@
             <option value="">— Select a state —</option>
             <option value="states/southcarolina.html">South Carolina (HB 4641 – fake ban)</option>
             <option value="states/michigan.html">Michigan (HB 5537 – Schedule I)</option>
-           
             <option value="states/nc.html">North Carolina (Schedule IV needed)</option>
             <option value="states/delaware.html">Delaware (SB 262 – full ban)</option>
             <option value="states/nevada.html">Nevada (Schedule I hearing June 4)</option>
@@ -824,7 +890,18 @@
         </div>
       </div>
 
-      <!-- DUPLICATE STATE ACTION HUB REMOVED (as requested) -->
+      <!-- NEW: Educational callout for Kratom Products -->
+      <div class="products-callout">
+        <div class="products-icon">
+          <img src="kratomproduct.jpeg" alt="Kratom product variety">
+        </div>
+        <div class="products-content">
+          <h3>THE PLANT IS THE PROBLEM</h3>
+          <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
+          <a href="kratom_products.html" class="products-btn">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
+        </div>
+      </div>
+
     </div>
 
     <section class="industry-spotlight">
@@ -923,7 +1000,6 @@
   </footer>
 
   <script>
-    // Handle dropdown navigation
     const goButton = document.getElementById('goToStateBtn');
     const dropdown = document.getElementById('stateDropdown');
     if (goButton && dropdown) {
