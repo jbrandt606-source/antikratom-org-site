@@ -1,251 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Hero Section | Show Proof</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hero Section | Show Proof</title>
+<style>
+  /* RESET & BASE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      background: #070b12;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+  body {
+    background: #070b12;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
 
-    /* hero wrapper: two rows, no extra content below */
-    .hero {
-      width: 100%;
-      background: radial-gradient(circle at 25% 30%, rgba(180, 43, 43, 0.18), transparent 55%),
-                  linear-gradient(125deg, #060c15 0%, #0e1724 100%);
-      border-bottom: 4px solid #b42b2b;
-    }
+  /* hero container: two rows, full width */
+  .hero {
+    width: 100%;
+    background: radial-gradient(circle at 25% 30%, rgba(180, 43, 43, 0.18), transparent 55%),
+                linear-gradient(125deg, #060c15 0%, #0e1724 100%);
+    border-bottom: 4px solid #b42b2b;
+  }
 
-    /* container limits width, keeps centering */
-    .hero-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
+  .hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
-    /* ROW 1: two-column layout (no paragraph text) */
+  /* ROW 1: two columns, no paragraph */
+  .row-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0 60px 0;
+  }
+
+  /* left column: badge + headline */
+  .hero-left {
+    flex: 1.2;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(180, 43, 43, 0.12);
+    border: 1px solid rgba(228, 178, 62, 0.55);
+    backdrop-filter: blur(2px);
+    padding: 6px 16px;
+    border-radius: 60px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e4b23e;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6.5vw, 5.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 16px rgba(180, 43, 43, 0.45);
+    margin: 0;
+  }
+
+  .hero-title .gold {
+    color: #e4b23e;
+    border-bottom: 4px solid #b42b2b;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+
+  /* right column: dog image only */
+  .hero-right {
+    flex: 0.9;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .dog-wrapper {
+    width: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: -30px 20px 40px -20px rgba(0, 0, 0, 0.7);
+  }
+
+  .dog-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 28px;
+    filter: brightness(1.03) contrast(1.05);
+  }
+
+  /* dark edge fade on right of dog image */
+  .hero-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #0e1724 90%);
+    pointer-events: none;
+    border-radius: 28px;
+  }
+
+  /* ROW 2: full-width black card with explanatory paragraph */
+  .row-2 {
+    width: 100%;
+    padding: 0 0 70px 0;
+  }
+
+  .full-card {
+    background: #070e16;
+    border: 1px solid rgba(228, 178, 62, 0.2);
+    border-left: 5px solid #e4b23e;
+    border-radius: 0 28px 28px 0;
+    padding: 32px 48px;
+    width: 100%;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .full-card p {
+    color: #eef2ff;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  .full-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .full-card strong {
+    color: #e4b23e;
+    font-weight: 800;
+  }
+
+  /* Responsive: on tablets/mobile, row-1 stacks, but card always full width */
+  @media (max-width: 950px) {
+    .hero-inner {
+      padding: 0 24px;
+    }
     .row-1 {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      padding: 80px 0 60px 0;
+      flex-direction: column;
+      gap: 48px;
+      padding: 60px 0 40px;
     }
-
-    /* left column: only badge and headline */
-    .left-col {
-      flex: 1.2;
+    .hero-left {
+      width: 100%;
+      text-align: center;
     }
-
     .badge {
-      display: inline-block;
-      background: rgba(180, 43, 43, 0.12);
-      border: 1px solid rgba(228, 178, 62, 0.5);
-      backdrop-filter: blur(2px);
-      padding: 6px 16px;
-      border-radius: 60px;
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #e4b23e;
-      margin-bottom: 32px;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    /* massive headline */
-    .headline {
-      font-size: clamp(3rem, 6.5vw, 5.2rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      color: #ffffff;
-      text-shadow: 0 0 16px rgba(180, 43, 43, 0.5);
-      margin-bottom: 0;
+    .hero-title {
+      text-align: center;
     }
-
-    .headline .gold {
-      color: #e4b23e;
-      border-bottom: 4px solid #b42b2b;
-      display: inline-block;
-      padding-bottom: 4px;
+    .hero-right {
+      width: 100%;
+      justify-content: center;
     }
-
-    /* right column: dog image only */
-    .right-col {
-      flex: 0.9;
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-    }
-
     .dog-wrapper {
-      width: 100%;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: -30px 20px 40px -20px rgba(0, 0, 0, 0.7);
-      position: relative;
+      max-width: 420px;
+      margin: 0 auto;
     }
-
-    .dog-wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      border-radius: 28px;
-      transform: scaleX(1);
-      filter: brightness(1.03) contrast(1.05);
+    .hero-right::after {
+      width: 12%;
     }
-
-    /* dark fade on dog edges to blend */
-    .right-col::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 25%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, #0e1724 90%);
-      pointer-events: none;
-      border-radius: 28px;
-    }
-
-    /* ROW 2: full-width black card under both columns */
-    .row-2 {
-      width: 100%;
-      padding: 20px 0 70px 0;
-    }
-
     .full-card {
-      background: #070e16;
-      border: 1px solid rgba(228, 178, 62, 0.2);
-      border-left: 5px solid #e4b23e;
-      border-radius: 0 28px 28px 0;
-      padding: 32px 48px;
-      max-width: 100%;
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(1px);
+      padding: 28px 28px;
     }
+  }
 
+  @media (max-width: 550px) {
     .full-card p {
-      color: #eef2ff;
-      font-size: 1.08rem;
-      line-height: 1.55;
-      font-weight: 500;
-      margin-bottom: 18px;
+      font-size: 0.95rem;
     }
-
-    .full-card p:last-child {
-      margin-bottom: 0;
+    .full-card {
+      padding: 20px;
     }
-
-    .full-card strong {
-      color: #e4b23e;
-      font-weight: 800;
+    .hero-inner {
+      padding: 0 20px;
     }
-
-    /* Responsive: on narrow screens row1 stacks, but remains two rows no text beside dog */
-    @media (max-width: 950px) {
-      .hero-container {
-        padding: 0 24px;
-      }
-      .row-1 {
-        flex-wrap: wrap;
-        gap: 48px;
-        padding: 60px 0 40px;
-      }
-      .left-col {
-        flex: auto;
-        width: 100%;
-        text-align: center;
-      }
-      .right-col {
-        flex: auto;
-        width: 100%;
-        justify-content: center;
-      }
-      .dog-wrapper {
-        max-width: 420px;
-        margin: 0 auto;
-      }
-      .right-col::after {
-        width: 12%;
-      }
-      .badge {
-        margin-left: auto;
-        margin-right: auto;
-        display: inline-block;
-      }
-      .headline {
-        text-align: center;
-      }
-      .full-card {
-        padding: 28px 28px;
-      }
+    .row-1 {
+      padding: 40px 0 30px;
     }
-
-    @media (max-width: 550px) {
-      .full-card p {
-        font-size: 0.95rem;
-      }
-      .hero-container {
-        padding: 0 20px;
-      }
-      .full-card {
-        padding: 20px;
-      }
-    }
-
-    /* no extra content below hero, body background consistent */
-    html, body {
-      height: auto;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-container">
-      <!-- ROW 1: headline + dog (strict two-column, no paragraph) -->
-      <div class="row-1">
-        <!-- left column: only badge + headline -->
-        <div class="left-col">
-          <div class="badge">ONE STANDARD. NOT TWO.</div>
-          <h1 class="headline">
-            IF YOU DEMAND<br>
-            RECORDS,<br>
-            <span class="gold">SHOW PROOF</span>
-          </h1>
-        </div>
-
-        <!-- right column: only dog image -->
-        <div class="right-col">
-          <div class="dog-wrapper">
-            <img src="IMG_7857.jpeg" alt="Skeptical dachshund with side-eye expression, looking toward headline">
-          </div>
-        </div>
+<section class="hero">
+  <div class="hero-inner">
+    <!-- ROW 1: TWO COLUMNS (badge + headline) left / (dog image) right -->
+    <div class="row-1">
+      <div class="hero-left">
+        <div class="badge">ONE STANDARD. NOT TWO.</div>
+        <h1 class="hero-title">
+          IF YOU DEMAND<br>
+          RECORDS,<br>
+          <span class="gold">SHOW PROOF</span>
+        </h1>
       </div>
-
-      <!-- ROW 2: full-width black card containing explanatory paragraph -->
-      <div class="row-2">
-        <div class="full-card">
-          <p>
-            Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
-          </p>
-          <p>
-            <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
-          </p>
+      <div class="hero-right">
+        <div class="dog-wrapper">
+          <img src="IMG_7857.jpeg" alt="Skeptical dachshund side-eye looking toward headline">
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- ROW 2: FULL-WIDTH CARD with explanatory text -->
+    <div class="row-2">
+      <div class="full-card">
+        <p>
+          Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
+        </p>
+        <p>
+          <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
