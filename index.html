@@ -51,61 +51,57 @@
       padding: 0 28px;
     }
 
-    /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
-    .scroll-banner {
-      background: #1a2c2e;
-      background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
-      color: #ffffff;
-      font-size: 0.9rem;
-      font-weight: 500;
-      overflow: hidden;
-      border-bottom: 1px solid #e4b23e;
-      position: relative;
-      z-index: 10;
-    }
-    .scroll-track {
-      display: flex;
-      width: max-content;
-      animation: scrollEvidence 35s linear infinite;
-    }
-    .scroll-track:hover {
-      animation-play-state: paused;
-    }
-    .scroll-item {
-      display: inline-flex;
-      align-items: center;
-      white-space: nowrap;
-      padding: 12px 28px;
-      gap: 12px;
-      letter-spacing: 0.01em;
-      font-size: 0.95rem;
-    }
-    .scroll-item strong {
-      font-weight: 700;
-      color: #ffdf8c;
-      margin-right: 4px;
-    }
-    .scroll-item a {
-      color: #ffdf8c;
-      text-decoration: underline;
-      font-weight: 600;
-      margin: 0 4px;
-      transition: color 0.2s;
-    }
-    .scroll-item a:hover {
-      color: white;
-      text-decoration: none;
-    }
-    .separator {
-      color: rgba(255,255,240,0.5);
-      font-size: 1.1rem;
-      margin: 0 6px;
-    }
-    @keyframes scrollEvidence {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+   /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
+.scroll-banner {
+  display: block;
+  background: #1a2c2e;
+  background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  border-bottom: 1px solid #e4b23e;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
 
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scrollEvidence 18s linear infinite;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+}
+
+.scroll-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 28px;
+  gap: 12px;
+  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+}
+
+.scroll-item strong {
+  font-weight: 700;
+  color: #ffdf8c;
+}
+
+.scroll-item span {
+  color: #ffdf8c;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@keyframes scrollEvidence {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
     /* header */
     .site-header {
       background-color: #0c151f;
@@ -632,22 +628,28 @@
 </head>
 <body>
 <!-- SCROLLING BANNER: more evidence link to globalkratom.org, no emojis -->
-<!-- SCROLLING BANNER: evidence link to globalkratom.org, no emojis -->
-<div class="scroll-banner">
+<!-- SCROLLING BANNER -->
+<a class="scroll-banner"
+   href="https://globalkratom.org"
+   target="_blank"
+   rel="noopener noreferrer">
+
   <div class="scroll-track">
-    <!-- Duplicate content for seamless infinite scroll -->
+
     <div class="scroll-item">
-      <strong>RESEARCH LIBRARY:</strong> 100+ studies · FDA data · Poison center reports · Policy analysis → 
-      <a href="https://globalkratom.org" target="_blank" rel="noopener noreferrer">GlobalKratom.org</a>
-      <span class="separator">|</span> Evidence for lawmakers, health departments, parents, and advocates
+      <strong>RESEARCH LIBRARY:</strong>
+      100+ studies · FDA data · Poison center reports · Policy analysis →
+      <span>GlobalKratom.org</span>
     </div>
+
     <div class="scroll-item">
-      <strong>RESEARCH LIBRARY:</strong> 100+ studies · FDA data · Poison center reports · Policy analysis → 
-      <a href="https://globalkratom.org" target="_blank" rel="noopener noreferrer">GlobalKratom.org</a>
-      <span class="separator">|</span> Evidence for lawmakers, health departments, parents, and advocates
+      <strong>RESEARCH LIBRARY:</strong>
+      100+ studies · FDA data · Poison center reports · Policy analysis →
+      <span>GlobalKratom.org</span>
     </div>
+
   </div>
-</div>
+</a>
 
 <header class="site-header">
   <div class="container header-inner">
