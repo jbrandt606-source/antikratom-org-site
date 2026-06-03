@@ -391,6 +391,49 @@
       background: #8f2020;
     }
 
+    /* NEW CAMPAIGN CALLOUT (between plant and ethanol) */
+    .campaign-callout {
+      background: #0c151f;
+      border-left: 5px solid #e4b23e;
+      padding: 28px 32px;
+      margin: 40px 0;
+      border-radius: 0 24px 24px 0;
+      box-shadow: 0 12px 24px -10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .campaign-callout h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: -0.2px;
+    }
+    .campaign-callout p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #eef2ff;
+    }
+    .campaign-callout .btn-callout {
+      background-color: #b42b2b;
+      color: white;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: background 0.2s;
+      font-size: 0.9rem;
+    }
+    .campaign-callout .btn-callout:hover {
+      background-color: #8f2020;
+    }
+    .campaign-callout .small-note {
+      font-size: 0.85rem;
+      color: #bfc9d4;
+      margin-top: 16px;
+    }
+
     .simple-alert {
       padding: 8px 0 8px 28px;
       border-left: 3px solid #e4b23e;
@@ -623,12 +666,13 @@
       .hero h2 { font-size: 2rem; }
       .hero-sub { font-size: 1.1rem; }
       .message-section { padding-left: 20px; }
+      .campaign-callout { padding: 20px; }
+      .campaign-callout h3 { font-size: 1.4rem; }
     }
   </style>
 </head>
 <body>
-<!-- SCROLLING BANNER: more evidence link to globalkratom.org, no emojis -->
-<!-- SCROLLING BANNER -->
+<!-- SCROLLING BANNER: more evidence link to globalkratom.org -->
 <a class="scroll-banner"
    href="https://globalkratom.org"
    target="_blank"
@@ -683,7 +727,7 @@
   </section>
 
   <div class="container">
-    <!-- state quick nav (emoji removed) -->
+    <!-- state quick nav -->
     <div class="state-quick-nav">
       <p>> FIND YOUR STATE & ACT NOW</p>
       <div class="dropdown-row">
@@ -731,7 +775,16 @@
       <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
     </div>
 
-    <!-- ETHANOL URGENT (no emoji) -->
+    <!-- NEW CAMPAIGN CALLOUT: Medical Records Challenge (between plant and ethanol) -->
+    <div class="campaign-callout">
+      <h3>One Standard. Not Two.</h3>
+      <p>Kratom advocates demand autopsies, toxicology reports, and medical records from grieving families. They dissect every death certificate. They demand proof of harm.<br><strong>Then let's apply the same standard to claims of benefit.</strong></p>
+      <p>If kratom “saved your life” or “treated your pain” — show your medical records to your legislators. Show the diagnosis. Show the physician notes. Show the documented improvement.<br>We are not collecting records. This is a campaign to demand equal evidence. <strong>Send your medical records directly to your state lawmakers.</strong></p>
+      <a href="proof.html" class="btn-callout">Join the Medical Records Challenge →</a>
+      <div class="small-note">Learn how to submit your records to legislators and demand evidence-based policy.</div>
+    </div>
+
+    <!-- ETHANOL URGENT -->
     <div class="simple-alert">
       <h4>URGENT: ETHANOL DETECTED IN RETAIL KRATOM SHOTS</h4>
       <p>Independent lab tests have identified ethanol in multiple kratom extract products – some at levels far exceeding accepted limits. In Kansas, similar products were treated as alcoholic beverages after testing.</p>
