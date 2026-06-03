@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) matching main site -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org','antikratom.org']}});
+    gtag('config','G-P31PD1SSTD');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Show the Proof | Anti-Kratom Association</title>
+  <meta name="description" content="Kratom advocates demand autopsies, toxicology reports, and medical examiner records from grieving families. If benefit claims influence law, those claims should be documented too." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --dark:#070b10;
+      --nav:#0c151f;
+      --panel:#0d1721;
+      --panel2:#101f2b;
+      --red:#b42b2b;
+      --red2:#e04444;
+      --gold:#e4b23e;
+      --text:#ffffff;
+      --muted:#bfc9d4;
+      --line:#263846;
+    }
+    body{
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+      background:var(--dark);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .site-header{
+      background-color:var(--nav);
+      padding:16px 0;
+      border-bottom:3px solid var(--red);
+    }
+    .header-inner{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 28px;
+    }
+    .logo h1{
+      font-size:1.7rem;
+      font-weight:900;
+      letter-spacing:-.02em;
+      background:linear-gradient(135deg,#fff 60%,var(--gold) 100%);
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    .logo span{
+      display:block;
+      font-size:.85rem;
+      font-weight:400;
+      color:var(--muted);
+      margin-top:4px;
+    }
+    .nav{
+      display:flex;
+      gap:1.4rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:.86rem;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      transition:.2s;
+    }
+    .nav a:hover,
+    .nav a.active{
+      color:var(--gold);
+    }
+    .hero{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(180,43,43,.28),transparent 30%),
+        linear-gradient(115deg,#081019 0%,#132637 60%,#080d13 100%);
+      border-bottom:4px solid var(--red);
+      padding:70px 0 58px;
+    }
+    .hero-inner{
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 28px;
+    }
+    .eyebrow{
+      display:inline-block;
+      color:var(--gold);
+      border:1px solid rgba(228,178,62,.55);
+      background:rgba(228,178,62,.08);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.8rem;
+      margin-bottom:22px;
+    }
+    .hero h1{
+      font-size:clamp(2.45rem,6vw,5rem);
+      line-height:1.02;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:-.055em;
+      max-width:1050px;
+    }
+    .hero h1 span{
+      color:var(--gold);
+      border-bottom:5px solid var(--red);
+    }
+    .hero-copy{
+      max-width:920px;
+      margin-top:26px;
+      font-size:1.2rem;
+      color:#eef2ff;
+      background:rgba(0,0,0,.38);
+      border-left:6px solid var(--gold);
+      padding:24px 28px;
+      border-radius:0 24px 24px 0;
+      font-weight:550;
+    }
+    .container{
+      max-width:1280px;
+      margin:0 auto;
+      padding:48px 28px;
+    }
+    .screenshot-card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:28px;
+      margin-bottom:42px;
+      text-align:center;
+      box-shadow:0 18px 40px rgba(0,0,0,.25);
+    }
+    .screenshot-card img{
+      max-width:100%;
+      border-radius:20px;
+      border:2px solid rgba(228,178,62,.35);
+      box-shadow:0 18px 35px -18px rgba(0,0,0,.75);
+    }
+    .caption{
+      margin-top:18px;
+      font-size:.92rem;
+      color:var(--muted);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:start;
+    }
+    .block{
+      background:rgba(13,23,33,.94);
+      border:1px solid var(--line);
+      border-left:6px solid var(--red);
+      border-radius:0 28px 28px 0;
+      padding:34px 38px;
+      margin-bottom:28px;
+    }
+    .block h2{
+      color:var(--gold);
+      font-size:2rem;
+      line-height:1.15;
+      font-weight:900;
+      letter-spacing:-.03em;
+      margin-bottom:18px;
+    }
+    .block h3{
+      font-size:1.35rem;
+      color:#fff;
+      margin:28px 0 14px;
+      font-weight:850;
+    }
+    .block p{
+      color:#edf4ff;
+      font-size:1.08rem;
+      margin-bottom:18px;
+    }
+    .punch{
+      background:#08121b;
+      border:2px solid var(--red);
+      border-radius:24px;
+      padding:28px;
+      margin:26px 0;
+      font-size:1.25rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:-.02em;
+      color:#fff;
+    }
+    .punch span{
+      color:var(--gold);
+    }
+    .questions,
+    .harm-list{
+      list-style:none;
+      margin:18px 0;
+    }
+    .questions li,
+    .harm-list li{
+      position:relative;
+      padding-left:30px;
+      margin-bottom:14px;
+      color:#edf4ff;
+      font-weight:550;
+    }
+    .questions li::before{
+      content:">";
+      position:absolute;
+      left:0;
+      color:var(--gold);
+      font-weight:900;
+    }
+    .harm-list li::before{
+      content:"•";
+      position:absolute;
+      left:3px;
+      top:-2px;
+      color:var(--red2);
+      font-size:1.35rem;
+      font-weight:900;
+    }
+    .side-card{
+      background:linear-gradient(180deg,#132433,#0b141d);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+      position:sticky;
+      top:20px;
+    }
+    .side-card h2{
+      color:var(--gold);
+      font-size:1.75rem;
+      line-height:1.15;
+      margin-bottom:16px;
+      font-weight:900;
+      letter-spacing:-.03em;
+    }
+    .side-card p{
+      color:#edf4ff;
+      margin-bottom:18px;
+      font-size:1.02rem;
+    }
+    .mini-list{
+      margin:20px 0;
+      list-style:none;
+    }
+    .mini-list li{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:13px 0;
+      color:#fff;
+      font-weight:700;
+    }
+    .cta{
+      background:#070d13;
+      border:2px solid var(--gold);
+      border-radius:28px;
+      padding:36px;
+      margin-top:34px;
+      text-align:center;
+    }
+    .cta h2{
+      font-size:2.2rem;
+      line-height:1.1;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:-.04em;
+      color:#fff;
+      margin-bottom:16px;
+    }
+    .cta h2 span{
+      color:var(--gold);
+    }
+    .cta p{
+      max-width:850px;
+      margin:0 auto 18px;
+      color:#edf4ff;
+      font-size:1.1rem;
+    }
+    .btn-row{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.055em;
+      border-radius:999px;
+      padding:14px 28px;
+      transition:.2s;
+    }
+    .btn-red{
+      background:var(--red);
+      color:#fff;
+    }
+    .btn-red:hover{
+      background:#8f2020;
+      transform:translateY(-1px);
+    }
+    .btn-gold{
+      border:2px solid var(--gold);
+      color:var(--gold);
+      background:transparent;
+    }
+    .btn-gold:hover{
+      background:rgba(228,178,62,.14);
+      color:#fff;
+    }
+    .note{
+      color:#9fb0c0;
+      font-size:.88rem;
+      margin-top:20px;
+      max-width:780px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    footer{
+      background:var(--nav);
+      border-top:3px solid var(--red);
+      padding:34px 0;
+      text-align:center;
+      color:#aaa;
+      margin-top:40px;
+    }
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:22px;
+      margin-bottom:18px;
+    }
+    .footer-links a{
+      color:var(--gold);
+      text-decoration:none;
+      font-weight:700;
+      font-size:.92rem;
+    }
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .side-card{position:relative;top:0}
+      .block{padding:28px 24px}
+      .hero-copy{font-size:1.06rem}
+      .nav{gap:1rem}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>ANTI-KRATOM ASSOCIATION</h1>
+      <span>public health · evidence · action</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="evidence/index.html">Evidence</a>
+      <a href="industry/index.html">Industry</a>
+      <a href="action.html">Fight Back</a>
+      <a href="proof.html" class="active">Show Proof</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">One standard. Not two.</div>
+    <h1>If You Demand Records, <span>Show Proof</span></h1>
+    <div class="hero-copy">
+      Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
+      <br><br>
+      <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
+    </div>
+  </div>
+</section>
+<main class="container">
+  <div class="screenshot-card">
+    <img src="IMG_7852.jpeg" alt="Screenshot of public social media post discussing acknowledgment and public display of autopsy records." />
+    <div class="caption">
+      Public post discussing the use of autopsy records in the kratom debate. If records are the standard for harm, records should be the standard for benefit.
+    </div>
+  </div>
+  <div class="grid">
+    <section>
+      <div class="block">
+        <h2>Show the Diagnosis. Show the Treatment History. Show the Records.</h2>
+        <p>
+          Legislators are repeatedly asked to trust personal testimony that kratom treated chronic pain, anxiety, PTSD, depression, opioid use disorder, or another serious medical condition.
+        </p>
+        <p>
+          But testimony is not the same thing as medical evidence. If a person is asking lawmakers to keep kratom legal because it allegedly treated a disease, then lawmakers deserve to see documentation supporting that claim.
+        </p>
+        <div class="punch">
+          Not stories alone. <span>Records.</span>
+        </div>
+        <p>
+          Show the diagnosis. Show the prior treatment failures. Show the physician notes. Show the objective improvement. Show whether a licensed healthcare provider recommended kratom, monitored kratom use, or documented kratom as an appropriate treatment.
+        </p>
+        <p>
+          If grieving families are expected to produce autopsies and toxicology reports, then pro-kratom witnesses should be willing to submit medical documentation to the legislators, boards, and committees they are trying to influence.
+        </p>
+      </div>
+      <div class="block">
+        <h2>A Question for Legislators</h2>
+        <ul class="questions">
+          <li>How many medical records have you personally reviewed where a licensed physician or healthcare provider explicitly recommended kratom?</li>
+          <li>How many patient charts have you seen where a doctor documented that kratom successfully treated a disease?</li>
+          <li>How many medical records have you reviewed showing objective improvement attributable to kratom?</li>
+          <li>How many healthcare providers have testified under oath that kratom should be used as a treatment for a medical condition?</li>
+          <li>How many kratom “success stories” have been independently verified through medical documentation?</li>
+        </ul>
+        <p>
+          The answer is likely very few, if any.
+        </p>
+        <p>
+          Yet lawmakers are routinely asked to base public policy on anecdotal testimony from individuals claiming medical benefits that have never been independently verified.
+        </p>
+      </div>
+      <div class="block">
+        <h2>What Does the Published Medical Literature Show?</h2>
+        <p>
+          There are no widely accepted peer-reviewed clinical case reports showing that kratom safely and effectively treated a disease under medical supervision.
+        </p>
+        <p>
+          By contrast, the medical literature contains more than one hundred published case reports and case series describing harms associated with kratom exposure, including:
+        </p>
+        <ul class="harm-list">
+          <li>Dependence and withdrawal</li>
+          <li>Liver injury</li>
+          <li>Seizures</li>
+          <li>Psychosis</li>
+          <li>Neonatal withdrawal</li>
+          <li>Cardiac complications</li>
+          <li>Respiratory depression</li>
+          <li>Serious poisonings</li>
+          <li>Fatal intoxications</li>
+        </ul>
+        <p>
+          If personal testimony is enough to prove benefit, why are advocates demanding medical records, autopsies, and toxicology reports when the outcome is harm?
+        </p>
+        <div class="punch">
+          Evidence cannot be required only when the conclusion is inconvenient.
+        </div>
+      </div>
+    </section>
+    <aside class="side-card">
+      <h2>For Pro-Kratom Witnesses</h2>
+      <p>
+        If you testify that kratom treated a medical condition, submit your supporting medical records directly to the lawmakers you are asking to persuade.
+      </p>
+      <ul class="mini-list">
+        <li>Submit the diagnosis.</li>
+        <li>Submit the treatment history.</li>
+        <li>Submit physician notes.</li>
+        <li>Submit objective improvement.</li>
+        <li>Submit adverse effects and withdrawal history.</li>
+      </ul>
+      <p>
+        Do not ask families to prove harm while asking lawmakers to accept benefit on faith.
+      </p>
+      <p>
+        One standard. Not two.
+      </p>
+    </aside>
+  </div>
+  <section class="cta">
+    <h2>Submit Your Proof to <span>Legislators</span></h2>
+    <p>
+      Anti-Kratom Association is not collecting private medical records.
+    </p>
+    <p>
+      This campaign asks pro-kratom advocates, industry representatives, and public witnesses to submit their medical documentation directly to the legislators, regulatory boards, city councils, and committees they are attempting to influence.
+    </p>
+    <p>
+      If kratom is being promoted as medicine, lawmakers should ask for medical evidence.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-red" href="action.html">Contact Lawmakers</a>
+      <a class="btn btn-gold" href="evidence/index.html">Review the Evidence</a>
+    </div>
+    <div class="note">
+      Do not send private medical records to Anti-Kratom Association. If you choose to submit records, send them only to the appropriate public body, legislator, committee, or agency involved in the hearing or policy decision.
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="evidence/index.html">Evidence</a>
+    <a href="industry/index.html">Industry Watch</a>
+    <a href="action.html">Fight Back</a>
+    <a href="proof.html">Show Proof</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit.</div>
+</footer>
+</body>
+</html>
