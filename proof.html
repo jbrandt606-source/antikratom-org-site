@@ -86,7 +86,7 @@
     .nav a.active{
       color:var(--gold);
     }
-    /* New hero split with dog image */
+    /* Hero split with left text (from IMG_7858.png) and dog image on right */
     .hero-split{
       background: radial-gradient(circle at 30% 25%, rgba(180,43,43,.28), transparent 45%),
                   linear-gradient(125deg, #081019 0%, #0e1a28 100%);
@@ -122,42 +122,35 @@
     .hero-right img:hover{
       transform:scale(1.01);
     }
-    .eyebrow{
-      display:inline-block;
-      color:var(--gold);
-      border:1px solid rgba(228,178,62,.55);
-      background:rgba(228,178,62,.08);
-      padding:8px 14px;
-      border-radius:999px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-size:.8rem;
-      margin-bottom:22px;
-    }
+    /* Updated hero title and paragraph exactly matching the image text */
     .hero-left h1{
-      font-size:clamp(2.45rem,6vw,4.8rem);
-      line-height:1.02;
+      font-size:clamp(2.6rem,6vw,5rem);
+      line-height:1.05;
       font-weight:900;
       text-transform:uppercase;
       letter-spacing:-.055em;
-      margin-bottom:20px;
+      margin-bottom:24px;
     }
     .hero-left h1 span{
       color:var(--gold);
       border-bottom:5px solid var(--red);
+      display:inline-block;
+      padding-bottom:4px;
     }
     .hero-copy{
-      font-size:1.15rem;
+      font-size:1.2rem;
       color:#eef2ff;
-      background:rgba(0,0,0,.4);
+      background:rgba(0,0,0,.45);
       border-left:6px solid var(--gold);
-      padding:20px 28px;
-      border-radius:0 24px 24px 0;
+      padding:24px 30px;
+      border-radius:0 28px 28px 0;
       font-weight:550;
       margin-top:10px;
     }
-    /* rest styles unchanged */
+    .hero-copy strong{
+      color:var(--gold);
+    }
+    /* rest of styles (unchanged from previous functional page) */
     .container{
       max-width:1280px;
       margin:0 auto;
@@ -386,8 +379,7 @@
       .block{padding:28px 24px}
       .hero-container{flex-direction:column;text-align:center}
       .hero-left{text-align:center}
-      .hero-copy{border-left:none;border-top:4px solid var(--gold);border-radius:24px;padding:16px}
-      .eyebrow{margin-left:auto;margin-right:auto}
+      .hero-copy{border-left:none;border-top:4px solid var(--gold);border-radius:24px;padding:20px}
       .hero-right img{max-width:280px;margin:0 auto}
     }
   </style>
@@ -410,12 +402,11 @@
   </div>
 </header>
 
-<!-- HERO with left title and dog rolling eyes on the right -->
+<!-- HERO section with title "RECORDS, SHOW PROOF" and exact paragraph from image -->
 <section class="hero-split">
   <div class="hero-container">
     <div class="hero-left">
-      <div class="eyebrow">One standard. Not two.</div>
-      <h1>If You Demand Records, <span>Show Proof</span></h1>
+      <h1>RECORDS, <span>SHOW PROOF</span></h1>
       <div class="hero-copy">
         Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
         <br><br>
