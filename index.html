@@ -51,6 +51,61 @@
       padding: 0 28px;
     }
 
+    /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
+    .scroll-banner {
+      background: #1a2c2e;
+      background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      overflow: hidden;
+      border-bottom: 1px solid #e4b23e;
+      position: relative;
+      z-index: 10;
+    }
+    .scroll-track {
+      display: flex;
+      width: max-content;
+      animation: scrollEvidence 35s linear infinite;
+    }
+    .scroll-track:hover {
+      animation-play-state: paused;
+    }
+    .scroll-item {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 12px 28px;
+      gap: 12px;
+      letter-spacing: 0.01em;
+      font-size: 0.95rem;
+    }
+    .scroll-item strong {
+      font-weight: 700;
+      color: #ffdf8c;
+      margin-right: 4px;
+    }
+    .scroll-item a {
+      color: #ffdf8c;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 0 4px;
+      transition: color 0.2s;
+    }
+    .scroll-item a:hover {
+      color: white;
+      text-decoration: none;
+    }
+    .separator {
+      color: rgba(255,255,240,0.5);
+      font-size: 1.1rem;
+      margin: 0 6px;
+    }
+    @keyframes scrollEvidence {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     /* header */
     .site-header {
       background-color: #0c151f;
@@ -188,7 +243,7 @@
       color: #0c151f;
     }
 
-    /* state dropdown — clean, no box */
+    /* state dropdown — clean */
     .state-quick-nav {
       margin: 24px 0 40px;
       padding: 12px 0;
@@ -245,7 +300,7 @@
       color: #0c151f;
     }
 
-    /* simple fact rows – no boxed cards */
+    /* fact rows */
     .fact-grid {
       display: flex;
       flex-wrap: wrap;
@@ -284,7 +339,7 @@
       top: -2px;
     }
 
-    /* FULL IMAGE BANNER (user's kratomproducts.jpeg) */
+    /* image banner */
     .full-image-banner {
       margin: 40px 0 32px;
       text-align: center;
@@ -305,7 +360,7 @@
       transform: scale(1.01);
     }
 
-    /* message section – now without icon, just clean text */
+    /* message section */
     .message-section {
       margin: 48px 0;
       border-left: 4px solid #e4b23e;
@@ -364,7 +419,7 @@
       text-decoration: underline;
     }
 
-    /* industry / evidence / action sections — full width, less boxy (soft backgrounds) */
+    /* full width sections */
     .full-width-section {
       background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
       background-size: cover;
@@ -412,12 +467,15 @@
       padding-left: 28px;
       position: relative;
     }
+    /* emoji replaced with plain X */
     .industry-list li::before {
-      content: "⛔";
+      content: "✗";
       position: absolute;
       left: 0;
       top: -1px;
       font-size: 1.2rem;
+      font-weight: bold;
+      color: #e4b23e;
     }
     .col-right {
       background: rgba(0, 0, 0, 0.5);
@@ -480,7 +538,6 @@
       margin-top: 10px;
     }
 
-    /* action grid minimal */
     .action-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -574,6 +631,23 @@
   </style>
 </head>
 <body>
+<!-- SCROLLING BANNER: more evidence link to globalkratom.org, no emojis -->
+<div class="scroll-banner">
+  <div class="scroll-track">
+    <!-- Duplicate content for seamless infinite scroll -->
+    <div class="scroll-item">
+      <strong>FOR MORE EVIDENCE:</strong> Visit the Global Kratom Organization → 
+      <a href="https://globalkratom.org" target="_blank" rel="noopener noreferrer">globalkratom.org</a> 
+      <span class="separator">|</span> Comprehensive research · FDA data · Poison center reports · International studies
+    </div>
+    <div class="scroll-item">
+      <strong>FOR MORE EVIDENCE:</strong> Visit the Global Kratom Organization → 
+      <a href="https://globalkratom.org" target="_blank" rel="noopener noreferrer">globalkratom.org</a> 
+      <span class="separator">|</span> Comprehensive research · FDA data · Poison center reports · International studies
+    </div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">
@@ -606,9 +680,9 @@
   </section>
 
   <div class="container">
-    <!-- state quick nav (clean, no heavy box) -->
+    <!-- state quick nav (emoji removed) -->
     <div class="state-quick-nav">
-      <p>⚡ FIND YOUR STATE & ACT NOW</p>
+      <p>> FIND YOUR STATE & ACT NOW</p>
       <div class="dropdown-row">
         <select id="stateDropdown" class="state-select">
           <option value="">— Select a state —</option>
@@ -622,11 +696,11 @@
           <option value="states/arizona.html">Arizona (HB 2415 – loophole bill)</option>
         </select>
         <button id="goToStateBtn" class="btn-small">GO →</button>
-        <a href="states/index.html" class="state-index-link">📋 ALL STATE ACTIONS →</a>
+        <a href="states/index.html" class="state-index-link">>> ALL STATE ACTIONS →</a>
       </div>
     </div>
 
-    <!-- Simple facts instead of boxed cards -->
+    <!-- Simple facts -->
     <div class="fact-grid">
       <div class="fact-item">
         <h3>WHERE IT’S SOLD</h3>
@@ -642,21 +716,21 @@
       </div>
     </div>
 
-    <!-- FULL WIDTH BANNER (your image kratomproducts.jpeg) -->
+    <!-- FULL WIDTH BANNER -->
     <div class="full-image-banner">
       <img src="kratomproducts.jpeg" alt="Different names, same substance – Kratom. Ban the plant.">
     </div>
 
-    <!-- "The Plant is the Problem" section – no small icon, clean text only -->
+    <!-- "The Plant is the Problem" section -->
     <div class="message-section">
       <h3>THE PLANT IS THE PROBLEM</h3>
       <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
       <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
     </div>
 
-    <!-- ETHANOL URGENT (simplified, no heavy box) -->
+    <!-- ETHANOL URGENT (no emoji) -->
     <div class="simple-alert">
-      <h4>⚠️ URGENT: ETHANOL DETECTED IN RETAIL KRATOM SHOTS</h4>
+      <h4>URGENT: ETHANOL DETECTED IN RETAIL KRATOM SHOTS</h4>
       <p>Independent lab tests have identified ethanol in multiple kratom extract products – some at levels far exceeding accepted limits. In Kansas, similar products were treated as alcoholic beverages after testing.</p>
       <p><strong>Are these products being sold in your state without alcohol oversight?</strong><br> <a href="etoh.html" class="inline-link">→ Review the evidence and contact your state alcohol board now</a></p>
     </div>
@@ -713,7 +787,7 @@
     </div>
   </section>
 
-  <!-- Action section minimal -->
+  <!-- Action section -->
   <section class="full-width-section action-section">
     <div class="container">
       <div style="text-align: center; margin-bottom: 30px;">
@@ -734,7 +808,7 @@
 
   <div class="container">
     <div class="federal-action">
-      <h2><span>⚡ LET’S TAKE</span> FEDERAL ACTION NOW</h2>
+      <h2><span>! LET’S TAKE</span> FEDERAL ACTION NOW</h2>
       <p>State fights are crucial, but real change requires federal action. Congress can schedule kratom and stop this dangerous substance from being sold in every gas station and vape shop across the country.</p>
       <a href="congress.html" class="btn-federal">CONTACT CONGRESS →</a>
     </div>
