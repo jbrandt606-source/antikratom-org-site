@@ -14,7 +14,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Show the Proof | Anti-Kratom Association</title>
-  <meta name="description" content="Kratom advocates demand autopsies, toxicology reports, and medical examiner records from grieving families. If benefit claims influence law, those claims should be documented too." />
+  <meta name="description" content="Kratom advocates demand autopsies and toxicology reports from grieving families. If benefit claims influence law, those claims should be documented too." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -86,17 +86,41 @@
     .nav a.active{
       color:var(--gold);
     }
-    .hero{
-      background:
-        radial-gradient(circle at 20% 20%,rgba(180,43,43,.28),transparent 30%),
-        linear-gradient(115deg,#081019 0%,#132637 60%,#080d13 100%);
+    /* New hero split with dog image */
+    .hero-split{
+      background: radial-gradient(circle at 30% 25%, rgba(180,43,43,.28), transparent 45%),
+                  linear-gradient(125deg, #081019 0%, #0e1a28 100%);
       border-bottom:4px solid var(--red);
-      padding:70px 0 58px;
+      padding:70px 0 70px;
     }
-    .hero-inner{
+    .hero-container{
       max-width:1280px;
       margin:0 auto;
       padding:0 28px;
+      display:flex;
+      align-items:center;
+      gap:48px;
+      flex-wrap:wrap;
+    }
+    .hero-left{
+      flex:1.2;
+      min-width:260px;
+    }
+    .hero-right{
+      flex:0.9;
+      min-width:200px;
+      text-align:center;
+    }
+    .hero-right img{
+      max-width:100%;
+      border-radius:28px;
+      box-shadow:0 25px 35px -15px rgba(0,0,0,0.5);
+      border:2px solid rgba(228,178,62,0.5);
+      transition:transform 0.2s;
+      display:block;
+    }
+    .hero-right img:hover{
+      transform:scale(1.01);
     }
     .eyebrow{
       display:inline-block;
@@ -111,29 +135,29 @@
       font-size:.8rem;
       margin-bottom:22px;
     }
-    .hero h1{
-      font-size:clamp(2.45rem,6vw,5rem);
+    .hero-left h1{
+      font-size:clamp(2.45rem,6vw,4.8rem);
       line-height:1.02;
       font-weight:900;
       text-transform:uppercase;
       letter-spacing:-.055em;
-      max-width:1050px;
+      margin-bottom:20px;
     }
-    .hero h1 span{
+    .hero-left h1 span{
       color:var(--gold);
       border-bottom:5px solid var(--red);
     }
     .hero-copy{
-      max-width:920px;
-      margin-top:26px;
-      font-size:1.2rem;
+      font-size:1.15rem;
       color:#eef2ff;
-      background:rgba(0,0,0,.38);
+      background:rgba(0,0,0,.4);
       border-left:6px solid var(--gold);
-      padding:24px 28px;
+      padding:20px 28px;
       border-radius:0 24px 24px 0;
       font-weight:550;
+      margin-top:10px;
     }
+    /* rest styles unchanged */
     .container{
       max-width:1280px;
       margin:0 auto;
@@ -360,8 +384,11 @@
       .grid{grid-template-columns:1fr}
       .side-card{position:relative;top:0}
       .block{padding:28px 24px}
-      .hero-copy{font-size:1.06rem}
-      .nav{gap:1rem}
+      .hero-container{flex-direction:column;text-align:center}
+      .hero-left{text-align:center}
+      .hero-copy{border-left:none;border-top:4px solid var(--gold);border-radius:24px;padding:16px}
+      .eyebrow{margin-left:auto;margin-right:auto}
+      .hero-right img{max-width:280px;margin:0 auto}
     }
   </style>
 </head>
@@ -382,17 +409,25 @@
     </nav>
   </div>
 </header>
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">One standard. Not two.</div>
-    <h1>If You Demand Records, <span>Show Proof</span></h1>
-    <div class="hero-copy">
-      Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
-      <br><br>
-      <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
+
+<!-- HERO with left title and dog rolling eyes on the right -->
+<section class="hero-split">
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="eyebrow">One standard. Not two.</div>
+      <h1>If You Demand Records, <span>Show Proof</span></h1>
+      <div class="hero-copy">
+        Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
+        <br><br>
+        <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="IMG_7857.jpeg" alt="A skeptical dog rolling its eyes at the double standard of demanding proof of harm but not proof of benefit.">
     </div>
   </div>
 </section>
+
 <main class="container">
   <div class="screenshot-card">
     <img src="IMG_7852.jpeg" alt="Screenshot of public social media post discussing acknowledgment and public display of autopsy records." />
