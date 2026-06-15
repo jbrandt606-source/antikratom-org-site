@@ -148,19 +148,11 @@
       color: var(--gold);
       margin-bottom: 10px;
     }
-    .med-collage-desc {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin: 12px 0;
-    }
-    .med-icon {
-      background: #1e2c3a;
-      padding: 8px 10px;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 600;
+    .hero-medical-mock img {
+      max-width: 100%;
+      border-radius: 16px;
+      margin-top: 8px;
+      border: 1px solid rgba(228,178,62,0.4);
     }
     .hero-right small {
       display: block;
@@ -214,7 +206,7 @@
       padding: 48px 28px;
     }
 
-    /* gallery of kratom evidence: social media ads */
+    /* gallery of kratom evidence: actual images */
     .gallery-mock-card {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -235,7 +227,7 @@
     }
     .image-grid-mock {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 22px;
       margin-top: 20px;
     }
@@ -245,6 +237,13 @@
       padding: 16px;
       border: 1px solid #2a3a48;
       transition: 0.1s;
+      text-align: center;
+    }
+    .mock-ad-item img {
+      max-width: 100%;
+      border-radius: 16px;
+      margin-bottom: 12px;
+      border: 1px solid #3a4a58;
     }
     .mock-ad-item .filename {
       font-family: 'SF Mono', monospace;
@@ -470,42 +469,41 @@
     <div class="hero-right">
       <div class="hero-medical-mock">
         <div><span class="badge-img">IMG_8667.png · Today 2:37 AM</span></div>
-        <div class="med-collage-desc">
-          <span class="med-icon">Surgeons in operating room</span>
-          <span class="med-icon">Nurse and patient</span>
-          <span class="med-icon">Physicians consulting</span>
-          <span class="med-icon">Pharmacist reviewing medications</span>
-        </div>
+        <img src="/IMG_8667.png" alt="Medical collage showing surgeons in operating room, nurses caring for patient, physicians consulting, pharmacist reviewing medications" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_8667.png%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <div style="font-size:0.8rem; background:#00000066; border-radius: 20px; padding: 8px; margin-top: 8px;">
           Real healthcare. Decades of training. Evidence based practice.
         </div>
-        <small>Medical collage (IMG_8667.png) — the gold standard of care. Compare with kratom’s “proof” below.</small>
+        <small>Medical collage (IMG_8667.png) — the gold standard of care. Compare with kratom's "proof" below.</small>
       </div>
     </div>
   </div>
 </section>
 
 <main class="container">
-  <!-- The absurd gallery: social media ads that kratom advocates submit as proof -->
+  <!-- The absurd gallery: actual images from the root directory -->
   <div class="gallery-mock-card">
     <div class="gallery-title">THE "EVIDENCE" KRATOM ADVOCATES SUBMIT TO LAWMAKERS</div>
     <div class="image-grid-mock">
       <div class="mock-ad-item">
+        <img src="/IMG_7024.jpeg" alt="Social media advertisement with young women outdoors and headline With a secret ingredient" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_7024.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <div><span class="filename">IMG_7024.jpeg</span></div>
         <div class="description">Social media advertisement featuring young women outdoors with the headline "With a secret ingredient". Marketing a beverage or supplement product. No medical claims, no physician oversight.</div>
         <div class="timestamp-meta">2:35 AM · 260 KB</div>
       </div>
       <div class="mock-ad-item">
+        <img src="/IMG_6880.jpeg" alt="Social media advertisement for premium kratom shots showing multiple bottled products" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6880.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <div><span class="filename">IMG_6880.jpeg</span></div>
         <div class="description">Social media advertisement for kratom shots. Displays multiple bottled products with text promoting "premium kratom shots." Unregulated, unverified potency.</div>
         <div class="timestamp-meta">2:35 AM · 556 KB</div>
       </div>
       <div class="mock-ad-item">
+        <img src="/IMG_6878.jpeg" alt="Social media advertisement with people holding colorful bottles and headline READY TO LEVEL UP" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6878.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <div><span class="filename">IMG_6878.jpeg</span></div>
         <div class="description">Social media advertisement featuring people holding brightly colored beverage bottles with the headline "READY TO LEVEL UP?" Marketing an energy or wellness drink.</div>
         <div class="timestamp-meta">2:35 AM · 496 KB</div>
       </div>
       <div class="mock-ad-item">
+        <img src="/IMG_6223.jpeg" alt="Plush pink hippopotamus on grass surrounded by pink product packages" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6223.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <div><span class="filename">IMG_6223.jpeg</span></div>
         <div class="description">Plush pink hippopotamus lying on grass surrounded by multiple pink product packages arranged around it. Promotional style product photo. A stuffed animal as medical evidence.</div>
         <div class="timestamp-meta">2:35 AM · 348 KB</div>
