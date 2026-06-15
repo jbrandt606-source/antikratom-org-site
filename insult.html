@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (gtag.js) – keep consistency with existing domain tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org','antikratom.org']}});
+    gtag('config','G-P31PD1SSTD');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Insult Hidden Inside the Kratom Argument | Anti-Kratom Association</title>
+  <meta name="description" content="Every time lawmakers accept kratom as a ‘wellness product’ because healthcare ‘failed,’ they tell doctors, nurses and pharmacists they are incompetent. And the evidence? A messy camera roll of IMG_8669 and 2:35AM screenshots.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: #070b10;
+      --nav: #0c151f;
+      --panel: #0d1721;
+      --panel2: #101f2b;
+      --red: #b42b2b;
+      --red2: #e04444;
+      --gold: #e4b23e;
+      --text: #ffffff;
+      --muted: #bfc9d4;
+      --line: #263846;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .site-header {
+      background-color: var(--nav);
+      padding: 16px 0;
+      border-bottom: 3px solid var(--red);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      background: linear-gradient(135deg, #fff 60%, var(--gold) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logo span {
+      display: block;
+      font-size: .85rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .86rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      transition: .2s;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--gold);
+    }
+
+    /* Hero split with the absurd gallery contrast */
+    .hero-split {
+      background: radial-gradient(circle at 30% 25%, rgba(180, 43, 43, 0.28), transparent 45%),
+                  linear-gradient(125deg, #081019 0%, #0e1a28 100%);
+      border-bottom: 4px solid var(--red);
+      padding: 70px 0 70px;
+    }
+
+    .hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      flex: 1.2;
+      min-width: 260px;
+    }
+
+    .hero-right {
+      flex: 0.9;
+      min-width: 240px;
+      text-align: center;
+    }
+
+    /* hero image mock – no frame, pure “unsorted gallery” feel */
+    .hero-img-mock {
+      background: rgba(0,0,0,0.55);
+      border-radius: 18px;
+      padding: 14px 12px;
+      backdrop-filter: blur(1px);
+      border: 1px dashed var(--gold);
+      transition: none;
+      box-shadow: none;
+    }
+    .hero-img-mock .file-badge {
+      font-family: monospace;
+      background: #000000aa;
+      padding: 8px 12px;
+      border-radius: 14px;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .mock-thumb {
+      background: #111c26;
+      border-radius: 18px;
+      padding: 20px 12px;
+      text-align: center;
+      font-size: 2.4rem;
+      margin: 12px 0;
+    }
+    .hero-right small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.7rem;
+      margin-top: 8px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid rgba(228, 178, 62, .55);
+      background: rgba(228, 178, 62, .08);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .8rem;
+      margin-bottom: 22px;
+    }
+
+    .hero-left h1 {
+      font-size: clamp(2.45rem, 6vw, 4.8rem);
+      line-height: 1.02;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.055em;
+      margin-bottom: 20px;
+    }
+
+    .hero-left h1 span {
+      color: var(--gold);
+      border-bottom: 5px solid var(--red);
+    }
+
+    .hero-copy {
+      font-size: 1.15rem;
+      color: #eef2ff;
+      background: rgba(0, 0, 0, .4);
+      border-left: 6px solid var(--gold);
+      padding: 20px 28px;
+      border-radius: 0 24px 24px 0;
+      font-weight: 550;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 48px 28px;
+    }
+
+    /* PHONE GALLERY MOCKUP — the raw, unsorted root images */
+    .gallery-mock-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 18px 35px -12px black;
+    }
+    .gallery-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+      color: var(--gold);
+      border-left: 5px solid var(--red);
+      padding-left: 20px;
+      margin-bottom: 24px;
+    }
+    .image-grid-mock {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .mock-img-item {
+      background: #0a1118;
+      border-radius: 20px;
+      padding: 14px 12px;
+      border: 1px solid #2a3a48;
+      text-align: center;
+      transition: 0.1s;
+    }
+    .mock-img-item .file-icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .mock-img-item .filename {
+      font-family: 'SF Mono', monospace;
+      font-weight: 700;
+      background: #00000066;
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      color: #ffd966;
+    }
+    .mock-img-item .meta {
+      font-size: 0.7rem;
+      color: #9bb8d0;
+      margin-top: 8px;
+    }
+    .disclaimer-absurd {
+      background: #1e1b10;
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 18px;
+      font-weight: 600;
+      border-left: 4px solid var(--red2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .block {
+      background: rgba(13, 23, 33, .94);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--red);
+      border-radius: 0 28px 28px 0;
+      padding: 34px 38px;
+      margin-bottom: 28px;
+    }
+
+    .block h2 {
+      color: var(--gold);
+      font-size: 2rem;
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 18px;
+    }
+
+    .block h3 {
+      font-size: 1.35rem;
+      color: #fff;
+      margin: 28px 0 14px;
+      font-weight: 850;
+    }
+
+    .block p {
+      color: #edf4ff;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+
+    .insult-list {
+      list-style: none;
+      margin: 18px 0;
+    }
+    .insult-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 14px;
+      font-weight: 550;
+      color: #f0f3fa;
+    }
+    .insult-list li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      font-size: 1.1rem;
+    }
+
+    .side-card {
+      background: linear-gradient(180deg, #132433, #0b141d);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+      position: sticky;
+      top: 20px;
+    }
+    .side-card h2 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+    .side-card p {
+      color: #edf4ff;
+      margin-bottom: 18px;
+    }
+    .mini-list {
+      margin: 20px 0;
+      list-style: none;
+    }
+    .mini-list li {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 13px 0;
+      font-weight: 700;
+    }
+
+    .cta {
+      background: #070d13;
+      border: 2px solid var(--gold);
+      border-radius: 28px;
+      padding: 36px;
+      margin-top: 34px;
+      text-align: center;
+    }
+    .cta h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+    }
+    .btn-row {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .055em;
+      border-radius: 999px;
+      padding: 14px 28px;
+      transition: .2s;
+    }
+    .btn-red {
+      background: var(--red);
+      color: #fff;
+    }
+    .btn-red:hover {
+      background: #8f2020;
+    }
+    .btn-gold {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+    }
+    footer {
+      background: var(--nav);
+      border-top: 3px solid var(--red);
+      padding: 34px 0;
+      text-align: center;
+      color: #aaa;
+      margin-top: 40px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-bottom: 18px;
+    }
+    .footer-links a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .side-card { position: relative; top: 0; }
+      .hero-container { flex-direction: column; text-align: center; }
+      .hero-copy { border-left: none; border-top: 4px solid var(--gold); border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>ANTI-KRATOM ASSOCIATION</h1>
+      <span>science · accountability · safety</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="evidence/index.html">Evidence</a>
+      <a href="industry/index.html">Industry</a>
+      <a href="action.html">Fight Back</a>
+      <a href="proof.html" class="active">The Insult</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO with IMG_8667.jpeg as hero image (mock representation of raw phone asset) -->
+<section class="hero-split">
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="eyebrow">The hidden accusation</div>
+      <h1>The Insult Hidden Inside the <span>Kratom Argument</span></h1>
+      <div class="hero-copy">
+        <strong>Dear Healthcare Provider: You’re Apparently Incompetent.</strong><br><br>
+        Every legislative hearing: a witness testifies that kratom treated their pain, anxiety, addiction — because doctors “failed.” Lawmakers nod. But beneath the sympathy lies a devastating message: that physicians, pharmacists, and specialists are so useless that patients must turn to vape shops and gas stations. That’s not compassion — that’s a vote of no confidence in the entire medical profession.
+      </div>
+    </div>
+    <div class="hero-right">
+      <!-- Hero image: IMG_8667.jpeg – presented exactly as a raw, unprofessional gallery asset to drive the point -->
+      <div class="hero-img-mock">
+        <div class="mock-thumb">
+          🖼️📱 <span class="file-badge">IMG_8667.jpeg</span>
+        </div>
+        <div style="font-family: monospace; font-size:0.75rem; background:#00000077; border-radius:30px; padding:6px;">2:35 AM • 4.1 MB • “wellness proof”</div>
+        <small>screenshot from pro-kratom gallery • no medical header • no timestamp verification</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <!-- THE RIDICULOUS GALLERY: images saved under the root, exactly as described by the prompt -->
+  <div class="gallery-mock-card">
+    <div class="gallery-title">🗂️ THE “EVIDENCE” SAVED UNDER THE ROOT<br> <span style="font-size:0.9rem;">(What lawmakers accept as “wellness product” justification)</span></div>
+    <div class="image-grid-mock">
+      <div class="mock-img-item"><div class="file-icon">🖼️</div><div class="filename">IMG_8669.jpeg</div><div class="meta">2:35AM • 3.6MB</div></div>
+      <div class="mock-img-item"><div class="file-icon">🌿</div><div class="filename">IMG_7024.jpeg</div><div class="meta">2:35AM • 260KB</div></div>
+      <div class="mock-img-item"><div class="file-icon">📸</div><div class="filename">IMG_6880.jpeg</div><div class="meta">2:35AM • 556KB</div></div>
+      <div class="mock-img-item"><div class="file-icon">🌄</div><div class="filename">IMG_6878.jpeg</div><div class="meta">2:35AM • 496KB</div></div>
+      <div class="mock-img-item"><div class="file-icon">📁</div><div class="filename">IMG_6223.jpeg</div><div class="meta">2:35AM • 348KB</div></div>
+      <div class="mock-img-item"><div class="file-icon">⏳</div><div class="filename">READYTO_export.png</div><div class="meta">2:35AM • 124KB</div></div>
+    </div>
+    <div class="disclaimer-absurd">
+      ⚡ This is the unorganized, unsorted camera roll used to argue that “pure natural kratom is a necessary wellness product.” No diagnostic codes. No doctor’s signature. No treatment plan. No adverse event log. Just 2:35AM snapshots and random file sizes. And yet lawmakers nod and accept that doctors are obsolete.
+    </div>
+  </div>
+
+  <div class="grid">
+    <section>
+      <div class="block">
+        <h2>“Healthcare failed me” — The silent verdict on 2.6 million professionals</h2>
+        <p>When a witness stands before a state Senate committee and says, “Kratom saved my life because nothing else worked,” legislators rarely challenge the implication. But the implication is devastating: <strong>the American healthcare system — with its doctors, nurses, psychologists, pain specialists and addiction medicine — is functionally useless.</strong> That is the hidden insult woven into every pro-kratom sob story that lawmakers use to block regulation.</p>
+        <p>If a lawmaker truly believes that a vape shop powder outperforms decades of medical research, they are voting “no confidence” in every physician who took the Hippocratic oath. Either the system works — or it doesn’t. And if the only answer is a gas station botanical, then the legislator is admitting they’ve allowed healthcare to rot. </p>
+        <h3>The ridiculous double standard: wellness claims vs. medical records</h3>
+        <p>Kratom advocates demand grieving families produce autopsies, toxicology reports, and death certificates. They demand forensic rigor when the outcome is harm. But when someone claims kratom “cures depression” or “manages opioid withdrawal,” they bring a fuzzy selfie and a blurry screenshot taken at 2:35AM (see above). And lawmakers accept it. No physician notes. No treatment history. Just <em>IMG_6880.jpeg</em> and a compelling story.</p>
+        <p>That’s not evidence. That’s an insult to every clinician who spent a decade in training.</p>
+      </div>
+
+      <div class="block">
+        <h2>You cannot have it both ways</h2>
+        <p>Lawmakers cannot stand on a podium and boast about their state’s “world-class healthcare infrastructure” while simultaneously arguing that desperate citizens must rely on head shops because medicine has catastrophically failed them. Either healthcare works, or it doesn’t. If your justification for kratom is “patients have nowhere else to turn,” then you are confessing that your healthcare system is a hollowed-out disaster.</p>
+        <ul class="insult-list">
+          <li><strong>To Physicians:</strong> “Your residency, board exams, and clinical judgment are worth less than a bag of powder next to nicotine vapes.”</li>
+          <li><strong>To Addiction Specialists:</strong> “We trust a convenience store employee more than your MAT protocols.”</li>
+          <li><strong>To Pharmacists:</strong> “Skip the rigorous quality control — unregulated plant matter is fine.”</li>
+          <li><strong>To Pain Management Experts:</strong> “Your multimodal plans are obsolete; just buy unlabeled kratom capsules.”</li>
+        </ul>
+        <p>If the system is broken, fix it. Expand mental health access. Fund addiction medicine. Rebuild pain management. But don’t insult healthcare professionals by pretending the answer is an unregulated botanical sold at gas stations — while propping up “evidence” like a 260KB screenshot saved in a cluttered photo roll.</p>
+      </div>
+
+      <div class="block">
+        <h2>From the gas station to the hearing room: the wellness fantasy</h2>
+        <p>“Pure natural kratom as a wellness product.” That’s the slogan. Yet the “wellness” industry has standards: third-party testing, adverse event reporting, licensed manufacturing. Kratom has none. Its advocates rely on emotional testimony and blurry <strong>IMG_8669.jpeg</strong> shots. Meanwhile, healthcare providers follow evidence-based guidelines, submit to peer review, and accept malpractice liability. The audacity of telling a nurse practitioner that “kratom worked when you couldn’t” — without a single medical record — is breathtaking. But legislators let it slide, because the insult is invisible.</p>
+        <p>No physician should accept this narrative. No pharmacist should stay silent. Every time a lawmaker invokes the “kratom success story,” they should be forced to answer: <strong>“Where are the medical records showing supervised treatment failure and subsequent kratom remission?”</strong> Without them, the story is just a story — and the insult to healthcare stands.</p>
+      </div>
+    </section>
+
+    <aside class="side-card">
+      <h2>Direct insult: Dear healthcare provider</h2>
+      <p>Lawmakers who defend kratom based on “nothing else worked” are publicly calling you incompetent. They are saying your prescription pad, your stethoscope, your referral to a pain clinic — none of it matters compared to a $20 bag from a smoke shop.</p>
+      <p>And to justify that position, they point to images like the ones above: random camera roll exports, timestamped at 2:35AM, with no clinical context.</p>
+      <ul class="mini-list">
+        <li>No ICD-10 diagnosis codes</li>
+        <li>No physician progress notes</li>
+        <li>No objective treatment response data</li>
+        <li>No adverse effect documentation</li>
+        <li>Zero licensed medical oversight</li>
+      </ul>
+      <p><strong>Yet lawmakers accept this as proof that you failed your patients. Are you willing to let that stand?</strong></p>
+      <p style="margin-top: 16px; border-top:1px solid #2a4055; padding-top:14px;">The Anti-Kratom Association calls on every medical board, nursing association, and physician coalition to denounce this insult. Kratom is not medicine. And a handful of unsorted phone images are not evidence of healthcare failure.</p>
+    </aside>
+  </div>
+
+  <div class="cta">
+    <h2>Stop the insult. Fix healthcare, <span>not the gas station.</span></h2>
+    <p>Lawmakers: if patients truly cannot access effective treatment, expand Medicaid, fund addiction services, deploy multidisciplinary pain clinics. But do <strong>not</strong> stand before doctors and tell them a vape shop product outperforms their life’s work — especially when the “proof” looks like a chaotic photo album at 2:35AM.</p>
+    <div class="btn-row">
+      <a class="btn btn-red" href="action.html">Demand healthcare investment</a>
+      <a class="btn btn-gold" href="evidence/index.html">See the real evidence on kratom harms</a>
+    </div>
+    <div class="note" style="margin-top: 28px; color: #bcccd9;">Call your legislator. Ask them: “Do you trust my doctor or a dusty bag of powder from a truck stop? And would you trust blurry IMG_6880.jpeg as clinical proof?”</div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="evidence/index.html">Medical Literature</a>
+    <a href="industry/index.html">Industry Tactics</a>
+    <a href="action.html">Take Action</a>
+    <a href="proof.html">The Insult Archive</a>
+    <a href="about.html">About</a>
+  </div>
+  <div>© 2026 Anti-Kratom Association — No confidence in vape shop medicine. Support real healthcare.</div>
+  <div style="font-size:0.7rem; margin-top:12px;">“The Insult Hidden Inside the Kratom Argument” – originally published at antikratom.org. Healthcare providers deserve better than a 2:35AM screenshot.</div>
+</footer>
+</body>
+</html>
