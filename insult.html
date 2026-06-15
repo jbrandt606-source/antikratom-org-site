@@ -24,427 +24,429 @@
     }
 
     :root {
-      --dark: #070b10;
-      --nav: #0c151f;
-      --panel: #0d1721;
-      --panel2: #101f2b;
-      --red: #b42b2b;
-      --red2: #e04444;
-      --gold: #e4b23e;
-      --text: #ffffff;
-      --muted: #bfc9d4;
-      --line: #263846;
+      --bg-dark: #0a0f16;
+      --surface: #11181f;
+      --surface-light: #1a242f;
+      --text-primary: #ffffff;
+      --text-secondary: #cbd5e6;
+      --accent-red: #bc3f3f;
+      --accent-gold: #dbb42c;
+      --border-dim: #2a3a48;
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: var(--dark);
-      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
       line-height: 1.55;
+      scroll-behavior: smooth;
     }
 
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
     .site-header {
-      background-color: var(--nav);
-      padding: 16px 0;
-      border-bottom: 3px solid var(--red);
+      background: var(--surface);
+      border-bottom: 3px solid var(--accent-red);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .header-inner {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
+    .header-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .logo h1 {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 900;
-      letter-spacing: -.02em;
-      background: linear-gradient(135deg, #fff 60%, var(--gold) 100%);
+      background: linear-gradient(135deg, #fff, var(--accent-gold));
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
+      letter-spacing: -0.02em;
     }
 
     .logo span {
-      display: block;
-      font-size: .85rem;
-      font-weight: 400;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    .nav {
-      display: flex;
-      gap: 1.4rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: .86rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      transition: .2s;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      color: var(--gold);
-    }
-
-    /* Hero section with medical collage */
-    .hero-split {
-      background: radial-gradient(circle at 30% 25%, rgba(180, 43, 43, 0.28), transparent 45%),
-                  linear-gradient(125deg, #081019 0%, #0e1a28 100%);
-      border-bottom: 4px solid var(--red);
-      padding: 70px 0 70px;
-    }
-
-    .hero-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 28px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-
-    .hero-left {
-      flex: 1.2;
-      min-width: 260px;
-    }
-
-    .hero-right {
-      flex: 0.9;
-      min-width: 240px;
-      text-align: center;
-    }
-
-    .hero-medical-mock {
-      background: #0f1822;
-      border-radius: 24px;
-      padding: 16px 12px;
-      border: 1px solid var(--gold);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.5);
-    }
-    .hero-medical-mock .badge-img {
-      font-family: monospace;
-      background: #000000aa;
-      padding: 6px 12px;
-      border-radius: 30px;
-      display: inline-block;
-      font-weight: 800;
       font-size: 0.75rem;
-      letter-spacing: 0;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .hero-medical-mock img {
-      max-width: 100%;
-      border-radius: 16px;
-      margin-top: 8px;
-      border: 1px solid rgba(228,178,62,0.4);
-    }
-    .hero-right small {
+      color: var(--text-secondary);
       display: block;
-      color: var(--muted);
-      font-size: 0.7rem;
-      margin-top: 12px;
     }
 
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      border: 1px solid rgba(228, 178, 62, .55);
-      background: rgba(228, 178, 62, .08);
-      padding: 8px 14px;
-      border-radius: 999px;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-gold);
+    }
+
+    /* Hero split layout */
+    .hero {
+      max-width: 1280px;
+      margin: 2.5rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .8rem;
-      margin-bottom: 22px;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+      border-left: 3px solid var(--accent-red);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .hero-left h1 {
-      font-size: clamp(2.45rem, 6vw, 4.8rem);
-      line-height: 1.02;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -.055em;
-      margin-bottom: 20px;
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
     }
 
-    .hero-left h1 span {
-      color: var(--gold);
-      border-bottom: 5px solid var(--red);
+    .hero-content h1 span {
+      color: var(--accent-gold);
+      border-bottom: 4px solid var(--accent-red);
     }
 
-    .hero-copy {
-      font-size: 1.15rem;
-      color: #eef2ff;
-      background: rgba(0, 0, 0, .4);
-      border-left: 6px solid var(--gold);
-      padding: 20px 28px;
-      border-radius: 0 24px 24px 0;
-      font-weight: 550;
-      margin-top: 10px;
+    .hero-subhead {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-red);
+      margin-bottom: 1.25rem;
     }
 
+    .hero-summary {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--accent-gold);
+      border-radius: 0 1rem 1rem 0;
+    }
+
+    .hero-image {
+      flex: 0.9;
+      background: var(--surface-light);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-dim);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-caption {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      padding: 0.75rem;
+      background: rgba(0, 0, 0, 0.5);
+      letter-spacing: 0.3px;
+    }
+
+    /* Main container */
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 48px 28px;
+      padding: 2rem 2rem 3rem;
     }
 
-    /* gallery of kratom evidence: actual images */
-    .gallery-mock-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      padding: 28px;
-      margin-bottom: 48px;
-      box-shadow: 0 18px 35px -12px black;
+    /* Evidence gallery */
+    .gallery-section {
+      background: var(--surface);
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border: 1px solid var(--border-dim);
     }
-    .gallery-title {
-      font-size: 1.4rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -.02em;
-      color: var(--gold);
-      border-left: 5px solid var(--red);
-      padding-left: 20px;
-      margin-bottom: 24px;
-    }
-    .image-grid-mock {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 20px;
-    }
-    .mock-ad-item {
-      background: #0a1118;
-      border-radius: 24px;
-      padding: 16px;
-      border: 1px solid #2a3a48;
-      transition: 0.1s;
-      text-align: center;
-    }
-    .mock-ad-item img {
-      max-width: 100%;
-      border-radius: 16px;
-      margin-bottom: 12px;
-      border: 1px solid #3a4a58;
-    }
-    .mock-ad-item .filename {
-      font-family: 'SF Mono', monospace;
+
+    .section-title {
+      font-size: 1.8rem;
       font-weight: 800;
-      background: #00000099;
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      color: #ffd966;
-    }
-    .mock-ad-item .description {
-      font-size: 0.85rem;
-      color: #ccdeee;
-      margin: 12px 0 6px;
-      line-height: 1.4;
-    }
-    .timestamp-meta {
-      font-size: 0.65rem;
-      color: #9aafc5;
-      border-top: 1px dashed #2a4055;
-      margin-top: 8px;
-      padding-top: 8px;
-    }
-    .disclaimer-absurd {
-      background: #1e1b10;
-      margin-top: 28px;
-      padding: 16px;
-      border-radius: 18px;
-      font-weight: 600;
-      border-left: 5px solid var(--red2);
+      border-left: 5px solid var(--accent-red);
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--text-primary);
     }
 
-    .grid {
+    .gallery-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 28px;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
     }
 
-    .block {
-      background: rgba(13, 23, 33, .94);
-      border: 1px solid var(--line);
-      border-left: 6px solid var(--red);
-      border-radius: 0 28px 28px 0;
-      padding: 34px 38px;
-      margin-bottom: 28px;
+    .evidence-card {
+      background: var(--bg-dark);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      border: 1px solid var(--border-dim);
+      transition: transform 0.2s;
     }
 
-    .block h2 {
-      color: var(--gold);
-      font-size: 2rem;
-      line-height: 1.15;
-      font-weight: 900;
-      letter-spacing: -.03em;
-      margin-bottom: 18px;
+    .evidence-card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .block h3 {
-      font-size: 1.35rem;
+    .evidence-card .card-content {
+      padding: 1rem;
+    }
+
+    .evidence-card .desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .evidence-card .meta {
+      font-size: 0.7rem;
+      color: #7f8fa4;
+      font-family: monospace;
+    }
+
+    .absurd-note {
+      background: #1c1a1a;
+      border-left: 5px solid var(--accent-red);
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 0.75rem;
+      font-weight: 500;
+      color: #f0e6d0;
+    }
+
+    /* Two column layout */
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .main-article {
+      background: var(--surface);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 1px solid var(--border-dim);
+    }
+
+    .main-article h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+
+    .main-article h3 {
+      font-size: 1.3rem;
+      margin: 1.5rem 0 0.75rem;
       color: #fff;
-      margin: 28px 0 14px;
-      font-weight: 850;
     }
 
-    .block p {
-      color: #edf4ff;
-      font-size: 1.08rem;
-      margin-bottom: 18px;
+    .main-article p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 1rem;
     }
 
     .insult-list {
       list-style: none;
-      margin: 18px 0;
+      margin: 1.25rem 0;
     }
+
     .insult-list li {
       position: relative;
-      padding-left: 30px;
-      margin-bottom: 14px;
-      font-weight: 550;
-      color: #f0f3fa;
+      padding-left: 1.75rem;
+      margin-bottom: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
     }
+
     .insult-list li::before {
       content: ">";
       position: absolute;
       left: 0;
-      top: -1px;
-      font-size: 1rem;
-      color: var(--gold);
-      font-weight: 900;
+      color: var(--accent-gold);
+      font-weight: 800;
     }
 
-    .side-card {
-      background: linear-gradient(180deg, #132433, #0b141d);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 30px;
+    .sidebar {
+      background: linear-gradient(145deg, #101a24, #0a1118);
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      border: 1px solid var(--border-dim);
       position: sticky;
-      top: 20px;
-    }
-    .side-card h2 {
-      color: var(--gold);
-      font-size: 1.75rem;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      font-weight: 900;
-    }
-    .side-card p {
-      color: #edf4ff;
-      margin-bottom: 18px;
-    }
-    .mini-list {
-      margin: 20px 0;
-      list-style: none;
-    }
-    .mini-list li {
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding: 13px 0;
-      font-weight: 700;
+      top: 6rem;
+      height: fit-content;
     }
 
-    .cta {
-      background: #070d13;
-      border: 2px solid var(--gold);
-      border-radius: 28px;
-      padding: 36px;
-      margin-top: 34px;
+    .sidebar h2 {
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+    }
+
+    .sidebar p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .sidebar-list li {
+      padding: 0.8rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 600;
+    }
+
+    .cta-box {
+      background: #0e161f;
+      border: 2px solid var(--accent-gold);
+      border-radius: 1.5rem;
+      padding: 2rem;
       text-align: center;
+      margin-top: 2rem;
     }
-    .cta h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -.04em;
+
+    .cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    .btn-row {
+
+    .button-group {
       display: flex;
-      gap: 18px;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 26px;
+      margin-top: 1.5rem;
     }
+
     .btn {
       display: inline-block;
-      text-decoration: none;
-      font-weight: 900;
+      padding: 0.8rem 1.8rem;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .055em;
-      border-radius: 999px;
-      padding: 14px 28px;
-      transition: .2s;
+      letter-spacing: 0.05em;
+      border-radius: 3rem;
+      transition: all 0.2s;
+      font-size: 0.85rem;
     }
-    .btn-red {
-      background: var(--red);
-      color: #fff;
+
+    .btn-primary {
+      background: var(--accent-red);
+      color: white;
     }
-    .btn-red:hover {
-      background: #8f2020;
+
+    .btn-primary:hover {
+      background: #9a2e2e;
     }
-    .btn-gold {
-      border: 2px solid var(--gold);
-      color: var(--gold);
+
+    .btn-secondary {
+      border: 2px solid var(--accent-gold);
+      color: var(--accent-gold);
       background: transparent;
     }
-    footer {
-      background: var(--nav);
-      border-top: 3px solid var(--red);
-      padding: 34px 0;
-      text-align: center;
-      color: #aaa;
-      margin-top: 40px;
+
+    .btn-secondary:hover {
+      background: rgba(219, 180, 44, 0.1);
     }
+
+    footer {
+      background: var(--surface);
+      border-top: 3px solid var(--accent-red);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
     .footer-links {
       display: flex;
       justify-content: center;
+      gap: 2rem;
       flex-wrap: wrap;
-      gap: 22px;
-      margin-bottom: 18px;
+      margin-bottom: 1rem;
     }
+
     .footer-links a {
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 700;
+      color: var(--accent-gold);
+      font-weight: 600;
     }
-    @media (max-width: 900px) {
-      .grid {
+
+    @media (max-width: 860px) {
+      .two-columns {
         grid-template-columns: 1fr;
       }
-      .side-card { position: relative; top: 0; }
-      .hero-container { flex-direction: column; text-align: center; }
-      .hero-copy { border-left: none; border-top: 4px solid var(--gold); border-radius: 24px; }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .sidebar {
+        position: static;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 <header class="site-header">
-  <div class="header-inner">
+  <div class="header-container">
     <div class="logo">
       <h1>ANTI-KRATOM ASSOCIATION</h1>
-      <span>healthcare · evidence · accountability</span>
+      <span>evidence based advocacy · public health</span>
     </div>
-    <nav class="nav">
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="evidence/index.html">Evidence</a>
       <a href="industry/index.html">Industry</a>
@@ -455,118 +457,113 @@
   </div>
 </header>
 
-<!-- Hero section with IMG_8667.png as hero image (medical collage) -->
-<section class="hero-split">
-  <div class="hero-container">
-    <div class="hero-left">
-      <div class="eyebrow">The hidden accusation</div>
+<!-- Hero section with title superimposed on left side, medical image on right -->
+<div class="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-label">The hidden accusation</div>
       <h1>The Insult Hidden Inside the <span>Kratom Argument</span></h1>
-      <div class="hero-copy">
-        <strong>Dear Healthcare Provider: You Are Apparently Incompetent.</strong><br><br>
-        Every legislative hearing arrives at the same moment. A witness stands before lawmakers and explains that kratom saved them. It treated their pain, anxiety, depression, opioid use disorder. It succeeded where doctors failed. The room nods sympathetically. But few stop to consider the extraordinary accusation hidden inside that testimony. Because if lawmakers truly believe these stories justify keeping kratom on store shelves, then they are also accepting a remarkable conclusion: that healthcare providers are so ineffective, so inaccessible, or so indifferent that patients have no choice but to seek treatment from a vape shop.
+      <div class="hero-subhead">Dear Healthcare Provider: You Are Apparently Incompetent</div>
+      <div class="hero-summary">
+        Every legislative hearing on kratom eventually arrives at the same moment. A witness stands before lawmakers and explains that kratom saved them. It treated their pain, anxiety, depression, opioid use disorder. It succeeded where doctors failed. The room nods sympathetically. Few people stop to consider the extraordinary accusation hidden inside that testimony. Because if lawmakers truly believe these stories justify keeping kratom on store shelves, then they are also accepting a remarkable conclusion: that healthcare providers are so ineffective, so inaccessible, or so indifferent that patients have no choice but to seek treatment from a vape shop.
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-medical-mock">
-        <div><span class="badge-img">IMG_8667.png · Today 2:37 AM</span></div>
-        <img src="/IMG_8667.png" alt="Medical collage showing surgeons in operating room, nurses caring for patient, physicians consulting, pharmacist reviewing medications" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_8667.png%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div style="font-size:0.8rem; background:#00000066; border-radius: 20px; padding: 8px; margin-top: 8px;">
-          Real healthcare. Decades of training. Evidence based practice.
-        </div>
-        <small>Medical collage (IMG_8667.png) — the gold standard of care. Compare with kratom's "proof" below.</small>
-      </div>
+    <div class="hero-image">
+      <img src="/IMG_8667.png" alt="Medical collage showing surgeons in operating room, nurses caring for a patient, physicians consulting, and a pharmacist reviewing medications">
+      <div class="image-caption">The standard of care: years of training, peer review, accountability. What lawmakers call “inadequate”.</div>
     </div>
   </div>
-</section>
+</div>
 
 <main class="container">
-  <!-- The absurd gallery: actual images from the root directory -->
-  <div class="gallery-mock-card">
-    <div class="gallery-title">THE "EVIDENCE" KRATOM ADVOCATES SUBMIT TO LAWMAKERS</div>
-    <div class="image-grid-mock">
-      <div class="mock-ad-item">
-        <img src="/IMG_7024.jpeg" alt="Social media advertisement with young women outdoors and headline With a secret ingredient" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_7024.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div><span class="filename">IMG_7024.jpeg</span></div>
-        <div class="description">Social media advertisement featuring young women outdoors with the headline "With a secret ingredient". Marketing a beverage or supplement product. No medical claims, no physician oversight.</div>
-        <div class="timestamp-meta">2:35 AM · 260 KB</div>
+  <!-- Gallery of absurd “evidence” – social media ads and pink hippo -->
+  <div class="gallery-section">
+    <div class="section-title">The “proof” that medicine has failed</div>
+    <div class="gallery-grid">
+      <div class="evidence-card">
+        <img src="/IMG_7024.jpeg" alt="Social media advertisement with young women outdoors and headline With a secret ingredient">
+        <div class="card-content">
+          <div class="desc">Social media advertisement: “With a secret ingredient”. A vague wellness beverage post. No clinical data, no physician oversight.</div>
+          <div class="meta">Captured 2:35 AM · 260 KB</div>
+        </div>
       </div>
-      <div class="mock-ad-item">
-        <img src="/IMG_6880.jpeg" alt="Social media advertisement for premium kratom shots showing multiple bottled products" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6880.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div><span class="filename">IMG_6880.jpeg</span></div>
-        <div class="description">Social media advertisement for kratom shots. Displays multiple bottled products with text promoting "premium kratom shots." Unregulated, unverified potency.</div>
-        <div class="timestamp-meta">2:35 AM · 556 KB</div>
+      <div class="evidence-card">
+        <img src="/IMG_6880.jpeg" alt="Kratom shot advertisement with multiple bottled products">
+        <div class="card-content">
+          <div class="desc">Premium kratom shots advertisement. Unregulated potency, no safety studies, promoted alongside recreational products.</div>
+          <div class="meta">Captured 2:35 AM · 556 KB</div>
+        </div>
       </div>
-      <div class="mock-ad-item">
-        <img src="/IMG_6878.jpeg" alt="Social media advertisement with people holding colorful bottles and headline READY TO LEVEL UP" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6878.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div><span class="filename">IMG_6878.jpeg</span></div>
-        <div class="description">Social media advertisement featuring people holding brightly colored beverage bottles with the headline "READY TO LEVEL UP?" Marketing an energy or wellness drink.</div>
-        <div class="timestamp-meta">2:35 AM · 496 KB</div>
+      <div class="evidence-card">
+        <img src="/IMG_6878.jpeg" alt="Energy drink style advertisement with headline READY TO LEVEL UP">
+        <div class="card-content">
+          <div class="desc">“READY TO LEVEL UP?” Bright energy drink marketing aimed at young adults. No mention of dependence or adverse effects.</div>
+          <div class="meta">Captured 2:35 AM · 496 KB</div>
+        </div>
       </div>
-      <div class="mock-ad-item">
-        <img src="/IMG_6223.jpeg" alt="Plush pink hippopotamus on grass surrounded by pink product packages" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23111%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%23e4b23e%22%3EIMG_6223.jpeg%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <div><span class="filename">IMG_6223.jpeg</span></div>
-        <div class="description">Plush pink hippopotamus lying on grass surrounded by multiple pink product packages arranged around it. Promotional style product photo. A stuffed animal as medical evidence.</div>
-        <div class="timestamp-meta">2:35 AM · 348 KB</div>
+      <div class="evidence-card">
+        <img src="/IMG_6223.jpeg" alt="Plush pink hippopotamus surrounded by pink product packages">
+        <div class="card-content">
+          <div class="desc">A pink plush hippopotamus surrounded by product packages. A stuffed animal presented as promotional content for a “wellness” product.</div>
+          <div class="meta">Captured 2:35 AM · 348 KB</div>
+        </div>
       </div>
     </div>
-    <div class="disclaimer-absurd">
-      This is what legislators accept as justification for keeping kratom legal. Random social media ads, a "secret ingredient" wink, and a pink hippopotamus. Meanwhile healthcare professionals dedicate their lives to evidence. Yet lawmakers nod at these images and tell doctors they have failed.
+    <div class="absurd-note">
+      This is the collection of images that lawmakers are shown to argue that “pure natural kratom is a necessary wellness product”. No diagnostic codes, no treatment plans, no physician signatures. Just social media ads, a secret ingredient wink, and a stuffed hippopotamus. And yet legislators nod and accept that healthcare has failed.
     </div>
   </div>
 
-  <div class="grid">
-    <section>
-      <div class="block">
-        <h2>"Healthcare Failed Me" is a Vote of No Confidence</h2>
-        <p>For decades, physicians, pharmacists, nurses, psychologists, addiction specialists, physical therapists, and pain specialists have devoted their careers to treating these conditions. Entire healthcare systems exist to manage chronic pain, depression, anxiety disorders, substance use disorders, and countless other medical conditions.</p>
-        <p>Yet every time a lawmaker repeats the claim that kratom is necessary because "it helps people when nothing else works," they are implicitly telling healthcare professionals that their work is inadequate. They are saying that a bag of unregulated powder sold next to energy drinks accomplishes what modern medicine cannot. They are saying that patients suffering from addiction are better served by a convenience store than by addiction specialists. They are saying that the healthcare system they oversee is so threadbare that desperate patients must turn to gas stations for relief.</p>
-        <h3>You Cannot Have It Both Ways</h3>
-        <p>Lawmakers cannot praise their state's healthcare infrastructure while simultaneously arguing that people must rely on products sold at convenience stores because medicine has failed them. Either healthcare works, or it does not. And if the argument for kratom is that patients have nowhere else to turn, then lawmakers should stop defending kratom and start asking why they have allowed a system to exist in which a gas station is viewed as a healthcare destination.</p>
-        <ul class="insult-list">
-          <li>To physicians: Your residency, board exams, and clinical judgment are worth less than a bag of powder next to nicotine vapes.</li>
-          <li>To addiction specialists: We trust a convenience store employee more than your MAT protocols.</li>
-          <li>To pharmacists: Skip rigorous quality control; unregulated plant matter is fine.</li>
-          <li>To pain management experts: Your multimodal plans are obsolete; just buy unlabeled kratom capsules.</li>
-        </ul>
-        <p>No physician should accept that narrative. No pharmacist should accept that narrative. No healthcare professional should accept being told that years of education, training, and evidence based practice are less valuable than whatever happens to be available behind the counter at a vape shop. And no lawmaker should accept it either.</p>
-      </div>
+  <!-- Two column argument section -->
+  <div class="two-columns">
+    <div class="main-article">
+      <h2>“Healthcare failed me” is a vote of no confidence</h2>
+      <p>For decades, physicians, pharmacists, nurses, psychologists, addiction specialists, physical therapists, and pain specialists have devoted their careers to treating these conditions. Entire healthcare systems exist to manage chronic pain, depression, anxiety disorders, substance use disorders, and countless other medical conditions.</p>
+      <p>Yet every time a lawmaker repeats the claim that kratom is necessary because “it helps people when nothing else works,” they are implicitly telling healthcare professionals that their work is inadequate. They are saying that a bag of unregulated powder sold next to energy drinks and nicotine vapes accomplishes what modern medicine cannot. They are saying that patients suffering from addiction are better served by a convenience store than by addiction specialists. They are saying that the healthcare system they oversee is so threadbare that desperate patients must turn to gas stations for relief.</p>
+      
+      <h3>You cannot have it both ways</h3>
+      <p>Lawmakers cannot praise their state’s healthcare infrastructure while simultaneously arguing that people must rely on products sold at convenience stores because medicine has failed them. Either healthcare works, or it does not. And if the argument for kratom is that patients have nowhere else to turn, then lawmakers should stop defending kratom and start asking why they have allowed a system to exist in which a gas station is viewed as a healthcare destination.</p>
+      
+      <ul class="insult-list">
+        <li>To physicians: Your residency, board exams, and clinical judgment are worth less than a bag of powder next to nicotine vapes.</li>
+        <li>To addiction specialists: We trust a convenience store employee more than your medication assisted treatment protocols.</li>
+        <li>To pharmacists: Skip rigorous quality control; unregulated plant matter is fine.</li>
+        <li>To pain management experts: Your multimodal plans are obsolete; just buy unlabeled kratom capsules.</li>
+      </ul>
+      
+      <h3>The double standard: autopsies for harm, selfies for benefit</h3>
+      <p>Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They demand grieving families prove every detail. They demand forensic rigor when the outcome is harm.</p>
+      <p>But when a witness claims kratom treated their chronic pain, anxiety, depression, or opioid use disorder, the “evidence” is often a social media ad saved to a camera roll at 2:35 AM. No physician notes. No treatment history. No objective outcome measures. Just a pink hippopotamus and an emotional testimony.</p>
+      <p>If lawmakers truly believe these stories justify keeping kratom on store shelves, then they should apply the same standard: every pro kratom witness should be required to submit medical documentation showing the diagnosis, prior treatment failures, and a licensed healthcare provider’s note that kratom was the solution. Otherwise, the testimony is no different from a stuffed animal advertisement.</p>
+      
+      <h3>The solution is not a vape shop. It is fixing healthcare.</h3>
+      <p>If patients cannot access effective treatment for pain, addiction, anxiety, or depression, then the solution is not to preserve an unregulated retail drug market. The solution is to improve healthcare access. If treatment is unavailable, expand treatment. If addiction care is inaccessible, fund addiction care. If pain management is inadequate, fix pain management. If mental health services are difficult to obtain, increase mental health services.</p>
+      <p>But do not tell healthcare professionals that the answer is a product sold in vape shops and gas stations. That is not a vote of confidence in patients. It is a vote of no confidence in the healthcare system.</p>
+    </div>
 
-      <div class="block">
-        <h2>The Double Standard: Autopsies for Harm, Selfies for Benefit</h2>
-        <p>Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They demand grieving families prove every detail. They demand forensic rigor when the outcome is harm.</p>
-        <p>But when a witness claims kratom treated their chronic pain, anxiety, depression, or opioid use disorder, the "evidence" is often a social media ad saved to camera roll at 2:35 AM. No physician notes. No treatment history. No objective outcome measures. Just a pink hippopotamus and an emotional testimony.</p>
-        <p>If lawmakers truly believe these stories justify keeping kratom on store shelves, then they should apply the same standard: every pro kratom witness should be required to submit medical documentation showing the diagnosis, prior treatment failures, and a licensed healthcare provider's note that kratom was the solution. Otherwise, the testimony is no different from a stuffed animal advertisement.</p>
-      </div>
-
-      <div class="block">
-        <h2>The Solution is Not a Vape Shop. It is Fixing Healthcare.</h2>
-        <p>If patients cannot access effective treatment for pain, addiction, anxiety, or depression, then the solution is not to preserve an unregulated retail drug market. The solution is to improve healthcare access. If treatment is unavailable, expand treatment. If addiction care is inaccessible, fund addiction care. If pain management is inadequate, fix pain management. If mental health services are difficult to obtain, increase mental health services.</p>
-        <p>But do not tell healthcare professionals that the answer is a product sold in vape shops and gas stations. That is not a vote of confidence in patients. It is a vote of no confidence in the healthcare system.</p>
-      </div>
-    </section>
-
-    <aside class="side-card">
-      <h2>Direct Message to Lawmakers</h2>
-      <p>You are being asked to believe that a product promoted alongside "secret ingredient" emojis and plush toys outperforms surgeons, psychiatrists, and board certified pain doctors. That is an insult to every healthcare professional in your state.</p>
-      <ul class="mini-list">
+    <aside class="sidebar">
+      <h2>Direct message to lawmakers</h2>
+      <p>You are being asked to believe that a product promoted alongside “secret ingredient” posts and a plush pink hippopotamus outperforms surgeons, psychiatrists, and board certified pain doctors. That is an insult to every healthcare professional in your state.</p>
+      <ul class="sidebar-list">
         <li>Show the medical records, not the social media ads.</li>
-        <li>Show the physician's diagnosis and treatment failure.</li>
+        <li>Show the physician’s diagnosis and treatment failure.</li>
         <li>Show the objective improvement under medical supervision.</li>
         <li>Stop accepting IMG_7024.jpeg as clinical evidence.</li>
       </ul>
       <p>If grieving families are expected to produce autopsies and toxicology reports, then pro kratom witnesses should be willing to submit medical documentation to the legislators, boards, and committees they are trying to influence. One standard. Not two.</p>
-      <p style="margin-top: 18px; border-top:1px solid #2a4055; padding-top:14px;">The Anti-Kratom Association calls on medical boards to reject this insult. Demand that every pro kratom witness submit their full medical records to the legislative body, or stop pretending that healthcare has failed.</p>
+      <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-dim);"><strong>The Anti-Kratom Association calls on medical boards to reject this insult.</strong> Demand that every pro kratom witness submit their full medical records to the legislative body, or stop pretending that healthcare has failed.</p>
     </aside>
   </div>
 
-  <div class="cta">
-    <h2>Stop the Insult. Invest in Real Healthcare.</h2>
+  <!-- Call to action -->
+  <div class="cta-box">
+    <h2>Stop the insult. Invest in real healthcare.</h2>
     <p>Lawmakers: expand treatment. Fund addiction medicine. Strengthen pain management. Do not tell physicians they are incompetent while accepting social media ads as proof. Demand medical records, not camera roll screenshots taken at 2:35 AM.</p>
-    <div class="btn-row">
-      <a class="btn btn-red" href="action.html">Demand Healthcare Investment</a>
-      <a class="btn btn-gold" href="evidence/index.html">Review the Evidence on Kratom Harms</a>
+    <div class="button-group">
+      <a href="action.html" class="btn btn-primary">Demand healthcare investment</a>
+      <a href="evidence/index.html" class="btn btn-secondary">Review kratom harm evidence</a>
     </div>
-    <div class="note" style="margin-top: 28px; color: #bcccd9;">Ask your legislator: will you accept a pink hippopotamus as medical evidence? Or will you respect our doctors, nurses, and pharmacists?</div>
+    <p style="font-size: 0.8rem; margin-top: 1.5rem; color: #9aaec5;">Ask your legislator: will you accept a pink hippopotamus as medical evidence? Or will you respect our doctors, nurses, and pharmacists?</p>
   </div>
 </main>
 
@@ -580,7 +577,7 @@
     <a href="about.html">About</a>
   </div>
   <div>© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. No confidence in vape shop medicine. Respect healthcare professionals.</div>
-  <div style="font-size:0.7rem; margin-top:12px;">"The Insult Hidden Inside the Kratom Argument" — antikratom.org. Real evidence matters. A pink hippopotamus does not replace a pharmacist.</div>
+  <div style="font-size:0.7rem; margin-top:0.8rem;">“The Insult Hidden Inside the Kratom Argument” — antikratom.org. Real evidence matters. A pink hippopotamus does not replace a pharmacist.</div>
 </footer>
 </body>
 </html>
