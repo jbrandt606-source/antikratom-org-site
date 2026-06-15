@@ -391,73 +391,80 @@
       background: #8f2020;
     }
 
-    /* NEW CAMPAIGN CALLOUT (between plant and ethanol) */
-    .campaign-callout {
-      background: #0c151f;
-      border-left: 5px solid #e4b23e;
-      padding: 28px 32px;
+    /* ===== NEW CAMPAIGN CARDS (compact bullet point stories) ===== */
+    .campaigns-section {
       margin: 40px 0;
-      border-radius: 0 24px 24px 0;
-      box-shadow: 0 12px 24px -10px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
+      padding: 12px 0;
+      border-top: 1px solid #d0dbc2;
+      border-bottom: 1px solid #d0dbc2;
     }
-    .campaign-callout h3 {
-      font-size: 1.8rem;
+    .campaigns-heading {
+      font-size: 1.6rem;
       font-weight: 800;
-      color: #fff;
-      margin-bottom: 12px;
+      color: #1f3b2c;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
+    }
+    .campaigns-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: flex-start;
+    }
+    .campaign-card {
+      flex: 1;
+      min-width: 240px;
+      background: #fafdf5;
+      border-left: 4px solid #b42b2b;
+      padding: 1.2rem 1.4rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: all 0.15s;
+    }
+    .campaign-card:hover {
+      background: #ffffff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      border-left-width: 6px;
+    }
+    .campaign-card h4 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #1f3627;
       letter-spacing: -0.2px;
     }
-    .campaign-callout p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #eef2ff;
-    }
-    .campaign-callout .btn-callout {
-      background-color: #b42b2b;
-      color: white;
-      padding: 12px 32px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 700;
-      text-transform: uppercase;
-      display: inline-block;
-      transition: background 0.2s;
+    .campaign-card p {
       font-size: 0.9rem;
+      color: #2c4239;
+      margin-bottom: 1rem;
+      line-height: 1.45;
     }
-    .campaign-callout .btn-callout:hover {
-      background-color: #8f2020;
-    }
-    .campaign-callout .small-note {
-      font-size: 0.85rem;
-      color: #bfc9d4;
-      margin-top: 16px;
-    }
-
-    .simple-alert {
-      padding: 8px 0 8px 28px;
-      border-left: 3px solid #e4b23e;
-      margin: 40px 0;
-    }
-    .simple-alert h4 {
-      font-size: 1.5rem;
-      font-weight: 800;
+    .campaign-link {
+      font-weight: 700;
+      text-decoration: none;
       color: #b42b2b;
-      margin-bottom: 8px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
     }
-    .simple-alert p {
-      margin-bottom: 12px;
+    .campaign-link::after {
+      content: "→";
       font-size: 1rem;
     }
-    .inline-link {
-      font-weight: 700;
-      color: #b42b2b;
-      text-decoration: none;
-    }
-    .inline-link:hover {
+    .campaign-link:hover {
+      gap: 10px;
       text-decoration: underline;
     }
+    @media (max-width: 800px) {
+      .campaigns-grid { flex-direction: column; }
+    }
 
+    /* simple alert replaced, keep ethanol only if needed, but we removed it */
+    
     /* full width sections */
     .full-width-section {
       background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
@@ -506,7 +513,6 @@
       padding-left: 28px;
       position: relative;
     }
-    /* emoji replaced with plain X */
     .industry-list li::before {
       content: "✗";
       position: absolute;
@@ -666,8 +672,6 @@
       .hero h2 { font-size: 2rem; }
       .hero-sub { font-size: 1.1rem; }
       .message-section { padding-left: 20px; }
-      .campaign-callout { padding: 20px; }
-      .campaign-callout h3 { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -706,6 +710,7 @@
       <a href="evidence/index.html">EVIDENCE</a>
       <a href="industry/index.html">INDUSTRY</a>
       <a href="action.html">FIGHT BACK</a>
+      <a href="insult.html">THE INSULT</a>  <!-- new link to insult.html -->
       <a href="congress.html">CONGRESS</a>
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
@@ -775,20 +780,29 @@
       <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
     </div>
 
-    <!-- NEW CAMPAIGN CALLOUT: Medical Records Challenge (between plant and ethanol) -->
-    <div class="campaign-callout">
-      <h3>One Standard. Not Two.</h3>
-      <p>Kratom advocates demand autopsies, toxicology reports, and medical records from grieving families. They dissect every death certificate. They demand proof of harm.<br><strong>Then let's apply the same standard to claims of benefit.</strong></p>
-      <p>If kratom “saved your life” or “treated your pain” — show your medical records to your legislators. Show the diagnosis. Show the physician notes. Show the documented improvement.<br>We are not collecting records. This is a campaign to demand equal evidence. <strong>Send your medical records directly to your state lawmakers.</strong></p>
-      <a href="proof.html" class="btn-callout">Join the Medical Records Challenge →</a>
-      <div class="small-note">Learn how to submit your records to legislators and demand evidence-based policy.</div>
-    </div>
-
-    <!-- ETHANOL URGENT -->
-    <div class="simple-alert">
-      <h4>URGENT: ETHANOL DETECTED IN RETAIL KRATOM SHOTS</h4>
-      <p>Independent lab tests have identified ethanol in multiple kratom extract products – some at levels far exceeding accepted limits. In Kansas, similar products were treated as alcoholic beverages after testing.</p>
-      <p><strong>Are these products being sold in your state without alcohol oversight?</strong><br> <a href="etoh.html" class="inline-link">→ Review the evidence and contact your state alcohol board now</a></p>
+    <!-- NEW COMPACT SECTION: three smaller bullet point stories (Proof, EtOH, Insult) -->
+    <div class="campaigns-section">
+      <div class="campaigns-heading">Key investigations & policy pillars</div>
+      <div class="campaigns-grid">
+        <!-- Proof / Medical Records Challenge -->
+        <div class="campaign-card">
+          <h4>Medical Records Challenge</h4>
+          <p>Kratom advocates demand autopsies and toxicology for harm – but offer only anecdotes for benefit. We demand one standard. Show your medical records to lawmakers, not just testimony.</p>
+          <a href="proof.html" class="campaign-link">One standard. Not two.</a>
+        </div>
+        <!-- Ethanol / ETOH -->
+        <div class="campaign-card">
+          <h4>Ethanol in kratom shots</h4>
+          <p>Independent lab tests found ethanol in retail kratom extracts – some at levels exceeding alcohol beverage limits. Are these being sold without alcohol oversight?</p>
+          <a href="etoh.html" class="campaign-link">Review evidence →</a>
+        </div>
+        <!-- Insult (The Insult Hidden in Plain Sight) -->
+        <div class="campaign-card">
+          <h4>The Insult Hidden in Plain Sight</h4>
+          <p>When lawmakers accept kratom anecdotes as medical evidence, they vote “no confidence” in every physician, nurse and pharmacist. A policy commentary for legislators and healthcare professionals.</p>
+          <a href="insult.html" class="campaign-link">Read the commentary →</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -877,6 +891,7 @@
       <a href="evidence/index.html">EVIDENCE</a>
       <a href="industry/index.html">INDUSTRY NARRATIVES</a>
       <a href="action.html">FIGHT BACK</a>
+      <a href="insult.html">THE INSULT</a>
       <a href="congress.html">CONGRESS</a>
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
