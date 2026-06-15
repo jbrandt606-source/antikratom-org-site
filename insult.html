@@ -100,7 +100,7 @@
       color: var(--gold);
     }
 
-    /* Hero split with integrated medical image on the right */
+    /* Hero section - text only, no image */
     .hero-split {
       background: radial-gradient(circle at 30% 25%, rgba(180, 43, 43, 0.28), transparent 45%),
                   linear-gradient(125deg, #081019 0%, #0e1a28 100%);
@@ -112,39 +112,11 @@
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 28px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      flex-wrap: wrap;
     }
 
     .hero-left {
-      flex: 1.2;
-      min-width: 260px;
-    }
-
-    .hero-right {
-      flex: 0.9;
-      min-width: 200px;
-      text-align: center;
-    }
-
-    /* Medical image: no frame, no border, no shadow, integrated */
-    .hero-right img {
-      max-width: 100%;
-      display: block;
-      width: 100%;
-      height: auto;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-      transition: none;
-      background: transparent;
+      max-width: 900px;
       margin: 0 auto;
-    }
-
-    .hero-right img:hover {
-      transform: none;
     }
 
     .eyebrow {
@@ -193,7 +165,7 @@
       padding: 48px 28px;
     }
 
-    /* Evidence gallery card (like screenshot-card but for multiple images) */
+    /* Evidence gallery card */
     .evidence-grid {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -465,10 +437,6 @@
       .block {
         padding: 28px 24px;
       }
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
       .hero-left {
         text-align: center;
       }
@@ -481,10 +449,6 @@
       .eyebrow {
         margin-left: auto;
         margin-right: auto;
-      }
-      .hero-right img {
-        max-width: 260px;
-        margin: 0 auto;
       }
     }
   </style>
@@ -507,7 +471,7 @@
   </div>
 </header>
 
-<!-- Hero: left text, right image (IMG_8667.png) integrated -->
+<!-- Hero: text only, no image -->
 <section class="hero-split">
   <div class="hero-container">
     <div class="hero-left">
@@ -519,16 +483,13 @@
         Patient suffering is real. No one should dismiss it. But lawmakers should be careful about what they are being asked to accept. When a retail kratom advocate says this product treated pain, anxiety, depression, or opioid withdrawal after medicine failed, that is not just a personal story. It is also an accusation about the healthcare system. It asks legislators to believe that an unregulated product sold in convenience stores is a reasonable substitute for trained clinicians, licensed pharmacies, documented treatment plans, and accountable medical care.
       </div>
     </div>
-    <div class="hero-right">
-      <img src="/IMG_8667.png" alt="Medical collage: surgeons in operating room, nurses caring for a patient, physicians consulting, pharmacist reviewing medications">
-    </div>
   </div>
 </section>
 
 <main class="container">
-  <!-- Evidence gallery: the actual marketing images kratom advocates submit -->
+  <!-- Evidence gallery: new title as requested -->
   <div class="evidence-grid">
-    <div class="evidence-title">The “Medical Evidence” That Lawmakers Are Asked to Accept</div>
+    <div class="evidence-title">Does This Look Like a Serious Alternative to Healthcare?</div>
     <div class="evidence-sub">Kratom industry advocates routinely submit personal testimony and consumer marketing images in legislative hearings. Below are examples of product advertisements and promotional photography presented as justification for keeping unregulated kratom on store shelves.</div>
     <div class="gallery">
       <div class="gallery-item">
