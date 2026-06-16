@@ -100,7 +100,7 @@
       color: var(--gold);
     }
 
-    /* ----- FULL-WIDTH HERO using IMG_8714.png (as requested) ----- */
+    /* ----- FULL-WIDTH HERO using IMG_8714.png ----- */
     .page-hero {
       background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('IMG_8714.png') center center / cover no-repeat;
       color: white;
@@ -139,13 +139,14 @@
       color: var(--gold);
     }
 
-    /* ----- Content styling (dark theme blocks) ----- */
+    /* ----- Content styling: removed boxes and side borders ----- */
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 48px 28px;
     }
 
+    /* Image rows – keep styling for images, no boxes around them */
     .image-row {
       display: flex;
       flex-wrap: wrap;
@@ -181,16 +182,12 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .block {
-      background: rgba(13, 23, 33, .94);
-      border: 1px solid var(--line);
-      border-left: 6px solid var(--red);
-      border-radius: 0 28px 28px 0;
-      padding: 34px 38px;
-      margin-bottom: 42px;
+    /* Content sections – now plain without boxes, borders, backgrounds, padding */
+    .content-section {
+      margin-bottom: 48px;
     }
 
-    .block h2 {
+    .content-section h2 {
       color: var(--gold);
       font-size: 2rem;
       line-height: 1.15;
@@ -199,18 +196,18 @@
       margin-bottom: 18px;
     }
 
-    .block p {
+    .content-section p {
       color: #edf4ff;
       font-size: 1.08rem;
       margin-bottom: 18px;
     }
 
-    .block ul {
+    .content-section ul {
       list-style: none;
       margin: 18px 0 18px 20px;
     }
 
-    .block ul li {
+    .content-section ul li {
       color: #edf4ff;
       font-weight: 550;
       padding-left: 30px;
@@ -218,7 +215,7 @@
       margin-bottom: 12px;
     }
 
-    .block ul li::before {
+    .content-section ul li::before {
       content: "•";
       position: absolute;
       left: 0;
@@ -226,6 +223,21 @@
       color: var(--red2);
       font-size: 1.35rem;
       font-weight: 900;
+    }
+
+    .content-section .highlight {
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-left: 4px solid var(--red);
+      padding-left: 24px;
+      margin-top: 28px;
+    }
+
+    .content-section .strong-close {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--red2);
+      margin-top: 12px;
     }
 
     .section-divider {
@@ -270,9 +282,6 @@
       .page-hero .subhead {
         font-size: 1.2rem;
         padding: 14px 20px;
-      }
-      .block {
-        padding: 24px 20px;
       }
       .image-row {
         flex-direction: column;
@@ -323,8 +332,8 @@
 
 <main class="container">
 
-  <!-- Introduction: The contradiction -->
-  <div class="block" style="border-left-color: var(--gold);">
+  <!-- Introduction -->
+  <section class="content-section">
     <h2>If kratom isn't addictive, why is there now a market for quitting it?</h2>
     <p>
       For years, lawmakers were told a simple story: kratom isn't really addictive. Withdrawal is mild. People can stop whenever they want.
@@ -341,12 +350,12 @@
     <p>
       That question is the central contradiction this article explores.
     </p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- What is SR-17018? -->
-  <div class="block">
+  <section class="content-section">
     <h2>What is SR‑17018?</h2>
     <p>
       SR‑17018 is an experimental opioid‑like compound that has been discussed online by some kratom users as a way to manage tolerance, withdrawal, or dependence. It is not approved by the FDA or any regulatory body. Its safety, efficacy, and long‑term effects are unknown.
@@ -354,12 +363,12 @@
     <p>
       While SR‑17018 is one piece of this story, the bigger picture is the <strong>ecosystem</strong> that has grown around it — and what that ecosystem reveals about kratom dependence.
     </p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- “Has Anyone Ever Heard of It?” -->
-  <div class="block">
+  <section class="content-section">
     <h2>“Has Anyone Ever Heard of It?”</h2>
     <div class="image-block">
       <img src="IMG_8706.jpeg" alt="Screenshot of a Facebook post asking about SR-17018">
@@ -371,12 +380,12 @@
     <p>Instead, they found large numbers of people discussing how to use SR‑17018 to quit kratom.</p>
     <p>The question was no longer whether kratom causes withdrawal. The discussion had already moved on to how to escape it.</p>
     <p><strong>If dependence were truly rare, why would thousands of people be searching for specialized compounds to help them stop?</strong></p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- Building an Underground Treatment Community -->
-  <div class="block">
+  <section class="content-section">
     <h2>Building an Underground Treatment Community</h2>
     <div class="image-row">
       <img src="IMG_8693.jpeg" alt="Reddit thread about SR-17018">
@@ -394,16 +403,16 @@
     <p>Entire conversations developed around obtaining products, designing taper schedules, and helping others stop using kratom.</p>
     <p>The existence of these discussions creates an uncomfortable contradiction:</p>
     <p><strong>If whole‑leaf kratom is as easy to quit as advocates claimed, why are thousands of people searching for specialized compounds to help them stop?</strong></p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- The New Promise -->
-  <div class="block">
+  <section class="content-section">
     <h2>The New Promise</h2>
     <div class="image-row">
       <img src="IMG_8709.jpeg" alt="User testimonial claiming SR-17018 allowed them to stop with almost no withdrawal">
-      <img src="IMG_8708.jpeg" alt="User recommending SR-17018 instead of Suboxone">
+      <img src="IMG_8707.jpeg" alt="User recommending SR-17018 instead of Suboxone">
       <img src="IMG_8696.jpeg" alt="User calling SR-17018 a miracle substance">
     </div>
     <p>Users began describing SR‑17018 in extraordinary terms.</p>
@@ -413,12 +422,12 @@
     <p>A new compound had appeared. A new community had formed. And a new set of promises was being made.</p>
     <p>This pattern — a substance promoted as a solution to dependence — raises a fundamental question:</p>
     <p><strong>If kratom is not creating a dependence problem, why are users turning to experimental compounds to manage withdrawal?</strong></p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- From Recovery Discussions to Consumer Products -->
-  <div class="block">
+  <section class="content-section">
     <h2>From Recovery Discussions to Consumer Products</h2>
     <div class="image-row">
       <img src="IMG_8703.jpeg" alt="Product packaging 'Reset'">
@@ -437,12 +446,12 @@
     <p>What began as discussions among users evolved into a market.</p>
     <p>A market whose purpose was not helping people start kratom. A market whose purpose was helping people stop.</p>
     <p><strong>Would such a market exist if kratom dependence were truly uncommon?</strong></p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- Crowdsourced Detox Protocols -->
-  <div class="block">
+  <section class="content-section">
     <h2>Crowdsourced Detox Protocols</h2>
     <div class="image-block">
       <img src="IMG_8710.jpeg" alt="Detailed taper schedule screenshot from a forum">
@@ -453,12 +462,12 @@
     <p>The discussions increasingly resembled addiction‑treatment forums.</p>
     <p>Not wellness forums. Not supplement forums. Addiction‑treatment forums.</p>
     <p>Because the central problem being discussed was withdrawal.</p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- Then Came the Questions About SR‑17018 -->
-  <div class="block">
+  <section class="content-section">
     <h2>Then Came the Questions About SR‑17018</h2>
     <div class="image-row">
       <img src="IMG_8698.jpeg" alt="Post about SR-17018 side effects">
@@ -478,12 +487,12 @@
     </ul>
     <p>The irony is difficult to miss.</p>
     <p>A community formed to escape kratom dependence. Then parts of that same community began discussing recovery after stopping SR‑17018.</p>
-  </div>
+  </section>
 
   <hr class="section-divider">
 
   <!-- What Lawmakers Were Told Versus What Happened -->
-  <div class="block" style="border-left-color: var(--gold);">
+  <section class="content-section">
     <h2>What Lawmakers Were Told Versus What Happened</h2>
     <p>For years, lawmakers heard that kratom was different.</p>
     <p>Not like opioids. Not significantly addictive. Not associated with serious withdrawal. Not something that justified strict regulation.</p>
@@ -502,16 +511,16 @@
     <p>A consumer market has emerged specifically to help people stop using whole‑leaf kratom.</p>
     <p>That market would not exist if the problem advocates described to lawmakers were the same problem users were experiencing in real life.</p>
     <p>The story of SR‑17018 is therefore not primarily a story about SR‑17018. It is a story about kratom.</p>
-    <p style="font-weight: 700; font-size: 1.2rem; border-left: 4px solid var(--red); padding-left: 24px; margin-top: 28px;">
+    <div class="highlight">
       Because every bottle sold, every taper schedule shared, every withdrawal discussion posted, and every desperate request for help points back to the same uncomfortable conclusion:
-    </p>
-    <p style="font-size: 1.3rem; font-weight: 800; color: var(--red2); margin-top: 12px;">
+    </div>
+    <div class="strong-close">
       The people telling lawmakers that kratom dependence was insignificant helped create the conditions for an entirely new retail industry devoted to helping consumers get off kratom.
-    </p>
+    </div>
     <p style="margin-top: 24px; font-size: 1.1rem; border-top: 2px solid var(--line); padding-top: 20px;">
       <strong>That is the contradiction lawmakers should examine:</strong> If dependence is rare, why is there now a withdrawal market? And if that market exists, what does it mean for the credibility of claims that kratom is safe and non‑addictive?
     </p>
-  </div>
+  </section>
 
 </main>
 
