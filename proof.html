@@ -100,91 +100,48 @@
       color: var(--gold);
     }
 
-    /* Hero split with integrated dog image — no frame, no border, no shadow */
-    .hero-split {
-      background: radial-gradient(circle at 30% 25%, rgba(180, 43, 43, 0.28), transparent 45%),
-                  linear-gradient(125deg, #081019 0%, #0e1a28 100%);
+    /* ----- FULL-WIDTH HERO (same as sr.html) ----- */
+    .page-hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('IMG_8714.png') center center / cover no-repeat;
+      color: white;
+      padding: 120px 0 100px;
       border-bottom: 4px solid var(--red);
-      padding: 70px 0 70px;
     }
 
-    .hero-container {
+    .page-hero .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 28px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      flex-wrap: wrap;
     }
 
-    .hero-left {
-      flex: 1.2;
-      min-width: 260px;
-    }
-
-    .hero-right {
-      flex: 0.9;
-      min-width: 200px;
-      text-align: center;
-    }
-
-    /* dog image: completely unframed, no border, no shadow, no rounding — part of the canvas */
-    .hero-right img {
-      max-width: 100%;
-      display: block;
-      width: 100%;
-      height: auto;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-      transition: none;
-      background: transparent;
-      margin: 0 auto;
-    }
-
-    /* remove any hover transform that would create separation */
-    .hero-right img:hover {
-      transform: none;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      border: 1px solid rgba(228, 178, 62, .55);
-      background: rgba(228, 178, 62, .08);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .8rem;
-      margin-bottom: 22px;
-    }
-
-    .hero-left h1 {
-      font-size: clamp(2.45rem, 6vw, 4.8rem);
-      line-height: 1.02;
+    .page-hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
       font-weight: 900;
+      line-height: 1.05;
       text-transform: uppercase;
-      letter-spacing: -.055em;
-      margin-bottom: 20px;
+      letter-spacing: -.04em;
+      max-width: 1000px;
     }
 
-    .hero-left h1 span {
+    .page-hero h1 span {
       color: var(--gold);
       border-bottom: 5px solid var(--red);
     }
 
-    .hero-copy {
-      font-size: 1.15rem;
-      color: #eef2ff;
-      background: rgba(0, 0, 0, .4);
+    .page-hero .subhead {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 20px;
       border-left: 6px solid var(--gold);
-      padding: 20px 28px;
+      padding-left: 28px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 18px 28px;
+      max-width: 850px;
       border-radius: 0 24px 24px 0;
-      font-weight: 550;
-      margin-top: 10px;
+    }
+
+    .page-hero .subhead strong {
+      color: var(--gold);
     }
 
     /* Main content styling */
@@ -427,7 +384,17 @@
       font-size: .92rem;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
+      .page-hero {
+        padding: 80px 0 60px;
+      }
+      .page-hero h1 {
+        font-size: 2.5rem;
+      }
+      .page-hero .subhead {
+        font-size: 1.2rem;
+        padding: 14px 20px;
+      }
       .grid {
         grid-template-columns: 1fr;
       }
@@ -438,26 +405,11 @@
       .block {
         padding: 28px 24px;
       }
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-left {
-        text-align: center;
-      }
-      .hero-copy {
-        border-left: none;
-        border-top: 4px solid var(--gold);
-        border-radius: 24px;
-        padding: 16px;
-      }
-      .eyebrow {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-right img {
-        max-width: 260px;
-        margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .page-hero h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -480,27 +432,20 @@
   </div>
 </header>
 
-<!-- HERO SECTION: dog image is completely integrated, no frame/border/shadow -->
-<section class="hero-split">
-  <div class="hero-container">
-    <div class="hero-left">
-      <div class="eyebrow">One standard. Not two.</div>
-      <h1>If You Demand Records, <span>Show Proof</span></h1>
-      <div class="hero-copy">
-        Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
-        <br><br>
-        <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
-      </div>
-    </div>
-    <div class="hero-right">
-      <!-- Dog image appears as a natural element of the page — no frame, no border, no shadow, no card styling -->
-      <img src="IMG_7854.jpeg" alt="Skeptical dachshund looking toward headline, integrated seamlessly into advocacy message">
+<!-- HERO SECTION: Full-width with background image (IMG_8714.png) like sr.html -->
+<section class="page-hero">
+  <div class="container">
+    <h1>If You Demand Records, <span>Show Proof</span></h1>
+    <div class="subhead">
+      Kratom trade advocates routinely obtain autopsy reports, toxicology reports, death certificates, and medical examiner records through public records requests. They analyze them. They challenge them. They publicly dissect them. They demand grieving families prove every detail.
+      <br><br>
+      <strong>Fine. Then apply the same standard to claims that kratom “saved my life,” “treated my pain,” or “got me off opioids.”</strong>
     </div>
   </div>
 </section>
 
 <main class="container">
-  <!-- Screenshot section remains functional, dog unaffected -->
+  <!-- Screenshot section remains unchanged -->
   <div class="screenshot-card">
     <img src="IMG_7852.jpeg" alt="Screenshot of public social media post discussing acknowledgment and public display of autopsy records." />
     <div class="caption">
