@@ -100,99 +100,52 @@
       color: var(--gold);
     }
 
-    /* Hero split – dark gradient + right image */
-    .hero-split {
-      background: radial-gradient(circle at 30% 25%, rgba(180, 43, 43, 0.25), transparent 45%),
-                  linear-gradient(125deg, #081019 0%, #0e1a28 100%);
+    /* ----- FULL-WIDTH HERO (like insult.html) ----- */
+    .page-hero {
+      background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('IMG_8713.png') center center / cover no-repeat;
+      color: white;
+      padding: 120px 0 100px;
       border-bottom: 4px solid var(--red);
-      padding: 70px 0 70px;
     }
 
-    .hero-container {
+    .page-hero .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 28px;
-      display: flex;
-      align-items: center;
-      gap: 48px;
-      flex-wrap: wrap;
     }
 
-    .hero-left {
-      flex: 1.2;
-      min-width: 260px;
-    }
-
-    .hero-right {
-      flex: 0.9;
-      min-width: 200px;
-      text-align: center;
-    }
-
-    /* Hero image – no frame, no border, no shadow */
-    .hero-right img {
-      max-width: 100%;
-      display: block;
-      width: 100%;
-      height: auto;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-      background: transparent;
-      margin: 0 auto;
-    }
-
-    .hero-right img:hover {
-      transform: none;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      border: 1px solid rgba(228, 178, 62, .55);
-      background: rgba(228, 178, 62, .08);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .8rem;
-      margin-bottom: 22px;
-    }
-
-    .hero-left h1 {
-      font-size: clamp(2.45rem, 6vw, 4.8rem);
-      line-height: 1.02;
+    .page-hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
       font-weight: 900;
+      line-height: 1.05;
       text-transform: uppercase;
-      letter-spacing: -.055em;
-      margin-bottom: 20px;
+      letter-spacing: -.04em;
+      max-width: 1000px;
     }
 
-    .hero-left h1 span {
-      color: var(--gold);
-      border-bottom: 5px solid var(--red);
-    }
-
-    .hero-copy {
-      font-size: 1.15rem;
-      color: #eef2ff;
-      background: rgba(0, 0, 0, .4);
+    .page-hero .subhead {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 20px;
       border-left: 6px solid var(--gold);
-      padding: 20px 28px;
+      padding-left: 28px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 18px 28px;
+      max-width: 850px;
       border-radius: 0 24px 24px 0;
-      font-weight: 550;
-      margin-top: 10px;
     }
 
-    /* Main content */
+    .page-hero .subhead strong {
+      color: var(--gold);
+    }
+
+    /* ----- Content styling (dark theme blocks) ----- */
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 48px 28px;
     }
 
-    /* Image row – dark cards */
     .image-row {
       display: flex;
       flex-wrap: wrap;
@@ -228,7 +181,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    /* Content blocks – same style as proof.html */
     .block {
       background: rgba(13, 23, 33, .94);
       border: 1px solid var(--line);
@@ -283,42 +235,6 @@
       margin: 40px 0;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-left {
-        text-align: center;
-      }
-      .hero-copy {
-        border-left: none;
-        border-top: 4px solid var(--gold);
-        border-radius: 24px;
-        padding: 16px;
-      }
-      .eyebrow {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-right img {
-        max-width: 260px;
-        margin: 0 auto;
-      }
-      .block {
-        padding: 28px 24px;
-      }
-      .image-row {
-        flex-direction: column;
-        align-items: center;
-      }
-      .image-row img {
-        max-height: 260px;
-        width: 100%;
-      }
-    }
-
     /* Footer */
     footer {
       background: var(--nav);
@@ -343,6 +259,36 @@
       font-weight: 700;
       font-size: .92rem;
     }
+
+    @media (max-width: 850px) {
+      .page-hero {
+        padding: 80px 0 60px;
+      }
+      .page-hero h1 {
+        font-size: 2.5rem;
+      }
+      .page-hero .subhead {
+        font-size: 1.2rem;
+        padding: 14px 20px;
+      }
+      .block {
+        padding: 24px 20px;
+      }
+      .image-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-row img {
+        max-height: 260px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -364,20 +310,12 @@
   </div>
 </header>
 
-<!-- HERO using IMG_8713.png as the main image (right side) -->
-<section class="hero-split">
-  <div class="hero-container">
-    <div class="hero-left">
-      <div class="eyebrow">The Lie That Created a New Market</div>
-      <h1>How Whole‑Leaf Kratom Advocates <span>Created a Market</span></h1>
-      <div class="hero-copy">
-        Lawmakers were told withdrawal was minor, dependence was rare, and regulation was unnecessary.<br><br>
-        <strong>Today, thousands of users are searching for compounds to quit – and a retail industry has emerged to help them.</strong>
-      </div>
-    </div>
-    <div class="hero-right">
-      <!-- Hero image – IMG_8713.png, no frame, no border -->
-      <img src="IMG_8713.png" alt="The lie that created a new market – visual metaphor for kratom dependence and the SR-17018 phenomenon">
+<!-- FULL-WIDTH HERO with IMG_8713.png as background (same as insult.html style) -->
+<section class="page-hero">
+  <div class="container">
+    <h1>The Lie That Created a New Market</h1>
+    <div class="subhead">
+      How whole‑leaf kratom advocates told lawmakers withdrawal was minor, dependence was rare, and regulation was unnecessary — only to watch an entire industry emerge selling products to help people quit.
     </div>
   </div>
 </section>
