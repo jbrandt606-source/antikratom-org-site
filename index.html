@@ -391,80 +391,73 @@
       background: #8f2020;
     }
 
-    /* ===== NEW CAMPAIGN CARDS (compact bullet point stories) ===== */
-    .campaigns-section {
+    /* ===== STORIES LIST (bullet style) ===== */
+    .stories-section {
       margin: 40px 0;
       padding: 12px 0;
       border-top: 1px solid #d0dbc2;
       border-bottom: 1px solid #d0dbc2;
     }
-    .campaigns-heading {
+    .stories-heading {
       font-size: 1.6rem;
       font-weight: 800;
       color: #1f3b2c;
       margin-bottom: 1.5rem;
       letter-spacing: -0.3px;
     }
-    .campaigns-grid {
+    .stories-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .stories-list li {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: flex-start;
+      align-items: baseline;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e8ede2;
+      font-size: 1rem;
+      color: #1e2d2a;
     }
-    .campaign-card {
-      flex: 1;
-      min-width: 240px;
-      background: #fafdf5;
-      border-left: 4px solid #b42b2b;
-      padding: 1.2rem 1.4rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      transition: all 0.15s;
+    .stories-list li:last-child {
+      border-bottom: none;
     }
-    .campaign-card:hover {
-      background: #ffffff;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-      border-left-width: 6px;
-    }
-    .campaign-card h4 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+    .stories-list li strong {
+      font-weight: 700;
+      min-width: 180px;
       color: #1f3627;
-      letter-spacing: -0.2px;
     }
-    .campaign-card p {
-      font-size: 0.9rem;
-      color: #2c4239;
-      margin-bottom: 1rem;
-      line-height: 1.45;
-    }
-    .campaign-link {
+    .stories-list li a {
+      color: #b42b2b;
       font-weight: 700;
       text-decoration: none;
-      color: #b42b2b;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s;
+      white-space: nowrap;
+      margin-left: 0.5rem;
     }
-    .campaign-link::after {
-      content: "→";
-      font-size: 1rem;
-    }
-    .campaign-link:hover {
-      gap: 10px;
+    .stories-list li a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 800px) {
-      .campaigns-grid { flex-direction: column; }
+    .stories-list li .summary {
+      color: #3d5a4a;
+    }
+    @media (max-width: 700px) {
+      .stories-list li {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+      }
+      .stories-list li strong {
+        min-width: auto;
+        width: 100%;
+      }
+      .stories-list li .summary {
+        width: 100%;
+        margin-left: 0;
+      }
+      .stories-list li a {
+        margin-left: 0;
+      }
     }
 
-    /* simple alert replaced, keep ethanol only if needed, but we removed it */
-    
     /* full width sections */
     .full-width-section {
       background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
@@ -710,6 +703,9 @@
       <a href="evidence/index.html">EVIDENCE</a>
       <a href="industry/index.html">INDUSTRY</a>
       <a href="action.html">FIGHT BACK</a>
+      <!-- Added proof.html and sr.html below FIGHT BACK -->
+      <a href="proof.html">PROOF</a>
+      <a href="sr.html">SR-17018</a>
       <a href="congress.html">CONGRESS</a>
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
@@ -779,29 +775,31 @@
       <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
     </div>
 
-    <!-- NEW COMPACT SECTION: three smaller bullet point stories (Proof, EtOH, Insult) -->
-    <div class="campaigns-section">
-      <div class="campaigns-heading">Key investigations & policy pillars</div>
-      <div class="campaigns-grid">
-        <!-- Proof / Medical Records Challenge -->
-        <div class="campaign-card">
-          <h4>Medical Records Challenge</h4>
-          <p>Kratom advocates demand autopsies and toxicology for harm – but offer only anecdotes for benefit. We demand one standard. Show your medical records to lawmakers, not just testimony.</p>
-          <a href="proof.html" class="campaign-link">One standard. Not two.</a>
-        </div>
-        <!-- Ethanol / ETOH -->
-        <div class="campaign-card">
-          <h4>Ethanol in kratom shots</h4>
-          <p>Independent lab tests found ethanol in retail kratom extracts – some at levels exceeding alcohol beverage limits. Are these being sold without alcohol oversight?</p>
-          <a href="etoh.html" class="campaign-link">Review evidence →</a>
-        </div>
-        <!-- Insult (The Insult Hidden in Plain Sight) -->
-        <div class="campaign-card">
-          <h4>The Insult Hidden in Plain Sight</h4>
-          <p>When lawmakers accept kratom anecdotes as medical evidence, they vote “no confidence” in every physician, nurse and pharmacist. A policy commentary for legislators and healthcare professionals.</p>
-          <a href="insult.html" class="campaign-link">Read the commentary →</a>
-        </div>
-      </div>
+    <!-- STORIES LIST (bullet style) – replaced the three cards -->
+    <div class="stories-section">
+      <div class="stories-heading">Key investigations & policy pillars</div>
+      <ul class="stories-list">
+        <li>
+          <strong>Medical Records Challenge</strong>
+          <span class="summary">Kratom advocates demand autopsies and toxicology for harm – but offer only anecdotes for benefit. We demand one standard.</span>
+          <a href="proof.html">Read more →</a>
+        </li>
+        <li>
+          <strong>Ethanol in kratom shots</strong>
+          <span class="summary">Independent lab tests found ethanol in retail kratom extracts – some at levels exceeding alcohol beverage limits.</span>
+          <a href="etoh.html">Review evidence →</a>
+        </li>
+        <li>
+          <strong>The Insult</strong>
+          <span class="summary">When lawmakers accept kratom anecdotes as medical evidence, they vote “no confidence” in every physician, nurse and pharmacist.</span>
+          <a href="insult.html">Read commentary →</a>
+        </li>
+        <li>
+          <strong>SR‑17018: The New Market</strong>
+          <span class="summary">How whole‑leaf kratom advocates downplayed withdrawal – and created a retail industry for quitting.</span>
+          <a href="sr.html">Learn more →</a>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -890,6 +888,9 @@
       <a href="evidence/index.html">EVIDENCE</a>
       <a href="industry/index.html">INDUSTRY NARRATIVES</a>
       <a href="action.html">FIGHT BACK</a>
+      <!-- Added proof and sr in footer -->
+      <a href="proof.html">PROOF</a>
+      <a href="sr.html">SR-17018</a>
       <a href="insult.html">THE INSULT</a>
       <a href="congress.html">CONGRESS</a>
       <a href="about.html">ABOUT</a>
