@@ -1,915 +1,1092 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
-    gtag('config','G-P31PD1SSTD');
-  </script>
-    
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anti‑Kratom Association | home</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY">
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #f4f7f2;
-      color: #11181c;
-      line-height: 1.5;
-    }
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MQKC65VZVY', { 'linker': { 'domains': ['mothersagainstherbalabuse.org', 'gasstationheroin.org'] } });
+        gtag('config', 'G-P31PD1SSTD');
+    </script>
 
-    /* subtle background texture */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.08;
-      pointer-events: none;
-      z-index: -1;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti‑Kratom Association | home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f7f2;
+            color: #11181c;
+            line-height: 1.5;
+        }
 
-   /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
-.scroll-banner {
-  display: block;
-  background: #1a2c2e;
-  background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  overflow: hidden;
-  border-bottom: 1px solid #e4b23e;
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-}
+        /* subtle background texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-.scroll-track {
-  display: flex;
-  width: max-content;
-  animation: scrollEvidence 18s linear infinite;
-}
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
 
-.scroll-track:hover {
-  animation-play-state: paused;
-}
+        /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
+        .scroll-banner {
+            display: block;
+            background: #1a2c2e;
+            background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            overflow: hidden;
+            border-bottom: 1px solid #e4b23e;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+        }
 
-.scroll-item {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  padding: 12px 28px;
-  gap: 12px;
-  letter-spacing: 0.01em;
-  font-size: 0.95rem;
-}
+        .scroll-track {
+            display: flex;
+            width: max-content;
+            animation: scrollEvidence 18s linear infinite;
+        }
 
-.scroll-item strong {
-  font-weight: 700;
-  color: #ffdf8c;
-}
+        .scroll-track:hover {
+            animation-play-state: paused;
+        }
 
-.scroll-item span {
-  color: #ffdf8c;
-  font-weight: 700;
-  text-decoration: underline;
-}
+        .scroll-item {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            padding: 12px 28px;
+            gap: 12px;
+            letter-spacing: 0.01em;
+            font-size: 0.95rem;
+        }
 
-@keyframes scrollEvidence {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-    /* header */
-    .site-header {
-      background-color: #0c151f;
-      color: #fff;
-      padding: 16px 0;
-      border-bottom: 4px solid #b42b2b;
-    }
+        .scroll-item strong {
+            font-weight: 700;
+            color: #ffdf8c;
+        }
 
-    .header-inner {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .scroll-item span {
+            color: #ffdf8c;
+            font-weight: 700;
+            text-decoration: underline;
+        }
 
-    .logo h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
+        @keyframes scrollEvidence {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
-    .logo span {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: #bfc9d4;
-      margin-top: 4px;
-    }
+        /* ===== NEW: TWITTER FOLLOW BAR ===== */
+        .twitter-follow-bar {
+            background: #0a0f1a;
+            border-bottom: 2px solid #1d9bf0;
+            padding: 10px 0;
+            position: relative;
+            z-index: 9;
+        }
 
-    .nav {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+        .twitter-follow-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px 28px;
+        }
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
+        .twitter-follow-inner .x-icon {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: #1d9bf0;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            flex-shrink: 0;
+        }
 
-    .nav a:hover {
-      color: #e4b23e;
-      border-bottom: 2px solid #b42b2b;
-    }
+        .twitter-follow-inner .x-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+        }
 
-    /* hero */
-    .hero {
-      background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
-      color: white;
-      padding: 100px 0 90px;
-      margin-bottom: 32px;
-      border-bottom: 3px solid #b42b2b;
-    }
+        .twitter-follow-inner .handle {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
 
-    .hero-content {
-      max-width: 1000px;
-    }
+        .twitter-follow-inner .handle a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-    .hero h2 {
-      font-size: 3.8rem;
-      font-weight: 800;
-      line-height: 1.1;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
+        .twitter-follow-inner .handle a:hover {
+            color: #1d9bf0;
+        }
 
-    .hero-standout {
-      font-size: 1.9rem;
-      font-weight: 700;
-      background-color: #b42b2b;
-      display: inline-block;
-      padding: 8px 28px;
-      margin-bottom: 28px;
-      letter-spacing: 0.08em;
-    }
+        .twitter-follow-inner .invite-text {
+            color: #b0c4d9;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
 
-    .hero-sub {
-      font-size: 1.4rem;
-      max-width: 850px;
-      border-left: 5px solid #e4b23e;
-      padding-left: 28px;
-      background: rgba(0,0,0,0.35);
-      padding: 16px 28px;
-    }
+        .twitter-follow-inner .invite-text strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
 
-    .hero-sub strong {
-      color: #e4b23e;
-    }
+        .twitter-follow-btn {
+            background: #1d9bf0;
+            color: #ffffff;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: background 0.2s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
 
-    .hero-buttons {
-      display: flex;
-      gap: 24px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
+        .twitter-follow-btn:hover {
+            background: #1a8cd8;
+            transform: scale(1.03);
+        }
 
-    .btn {
-      padding: 14px 32px;
-      font-weight: 700;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      transition: all 0.2s;
-      display: inline-block;
-      font-size: 1rem;
-    }
+        .twitter-follow-btn::after {
+            content: '→';
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+        }
 
-    .btn-primary {
-      background-color: #b42b2b;
-      color: white;
-      border: none;
-    }
+        .twitter-follow-btn:hover::after {
+            transform: translateX(4px);
+        }
 
-    .btn-primary:hover {
-      background-color: #8f2020;
-    }
+        @media (max-width: 700px) {
+            .twitter-follow-inner {
+                gap: 10px 18px;
+                padding: 4px 0;
+            }
+            .twitter-follow-inner .handle {
+                font-size: 1rem;
+            }
+            .twitter-follow-inner .invite-text {
+                font-size: 0.85rem;
+                width: 100%;
+                text-align: center;
+            }
+            .twitter-follow-btn {
+                padding: 6px 18px;
+                font-size: 0.8rem;
+            }
+            .twitter-follow-inner .x-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1.3rem;
+            }
+            .twitter-follow-inner .x-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
 
-    .btn-outline {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-    }
+        /* header */
+        .site-header {
+            background-color: #0c151f;
+            color: #fff;
+            padding: 16px 0;
+            border-bottom: 4px solid #b42b2b;
+        }
 
-    .btn-outline:hover {
-      background-color: white;
-      color: #0c151f;
-    }
+        .header-inner {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    /* state dropdown — clean */
-    .state-quick-nav {
-      margin: 24px 0 40px;
-      padding: 12px 0;
-      border-bottom: 1px solid #d9dfce;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .state-quick-nav p {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #1a3a2a;
-      margin: 0;
-    }
-    .dropdown-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .state-select {
-      background: #ffffff;
-      border: 1px solid #bebfa9;
-      padding: 8px 16px;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      min-width: 220px;
-    }
-    .btn-small {
-      background-color: #b42b2b;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 40px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .btn-small:hover {
-      background-color: #8f2020;
-    }
-    .state-index-link {
-      font-size: 0.9rem;
-      color: #b42b2b;
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1px dotted #b42b2b;
-    }
-    .state-index-link:hover {
-      color: #0c151f;
-    }
+        .logo h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
 
-    /* fact rows */
-    .fact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      margin: 48px 0 40px;
-      justify-content: space-between;
-    }
-    .fact-item {
-      flex: 1;
-      min-width: 200px;
-      border-left: 3px solid #b42b2b;
-      padding-left: 20px;
-    }
-    .fact-item h3 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #1f3627;
-      margin-bottom: 12px;
-    }
-    .fact-item ul {
-      list-style: none;
-    }
-    .fact-item li {
-      margin-bottom: 10px;
-      font-weight: 500;
-      padding-left: 16px;
-      position: relative;
-    }
-    .fact-item li::before {
-      content: "•";
-      color: #b42b2b;
-      font-weight: bold;
-      font-size: 1.2rem;
-      position: absolute;
-      left: 0;
-      top: -2px;
-    }
+        .logo span {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #bfc9d4;
+            margin-top: 4px;
+        }
 
-    /* image banner */
-    .full-image-banner {
-      margin: 40px 0 32px;
-      text-align: center;
-      background: #ffffff10;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.25);
-      transition: transform 0.2s;
-    }
-    .full-image-banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 24px;
-      border: 1px solid #e4b23e55;
-    }
-    .full-image-banner:hover {
-      transform: scale(1.01);
-    }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
 
-    /* message section */
-    .message-section {
-      margin: 48px 0;
-      border-left: 4px solid #e4b23e;
-      padding: 8px 0 8px 28px;
-      background: transparent;
-    }
-    .message-section h3 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #1f3b2c;
-      margin-bottom: 12px;
-      letter-spacing: -0.2px;
-    }
-    .message-section p {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      color: #1e2d2a;
-    }
-    .msg-link {
-      display: inline-block;
-      background: #b42b2b;
-      color: white;
-      padding: 8px 24px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-    .msg-link:hover {
-      background: #8f2020;
-    }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: color 0.2s;
+        }
 
-    /* ===== STORIES LIST (bullet style) ===== */
-    .stories-section {
-      margin: 40px 0;
-      padding: 12px 0;
-      border-top: 1px solid #d0dbc2;
-      border-bottom: 1px solid #d0dbc2;
-    }
-    .stories-heading {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #1f3b2c;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.3px;
-    }
-    .stories-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .stories-list li {
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #e8ede2;
-      font-size: 1rem;
-      color: #1e2d2a;
-    }
-    .stories-list li:last-child {
-      border-bottom: none;
-    }
-    .stories-list li strong {
-      font-weight: 700;
-      min-width: 180px;
-      color: #1f3627;
-    }
-    .stories-list li a {
-      color: #b42b2b;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      margin-left: 0.5rem;
-    }
-    .stories-list li a:hover {
-      text-decoration: underline;
-    }
-    .stories-list li .summary {
-      color: #3d5a4a;
-    }
-    @media (max-width: 700px) {
-      .stories-list li {
-        flex-wrap: wrap;
-        gap: 0.25rem;
-      }
-      .stories-list li strong {
-        min-width: auto;
-        width: 100%;
-      }
-      .stories-list li .summary {
-        width: 100%;
-        margin-left: 0;
-      }
-      .stories-list li a {
-        margin-left: 0;
-      }
-    }
+        .nav a:hover {
+            color: #e4b23e;
+            border-bottom: 2px solid #b42b2b;
+        }
 
-    /* full width sections */
-    .full-width-section {
-      background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 70px 0;
-      margin: 48px 0;
-      border-top: 3px solid #b42b2b;
-      border-bottom: 3px solid #b42b2b;
-    }
-    .industry-spotlight {
-      --bg-image: url('industry.jpg');
-    }
-    .evidence-spotlight {
-      --bg-image: url('evidence.jpg');
-    }
-    .action-section {
-      --bg-image: url('action.jpg');
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-    .col-left h2 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-    .col-left h2 span {
-      color: #e4b23e;
-      border-bottom: 3px solid #b42b2b;
-      padding-bottom: 6px;
-    }
-    .industry-list, .evidence-list-clean {
-      list-style: none;
-      margin: 28px 0;
-    }
-    .industry-list li, .evidence-list-clean li {
-      font-size: 1.15rem;
-      margin-bottom: 18px;
-      padding-left: 28px;
-      position: relative;
-    }
-    .industry-list li::before {
-      content: "✗";
-      position: absolute;
-      left: 0;
-      top: -1px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #e4b23e;
-    }
-    .col-right {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 32px;
-      border-left: 4px solid #e4b23e;
-    }
-    .col-right p {
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-    }
-    .btn-light {
-      background: #b42b2b;
-      color: white;
-      display: inline-block;
-      padding: 12px 28px;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 40px;
-      transition: background 0.2s;
-    }
-    .btn-light:hover {
-      background: #8f2020;
-    }
-    .evidence-links {
-      list-style: none;
-    }
-    .evidence-links li {
-      margin-bottom: 14px;
-      border-bottom: 1px dotted rgba(255,255,255,0.3);
-      padding-bottom: 10px;
-    }
-    .evidence-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .evidence-links a::after {
-      content: "→";
-      color: #e4b23e;
-      font-weight: bold;
-    }
-    .evidence-links a:hover {
-      color: #e4b23e;
-    }
-    .testimonial-block {
-      margin-top: 24px;
-      border-left: 3px solid #e4b23e;
-      padding-left: 20px;
-    }
-    .testimonial-block p {
-      font-size: 1.1rem;
-      font-style: normal;
-    }
-    .attribution {
-      font-weight: 700;
-      color: #e4b23e;
-      margin-top: 10px;
-    }
+        /* hero */
+        .hero {
+            background: linear-gradient(rgba(10, 18, 28, 0.8), rgba(10, 18, 28, 0.7)), url('hero.jpg') center center / cover no-repeat;
+            color: white;
+            padding: 100px 0 90px;
+            margin-bottom: 32px;
+            border-bottom: 3px solid #b42b2b;
+        }
 
-    .action-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 20px;
-      margin: 40px 0 30px;
-    }
-    .action-item {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 18px 12px;
-      text-align: center;
-      transition: 0.2s;
-    }
-    .action-item a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-    }
-    .action-item:hover {
-      background: rgba(180, 43, 43, 0.6);
-      border-color: #e4b23e;
-    }
-    .federal-action {
-      margin: 50px 0;
-      text-align: center;
-      border-top: 2px solid #d0dbc2;
-      padding: 40px 20px 20px;
-    }
-    .federal-action h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #1f3b2c;
-    }
-    .federal-action h2 span {
-      color: #b42b2b;
-    }
-    .federal-action p {
-      max-width: 700px;
-      margin: 16px auto 28px;
-      font-size: 1.1rem;
-      color: #1f2d28;
-    }
-    .btn-federal {
-      background: #b42b2b;
-      color: white;
-      padding: 12px 32px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      border-radius: 50px;
-      font-size: 1rem;
-    }
-    .site-footer {
-      background-color: #0c151f;
-      color: #aaa;
-      padding: 40px 0 30px;
-      border-top: 4px solid #b42b2b;
-      margin-top: 40px;
-    }
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-    .footer-links a {
-      color: #e4b23e;
-      text-decoration: none;
-      margin-right: 24px;
-      font-size: 0.9rem;
-    }
-    .copyright {
-      font-size: 0.85rem;
-    }
-    @media (max-width: 850px) {
-      .two-col { grid-template-columns: 1fr; gap: 32px; }
-      .hero h2 { font-size: 2.8rem; }
-      .hero-standout { font-size: 1.4rem; }
-      .state-quick-nav { flex-direction: column; align-items: flex-start; }
-      .fact-grid { flex-direction: column; }
-    }
-    @media (max-width: 600px) {
-      .hero h2 { font-size: 2rem; }
-      .hero-sub { font-size: 1.1rem; }
-      .message-section { padding-left: 20px; }
-    }
-  </style>
+        .hero-content {
+            max-width: 1000px;
+        }
+
+        .hero h2 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .hero-standout {
+            font-size: 1.9rem;
+            font-weight: 700;
+            background-color: #b42b2b;
+            display: inline-block;
+            padding: 8px 28px;
+            margin-bottom: 28px;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-sub {
+            font-size: 1.4rem;
+            max-width: 850px;
+            border-left: 5px solid #e4b23e;
+            padding-left: 28px;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 16px 28px;
+        }
+
+        .hero-sub strong {
+            color: #e4b23e;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #b42b2b;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #8f2020;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: #0c151f;
+        }
+
+        /* state dropdown — clean */
+        .state-quick-nav {
+            margin: 24px 0 40px;
+            padding: 12px 0;
+            border-bottom: 1px solid #d9dfce;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .state-quick-nav p {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #1a3a2a;
+            margin: 0;
+        }
+        .dropdown-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .state-select {
+            background: #ffffff;
+            border: 1px solid #bebfa9;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            min-width: 220px;
+        }
+        .btn-small {
+            background-color: #b42b2b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-small:hover {
+            background-color: #8f2020;
+        }
+        .state-index-link {
+            font-size: 0.9rem;
+            color: #b42b2b;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dotted #b42b2b;
+        }
+        .state-index-link:hover {
+            color: #0c151f;
+        }
+
+        /* fact rows */
+        .fact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin: 48px 0 40px;
+            justify-content: space-between;
+        }
+        .fact-item {
+            flex: 1;
+            min-width: 200px;
+            border-left: 3px solid #b42b2b;
+            padding-left: 20px;
+        }
+        .fact-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1f3627;
+            margin-bottom: 12px;
+        }
+        .fact-item ul {
+            list-style: none;
+        }
+        .fact-item li {
+            margin-bottom: 10px;
+            font-weight: 500;
+            padding-left: 16px;
+            position: relative;
+        }
+        .fact-item li::before {
+            content: "•";
+            color: #b42b2b;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* image banner */
+        .full-image-banner {
+            margin: 40px 0 32px;
+            text-align: center;
+            background: #ffffff10;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s;
+        }
+        .full-image-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 24px;
+            border: 1px solid #e4b23e55;
+        }
+        .full-image-banner:hover {
+            transform: scale(1.01);
+        }
+
+        /* message section */
+        .message-section {
+            margin: 48px 0;
+            border-left: 4px solid #e4b23e;
+            padding: 8px 0 8px 28px;
+            background: transparent;
+        }
+        .message-section h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1f3b2c;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+        }
+        .message-section p {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #1e2d2a;
+        }
+        .msg-link {
+            display: inline-block;
+            background: #b42b2b;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+        .msg-link:hover {
+            background: #8f2020;
+        }
+
+        /* ===== STORIES LIST (bullet style) ===== */
+        .stories-section {
+            margin: 40px 0;
+            padding: 12px 0;
+            border-top: 1px solid #d0dbc2;
+            border-bottom: 1px solid #d0dbc2;
+        }
+        .stories-heading {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1f3b2c;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+        .stories-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .stories-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e8ede2;
+            font-size: 1rem;
+            color: #1e2d2a;
+        }
+        .stories-list li:last-child {
+            border-bottom: none;
+        }
+        .stories-list li strong {
+            font-weight: 700;
+            min-width: 180px;
+            color: #1f3627;
+        }
+        .stories-list li a {
+            color: #b42b2b;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            margin-left: 0.5rem;
+        }
+        .stories-list li a:hover {
+            text-decoration: underline;
+        }
+        .stories-list li .summary {
+            color: #3d5a4a;
+        }
+        @media (max-width: 700px) {
+            .stories-list li {
+                flex-wrap: wrap;
+                gap: 0.25rem;
+            }
+            .stories-list li strong {
+                min-width: auto;
+                width: 100%;
+            }
+            .stories-list li .summary {
+                width: 100%;
+                margin-left: 0;
+            }
+            .stories-list li a {
+                margin-left: 0;
+            }
+        }
+
+        /* full width sections */
+        .full-width-section {
+            background: linear-gradient(rgba(10, 18, 28, 0.88), rgba(10, 18, 28, 0.82)), var(--bg-image);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 70px 0;
+            margin: 48px 0;
+            border-top: 3px solid #b42b2b;
+            border-bottom: 3px solid #b42b2b;
+        }
+        .industry-spotlight {
+            --bg-image: url('industry.jpg');
+        }
+        .evidence-spotlight {
+            --bg-image: url('evidence.jpg');
+        }
+        .action-section {
+            --bg-image: url('action.jpg');
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .col-left h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+        .col-left h2 span {
+            color: #e4b23e;
+            border-bottom: 3px solid #b42b2b;
+            padding-bottom: 6px;
+        }
+        .industry-list,
+        .evidence-list-clean {
+            list-style: none;
+            margin: 28px 0;
+        }
+        .industry-list li,
+        .evidence-list-clean li {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            padding-left: 28px;
+            position: relative;
+        }
+        .industry-list li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e4b23e;
+        }
+        .col-right {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 32px;
+            border-left: 4px solid #e4b23e;
+        }
+        .col-right p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .btn-light {
+            background: #b42b2b;
+            color: white;
+            display: inline-block;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 40px;
+            transition: background 0.2s;
+        }
+        .btn-light:hover {
+            background: #8f2020;
+        }
+        .evidence-links {
+            list-style: none;
+        }
+        .evidence-links li {
+            margin-bottom: 14px;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        .evidence-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .evidence-links a::after {
+            content: "→";
+            color: #e4b23e;
+            font-weight: bold;
+        }
+        .evidence-links a:hover {
+            color: #e4b23e;
+        }
+        .testimonial-block {
+            margin-top: 24px;
+            border-left: 3px solid #e4b23e;
+            padding-left: 20px;
+        }
+        .testimonial-block p {
+            font-size: 1.1rem;
+            font-style: normal;
+        }
+        .attribution {
+            font-weight: 700;
+            color: #e4b23e;
+            margin-top: 10px;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 20px;
+            margin: 40px 0 30px;
+        }
+        .action-item {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 18px 12px;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .action-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
+        .action-item:hover {
+            background: rgba(180, 43, 43, 0.6);
+            border-color: #e4b23e;
+        }
+        .federal-action {
+            margin: 50px 0;
+            text-align: center;
+            border-top: 2px solid #d0dbc2;
+            padding: 40px 20px 20px;
+        }
+        .federal-action h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1f3b2c;
+        }
+        .federal-action h2 span {
+            color: #b42b2b;
+        }
+        .federal-action p {
+            max-width: 700px;
+            margin: 16px auto 28px;
+            font-size: 1.1rem;
+            color: #1f2d28;
+        }
+        .btn-federal {
+            background: #b42b2b;
+            color: white;
+            padding: 12px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+        .site-footer {
+            background-color: #0c151f;
+            color: #aaa;
+            padding: 40px 0 30px;
+            border-top: 4px solid #b42b2b;
+            margin-top: 40px;
+        }
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .footer-links a {
+            color: #e4b23e;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 0.9rem;
+        }
+        .copyright {
+            font-size: 0.85rem;
+        }
+        @media (max-width: 850px) {
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            .hero-standout {
+                font-size: 1.4rem;
+            }
+            .state-quick-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .fact-grid {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero-sub {
+                font-size: 1.1rem;
+            }
+            .message-section {
+                padding-left: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- SCROLLING BANNER: more evidence link to globalkratom.org -->
-<a class="scroll-banner"
-   href="https://globalkratom.org"
-   target="_blank"
-   rel="noopener noreferrer">
 
-  <div class="scroll-track">
+    <!-- SCROLLING BANNER: more evidence link to globalkratom.org -->
+    <a class="scroll-banner"
+    href="https://globalkratom.org"
+    target="_blank"
+    rel="noopener noreferrer">
 
-    <div class="scroll-item">
-      <strong>RESEARCH LIBRARY:</strong>
-      100+ studies · FDA data · Poison center reports · Policy analysis →
-      <span>GlobalKratom.org</span>
+    <div class="scroll-track">
+
+        <div class="scroll-item">
+            <strong>RESEARCH LIBRARY:</strong>
+            100+ studies · FDA data · Poison center reports · Policy analysis →
+            <span>GlobalKratom.org</span>
+        </div>
+
+        <div class="scroll-item">
+            <strong>RESEARCH LIBRARY:</strong>
+            100+ studies · FDA data · Poison center reports · Policy analysis →
+            <span>GlobalKratom.org</span>
+        </div>
+
     </div>
-
-    <div class="scroll-item">
-      <strong>RESEARCH LIBRARY:</strong>
-      100+ studies · FDA data · Poison center reports · Policy analysis →
-      <span>GlobalKratom.org</span>
-    </div>
-
-  </div>
 </a>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="logo">
-      <h1>ANTI-KRATOM ASSOCIATION</h1>
-      <span>public health · evidence · action</span>
+<!-- ===== TWITTER FOLLOW BAR ===== -->
+<div class="twitter-follow-bar">
+    <div class="container twitter-follow-inner">
+        <span class="x-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </span>
+        <span class="handle">
+            <a href="https://twitter.com/AntiKratom" target="_blank" rel="noopener noreferrer">@AntiKratom</a>
+        </span>
+        <span class="invite-text">
+            <strong>Join the fight</strong> — follow for alerts, evidence &amp; action calls
+        </span>
+        <a href="https://twitter.com/AntiKratom" target="_blank" rel="noopener noreferrer" class="twitter-follow-btn">
+            Follow
+        </a>
     </div>
-    <nav class="nav">
-      <a href="#">HOME</a>
-      <a href="evidence/index.html">EVIDENCE</a>
-      <a href="industry/index.html">INDUSTRY</a>
-      <a href="action.html">FIGHT BACK</a>
-      <!-- Added proof.html and sr.html below FIGHT BACK -->
-      <a href="proof.html">PROOF</a>
-      <a href="sr.html">SR-17018</a>
-      <a href="congress.html">CONGRESS</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </div>
+</div>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>ANTI-KRATOM ASSOCIATION</h1>
+            <span>public health · evidence · action</span>
+        </div>
+        <nav class="nav">
+            <a href="#">HOME</a>
+            <a href="evidence/index.html">EVIDENCE</a>
+            <a href="industry/index.html">INDUSTRY</a>
+            <a href="action.html">FIGHT BACK</a>
+            <!-- Added proof.html and sr.html below FIGHT BACK -->
+            <a href="proof.html">PROOF</a>
+            <a href="sr.html">SR-17018</a>
+            <a href="congress.html">CONGRESS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container hero-content">
-      <h2>GAS-STATION DRUGS ARE POISONING OUR COMMUNITIES</h2>
-      <div class="hero-standout">UNSAFE. UNREGULATED. UNFIT.</div>
-      <div class="hero-sub"><strong>Kratom</strong> is sold in vape shops and gas stations nationwide despite federal warnings.<br> Communities are fighting back.</div>
-      <div class="hero-buttons">
-        <a href="action.html" class="btn btn-primary">TAKE ACTION NOW →</a>
-        <a href="evidence/index.html" class="btn btn-outline">READ THE EVIDENCE →</a>
-      </div>
-    </div>
-  </section>
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>GAS-STATION DRUGS ARE POISONING OUR COMMUNITIES</h2>
+            <div class="hero-standout">UNSAFE. UNREGULATED. UNFIT.</div>
+            <div class="hero-sub"><strong>Kratom</strong> is sold in vape shops and gas stations nationwide despite federal warnings.<br> Communities are fighting back.</div>
+            <div class="hero-buttons">
+                <a href="action.html" class="btn btn-primary">TAKE ACTION NOW →</a>
+                <a href="evidence/index.html" class="btn btn-outline">READ THE EVIDENCE →</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="container">
-    <!-- state quick nav -->
-    <div class="state-quick-nav">
-      <p>> FIND YOUR STATE & ACT NOW</p>
-      <div class="dropdown-row">
-        <select id="stateDropdown" class="state-select">
-          <option value="">— Select a state —</option>
-          <option value="states/southcarolina.html">South Carolina (HB 4641 – fake ban)</option>
-          <option value="states/michigan.html">Michigan (HB 5537 – Schedule I)</option>
-          <option value="states/nc.html">North Carolina (Schedule IV needed)</option>
-          <option value="states/delaware.html">Delaware (SB 262 – full ban)</option>
-          <option value="states/nevada.html">Nevada (Schedule I hearing June 4)</option>
-          <option value="states/ohio.html">Ohio (Oppose SB 299 & HB 587)</option>
-          <option value="states/NH.html">New Hampshire (Amend SB 557 to full ban)</option>
-          <option value="states/arizona.html">Arizona (HB 2415 – loophole bill)</option>
-        </select>
-        <button id="goToStateBtn" class="btn-small">GO →</button>
-        <a href="states/index.html" class="state-index-link">>> ALL STATE ACTIONS →</a>
-      </div>
-    </div>
-
-    <!-- Simple facts -->
-    <div class="fact-grid">
-      <div class="fact-item">
-        <h3>WHERE IT’S SOLD</h3>
-        <ul><li>Gas stations</li><li>Vape shops</li><li>Online retailers</li></ul>
-      </div>
-      <div class="fact-item">
-        <h3>WHO IT TARGETS</h3>
-        <ul><li>Teens & young adults</li><li>People in recovery</li><li>Unsuspecting consumers</li></ul>
-      </div>
-      <div class="fact-item">
-        <h3>WHAT HAPPENS</h3>
-        <ul><li>Addiction & withdrawal</li><li>ER visits / poison control</li><li>Deaths with kratom detected</li></ul>
-      </div>
-    </div>
-
-    <!-- FULL WIDTH BANNER -->
-    <div class="full-image-banner">
-      <img src="kratomproducts.jpeg" alt="Different names, same substance – Kratom. Ban the plant.">
-    </div>
-
-    <!-- "The Plant is the Problem" section -->
-    <div class="message-section">
-      <h3>THE PLANT IS THE PROBLEM</h3>
-      <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
-      <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
-    </div>
-
-    <!-- STORIES LIST (bullet style) – replaced the three cards -->
-    <div class="stories-section">
-      <div class="stories-heading">Key investigations & policy pillars</div>
-      <ul class="stories-list">
-        <li>
-          <strong>Medical Records Challenge</strong>
-          <span class="summary">Kratom advocates demand autopsies and toxicology for harm – but offer only anecdotes for benefit. We demand one standard.</span>
-          <a href="proof.html">Read more →</a>
-        </li>
-        <li>
-          <strong>Ethanol in kratom shots</strong>
-          <span class="summary">Independent lab tests found ethanol in retail kratom extracts – some at levels exceeding alcohol beverage limits.</span>
-          <a href="etoh.html">Review evidence →</a>
-        </li>
-        <li>
-          <strong>The Insult</strong>
-          <span class="summary">When lawmakers accept kratom anecdotes as medical evidence, they vote “no confidence” in every physician, nurse and pharmacist.</span>
-          <a href="insult.html">Read commentary →</a>
-        </li>
-        <li>
-          <strong>SR‑17018: The New Market</strong>
-          <span class="summary">How whole‑leaf kratom advocates downplayed withdrawal – and created a retail industry for quitting.</span>
-          <a href="sr.html">Learn more →</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Industry full width section -->
-  <section class="full-width-section industry-spotlight">
     <div class="container">
-      <div class="two-col">
-        <div class="col-left">
-          <h2><span>INDUSTRY</span> SPIN & DECEPTION</h2>
-          <ul class="industry-list">
-            <li>American Kratom Association lobbying</li>
-            <li>Jack Henningfield & OxyContin parallels</li>
-            <li>KCPA: market protection, not public health</li>
-            <li>Same tactics as Big Tobacco</li>
-          </ul>
+        <!-- state quick nav -->
+        <div class="state-quick-nav">
+            <p>> FIND YOUR STATE & ACT NOW</p>
+            <div class="dropdown-row">
+                <select id="stateDropdown" class="state-select">
+                    <option value="">— Select a state —</option>
+                    <option value="states/southcarolina.html">South Carolina (HB 4641 – fake ban)</option>
+                    <option value="states/michigan.html">Michigan (HB 5537 – Schedule I)</option>
+                    <option value="states/nc.html">North Carolina (Schedule IV needed)</option>
+                    <option value="states/delaware.html">Delaware (SB 262 – full ban)</option>
+                    <option value="states/nevada.html">Nevada (Schedule I hearing June 4)</option>
+                    <option value="states/ohio.html">Ohio (Oppose SB 299 & HB 587)</option>
+                    <option value="states/NH.html">New Hampshire (Amend SB 557 to full ban)</option>
+                    <option value="states/arizona.html">Arizona (HB 2415 – loophole bill)</option>
+                </select>
+                <button id="goToStateBtn" class="btn-small">GO →</button>
+                <a href="states/index.html" class="state-index-link">>> ALL STATE ACTIONS →</a>
+            </div>
         </div>
-        <div class="col-right">
-          <p>The kratom industry uses sophisticated messaging to block regulation. They push "consumer protection" bills that actually protect their profits.</p>
-          <p>Learn how they mislead lawmakers and the media — and how you can expose the truth.</p>
-          <a href="industry/index.html" class="btn-light">UNCOVER INDUSTRY SPIN →</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Evidence full width -->
-  <section class="full-width-section evidence-spotlight">
+        <!-- Simple facts -->
+        <div class="fact-grid">
+            <div class="fact-item">
+                <h3>WHERE IT’S SOLD</h3>
+                <ul><li>Gas stations</li><li>Vape shops</li><li>Online retailers</li></ul>
+            </div>
+            <div class="fact-item">
+                <h3>WHO IT TARGETS</h3>
+                <ul><li>Teens & young adults</li><li>People in recovery</li><li>Unsuspecting consumers</li></ul>
+            </div>
+            <div class="fact-item">
+                <h3>WHAT HAPPENS</h3>
+                <ul><li>Addiction & withdrawal</li><li>ER visits / poison control</li><li>Deaths with kratom detected</li></ul>
+            </div>
+        </div>
+
+        <!-- FULL WIDTH BANNER -->
+        <div class="full-image-banner">
+            <img src="kratomproducts.jpeg" alt="Different names, same substance – Kratom. Ban the plant.">
+        </div>
+
+        <!-- "The Plant is the Problem" section -->
+        <div class="message-section">
+            <h3>THE PLANT IS THE PROBLEM</h3>
+            <p>Kratom leaf naturally contains the same alkaloids found in extracts, shots, and “7‑OH” products. There is no “safe” natural version – only different concentrations. <strong>Any bill that leaves natural leaf legal is a loophole, not a ban.</strong> See the truth about how kratom products are all equally dangerous.</p>
+            <a href="kratom_products.html" class="msg-link">LEARN WHY “NATURAL” IS NO EXCUSE →</a>
+        </div>
+
+        <!-- STORIES LIST (bullet style) – replaced the three cards -->
+        <div class="stories-section">
+            <div class="stories-heading">Key investigations & policy pillars</div>
+            <ul class="stories-list">
+                <li>
+                    <strong>Medical Records Challenge</strong>
+                    <span class="summary">Kratom advocates demand autopsies and toxicology for harm – but offer only anecdotes for benefit. We demand one standard.</span>
+                    <a href="proof.html">Read more →</a>
+                </li>
+                <li>
+                    <strong>Ethanol in kratom shots</strong>
+                    <span class="summary">Independent lab tests found ethanol in retail kratom extracts – some at levels exceeding alcohol beverage limits.</span>
+                    <a href="etoh.html">Review evidence →</a>
+                </li>
+                <li>
+                    <strong>The Insult</strong>
+                    <span class="summary">When lawmakers accept kratom anecdotes as medical evidence, they vote “no confidence” in every physician, nurse and pharmacist.</span>
+                    <a href="insult.html">Read commentary →</a>
+                </li>
+                <li>
+                    <strong>SR‑17018: The New Market</strong>
+                    <span class="summary">How whole‑leaf kratom advocates downplayed withdrawal – and created a retail industry for quitting.</span>
+                    <a href="sr.html">Learn more →</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Industry full width section -->
+    <section class="full-width-section industry-spotlight">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-left">
+                    <h2><span>INDUSTRY</span> SPIN & DECEPTION</h2>
+                    <ul class="industry-list">
+                        <li>American Kratom Association lobbying</li>
+                        <li>Jack Henningfield & OxyContin parallels</li>
+                        <li>KCPA: market protection, not public health</li>
+                        <li>Same tactics as Big Tobacco</li>
+                    </ul>
+                </div>
+                <div class="col-right">
+                    <p>The kratom industry uses sophisticated messaging to block regulation. They push "consumer protection" bills that actually protect their profits.</p>
+                    <p>Learn how they mislead lawmakers and the media — and how you can expose the truth.</p>
+                    <a href="industry/index.html" class="btn-light">UNCOVER INDUSTRY SPIN →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence full width -->
+    <section class="full-width-section evidence-spotlight">
+        <div class="container">
+            <div class="two-col">
+                <div class="col-left">
+                    <h2><span>THE</span> EVIDENCE</h2>
+                    <ul class="evidence-links">
+                        <li><a href="evidence/fdaposition/index.html">FDA Position</a></li>
+                        <li><a href="evidence/fdadenial/index.html">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
+                        <li><a href="evidence/death/index.html">CDC SUDORS death data</a></li>
+                        <li><a href="evidence/poisoncontrol/poisoncontrol.html">Poison control center reports</a></li>
+                        <li><a href="evidence/adverse.html">FDA Reported adverse events</a></li>
+                        <li><a href="evidence/research/index.html">Human research / addiction liability</a></li>
+                    </ul>
+                </div>
+                <div class="col-right">
+                    <div class="testimonial-block">
+                        <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
+                        <div class="attribution">— Ohio parent, 2024</div>
+                    </div>
+                    <div class="testimonial-block" style="margin-top: 24px;">
+                        <p><strong>More parents’ voices:</strong> “My son started buying it at a vape shop. Within a year he was in the ER.” — T. Reynolds</p>
+                        <a href="evidence/index.html" class="btn-light" style="margin-top: 16px; display: inline-block;">SEE THE EVIDENCE →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action section -->
+    <section class="full-width-section action-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 2.5rem;">TAKE ACTION NOW</h2>
+                <div style="width: 70px; height: 3px; background: #e4b23e; margin: 16px auto;"></div>
+            </div>
+            <div class="action-grid">
+                <div class="action-item"><a href="email.html">EMAIL YOUR LEGISLATOR</a></div>
+                <div class="action-item"><a href="testimony.html">WRITE A TESTIMONY</a></div>
+                <div class="action-item"><a href="media.html">DOWNLOAD FLYERS & ONE-PAGE HANDOUTS</a></div>
+                <div class="action-item"><a href="pharmacy.html">CONTACT STATE BOARD OF PHARMACY</a></div>
+                <div class="action-item"><a href="health.html">CONTACT STATE HEALTH DEPARTMENT</a></div>
+                <div class="action-item"><a href="medsociety.html">CONTACT MEDICAL SOCIETIES</a></div>
+            </div>
+            <p style="text-align: center; color: #eef2f5; margin-top: 32px;">Use our templates and toolkits to contact federal officials, state legislators, and health agencies.</p>
+        </div>
+    </section>
+
     <div class="container">
-      <div class="two-col">
-        <div class="col-left">
-          <h2><span>THE</span> EVIDENCE</h2>
-          <ul class="evidence-links">
-            <li><a href="evidence/fdaposition/index.html">FDA Position</a></li>
-            <li><a href="evidence/fdadenial/index.html">FDA New Dietary Ingredient denial (Johnson Foods)</a></li>
-            <li><a href="evidence/death/index.html">CDC SUDORS death data</a></li>
-            <li><a href="evidence/poisoncontrol/poisoncontrol.html">Poison control center reports</a></li>
-            <li><a href="evidence/adverse.html">FDA Reported adverse events</a></li>
-            <li><a href="evidence/research/index.html">Human research / addiction liability</a></li>
-          </ul>
+        <div class="federal-action">
+            <h2><span>! LET’S TAKE</span> FEDERAL ACTION NOW</h2>
+            <p>State fights are crucial, but real change requires federal action. Congress can schedule kratom and stop this dangerous substance from being sold in every gas station and vape shop across the country.</p>
+            <a href="congress.html" class="btn-federal">CONTACT CONGRESS →</a>
         </div>
-        <div class="col-right">
-          <div class="testimonial-block">
-            <p>“We didn’t know what it was until it was too late. It was next to the energy drinks.”</p>
-            <div class="attribution">— Ohio parent, 2024</div>
-          </div>
-          <div class="testimonial-block" style="margin-top: 24px;">
-            <p><strong>More parents’ voices:</strong> “My son started buying it at a vape shop. Within a year he was in the ER.” — T. Reynolds</p>
-            <a href="evidence/index.html" class="btn-light" style="margin-top: 16px; display: inline-block;">SEE THE EVIDENCE →</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Action section -->
-  <section class="full-width-section action-section">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 30px;">
-        <h2 style="font-size: 2.5rem;">TAKE ACTION NOW</h2>
-        <div style="width: 70px; height: 3px; background: #e4b23e; margin: 16px auto;"></div>
-      </div>
-      <div class="action-grid">
-        <div class="action-item"><a href="email.html">EMAIL YOUR LEGISLATOR</a></div>
-        <div class="action-item"><a href="testimony.html">WRITE A TESTIMONY</a></div>
-        <div class="action-item"><a href="media.html">DOWNLOAD FLYERS & ONE-PAGE HANDOUTS</a></div>
-        <div class="action-item"><a href="pharmacy.html">CONTACT STATE BOARD OF PHARMACY</a></div>
-        <div class="action-item"><a href="health.html">CONTACT STATE HEALTH DEPARTMENT</a></div>
-        <div class="action-item"><a href="medsociety.html">CONTACT MEDICAL SOCIETIES</a></div>
-      </div>
-      <p style="text-align: center; color: #eef2f5; margin-top: 32px;">Use our templates and toolkits to contact federal officials, state legislators, and health agencies.</p>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="federal-action">
-      <h2><span>! LET’S TAKE</span> FEDERAL ACTION NOW</h2>
-      <p>State fights are crucial, but real change requires federal action. Congress can schedule kratom and stop this dangerous substance from being sold in every gas station and vape shop across the country.</p>
-      <a href="congress.html" class="btn-federal">CONTACT CONGRESS →</a>
-    </div>
-  </div>
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-links">
-      <a href="evidence/index.html">EVIDENCE</a>
-      <a href="industry/index.html">INDUSTRY NARRATIVES</a>
-      <a href="action.html">FIGHT BACK</a>
-      <!-- Added proof and sr in footer -->
-      <a href="proof.html">PROOF</a>
-      <a href="sr.html">SR-17018</a>
-      <a href="insult.html">THE INSULT</a>
-      <a href="congress.html">CONGRESS</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
+    <div class="container footer-inner">
+        <div class="footer-links">
+            <a href="evidence/index.html">EVIDENCE</a>
+            <a href="industry/index.html">INDUSTRY NARRATIVES</a>
+            <a href="action.html">FIGHT BACK</a>
+            <!-- Added proof and sr in footer -->
+            <a href="proof.html">PROOF</a>
+            <a href="sr.html">SR-17018</a>
+            <a href="insult.html">THE INSULT</a>
+            <a href="congress.html">CONGRESS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+        <div class="copyright">© 2025 Anti‑Kratom Association. All rights reserved.<br><span style="font-size:0.8rem;">Unsafe. Unregulated. Unfit.</span></div>
     </div>
-    <div class="copyright">© 2025 Anti‑Kratom Association. All rights reserved.<br><span style="font-size:0.8rem;">Unsafe. Unregulated. Unfit.</span></div>
-  </div>
 </footer>
 
 <script>
-  const goButton = document.getElementById('goToStateBtn');
-  const dropdown = document.getElementById('stateDropdown');
-  if (goButton && dropdown) {
-    goButton.addEventListener('click', function() {
-      const selected = dropdown.value;
-      if (selected && selected !== '') window.location.href = selected;
-      else alert('Please select a state from the dropdown.');
-    });
-  }
+    const goButton = document.getElementById('goToStateBtn');
+    const dropdown = document.getElementById('stateDropdown');
+    if (goButton && dropdown) {
+        goButton.addEventListener('click', function() {
+            const selected = dropdown.value;
+            if (selected && selected !== '') window.location.href = selected;
+            else alert('Please select a state from the dropdown.');
+        });
+    }
 </script>
 </body>
 </html>
