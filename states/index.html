@@ -121,14 +121,13 @@
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
             background: #0b131e;
             color: #f0f4fa;
-            padding: 0;
+            padding: 2rem 1.5rem;
             min-height: 100vh;
         }
 
         .container {
             max-width: 1320px;
             margin: 0 auto;
-            padding: 0 1.5rem 2rem 1.5rem;
         }
 
         /* ── skip link (accessibility) ── */
@@ -150,74 +149,7 @@
             top: 0;
         }
 
-        /* ─── HEADER (matches reference page) ─── */
-        .site-header {
-            background-color: #0c151f;
-            color: #fff;
-            padding: 16px 0;
-            border-bottom: 4px solid #b42b2b;
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .logo h1 {
-            font-size: 1.7rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-
-        .logo span {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: #bfc9d4;
-            letter-spacing: 0.3px;
-            margin-top: 4px;
-        }
-
-        .nav {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            transition: color 0.2s;
-        }
-
-        .nav a:hover {
-            color: #e4b23e;
-            border-bottom: 2px solid #b42b2b;
-        }
-
-        .nav a.active {
-            color: #e4b23e;
-            border-bottom: 2px solid #b42b2b;
-        }
-
-        /* ── hub header (below site header) ── */
-        .hub-header {
-            margin-top: 2.5rem;
-            margin-bottom: 1.8rem;
-        }
-
+        /* ── header ── */
         .hub-header h1 {
             font-size: 2.4rem;
             font-weight: 800;
@@ -228,6 +160,7 @@
         .hub-header p {
             font-size: 1.1rem;
             color: #b0c4de;
+            margin-bottom: 1.8rem;
         }
 
         /* ── stats bar ── */
@@ -606,22 +539,8 @@
 
         /* ── responsive ── */
         @media (max-width: 700px) {
-            .container {
-                padding: 0 1rem 2rem 1rem;
-            }
-            .header-inner {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-                padding: 0 16px;
-            }
-            .nav {
-                gap: 1rem;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-            }
-            .nav a {
-                font-size: 0.8rem;
+            body {
+                padding: 1rem;
             }
             .hub-header h1 {
                 font-size: 1.8rem;
@@ -682,9 +601,6 @@
                 font-size: 0.75rem;
                 padding: 0.3rem 0.9rem;
             }
-            .logo h1 {
-                font-size: 1.4rem;
-            }
         }
     </style>
 </head>
@@ -693,28 +609,9 @@
     <!-- ═══ SKIP LINK ═══ -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- ═══ HEADER (matches reference page) ═══ -->
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo">
-                <h1>ANTI-KRATOM ASSOCIATION</h1>
-                <span>public health · evidence · action</span>
-            </div>
-            <nav class="nav" aria-label="Main navigation">
-                <a href="../index.html">HOME</a>
-                <a href="../evidence/index.html">EVIDENCE</a>
-                <a href="../industry/index.html">INDUSTRY</a>
-                <a href="#" class="active">FIGHT BACK</a>
-                <a href="../about.html">ABOUT</a>
-                <a href="../contact.html">CONTACT</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ═══ MAIN CONTENT ═══ -->
     <div class="container">
 
-        <!-- ═══ HUB HEADER ═══ -->
+        <!-- ═══ HEADER ═══ -->
         <header class="hub-header">
             <h1>STATE ACTION HUB</h1>
             <p>Pick your state. Call your representative. Demand a full ban on kratom.</p>
@@ -789,9 +686,9 @@
         <!-- ═══ FOOTER ═══ -->
         <footer class="footer-bar">
             <span>
-                <a href="../index.html">Home</a> ·
-                <a href="../evidence/index.html">Evidence</a> ·
-                <a href="../industry/index.html">Industry Hub</a> ·
+                <a href="#">Home</a> ·
+                <a href="#">Evidence</a> ·
+                <a href="#">Industry Hub</a> ·
                 <a href="#">Fight Back</a>
             </span>
             <span>&copy; 2026 · Anti‑Kratom Association</span>
