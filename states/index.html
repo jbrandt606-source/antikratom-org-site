@@ -52,11 +52,11 @@
                 "@type": "ItemList",
                 "name": "US States with Kratom Legislative Action",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Montana", "url": "#montana" },
-                    { "@type": "ListItem", "position": 2, "name": "Arizona", "url": "#arizona" },
-                    { "@type": "ListItem", "position": 3, "name": "Delaware", "url": "#delaware" },
-                    { "@type": "ListItem", "position": 4, "name": "Florida", "url": "#florida" },
-                    { "@type": "ListItem", "position": 5, "name": "Michigan", "url": "#michigan" }
+                    { "@type": "ListItem", "position": 1, "name": "Montana", "url": "states/montana.html" },
+                    { "@type": "ListItem", "position": 2, "name": "Arizona", "url": "states/arizona.html" },
+                    { "@type": "ListItem", "position": 3, "name": "Delaware", "url": "states/delaware.html" },
+                    { "@type": "ListItem", "position": 4, "name": "Florida", "url": "states/florida.html" },
+                    { "@type": "ListItem", "position": 5, "name": "Michigan", "url": "states/michigan.html" }
                 ]
             }
         }
@@ -109,7 +109,6 @@
         }
     </script>
 
-    <!-- ═══ BASE STYLES (matches the image + modern layout) ═══ -->
     <style>
         /* ── reset & base ── */
         * {
@@ -122,13 +121,14 @@
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
             background: #0b131e;
             color: #f0f4fa;
-            padding: 2rem 1.5rem;
+            padding: 0;
             min-height: 100vh;
         }
 
         .container {
             max-width: 1320px;
             margin: 0 auto;
+            padding: 0 1.5rem 2rem 1.5rem;
         }
 
         /* ── skip link (accessibility) ── */
@@ -150,7 +150,74 @@
             top: 0;
         }
 
-        /* ── header ── */
+        /* ─── HEADER (matches reference page) ─── */
+        .site-header {
+            background-color: #0c151f;
+            color: #fff;
+            padding: 16px 0;
+            border-bottom: 4px solid #b42b2b;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #bfc9d4;
+            letter-spacing: 0.3px;
+            margin-top: 4px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #e4b23e;
+            border-bottom: 2px solid #b42b2b;
+        }
+
+        .nav a.active {
+            color: #e4b23e;
+            border-bottom: 2px solid #b42b2b;
+        }
+
+        /* ── hub header (below site header) ── */
+        .hub-header {
+            margin-top: 2.5rem;
+            margin-bottom: 1.8rem;
+        }
+
         .hub-header h1 {
             font-size: 2.4rem;
             font-weight: 800;
@@ -161,7 +228,6 @@
         .hub-header p {
             font-size: 1.1rem;
             color: #b0c4de;
-            margin-bottom: 1.8rem;
         }
 
         /* ── stats bar ── */
@@ -392,7 +458,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* border color variants */
         .state-card.urgent {
             border-left-color: #b42b2b;
         }
@@ -541,8 +606,22 @@
 
         /* ── responsive ── */
         @media (max-width: 700px) {
-            body {
-                padding: 1rem;
+            .container {
+                padding: 0 1rem 2rem 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                padding: 0 16px;
+            }
+            .nav {
+                gap: 1rem;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .nav a {
+                font-size: 0.8rem;
             }
             .hub-header h1 {
                 font-size: 1.8rem;
@@ -603,6 +682,9 @@
                 font-size: 0.75rem;
                 padding: 0.3rem 0.9rem;
             }
+            .logo h1 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -611,9 +693,28 @@
     <!-- ═══ SKIP LINK ═══ -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <!-- ═══ HEADER (matches reference page) ═══ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <h1>ANTI-KRATOM ASSOCIATION</h1>
+                <span>public health · evidence · action</span>
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <a href="../index.html">HOME</a>
+                <a href="../evidence/index.html">EVIDENCE</a>
+                <a href="../industry/index.html">INDUSTRY</a>
+                <a href="#" class="active">FIGHT BACK</a>
+                <a href="../about.html">ABOUT</a>
+                <a href="../contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
     <div class="container">
 
-        <!-- ═══ HEADER ═══ -->
+        <!-- ═══ HUB HEADER ═══ -->
         <header class="hub-header">
             <h1>STATE ACTION HUB</h1>
             <p>Pick your state. Call your representative. Demand a full ban on kratom.</p>
@@ -664,7 +765,7 @@
                     <strong>Law enforcement has no field test to enforce this bill.</strong> The Economic Affairs Interim
                     Committee meets May 19 — they must hear from you immediately.
                 </p>
-                <a href="#" class="btn-urgent" aria-label="Oppose the KCPA bill in Montana and support a full ban">Oppose the KCPA – Support a Full Ban →</a>
+                <a href="states/montana.html" class="btn-urgent" aria-label="Oppose the KCPA bill in Montana and support a full ban">Oppose the KCPA – Support a Full Ban →</a>
             </article>
 
             <!-- ─── ALL STATES HEADER ─── -->
@@ -688,9 +789,9 @@
         <!-- ═══ FOOTER ═══ -->
         <footer class="footer-bar">
             <span>
-                <a href="#">Home</a> ·
-                <a href="#">Evidence</a> ·
-                <a href="#">Industry Hub</a> ·
+                <a href="../index.html">Home</a> ·
+                <a href="../evidence/index.html">Evidence</a> ·
+                <a href="../industry/index.html">Industry Hub</a> ·
                 <a href="#">Fight Back</a>
             </span>
             <span>&copy; 2026 · Anti‑Kratom Association</span>
@@ -700,13 +801,13 @@
 
     <!-- ═══ SCRIPTS ═══ -->
     <script>
-        // ─── STATE DATA ───
+        // ─── STATE DATA with correct links ───
         const states = [{
             name: "Alaska",
             badge: "Session Ended — Prepare",
             badgeType: "gray",
             description: "No statewide kratom ban advanced this session. Use the off‑session window to document retail sales, recruit medical/law enforcement allies, and build local awareness.",
-            link: "#",
+            link: "states/alaska.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -715,7 +816,7 @@
             badge: "Urgent — Loophole Bill",
             badgeType: "",
             description: "HB 2415 bans only synthetic kratom, sets a meaningless 800 ppm threshold, and admits law enforcement is not required to test. Demand a full Schedule I amendment.",
-            link: "#",
+            link: "states/arizona.html",
             btnText: "Take Action in AZ",
             btnType: "",
             filter: "urgent"
@@ -724,7 +825,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next legislative session.",
-            link: "#",
+            link: "states/colorado.html",
             btnText: "Stay Ready",
             btnType: "gray",
             filter: "prepare"
@@ -733,7 +834,7 @@
             badge: "Ban + Fake Regulation",
             badgeType: "",
             description: "Support SB 262 – full Schedule I ban. Oppose HB 332 – unenforceable KCPA framework. Regulation doesn't work – only a ban does.",
-            link: "#",
+            link: "states/delaware.html",
             btnText: "Take Action in DE",
             btnType: "",
             filter: "urgent"
@@ -742,7 +843,7 @@
             badge: "KCPA Failure",
             badgeType: "",
             description: "Florida leads the nation in kratom deaths. The Kratom Consumer Protection Act is a failure. Repeal and pass a full Schedule I ban.",
-            link: "#",
+            link: "states/florida.html",
             btnText: "Repeal KCPA – Full Ban",
             btnType: "",
             filter: "urgent"
@@ -751,7 +852,7 @@
             badge: "Schedule I Bill Failed",
             badgeType: "",
             description: "A full ban bill failed. The industry is pushing a KCPA. Demand that legislators revive the Schedule I ban.",
-            link: "#",
+            link: "states/georgia.html",
             btnText: "Bring Back the Ban",
             btnType: "",
             filter: "active-bill"
@@ -760,7 +861,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom bill moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "#",
+            link: "states/hawaii.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -769,7 +870,7 @@
             badge: "Session Ended — Prepare",
             badgeType: "gray",
             description: "Both full prohibition and KCPA failed. Kratom remains unregulated. Use the off‑session window to build support for a full ban.",
-            link: "#",
+            link: "states/idaho.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -778,7 +879,7 @@
             badge: "No KCPA, No Ban",
             badgeType: "gray",
             description: "Both KCPA and Schedule I bills failed. The industry will try again. Build a coalition for a full prohibition.",
-            link: "#",
+            link: "states/illinois.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -787,7 +888,7 @@
             badge: "Session Adjourned",
             badgeType: "gray",
             description: "Legislature adjourned without a ban. Use the off‑session window to document retail sales, recruit stakeholders, and build local awareness.",
-            link: "#",
+            link: "states/iowa.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -796,7 +897,7 @@
             badge: "No KCPA",
             badgeType: "gray",
             description: "Maine has not passed a KCPA. The industry is pushing these weak laws. Demand a full Schedule I ban instead.",
-            link: "#",
+            link: "states/maine.html",
             btnText: "Build Coalition for a Ban",
             btnType: "gray",
             filter: "ban"
@@ -805,7 +906,7 @@
             badge: "No Full Ban",
             badgeType: "",
             description: "Massachusetts lacks a complete criminal ban. Reject KCPA half‑measures. Demand a full Schedule I prohibition.",
-            link: "#",
+            link: "states/mass.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -814,7 +915,7 @@
             badge: "Schedule I Bill",
             badgeType: "gold",
             description: "HB 5537 would put kratom on Schedule I – a complete ban. The industry is fighting it. Call your senator to demand a YES vote.",
-            link: "#",
+            link: "states/michigan.html",
             btnText: "Take Action in MI",
             btnType: "gold",
             filter: "active-bill"
@@ -823,7 +924,7 @@
             badge: "Age 21 Law Fails",
             badgeType: "",
             description: "HF 3453 only raised the age to 21 – it does not ban kratom. We need a full Schedule I ban. Contact your legislators.",
-            link: "#",
+            link: "states/minnesota.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -832,7 +933,7 @@
             badge: "KCPA Failure",
             badgeType: "",
             description: "HB 1077 created a weak KCPA with a 1% cap and a 25% tax. Repeal and pass a full Schedule I ban.",
-            link: "#",
+            link: "states/mississippi.html",
             btnText: "Repeal KCPA – Full Ban",
             btnType: "",
             filter: "urgent"
@@ -841,7 +942,7 @@
             badge: "No KCPA",
             badgeType: "gray",
             description: "Missouri has not passed a KCPA. The industry is pushing. Demand a full Schedule I ban before they lock in a weak law.",
-            link: "#",
+            link: "states/missouri.html",
             btnText: "Build Coalition for a Ban",
             btnType: "gray",
             filter: "ban"
@@ -850,7 +951,7 @@
             badge: "Urgent – KCPA Hearing",
             badgeType: "",
             description: "A KCPA bill is being heard May 19. It would legalize and tax kratom. Oppose it and demand a full ban.",
-            link: "#",
+            link: "states/montana.html",
             btnText: "Oppose KCPA – Full Ban",
             btnType: "",
             filter: "urgent"
@@ -859,7 +960,7 @@
             badge: "KCPA Failure",
             badgeType: "",
             description: "LB230 created an unenforceable KCPA with a 2% cap. Repeal and pass a full Schedule I ban.",
-            link: "#",
+            link: "states/nebraska.html",
             btnText: "Repeal KCPA – Full Ban",
             btnType: "",
             filter: "urgent"
@@ -868,7 +969,7 @@
             badge: "Schedule I Hearing (June 4)",
             badgeType: "gold",
             description: "The Board of Pharmacy is considering a full Schedule I ban. Submit your technical comment before June 4.",
-            link: "#",
+            link: "states/nevada.html",
             btnText: "Submit Comment",
             btnType: "gold",
             filter: "active-bill"
@@ -877,7 +978,7 @@
             badge: "Amend SB 557",
             badgeType: "",
             description: "SB 557 is a weak synthetic‑only ban. Demand an amendment to include all kratom alkaloids under Schedule I.",
-            link: "#",
+            link: "states/NH.html",
             btnText: "Amend to Full Ban",
             btnType: "",
             filter: "active-bill"
@@ -886,7 +987,7 @@
             badge: "CJ's Law Pending",
             badgeType: "gold",
             description: "CJ's Law (S829) would criminalize kratom. Support this real ban. Contact organizations and senators to pass it.",
-            link: "#",
+            link: "states/newjersey.html",
             btnText: "Support CJ's Law",
             btnType: "gold",
             filter: "active-bill"
@@ -895,7 +996,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "#",
+            link: "states/newmexico.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -904,7 +1005,7 @@
             badge: "Weak Bills Pending",
             badgeType: "",
             description: "Proposed KCPA bills would not ban kratom. Demand a full Schedule I criminal prohibition.",
-            link: "#",
+            link: "states/newyork.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -913,7 +1014,7 @@
             badge: "Schedule IV Needed",
             badgeType: "",
             description: "The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV.",
-            link: "#",
+            link: "states/nc.html",
             btnText: "Take Action in NC",
             btnType: "",
             filter: "active-bill"
@@ -922,7 +1023,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "#",
+            link: "states/northdakota.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -931,7 +1032,7 @@
             badge: "Oppose Workaround Bills",
             badgeType: "",
             description: "The Board of Pharmacy already determined kratom belongs in Schedule I. Oppose SB 299 and HB 587.",
-            link: "#",
+            link: "states/ohio.html",
             btnText: "Take Action in OH",
             btnType: "",
             filter: "urgent"
@@ -940,7 +1041,7 @@
             badge: "No KCPA",
             badgeType: "gray",
             description: "Oklahoma has not passed a KCPA. The industry is pushing. Demand a full Schedule I ban instead.",
-            link: "#",
+            link: "states/oklahoma.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -949,7 +1050,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "#",
+            link: "states/oregon.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -958,7 +1059,7 @@
             badge: "No KCPA",
             badgeType: "gray",
             description: "Pennsylvania has not passed a KCPA. The industry is pushing. Build a coalition for a full ban.",
-            link: "#",
+            link: "states/pennsylvania.html",
             btnText: "Build Coalition for a Ban",
             btnType: "gray",
             filter: "ban"
@@ -967,7 +1068,7 @@
             badge: "Bill Stalled – Build for 2027",
             badgeType: "gray",
             description: "The fake synthetic‑only ban died. Now we need a complete retail ban in 2027. Contact agencies and health groups.",
-            link: "#",
+            link: "states/southcarolina.html",
             btnText: "Build Support for 2027",
             btnType: "gray",
             filter: "prepare"
@@ -976,7 +1077,7 @@
             badge: "Ban Bills Failed",
             badgeType: "gray",
             description: "Senate Bill 77 and House Bill 1151 failed. Use the off‑session window to build support for a full ban.",
-            link: "#",
+            link: "states/southdakota.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -985,7 +1086,7 @@
             badge: "No Statewide Ban",
             badgeType: "gray",
             description: "Texas has not passed any statewide kratom regulation. Build a coalition to demand a full Schedule I ban.",
-            link: "#",
+            link: "states/texas.html",
             btnText: "Build Coalition for a Ban",
             btnType: "gray",
             filter: "ban"
@@ -994,7 +1095,7 @@
             badge: "Warning Labels Not Enough",
             badgeType: "",
             description: "Virginia requires an opioid‑like withdrawal warning and a 2% cap – but kratom remains legal. Demand a full ban.",
-            link: "#",
+            link: "states/virginia.html",
             btnText: "Demand a Full Ban",
             btnType: "",
             filter: "ban"
@@ -1003,7 +1104,7 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "#",
+            link: "states/washington.html",
             btnText: "Prepare for Next Session",
             btnType: "gray",
             filter: "prepare"
@@ -1012,7 +1113,7 @@
             badge: "No KCPA",
             badgeType: "gray",
             description: "West Virginia has not passed a KCPA. The industry is pushing. Demand a full Schedule I ban.",
-            link: "#",
+            link: "states/westvirginia.html",
             btnText: "Build Coalition for a Ban",
             btnType: "gray",
             filter: "ban"
@@ -1021,7 +1122,7 @@
             badge: "KCPA Failure",
             badgeType: "",
             description: "Wyoming passed a weak KCPA in 2026. Repeal it and pass a full Schedule I ban.",
-            link: "#",
+            link: "states/wyoming.html",
             btnText: "Repeal KCPA – Full Ban",
             btnType: "",
             filter: "urgent"
