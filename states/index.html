@@ -196,81 +196,6 @@
             color: #d0dcec;
         }
 
-        /* ── search & filters ── */
-        .search-filter-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 2rem;
-            background: rgba(255, 255, 255, 0.04);
-            padding: 0.8rem 1.2rem;
-            border-radius: 60px;
-            backdrop-filter: blur(4px);
-        }
-
-        .search-box {
-            flex: 1 1 240px;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: rgba(255, 255, 255, 0.07);
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .search-box input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #fff;
-            font-size: 0.95rem;
-            padding: 0.5rem 0;
-            width: 100%;
-        }
-
-        .search-box input::placeholder {
-            color: #8a9bb5;
-        }
-
-        .search-icon {
-            font-size: 1.1rem;
-            color: #8a9bb5;
-        }
-
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #b0c4de;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-        }
-
-        .filter-btn:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: #e4b23e;
-            color: #fff;
-        }
-
-        .filter-btn.active {
-            background: #e4b23e;
-            border-color: #e4b23e;
-            color: #0b131e;
-        }
-
         /* ── urgent callout (Montana) ── */
         .urgent-callout {
             background: linear-gradient(145deg, #1a2632, #0f1822);
@@ -352,20 +277,6 @@
             font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: -0.01em;
-        }
-
-        .view-map-link {
-            color: #e4b23e;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .view-map-link:hover {
-            text-decoration: underline;
         }
 
         /* ── state grid ── */
@@ -513,27 +424,69 @@
             margin: 0 auto 1.2rem auto;
         }
 
-        /* ── footer ── */
-        .footer-bar {
-            margin-top: 3rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        /* ── custom footer from reference ── */
+        .footer-nav {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            font-size: 0.9rem;
-            color: #8a9bb5;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
         }
 
-        .footer-bar a {
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 28px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s;
+            font-size: 1rem;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #0b131e;
+        }
+
+        .btn-primary {
+            background-color: #b42b2b;
+            color: white;
+            padding: 12px 28px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s;
+            font-size: 1rem;
+            display: inline-block;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #8f2020;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .footer-note a {
             color: #e4b23e;
             text-decoration: none;
-            margin: 0 0.4rem;
         }
 
-        .footer-bar a:hover {
+        .footer-note a:hover {
             text-decoration: underline;
         }
 
@@ -556,18 +509,6 @@
             .stat-number {
                 font-size: 1.6rem;
             }
-            .search-filter-row {
-                border-radius: 20px;
-                padding: 0.8rem 1rem;
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .search-box {
-                flex: 1 1 auto;
-            }
-            .filter-group {
-                justify-content: center;
-            }
             .urgent-callout {
                 padding: 1.5rem;
             }
@@ -581,9 +522,9 @@
                 flex-direction: column;
                 gap: 0.3rem;
             }
-            .footer-bar {
+            .footer-nav {
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
             }
         }
 
@@ -596,10 +537,6 @@
             }
             .state-card h4 {
                 font-size: 1.3rem;
-            }
-            .filter-btn {
-                font-size: 0.75rem;
-                padding: 0.3rem 0.9rem;
             }
         }
     </style>
@@ -633,21 +570,6 @@
             </div>
         </section>
 
-        <!-- ═══ SEARCH + FILTERS ═══ -->
-        <div class="search-filter-row" role="search">
-            <div class="search-box">
-                <span class="search-icon" aria-hidden="true">🔍</span>
-                <input type="text" id="stateSearch" placeholder="Search your state..." aria-label="Search for your state by name or keyword" />
-            </div>
-            <div class="filter-group" id="filterGroup" role="tablist" aria-label="Filter states by category">
-                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-                <button class="filter-btn" data-filter="urgent" role="tab" aria-selected="false">Urgent</button>
-                <button class="filter-btn" data-filter="active-bill" role="tab" aria-selected="false">Active Bill</button>
-                <button class="filter-btn" data-filter="regulation" role="tab" aria-selected="false">Regulation</button>
-                <button class="filter-btn" data-filter="ban" role="tab" aria-selected="false">Ban</button>
-            </div>
-        </div>
-
         <!-- ═══ MAIN CONTENT ═══ -->
         <main id="main-content" role="main">
 
@@ -668,7 +590,6 @@
             <!-- ─── ALL STATES HEADER ─── -->
             <div class="all-states-header">
                 <h3>All States</h3>
-                <a href="#" class="view-map-link" aria-label="View state map">🗺️ View by Map</a>
             </div>
 
             <!-- ─── STATE GRID ─── -->
@@ -683,16 +604,15 @@
 
         </main>
 
-        <!-- ═══ FOOTER ═══ -->
-        <footer class="footer-bar">
-            <span>
-                <a href="#">Home</a> ·
-                <a href="#">Evidence</a> ·
-                <a href="#">Industry Hub</a> ·
-                <a href="#">Fight Back</a>
-            </span>
-            <span>&copy; 2026 · Anti‑Kratom Association</span>
-        </footer>
+        <!-- ═══ FOOTER (from reference) ═══ -->
+        <div class="footer-nav">
+            <a class="btn btn-secondary" href="index.html">← Back to Action Hub</a>
+            <a class="btn btn-primary" href="../evidence/index.html">Review the Evidence</a>
+        </div>
+        <div class="footer-note">
+            <p><a href="../index.html">Home</a> | <a href="../evidence/index.html">Evidence</a> | <a href="../industry/index.html">Industry</a> | <a href="index.html">Fight Back</a></p>
+            <p style="margin-top:10px;">Hero image: action.jpg — your toolkit is ready.</p>
+        </div>
 
     </div>
 
@@ -1030,24 +950,9 @@
 
         // ─── RENDER GRID ───
         const grid = document.getElementById('stateGrid');
-        let currentFilter = 'all';
-        let searchTerm = '';
 
         function renderStates() {
-            const filtered = states.filter(s => {
-                const matchFilter = currentFilter === 'all' || s.filter === currentFilter;
-                const matchSearch = s.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    s.description.toLowerCase().includes(searchTerm.toLowerCase());
-                return matchFilter && matchSearch;
-            });
-
-            if (filtered.length === 0) {
-                grid.innerHTML =
-                    `<div style="grid-column:1/-1; text-align:center; padding:3rem 0; color:#8a9bb5;" role="status">No states match your criteria.</div>`;
-                return;
-            }
-
-            grid.innerHTML = filtered.map(s => {
+            grid.innerHTML = states.map(s => {
                 let badgeClass = 'state-badge';
                 if (s.badgeType === 'gold') badgeClass += ' gold';
                 else if (s.badgeType === 'blue') badgeClass += ' blue';
@@ -1075,26 +980,6 @@
             `;
             }).join('');
         }
-
-        // ─── SEARCH ───
-        document.getElementById('stateSearch').addEventListener('input', (e) => {
-            searchTerm = e.target.value.trim();
-            renderStates();
-        });
-
-        // ─── FILTER BUTTONS ───
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
-                currentFilter = btn.dataset.filter;
-                renderStates();
-            });
-        });
 
         // ─── INITIAL RENDER ───
         renderStates();
