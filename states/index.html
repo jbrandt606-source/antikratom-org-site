@@ -893,4 +893,212 @@
             badge: "No Active Bill",
             badgeType: "gray",
             description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
-            link: "/states/newmex
+            link: "/states/newmexico.html",
+            btnText: "Prepare for Next Session",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "New York",
+            badge: "Weak Bills Pending",
+            badgeType: "",
+            description: "Proposed KCPA bills would not ban kratom. Demand a full Schedule I criminal prohibition.",
+            link: "/states/newyork.html",
+            btnText: "Demand a Full Ban",
+            btnType: "",
+            filter: "ban"
+        }, {
+            name: "North Carolina",
+            badge: "Schedule IV Needed",
+            badgeType: "",
+            description: "The previous ban bill died. Now we need an amendment or new bill to add kratom to Schedule IV.",
+            link: "/states/nc.html",
+            btnText: "Take Action in NC",
+            btnType: "",
+            filter: "active-bill"
+        }, {
+            name: "North Dakota",
+            badge: "No Active Bill",
+            badgeType: "gray",
+            description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
+            link: "/states/northdakota.html",
+            btnText: "Prepare for Next Session",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "Ohio",
+            badge: "Oppose Workaround Bills",
+            badgeType: "",
+            description: "The Board of Pharmacy already determined kratom belongs in Schedule I. Oppose SB 299 and HB 587.",
+            link: "/states/ohio.html",
+            btnText: "Take Action in OH",
+            btnType: "",
+            filter: "urgent"
+        }, {
+            name: "Oklahoma",
+            badge: "No KCPA",
+            badgeType: "gray",
+            description: "Oklahoma has not passed a KCPA. The industry is pushing. Demand a full Schedule I ban instead.",
+            link: "/states/oklahoma.html",
+            btnText: "Demand a Full Ban",
+            btnType: "",
+            filter: "ban"
+        }, {
+            name: "Oregon",
+            badge: "No Active Bill",
+            badgeType: "gray",
+            description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
+            link: "/states/oregon.html",
+            btnText: "Prepare for Next Session",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "Pennsylvania",
+            badge: "No KCPA",
+            badgeType: "gray",
+            description: "Pennsylvania has not passed a KCPA. The industry is pushing. Build a coalition for a full ban.",
+            link: "/states/pennsylvania.html",
+            btnText: "Build Coalition for a Ban",
+            btnType: "gray",
+            filter: "ban"
+        }, {
+            name: "South Carolina",
+            badge: "Bill Stalled – Build for 2027",
+            badgeType: "gray",
+            description: "The fake synthetic‑only ban died. Now we need a complete retail ban in 2027. Contact agencies and health groups.",
+            link: "/states/southcarolina.html",
+            btnText: "Build Support for 2027",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "South Dakota",
+            badge: "Ban Bills Failed",
+            badgeType: "gray",
+            description: "Senate Bill 77 and House Bill 1151 failed. Use the off‑session window to build support for a full ban.",
+            link: "/states/southdakota.html",
+            btnText: "Prepare for Next Session",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "Texas",
+            badge: "No Statewide Ban",
+            badgeType: "gray",
+            description: "Texas has not passed any statewide kratom regulation. Build a coalition to demand a full Schedule I ban.",
+            link: "/states/texas.html",
+            btnText: "Build Coalition for a Ban",
+            btnType: "gray",
+            filter: "ban"
+        }, {
+            name: "Virginia",
+            badge: "Warning Labels Not Enough",
+            badgeType: "",
+            description: "Virginia requires an opioid‑like withdrawal warning and a 2% cap – but kratom remains legal. Demand a full ban.",
+            link: "/states/virginia.html",
+            btnText: "Demand a Full Ban",
+            btnType: "",
+            filter: "ban"
+        }, {
+            name: "Washington",
+            badge: "No Active Bill",
+            badgeType: "gray",
+            description: "No kratom ban moved this session. Build a coalition, document retail sales, and prepare for the next session.",
+            link: "/states/washington.html",
+            btnText: "Prepare for Next Session",
+            btnType: "gray",
+            filter: "prepare"
+        }, {
+            name: "West Virginia",
+            badge: "No KCPA",
+            badgeType: "gray",
+            description: "West Virginia has not passed a KCPA. The industry is pushing. Demand a full Schedule I ban.",
+            link: "/states/westvirginia.html",
+            btnText: "Build Coalition for a Ban",
+            btnType: "gray",
+            filter: "ban"
+        }, {
+            name: "Wyoming",
+            badge: "KCPA Failure",
+            badgeType: "",
+            description: "Wyoming passed a weak KCPA in 2026. Repeal it and pass a full Schedule I ban.",
+            link: "/states/wyoming.html",
+            btnText: "Repeal KCPA – Full Ban",
+            btnType: "",
+            filter: "urgent"
+        }];
+
+        // ─── SORT ALPHABETICALLY ───
+        states.sort((a, b) => a.name.localeCompare(b.name));
+
+        // ─── RENDER GRID ───
+        const grid = document.getElementById('stateGrid');
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        function renderStates() {
+            const filtered = states.filter(s => {
+                const matchFilter = currentFilter === 'all' || s.filter === currentFilter;
+                const matchSearch = s.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    s.description.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchFilter && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML =
+                    `<div style="grid-column:1/-1; text-align:center; padding:3rem 0; color:#8a9bb5;" role="status">No states match your criteria.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(s => {
+                let badgeClass = 'state-badge';
+                if (s.badgeType === 'gold') badgeClass += ' gold';
+                else if (s.badgeType === 'blue') badgeClass += ' blue';
+                else if (s.badgeType === 'gray') badgeClass += ' gray';
+
+                let btnClass = 'action-btn';
+                if (s.btnType === 'gold') btnClass += ' gold';
+                else if (s.btnType === 'blue') btnClass += ' blue';
+                else if (s.btnType === 'gray') btnClass += ' gray';
+
+                let cardClass = 'state-card';
+                if (s.filter === 'urgent') cardClass += ' urgent';
+                else if (s.filter === 'active-bill') cardClass += ' active-bill';
+                else if (s.filter === 'regulation') cardClass += ' regulation';
+                else if (s.filter === 'ban') cardClass += ' ban';
+                else cardClass += ' prepare';
+
+                return `
+              <div class="${cardClass}" role="listitem">
+                <div class="${badgeClass}">${s.badge}</div>
+                <h4>${s.name}</h4>
+                <p>${s.description}</p>
+                <a href="${s.link}" class="${btnClass}" aria-label="Take action for ${s.name}">${s.btnText} →</a>
+              </div>
+            `;
+            }).join('');
+        }
+
+        // ─── SEARCH ───
+        document.getElementById('stateSearch').addEventListener('input', (e) => {
+            searchTerm = e.target.value.trim();
+            renderStates();
+        });
+
+        // ─── FILTER BUTTONS ───
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                currentFilter = btn.dataset.filter;
+                renderStates();
+            });
+        });
+
+        // ─── INITIAL RENDER ───
+        renderStates();
+    </script>
+
+</body>
+</html>
