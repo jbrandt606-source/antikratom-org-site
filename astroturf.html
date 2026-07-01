@@ -87,32 +87,35 @@
     .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 22px; margin-bottom: 18px; }
     .footer-links a { color: #e4b23e; text-decoration: none; font-weight: 700; font-size: 0.92rem; }
 
-    /* dropdown / accordion */
+    /* methodology toggle as clean link */
     .methodology-toggle {
-      background: rgba(228,178,62,0.15);
-      border: 1px solid #e4b23e;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 24px 0 12px 0;
+      display: inline-block;
+      margin: 20px 0 8px 0;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 1.2rem;
+      font-weight: 600;
+      font-size: 1.1rem;
       color: #e4b23e;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.2s;
+      background: none;
+      border: none;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(228,178,62,0.3);
+      transition: border-color 0.2s;
+      font-family: inherit;
+      letter-spacing: 0.01em;
     }
     .methodology-toggle:hover {
-      background: rgba(228,178,62,0.25);
+      border-bottom-color: #e4b23e;
     }
     .methodology-toggle .arrow {
-      font-size: 1.6rem;
+      font-size: 0.8rem;
+      margin-left: 6px;
+      display: inline-block;
       transition: transform 0.3s;
     }
     .methodology-toggle .arrow.open {
       transform: rotate(180deg);
     }
+
     .methodology-detail {
       max-height: 0;
       overflow: hidden;
@@ -139,7 +142,7 @@
       margin-bottom: 8px;
     }
     .methodology-detail ul li::before {
-      content: "—";
+      content: ">";
       position: absolute;
       left: 0;
       color: #e4b23e;
@@ -178,26 +181,26 @@
 
 <div class="container">
 
-  <!-- ===== METHODOLOGY WITH DROPDOWN ===== -->
+  <!-- ===== METHODOLOGY WITH DROPDOWN (clean link style) ===== -->
   <section class="content-section">
     <h2>Methodology</h2>
     <p>This analysis examined all 2,370 public comments submitted to the Ohio Board of Pharmacy regarding the proposed scheduling of mitragynine (kratom) as a Schedule I controlled substance. The complete public record was obtained through a public records request.</p>
 
-    <div class="methodology-toggle" onclick="toggleMethodology()">
-      <span>📊 View complete methodology</span>
-      <span class="arrow" id="methodologyArrow">▼</span>
-    </div>
+    <button class="methodology-toggle" onclick="toggleMethodology()">
+      <span>View complete methodology</span>
+      <span class="arrow" id="methodologyArrow">▾</span>
+    </button>
 
     <div class="methodology-detail" id="methodologyDetail">
       <p><strong>Data Processing</strong><br>
       The official comment record was converted into a structured dataset suitable for computational analysis. Each comment was extracted, normalized, and reviewed using a reproducible workflow implemented in Python.</p>
       <p>Text normalization included:</p>
       <ul>
-        <li>removal of formatting artifacts introduced during document conversion;</li>
-        <li>conversion to lowercase;</li>
-        <li>removal of punctuation;</li>
-        <li>normalization of whitespace;</li>
-        <li>preservation of substantive comment text for analysis.</li>
+        <li>removal of formatting artifacts introduced during document conversion</li>
+        <li>conversion to lowercase</li>
+        <li>removal of punctuation</li>
+        <li>normalization of whitespace</li>
+        <li>preservation of substantive comment text for analysis</li>
       </ul>
       <p>No comments were excluded based on viewpoint.</p>
 
@@ -219,23 +222,23 @@
       <p><em>Template Family Identification</em><br>
       Comments were also evaluated for recurring advocacy themes. Rather than asking whether two comments were identical, the analysis identified recurring messaging families including:</p>
       <ul>
-        <li>chronic pain narratives;</li>
-        <li>regulation instead of prohibition;</li>
-        <li>natural leaf versus synthetic 7-hydroxymitragynine (7-OH);</li>
-        <li>black market and fentanyl arguments;</li>
-        <li>Kratom Consumer Protection Act advocacy;</li>
-        <li>pharmaceutical corruption allegations;</li>
-        <li>repeated technical pharmacology discussions.</li>
+        <li>chronic pain narratives</li>
+        <li>regulation instead of prohibition</li>
+        <li>natural leaf versus synthetic 7-hydroxymitragynine (7-OH)</li>
+        <li>black market and fentanyl arguments</li>
+        <li>Kratom Consumer Protection Act advocacy</li>
+        <li>pharmaceutical corruption allegations</li>
+        <li>repeated technical pharmacology discussions</li>
       </ul>
       <p>Template families were identified using recurring language patterns, repeated paragraphs, and shared policy narratives.</p>
 
       <p><em>Repeated Technical Language</em><br>
       Special attention was given to repeated scientific and pharmacological discussions. The analysis identified multiple comments containing highly similar explanations involving:</p>
       <ul>
-        <li>G-protein biased agonism;</li>
-        <li>β-arrestin signaling;</li>
-        <li>respiratory ceiling effects;</li>
-        <li>partial agonism.</li>
+        <li>G-protein biased agonism</li>
+        <li>β-arrestin signaling</li>
+        <li>respiratory ceiling effects</li>
+        <li>partial agonism</li>
       </ul>
       <p>These technical passages appeared across multiple submissions despite otherwise different comment structures.</p>
 
@@ -299,7 +302,7 @@
     <p>While the exact classification of every comment is complex, the evidence of coordinated template campaigns is clear and extensive.</p>
   </section>
 
-  <!-- ===== IDENTICAL COPY PASTE (now contextual) ===== -->
+  <!-- ===== REPEATED ADVOCACY LANGUAGE ===== -->
   <section class="content-section">
     <h2>Repeated Advocacy Language</h2>
     <p>Beyond identical copy-pasting, the analysis identified extensive reuse of advocacy language:</p>
