@@ -14,10 +14,28 @@
   <meta property="og:title" content="Astroturfing in Ohio Kratom Comments: Manufactured Opposition Exposed">
   <meta property="og:description" content="77.5% of opposition comments to Ohio's kratom ban were manufactured by coordinated advocacy campaigns, not genuine public opinion.">
   <meta property="og:url" content="https://antikratom.org/astroturf.html">
+  <meta property="og:site_name" content="Anti-Kratom Association">
+  <meta property="og:image" content="https://antikratom.org/astroturf.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Astroturfing in Ohio Kratom Comments">
   <meta name="twitter:description" content="77.5% of opposition comments were manufactured by coordinated advocacy campaigns.">
+  <meta name="twitter:image" content="https://antikratom.org/astroturf.png">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Astroturfing in Ohio Kratom Comments",
+    "url":"https://antikratom.org/astroturf.html",
+    "description":"Analysis of 2,370 public comments reveals that 77.5% of opposition to Ohio's kratom ban was manufactured through coordinated astroturfing campaigns.",
+    "keywords":"astroturfing, kratom, Ohio kratom ban, manufactured opposition",
+    "author":{"@type":"Organization","name":"Anti-Kratom Association"},
+    "publisher":{"@type":"Organization","name":"Anti-Kratom Association","url":"https://antikratom.org/"}
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +59,15 @@
       color: white;
       padding: 100px 0;
       border-bottom: 4px solid #b42b2b;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
     }
     .hero-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 24px;
+      width: 100%;
     }
     .hero h1 {
       font-size: 3.5rem;
@@ -63,7 +85,7 @@
     .hero p {
       font-size: 1.3rem;
       max-width: 800px;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       border-left: 6px solid #e4b23e;
       padding: 18px 28px;
     }
@@ -113,6 +135,7 @@
       padding: 40px;
       border-left: 6px solid #b42b2b;
       margin: 40px 0;
+      border-radius: 4px;
     }
     .content-section h2 {
       font-size: 2.4rem;
@@ -146,34 +169,50 @@
       font-weight: 900;
     }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
+    .stat-list {
       margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
     }
-    .stat-card {
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 16px;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      border: 1px solid #263846;
+    .stat-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: #edf4ff;
+      font-size: 1.15rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    .stat-card .number {
-      font-size: 3rem;
-      font-weight: 900;
+    .stat-list li .number {
+      font-weight: 800;
       color: #e4b23e;
-      line-height: 1.1;
+      font-size: 1.6rem;
+      min-width: 100px;
+      text-align: right;
     }
-    .stat-card .label {
-      color: #bfc9d4;
-      font-size: 0.9rem;
-      margin-top: 8px;
+    .stat-list li .stat-label {
+      font-weight: 500;
     }
-    .stat-card .note {
+    .stat-list li .stat-note {
       color: #9fb0c0;
-      font-size: 0.75rem;
-      margin-top: 6px;
+      font-size: 0.85rem;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .stat-list li:last-child {
+      border-bottom: none;
+    }
+
+    .highlight-text {
+      padding: 18px 22px;
+      background: rgba(180, 43, 43, 0.12);
+      border-left: 6px solid #b42b2b;
+      border-radius: 12px;
+      margin: 20px 0;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
     }
 
     .pdf-box {
@@ -190,20 +229,6 @@
     }
     .pdf-box a:hover {
       text-decoration: underline;
-    }
-
-    .highlight-box {
-      padding: 18px 22px;
-      background: rgba(180, 43, 43, 0.15);
-      border-left: 6px solid #b42b2b;
-      border-radius: 12px;
-      margin: 20px 0;
-    }
-    .highlight-box p {
-      color: #fff;
-      font-weight: 700;
-      margin: 0;
-      font-size: 1.1rem;
     }
 
     .two-col {
@@ -302,19 +327,30 @@
       .content-section h2 {
         font-size: 1.8rem;
       }
-      .stat-grid {
-        grid-template-columns: 1fr 1fr;
+      .stat-list li {
+        font-size: 1rem;
+      }
+      .stat-list li .number {
+        font-size: 1.3rem;
+        min-width: 70px;
       }
     }
     @media (max-width: 500px) {
-      .stat-grid {
-        grid-template-columns: 1fr;
-      }
       .hero {
         padding: 60px 0;
+        min-height: 300px;
       }
       .hero h1 {
         font-size: 2rem;
+      }
+      .stat-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .stat-list li .number {
+        text-align: left;
+        min-width: auto;
       }
     }
   </style>
@@ -363,31 +399,31 @@
       <h2>The Numbers Don't Lie</h2>
       <p>A detailed analysis of all 2,370 comments submitted to the Ohio Board of Pharmacy reveals a coordinated astroturfing campaign designed to manufacture opposition to the proposed kratom ban.</p>
 
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="number">2,370</div>
-          <div class="label">Total Comments</div>
-          <div class="note">All submissions reviewed</div>
-        </div>
-        <div class="stat-card">
-          <div class="number">1,941</div>
-          <div class="label">Oppose Comments</div>
-          <div class="note">81.8% of all comments</div>
-        </div>
-        <div class="stat-card">
-          <div class="number">1,786</div>
-          <div class="label">Advocacy Generated</div>
-          <div class="note">77.5% of total comments</div>
-        </div>
-        <div class="stat-card">
-          <div class="number">155</div>
-          <div class="label">Genuine Oppose</div>
-          <div class="note">Only 8% of oppose comments authentic</div>
-        </div>
-      </div>
+      <ul class="stat-list">
+        <li>
+          <span class="stat-label">Total Comments Submitted</span>
+          <span class="number">2,370</span>
+          <span class="stat-note">All submissions reviewed</span>
+        </li>
+        <li>
+          <span class="stat-label">Oppose Comments</span>
+          <span class="number">1,941</span>
+          <span class="stat-note">81.8% of all comments</span>
+        </li>
+        <li>
+          <span class="stat-label">Advocacy Generated</span>
+          <span class="number">1,786</span>
+          <span class="stat-note">77.5% of total comments</span>
+        </li>
+        <li>
+          <span class="stat-label">Genuine Oppose Comments</span>
+          <span class="number">155</span>
+          <span class="stat-note">Only 8% of oppose comments authentic</span>
+        </li>
+      </ul>
 
-      <div class="highlight-box">
-        <p>Key Finding: 92% of all oppose comments were advocacy generated. Only 8% of oppose comments appear to be genuine personal testimony.</p>
+      <div class="highlight-text">
+        Key Finding: 92% of all oppose comments were advocacy generated. Only 8% of oppose comments appear to be genuine personal testimony.
       </div>
 
       <div class="pdf-box">
@@ -474,8 +510,8 @@
       </ul>
       <p>This is not a public hearing. This is a manufactured public relations campaign designed to deceive regulators into believing there is widespread opposition to a public health measure. The astroturfing is so extensive that it overwhelms the genuine voices of families who have lost loved ones to kratom.</p>
 
-      <div class="highlight-box">
-        <p>The industry does not want you to know that the vast majority of opposition to kratom bans is manufactured, not organic.</p>
+      <div class="highlight-text">
+        The industry does not want you to know that the vast majority of opposition to kratom bans is manufactured, not organic.
       </div>
 
       <p>If you support honest public discourse, you must expose this deception. The public deserves to know who is really behind these comments and why they are trying so hard to hide it.</p>
