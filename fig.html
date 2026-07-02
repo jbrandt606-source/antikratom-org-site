@@ -56,7 +56,156 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', system-ui, sans-serif; background-color: #0c151f; color: #fff; line-height: 1.6; }
 
-    /* Hero with split layout - title on right, no colored bars */
+    /* ----- SCROLLING BANNER (EVIDENCE LINK) ----- */
+    .scroll-banner {
+      display: block;
+      background: #1a2c2e;
+      background-image: linear-gradient(95deg, #b42b2b 0%, #7a1f1f 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      overflow: hidden;
+      border-bottom: 1px solid #e4b23e;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .scroll-track {
+      display: flex;
+      width: max-content;
+      animation: scrollEvidence 18s linear infinite;
+    }
+    .scroll-track:hover { animation-play-state: paused; }
+    .scroll-item {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 12px 28px;
+      gap: 12px;
+      letter-spacing: 0.01em;
+      font-size: 0.95rem;
+    }
+    .scroll-item strong { font-weight: 700; color: #ffdf8c; }
+    .scroll-item span { color: #ffdf8c; font-weight: 700; text-decoration: underline; }
+    @keyframes scrollEvidence {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== TWITTER FOLLOW BAR ===== */
+    .twitter-follow-bar {
+      background: #0a0f1a;
+      border-bottom: 2px solid #1d9bf0;
+      padding: 10px 0;
+      position: relative;
+      z-index: 9;
+    }
+    .twitter-follow-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px 28px;
+    }
+    .twitter-follow-inner .x-icon {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: #1d9bf0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .twitter-follow-inner .x-icon svg { width: 22px; height: 22px; fill: #ffffff; }
+    .twitter-follow-inner .handle { font-weight: 700; font-size: 1.2rem; color: #ffffff; letter-spacing: -0.01em; }
+    .twitter-follow-inner .handle a { color: #ffffff; text-decoration: none; transition: color 0.2s; }
+    .twitter-follow-inner .handle a:hover { color: #1d9bf0; }
+    .twitter-follow-inner .invite-text { color: #b0c4d9; font-size: 0.95rem; font-weight: 400; }
+    .twitter-follow-inner .invite-text strong { color: #ffffff; font-weight: 600; }
+    .twitter-follow-btn {
+      background: #1d9bf0;
+      color: #ffffff;
+      padding: 8px 24px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .twitter-follow-btn:hover { background: #1a8cd8; transform: scale(1.03); }
+    .twitter-follow-btn::after { content: '→'; font-size: 1.1rem; transition: transform 0.2s; }
+    .twitter-follow-btn:hover::after { transform: translateX(4px); }
+    @media (max-width: 700px) {
+      .twitter-follow-inner { gap: 10px 18px; padding: 4px 0; }
+      .twitter-follow-inner .handle { font-size: 1rem; }
+      .twitter-follow-inner .invite-text { font-size: 0.85rem; width: 100%; text-align: center; }
+      .twitter-follow-btn { padding: 6px 18px; font-size: 0.8rem; }
+      .twitter-follow-inner .x-icon { width: 32px; height: 32px; font-size: 1.3rem; }
+      .twitter-follow-inner .x-icon svg { width: 18px; height: 18px; }
+    }
+
+    /* header */
+    .site-header {
+      background-color: #0c151f;
+      color: #fff;
+      padding: 16px 0;
+      border-bottom: 4px solid #b42b2b;
+    }
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .logo span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #bfc9d4;
+      margin-top: 4px;
+    }
+    .nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav a:hover {
+      color: #e4b23e;
+      border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Hero with split layout - title on right */
     .hero-fig {
       display: flex;
       min-height: 500px;
@@ -262,139 +411,196 @@
       .content-section h2 { font-size: 1.8rem; }
       .content-section p { font-size: 1.05rem; }
       .pull-quote { font-size: 1.1rem; padding: 18px 20px; }
+      .nav { gap: 1rem; }
+    }
+    @media (max-width: 500px) {
+      .content-section { padding: 18px 14px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== HERO: split layout, title on right ===== -->
-<section class="hero-fig">
-  <div class="hero-fig-left" role="img" aria-label="A tiny green fig leaf held between thumb and forefinger"></div>
-  <div class="hero-fig-right">
-    <div class="title-block">
-      <div class="title-line fig-leaf">A FIG LEAF</div>
-      <div class="title-line doesnt-cover">THAT DOESN'T COVER</div>
-      <div class="title-line endowment">THE ENDOWMENT</div>
-      <div class="title-line problem">OF THE PROBLEM.</div>
+  <!-- SCROLLING BANNER -->
+  <a class="scroll-banner" href="https://globalkratom.org" target="_blank" rel="noopener noreferrer">
+    <div class="scroll-track">
+      <div class="scroll-item">
+        <strong>RESEARCH LIBRARY:</strong>
+        100+ studies · FDA data · Poison center reports · Policy analysis →
+        <span>GlobalKratom.org</span>
+      </div>
+      <div class="scroll-item">
+        <strong>RESEARCH LIBRARY:</strong>
+        100+ studies · FDA data · Poison center reports · Policy analysis →
+        <span>GlobalKratom.org</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- TWITTER FOLLOW BAR -->
+  <div class="twitter-follow-bar">
+    <div class="container twitter-follow-inner">
+      <span class="x-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </span>
+      <span class="handle">
+        <a href="https://twitter.com/AntiKratom" target="_blank" rel="noopener noreferrer">@AntiKratom</a>
+      </span>
+      <span class="invite-text">
+        <strong>Join the fight</strong> — follow for alerts, evidence &amp; action calls
+      </span>
+      <a href="https://twitter.com/AntiKratom" target="_blank" rel="noopener noreferrer" class="twitter-follow-btn">Follow</a>
     </div>
   </div>
-</section>
 
-<div class="container">
-
-  <!-- ===== ARTICLE CONTENT ===== -->
-  <section class="content-section">
-    <p style="font-size: 1.3rem; font-weight: 500; border-left: 3px solid #e4b23e; padding-left: 20px; color: #e8f0f5;">
-      The Drug Enforcement Administration has taken an important step by proposing to temporarily place high-concentration 7-hydroxymitragynine (7-OH) into Schedule I above specified thresholds. The proposal recognizes what has become increasingly obvious: concentrated 7-OH products are potent opioids, have no accepted medical use, present serious risks including dependence and respiratory depression, and are being aggressively marketed in smoke shops and gas stations.
-    </p>
-
-    <p><strong>But the proposal also exposes a deeper contradiction.</strong></p>
-
-    <p>The DEA acknowledges throughout its notice that 7-OH is a naturally occurring alkaloid in kratom, that it is formed in the body after mitragynine is consumed, and that manufacturers can chemically convert mitragynine into 7-OH.</p>
-
-    <p>Then it leaves raw leaf kratom and mitragynine largely untouched for reasons unknown.</p>
-
-    <!-- besties.jpeg -->
-    <div class="img-inline">
-      <img src="besties.jpeg" alt="Secretary Kennedy with his friend and Botanic Tonics Founder JW Ross">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>ANTI-KRATOM ASSOCIATION</h1>
+        <span>public health · evidence · action</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">HOME</a>
+        <a href="evidence/index.html">EVIDENCE</a>
+        <a href="industry/index.html">INDUSTRY</a>
+        <a href="action.html">FIGHT BACK</a>
+        <a href="congress.html">CONGRESS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
     </div>
+  </header>
 
-    <h2>The Proposal Depends on Enforcement That Doesn't Exist</h2>
-
-    <p>The rule sets numerical limits for 7-OH concentrations and attempts to distinguish between products below and above those thresholds.</p>
-
-    <p><strong>Who is going to verify that?</strong></p>
-
-    <ul>
-      <li>Not the clerk behind the counter.</li>
-      <li>Not the gas station owner.</li>
-      <li>Not the smoke shop.</li>
-      <li>Not the average police officer.</li>
-    </ul>
-
-    <!-- officer.png -->
-    <div class="img-inline">
-      <img src="officer.png" alt="Police officer">
-    </div>
-
-    <p>No patrol officer is carrying an LC-MS/MS system in the trunk of a cruiser. Testing requires sophisticated laboratory equipment, trained analysts, and time. By the time laboratory results return, the product has already been sold to hundreds of customers. The practical reality is simple:</p>
-
-    <div class="pull-quote">
-      Absolutely no one is going to routinely inspect retail kratom products to verify they remain below these limits.
-    </div>
-
-    <h2>The Market Will Adapt</h2>
-
-    <p>The DEA correctly describes how 7-OH can be produced from mitragynine through relatively simple chemical conversion and notes that concentrated commercial products have proliferated rapidly.</p>
-
-    <p>If one formulation disappears, manufacturers redesign products. If one threshold is established, products are formulated just below it or marketed differently. If one molecule is controlled while the parent alkaloid remains widely available, chemistry does the rest.</p>
-
-    <h2>The Agency's Own Document Raises the Bigger Question</h2>
-
-    <p>Ironically, the proposal spends page after page describing problems that extend well beyond isolated 7-OH products, such as:</p>
-
-    <ul>
-      <li>opioid-like pharmacology,</li>
-      <li>aggressive retail marketing,</li>
-      <li>colorful products appealing to consumers,</li>
-      <li>gas station and smoke shop availability,</li>
-      <li>unknown purity,</li>
-      <li>inconsistent manufacturing,</li>
-      <li>misleading labeling,</li>
-      <li>poison center calls,</li>
-      <li>overdose reports,</li>
-      <li>dependence, and</li>
-      <li>products containing multiple opioid alkaloids.</li>
-    </ul>
-
-    <!-- products.jpeg -->
-    <div class="img-inline">
-      <img src="products.jpeg" alt="Kratom products on display">
-    </div>
-
-    <p>Those are characteristics of the broader commercial kratom market—not simply one isolated molecule.</p>
-
-    <p>The document repeatedly describes an industry that has evolved far beyond powdered leaves sold in Southeast Asia, yet the regulatory response targets only part of that evolution.</p>
-
-    <h2>The Real Test</h2>
-
-    <p>The measure of this policy will not be the headlines announcing a Schedule I action.</p>
-
-    <p>It will be what happens afterward.</p>
-
-    <div class="pull-quote">
-      If concentrated opioid products continue appearing under new names, new formulations, or new manufacturing processes, then history will judge this proposal for what it was: <span>a magnificent exercise in symbolism and a miserable exercise in policy.</span>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 22px; margin: 24px 0;">
-      <p style="margin: 0; color: #d0dce6;">
-        <strong>Read the full DEA notice:</strong><br>
-        <a href="https://www.dea.gov/press-releases/2026/07/01/dea-temporarily-schedule-7-oh-and-related-substances-protect-public" target="_blank" rel="noopener noreferrer" style="color: #e4b23e; font-weight: 600; text-decoration: none;">
-          DEA Temporarily Schedule 7-OH and Related Substances to Protect Public →
-        </a>
-      </p>
-    </div>
-
-    <div style="margin-top: 30px;">
-      <a href="index.html" style="color: #e4b23e; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(228,178,62,0.3); padding-bottom: 4px;">← Back to Home</a>
+  <!-- ===== HERO: split layout, title on right ===== -->
+  <section class="hero-fig">
+    <div class="hero-fig-left" role="img" aria-label="A tiny green fig leaf held between thumb and forefinger"></div>
+    <div class="hero-fig-right">
+      <div class="title-block">
+        <div class="title-line fig-leaf">A FIG LEAF</div>
+        <div class="title-line doesnt-cover">THAT DOESN'T COVER</div>
+        <div class="title-line endowment">THE ENDOWMENT</div>
+        <div class="title-line problem">OF THE PROBLEM.</div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <div class="footer-note">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="evidence/index.html">Evidence</a>
-      <a href="industry/index.html">Industry Watch</a>
-      <a href="action.html">Fight Back</a>
-      <a href="astroturf.html">Astroturf</a>
-      <a href="fig.html">Fig Leaf</a>
-      <a href="about.html">About</a>
-    </div>
-    <div>© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. Expose the Astroturf.</div>
-  </div>
+  <div class="container">
 
-</div>
+    <!-- ===== ARTICLE CONTENT ===== -->
+    <section class="content-section">
+      <p style="font-size: 1.3rem; font-weight: 500; border-left: 3px solid #e4b23e; padding-left: 20px; color: #e8f0f5;">
+        The Drug Enforcement Administration has taken an important step by proposing to temporarily place high-concentration 7-hydroxymitragynine (7-OH) into Schedule I above specified thresholds. The proposal recognizes what has become increasingly obvious: concentrated 7-OH products are potent opioids, have no accepted medical use, present serious risks including dependence and respiratory depression, and are being aggressively marketed in smoke shops and gas stations.
+      </p>
+
+      <p><strong>But the proposal also exposes a deeper contradiction.</strong></p>
+
+      <p>The DEA acknowledges throughout its notice that 7-OH is a naturally occurring alkaloid in kratom, that it is formed in the body after mitragynine is consumed, and that manufacturers can chemically convert mitragynine into 7-OH.</p>
+
+      <p>Then it leaves raw leaf kratom and mitragynine largely untouched for reasons unknown.</p>
+
+      <!-- besties.jpeg -->
+      <div class="img-inline">
+        <img src="besties.jpeg" alt="Secretary Kennedy with his friend and Botanic Tonics Founder JW Ross">
+      </div>
+
+      <h2>The Proposal Depends on Enforcement That Doesn't Exist</h2>
+
+      <p>The rule sets numerical limits for 7-OH concentrations and attempts to distinguish between products below and above those thresholds.</p>
+
+      <p><strong>Who is going to verify that?</strong></p>
+
+      <ul>
+        <li>Not the clerk behind the counter.</li>
+        <li>Not the gas station owner.</li>
+        <li>Not the smoke shop.</li>
+        <li>Not the average police officer.</li>
+      </ul>
+
+      <!-- officer.png -->
+      <div class="img-inline">
+        <img src="officer.png" alt="Police officer">
+      </div>
+
+      <p>No patrol officer is carrying an LC-MS/MS system in the trunk of a cruiser. Testing requires sophisticated laboratory equipment, trained analysts, and time. By the time laboratory results return, the product has already been sold to hundreds of customers. The practical reality is simple:</p>
+
+      <div class="pull-quote">
+        Absolutely no one is going to routinely inspect retail kratom products to verify they remain below these limits.
+      </div>
+
+      <h2>The Market Will Adapt</h2>
+
+      <p>The DEA correctly describes how 7-OH can be produced from mitragynine through relatively simple chemical conversion and notes that concentrated commercial products have proliferated rapidly.</p>
+
+      <p>If one formulation disappears, manufacturers redesign products. If one threshold is established, products are formulated just below it or marketed differently. If one molecule is controlled while the parent alkaloid remains widely available, chemistry does the rest.</p>
+
+      <h2>The Agency's Own Document Raises the Bigger Question</h2>
+
+      <p>Ironically, the proposal spends page after page describing problems that extend well beyond isolated 7-OH products, such as:</p>
+
+      <ul>
+        <li>opioid-like pharmacology,</li>
+        <li>aggressive retail marketing,</li>
+        <li>colorful products appealing to consumers,</li>
+        <li>gas station and smoke shop availability,</li>
+        <li>unknown purity,</li>
+        <li>inconsistent manufacturing,</li>
+        <li>misleading labeling,</li>
+        <li>poison center calls,</li>
+        <li>overdose reports,</li>
+        <li>dependence, and</li>
+        <li>products containing multiple opioid alkaloids.</li>
+      </ul>
+
+      <!-- products.jpeg -->
+      <div class="img-inline">
+        <img src="products.jpeg" alt="Kratom products on display">
+      </div>
+
+      <p>Those are characteristics of the broader commercial kratom market—not simply one isolated molecule.</p>
+
+      <p>The document repeatedly describes an industry that has evolved far beyond powdered leaves sold in Southeast Asia, yet the regulatory response targets only part of that evolution.</p>
+
+      <h2>The Real Test</h2>
+
+      <p>The measure of this policy will not be the headlines announcing a Schedule I action.</p>
+
+      <p>It will be what happens afterward.</p>
+
+      <div class="pull-quote">
+        If concentrated opioid products continue appearing under new names, new formulations, or new manufacturing processes, then history will judge this proposal for what it was: <span>a magnificent exercise in symbolism and a miserable exercise in policy.</span>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 22px; margin: 24px 0;">
+        <p style="margin: 0; color: #d0dce6;">
+          <strong>Read the full DEA notice:</strong><br>
+          <a href="https://www.dea.gov/press-releases/2026/07/01/dea-temporarily-schedule-7-oh-and-related-substances-protect-public" target="_blank" rel="noopener noreferrer" style="color: #e4b23e; font-weight: 600; text-decoration: none;">
+            DEA Temporarily Schedule 7-OH and Related Substances to Protect Public →
+          </a>
+        </p>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <a href="index.html" style="color: #e4b23e; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(228,178,62,0.3); padding-bottom: 4px;">← Back to Home</a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-note">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="evidence/index.html">Evidence</a>
+        <a href="industry/index.html">Industry Watch</a>
+        <a href="action.html">Fight Back</a>
+        <a href="astroturf.html">Astroturf</a>
+        <a href="fig.html">Fig Leaf</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. Expose the Astroturf.</div>
+    </div>
+
+  </div>
 
 </body>
 </html>
