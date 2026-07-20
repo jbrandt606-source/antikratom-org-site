@@ -44,11 +44,12 @@
 
         body {
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f4f7f2;
-            color: #11181c;
+            background: #0c151f;
+            color: #e0e5eb;
             line-height: 1.6;
         }
 
+        /* subtle background texture (optional, kept dim) */
         body::before {
             content: '';
             position: fixed;
@@ -59,7 +60,7 @@
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.06;
+            opacity: 0.04;
             pointer-events: none;
             z-index: -1;
         }
@@ -91,6 +92,7 @@
             font-weight: 700;
             letter-spacing: -0.02em;
             line-height: 1.2;
+            color: #ffffff;
         }
 
         .logo span {
@@ -196,7 +198,7 @@
             }
         }
 
-        /* ===== ARTICLE CONTENT ===== */
+        /* ===== ARTICLE CONTENT (dark theme) ===== */
         .article-content {
             padding: 60px 0 40px;
         }
@@ -204,17 +206,41 @@
         .article-content p {
             font-size: 1.15rem;
             margin-bottom: 1.5rem;
-            color: #1e2d2a;
+            color: #d0d5db;
             max-width: 820px;
         }
 
         .article-content .intro-highlight {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #1a2c2e;
+            color: #e4b23e;
             border-left: 4px solid #b42b2b;
             padding-left: 24px;
             margin-bottom: 2rem;
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e4b23e;
+            margin-top: 2rem;
+        }
+
+        .article-content ul, .article-content ol {
+            color: #d0d5db;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 1.2rem 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
         }
 
         .article-content .story-image {
@@ -222,17 +248,17 @@
             margin: 0 0 20px 30px;
             max-width: 320px;
             border-radius: 12px;
-            border: 1px solid #d0dbc2;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 1px solid #2a3a3e;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
 
         .article-content .story-image figcaption {
             font-size: 0.85rem;
-            color: #5a6e5e;
+            color: #a0b0b8;
             text-align: center;
             padding: 8px 0;
             font-style: italic;
-            background: #ffffff;
+            background: #1a2428;
             border-radius: 0 0 12px 12px;
         }
 
@@ -253,13 +279,14 @@
 
         /* ===== PDF & CITATION BOXES ===== */
         .citation-box {
-            background: #0c151f;
-            color: #ffffff;
+            background: #0f1a1e;
+            color: #eef2f5;
             padding: 24px 32px;
             border-radius: 16px;
             margin: 24px 0 32px;
             max-width: 860px;
             border-left: 6px solid #e4b23e;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
         }
 
         .citation-box h3 {
@@ -270,7 +297,7 @@
         }
 
         .citation-box p {
-            color: #eef2f5;
+            color: #d0d5db;
             font-size: 1rem;
             margin-bottom: 8px;
             max-width: 100%;
@@ -304,23 +331,23 @@
             max-width: 400px;
             margin: 24px 0;
             border-radius: 12px;
-            border: 1px solid #d0dbc2;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid #2a3a3e;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
         }
 
         .inline-image img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
+            border-radius: 12px 12px 0 0;
         }
 
         .inline-image figcaption {
             font-size: 0.85rem;
-            color: #5a6e5e;
+            color: #a0b0b8;
             text-align: center;
             padding: 8px 0;
-            background: #ffffff;
+            background: #1a2428;
             border-radius: 0 0 12px 12px;
         }
 
@@ -329,7 +356,7 @@
             margin: 40px 0 20px;
         }
         .back-link a {
-            color: #b42b2b;
+            color: #e4b23e;
             font-weight: 700;
             text-decoration: none;
             font-size: 1rem;
@@ -361,6 +388,7 @@
         }
         .copyright {
             font-size: 0.85rem;
+            color: #8a9aa0;
         }
 
         @media (max-width: 850px) {
@@ -408,13 +436,13 @@
     <main class="article-content">
         <div class="container">
 
-            <h2 style="font-size: 2rem; font-weight: 800; color: #1f3627; margin: 2rem 0 1rem;">Documented single-drug fatalities</h2>
+            <h2>Documented single-drug fatalities</h2>
 
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #b42b2b; margin-top: 2rem;">Two deaths from acute mitragynine intoxication</h3>
+            <h3>Two deaths from acute mitragynine intoxication</h3>
 
             <p>A 2022 forensic case report described two deaths in which comprehensive toxicology found no other drugs or alcohol.</p>
 
-            <ul style="margin: 1.2rem 0 1.2rem 2rem; color: #1e2d2a; font-size: 1.1rem;">
+            <ul>
                 <li>A 37-year-old man suddenly collapsed while bicycling. Mitragynine measured 2,325 ng/mL. The medical examiner certified acute mitragynine intoxication as the cause of death.</li>
                 <li>A previously healthy 33-year-old man lost consciousness while driving slowly. Mitragynine measured 3,809 ng/mL. No significant trauma or competing intoxicant was found. The cause of death was again acute mitragynine intoxication.</li>
             </ul>
@@ -427,9 +455,9 @@
 
             <p>The authors concluded that mitragynine was the single agent implicated in both deaths.</p>
 
-            <!-- The out‑of‑place Suriaga box with florida.pdf has been removed -->
+            <!-- Removed out-of-place Suriaga / florida.pdf box -->
 
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #b42b2b; margin-top: 2rem;">A third single-drug fatality</h3>
+            <h3>A third single-drug fatality</h3>
 
             <p>A 2023 case report described a 32-year-old man who suffered seizures and cardiac arrest. Toxicology detected mitragynine in blood, liver, and gastric contents, but no prescription drugs, illicit drugs, or alcohol. The death was ruled an accidental overdose caused by acute mitragynine intoxication with underlying medical conditions.</p>
 
@@ -439,7 +467,7 @@
                 <a href="Mata.pdf" class="pdf-link" target="_blank">Download PDF</a>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #b42b2b; margin-top: 2rem;">Nevada and earlier forensic literature</h3>
+            <h3>Nevada and earlier forensic literature</h3>
 
             <p>A Northern Nevada medical-examiner study identified a death in which mitragynine was considered the sole intoxicant, at 950 ng/mL. Its literature review also found ten previously reported fatalities in which kratom was the sole intoxicant.</p>
 
@@ -449,33 +477,33 @@
                 <a href="Nevada.pdf" class="pdf-link" target="_blank">Download PDF</a>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #b42b2b; margin-top: 2rem;">Florida identified dozens of mitragynine-only cases</h3>
+            <h3>Florida identified dozens of mitragynine-only cases</h3>
 
-            <p>A 2025 statewide analysis found 36 Florida decedents with mitragynine as the sole substance identified during 2020–2021. Twenty were classified as drug-toxicity deaths.</p>
+            <p>A 2025 statewide analysis found 36 Florida decedents with mitragynine as the sole substance identified during 2020-2021. Twenty were classified as drug-toxicity deaths.</p>
 
             <div class="citation-box">
                 <h3>Suriaga et al. 2025 (Florida)</h3>
-                <p>Suriaga AA, Tappen RM, McCurdy CR, Newman D, Grundmann O, Kelly JF. <em>The Associations of Kratom (Mitragynine), Opioids, Other Substances, and Sociodemographic Variables to Drug Intoxication–Related Mortality.</em> Journal of Addiction Medicine. 2025;19(3):306–313.</p>
+                <p>Suriaga AA, Tappen RM, McCurdy CR, Newman D, Grundmann O, Kelly JF. <em>The Associations of Kratom (Mitragynine), Opioids, Other Substances, and Sociodemographic Variables to Drug Intoxication-Related Mortality.</em> Journal of Addiction Medicine. 2025;19(3):306-313.</p>
                 <a href="florida.pdf" class="pdf-link" target="_blank">Download PDF</a>
             </div>
 
-            <h3 style="font-size: 1.4rem; font-weight: 700; color: #b42b2b; margin-top: 2rem;">National poison-center data</h3>
+            <h3>National poison-center data</h3>
 
-            <p>CDC researchers identified 233 kratom-associated deaths reported to poison centers from 2015–2025. Of those, 184 involved multiple substances—meaning 49 were reported as single-substance kratom exposures. These are surveillance reports rather than complete autopsy files, but they are still incompatible with the claim of “zero.”</p>
+            <p>CDC researchers identified 233 kratom-associated deaths reported to poison centers from 2015-2025. Of those, 184 involved multiple substances, meaning 49 were reported as single-substance kratom exposures. These are surveillance reports rather than complete autopsy files, but they are still incompatible with the claim of "zero."</p>
 
             <div class="citation-box">
                 <h3>MMWR 2026</h3>
-                <p>EB, Thomas YT, Holstege CP, Farah R. <em>Increases in Kratom-Related Reports to Poison Centers — National Poison Data System, United States, 2015–2025.</em> MMWR Morb Mortal Wkly Rep 2026;75:139–145.</p>
+                <p>EB, Thomas YT, Holstege CP, Farah R. <em>Increases in Kratom-Related Reports to Poison Centers — National Poison Data System, United States, 2015-2025.</em> MMWR Morb Mortal Wkly Rep 2026;75:139-145.</p>
                 <a href="cdc-kratom.pdf" class="pdf-link" target="_blank">Download PDF</a>
             </div>
 
-            <h2 style="font-size: 2rem; font-weight: 800; color: #1f3627; margin: 3rem 0 1rem;">Sole-substance deaths are not the Schedule I test</h2>
+            <h2>Sole-substance deaths are not the Schedule I test</h2>
 
-            <p>The obsession with finding a perfectly “kratom-only” death also misunderstands federal scheduling law.</p>
+            <p>The obsession with finding a perfectly "kratom-only" death also misunderstands federal scheduling law.</p>
 
             <p>Schedule I classification is based on whether a substance has:</p>
 
-            <ol style="margin: 1.2rem 0 1.2rem 2rem; color: #1e2d2a; font-size: 1.1rem;">
+            <ol>
                 <li>A high potential for abuse;</li>
                 <li>No currently accepted medical use in treatment in the United States; and</li>
                 <li>A lack of accepted safety for use under medical supervision.</li>
@@ -483,27 +511,26 @@
 
             <p>Federal law also directs regulators to consider abuse patterns, pharmacological effects, dependence liability, and risks to public health. It does <strong>not</strong> require proof that the substance has killed someone while acting entirely alone.</p>
 
-            <!-- Added title above the opium picture -->
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f3627; margin-top: 2rem;">Opium Poppy — A Cautionary Parallel</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; margin-top: 2rem;">Opium Poppy — A Cautionary Parallel</h3>
 
             <figure class="inline-image">
                 <img src="Opium.png" alt="Raw opium-poppy latex">
-                <figcaption>Raw opium-poppy latex — a substance rarely implicated in modern “single‑drug” fatalities, yet clearly dangerous.</figcaption>
+                <figcaption>Raw opium-poppy latex — a substance rarely implicated in modern "single-drug" fatalities, yet clearly dangerous.</figcaption>
             </figure>
 
-            <p>Consider raw opium-poppy latex. Can an advocate produce a modern peer-reviewed case in which chemically unadulterated poppy latex—and absolutely nothing else—was proven to be the sole cause of death? Probably not.</p>
+            <p>Consider raw opium-poppy latex. Can an advocate produce a modern peer-reviewed case in which chemically unadulterated poppy latex, and absolutely nothing else, was proven to be the sole cause of death? Probably not.</p>
 
             <p>Does that mean raw opium should be sold beside energy drinks at gas stations? Of course not.</p>
 
             <p>A lack of pristine, single-substance fatalities would not establish accepted medical use, eliminate abuse potential, prove safety under medical supervision, or erase dependence and withdrawal. The same logic applies to kratom.</p>
 
-            <h2 style="font-size: 2rem; font-weight: 800; color: #1f3627; margin: 3rem 0 1rem;">The honest conclusion</h2>
+            <h2>The honest conclusion</h2>
 
             <p>Not every mitragynine-positive death was caused by kratom. But the categorical claim that there are <strong>no</strong> kratom-only deaths is demonstrably false.</p>
 
             <p>The evidence includes peer-reviewed single-drug case reports, medical-examiner findings, statewide mortality data, and national poison-center deaths.</p>
 
-            <p>Even without those cases, “sole-cause death” would still be the wrong legal and scientific standard for deciding whether an unapproved, opioid-active substance belongs in Schedule I.</p>
+            <p>Even without those cases, "sole-cause death" would still be the wrong legal and scientific standard for deciding whether an unapproved, opioid-active substance belongs in Schedule I.</p>
 
             <div class="back-link">
                 <a href="index.html">← Back to Home</a>
