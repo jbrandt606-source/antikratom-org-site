@@ -404,6 +404,52 @@
     }
     .footer-note a:hover { text-decoration: underline; }
 
+    /* ── Print / PDF fixes ── */
+    @media print {
+      .hero-image-only img {
+        max-height: 400px;
+      }
+      .inline-image img {
+        max-width: 60%;
+      }
+      .pull-quote, .highlight-box, .doc-box {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .content-section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .no-break {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .container {
+        padding: 20px 16px;
+      }
+      .content-section {
+        padding: 24px 18px;
+        margin: 20px 0;
+      }
+      .content-section h2 {
+        font-size: 1.6rem;
+      }
+      .content-section p {
+        font-size: 1rem;
+      }
+      .pull-quote {
+        font-size: 1.1rem;
+        padding: 16px 20px;
+      }
+      .inline-image img {
+        max-height: 300px;
+        width: auto;
+      }
+      .scroll-banner, .twitter-follow-bar, .footer-nav {
+        display: none;
+      }
+    }
+
     @media (max-width: 768px) {
       .container { padding: 20px 16px; }
       .content-section { padding: 24px 18px; }
@@ -485,6 +531,8 @@
 
       <p>So naturally, Mom has taken up kratom.</p>
 
+      <p>Kratom is a psychoactive Southeast Asian plant whose principal alkaloid, mitragynine, acts at opioid receptors. In America, kratom products are sold as powders, capsules, extracts and drinks — including products found in smoke and vape shops.</p>
+
       <p>Because after OxyContin, fentanyl and several decades of opioid catastrophe, apparently what America was missing was another opioid-receptor-active product with better branding.</p>
 
       <p>Moms for America Action now urges policymakers to <strong>"Protect Natural Kratom,"</strong> describing its uses in terms such as wellness, energy, focus, occasional discomfort and relaxation.</p>
@@ -534,7 +582,7 @@
 
       <p>Meanwhile, Indonesia is a major supplier of America's kratom.</p>
 
-      <p>And the U.S.-bound shipping records you've documented make the contradiction even richer: kratom-related cargo has appeared under descriptions including <strong>fertilizer</strong> and <strong>"not for human consumption."</strong></p>
+      <p>And the U.S.-bound shipping records you've documented make the contradiction even richer: kratom-related cargo has appeared under descriptions including <strong><a href="https://globalkratom.org/shipment/intro.html" target="_blank" rel="noopener noreferrer" style="color: #e4b23e; text-decoration: underline;">fertilizer</a></strong> and <strong><a href="https://globalkratom.org/shipment/intro.html" target="_blank" rel="noopener noreferrer" style="color: #e4b23e; text-decoration: underline;">"not for human consumption."</a></strong></p>
 
       <p>Apparently something miraculous happens between the Indonesian dock and the American vape shop.</p>
 
@@ -659,7 +707,8 @@
 
       <p><strong>That's not progress. That's a costume change.</strong></p>
 
-      <div class="pull-quote" style="font-size: 1.6rem; text-align: center;">
+      <!-- Final pull-quote with no-break class to keep punchline together -->
+      <div class="pull-quote no-break" style="font-size: 1.6rem; text-align: center;">
         So congratulations, Moms for America.<br>
         You may have created the biggest "your mama" joke on the internet:
         <span class="highlight">Your mama is soooooo high…</span><br>
