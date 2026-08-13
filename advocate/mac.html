@@ -228,25 +228,6 @@
       background: #0a0a0a;
     }
 
-    .video-container {
-      background: #0a0a0a;
-      padding: 20px 0 30px;
-      border-bottom: 4px solid #b42b2b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .video-container video {
-      max-width: 100%;
-      max-height: 600px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
-    }
-    @media (max-width: 700px) {
-      .video-container video { max-height: 400px; }
-    }
-
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -267,12 +248,6 @@
       margin-bottom: 20px;
       border-left: 4px solid #e4b23e;
       padding-left: 20px;
-    }
-    .content-section h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #e4b23e;
-      margin: 28px 0 14px;
     }
     .content-section p {
       font-size: 1.15rem;
@@ -459,7 +434,81 @@
     }
     .footer-note a:hover { text-decoration: underline; }
 
-    /* Print fixes */
+    .archive-section {
+      background: rgba(255,255,255,0.04);
+      padding: 32px 36px;
+      margin: 40px 0;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .archive-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      border-left: 4px solid #e4b23e;
+      padding-left: 20px;
+    }
+    .archive-section .archive-intro {
+      font-size: 1.05rem;
+      color: #b0c4de;
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .archive-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .archive-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 16px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.15s;
+    }
+    .archive-item:hover {
+      background: rgba(255,255,255,0.07);
+    }
+    .archive-item .file-name {
+      font-weight: 600;
+      color: #e4b23e;
+      min-width: 130px;
+      font-size: 0.95rem;
+    }
+    .archive-item .file-desc {
+      flex: 1;
+      color: #c8d6e8;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .archive-item .file-link {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .archive-item .file-link:hover {
+      border-bottom-color: #e4b23e;
+    }
+    @media (max-width: 700px) {
+      .archive-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .archive-item .file-name { min-width: auto; }
+      .archive-item .file-link { align-self: flex-start; }
+    }
+
+    /* Print */
     @media print {
       .hero-image-only img { max-height: 400px; }
       .inline-image img { max-width: 60%; }
@@ -472,7 +521,7 @@
       .content-section p { font-size: 1rem; }
       .pull-quote { font-size: 1.1rem; padding: 16px 20px; }
       .inline-image img { max-height: 300px; width: auto; }
-      .scroll-banner, .twitter-follow-bar, .footer-nav, .video-container { display: none; }
+      .scroll-banner, .twitter-follow-bar, .footer-nav { display: none; }
     }
 
     @media (max-width: 768px) {
@@ -547,15 +596,6 @@
     <img src="hero5.png" alt="Open Truth: Mac Haddow — editorial graphic capturing his years of kratom advocacy and the recurring conclusion that kratom is always innocent">
   </section>
 
-  <!-- Video: mactestimony.mov -->
-  <div class="video-container">
-    <video controls preload="metadata" poster="hero5.png">
-      <source src="mactestimony.mov" type="video/quicktime">
-      <source src="mactestimony.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
   <div class="container">
 
     <section class="content-section">
@@ -599,11 +639,11 @@
 
       <p>Medical examiners?</p>
 
-      <p>Haddow says they follow FDA's <strong>"narrative"</strong> and mischaracterize kratom deaths. <a href="hawaii_testimony.PDF" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">hawaii_testimony.PDF</a></p>
+      <p>Haddow says they follow FDA's <strong>"narrative"</strong> and mischaracterize kratom deaths. <a href="hawaii_testimony_mac.PDF" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">hawaii_testimony_mac.PDF</a></p>
 
       <p>FAERS?</p>
 
-      <p>He calls FDA's adverse-event reporting system a <strong>"disinformation"</strong> database. <a href="hawaii_testimony.PDF" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">hawaii_testimony.PDF</a></p>
+      <p>He calls FDA's adverse-event reporting system a <strong>"disinformation"</strong> database. <a href="hawaii_testimony_mac.PDF" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">hawaii_testimony_mac.PDF</a></p>
 
       <p><strong>Quite a collection of incompetents.</strong></p>
 
@@ -646,7 +686,7 @@
 
       <p><strong>Nope.</strong></p>
 
-      <p>Haddow immediately attributes the increase to 7-OH. <a href="rhode_island_testimony.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony.pdf</a></p>
+      <p>Haddow immediately attributes the increase to 7-OH. <a href="rhode_island_testimony_mac.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony_mac.pdf</a></p>
 
       <p>So now we understand the rules:</p>
 
@@ -671,7 +711,7 @@
 
       <p>Today it's concentrated 7-OH.</p>
 
-      <p>In Ohio in 2022, Haddow had different villains. He blamed dangerous addictions and overdose deaths <strong>"not [on] pure kratom"</strong> but on adulterants including fentanyl, heroin and morphine. <a href="ohio_testimony.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">ohio_testimony.pdf</a></p>
+      <p>In Ohio in 2022, Haddow had different villains. He blamed dangerous addictions and overdose deaths <strong>"not [on] pure kratom"</strong> but on adulterants including fentanyl, heroin and morphine. <a href="ohio_testimony_mac.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">ohio_testimony_mac.pdf</a></p>
 
       <p>Then it was fentanyl.</p>
       <p>Now it's 7-OH.</p>
@@ -689,7 +729,7 @@
 
       <p><strong>Yes. Cheese.</strong></p>
 
-      <p>Haddow invokes dairy-derived casomorphins while arguing that opioid-receptor activity alone doesn't justify restricting kratom. <a href="rhode_island_testimony.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony.pdf</a></p>
+      <p>Haddow invokes dairy-derived casomorphins while arguing that opioid-receptor activity alone doesn't justify restricting kratom. <a href="rhode_island_testimony_mac.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony_mac.pdf</a></p>
 
       <p>His narrow point is fair. Receptor interaction alone doesn't determine the overall danger of a substance.</p>
 
@@ -713,11 +753,17 @@
 
       <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
 
+      <!-- bs5.jpeg — placed before the FDA study section (NIDA Says...) -->
+      <div class="inline-image">
+        <img src="bs5.jpeg" alt="Nope. It looks like bullshit from this angle too.">
+        <div class="caption">Nope. It looks like bullshit from this angle too.</div>
+      </div>
+
       <h2>NIDA Says "Potential." Mac Says "Available to Consumers."</h2>
 
       <p>This may be the cleanest example of Haddow's method.</p>
 
-      <p>Haddow quotes NIDA Director Nora Volkow saying kratom constituents <strong>"could be of value potentially"</strong> for pain and addiction and emphasizing the importance of research. <a href="rhode_island_testimony.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony.pdf</a></p>
+      <p>Haddow quotes NIDA Director Nora Volkow saying kratom constituents <strong>"could be of value potentially"</strong> for pain and addiction and emphasizing the importance of research. <a href="rhode_island_testimony_mac.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony_mac.pdf</a></p>
 
       <p>Then Haddow writes:</p>
 
@@ -755,7 +801,7 @@
 
       <p><strong>Proves.</strong></p>
 
-      <p>His own testimony describes 40 participants and acknowledges nausea, vomiting, somnolence, pupillary constriction and increased "drug liking" at the highest dose. <a href="rhode_island_testimony.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony.pdf</a></p>
+      <p>His own testimony describes 40 participants and acknowledges nausea, vomiting, somnolence, pupillary constriction and increased "drug liking" at the highest dose. <a href="rhode_island_testimony_mac.pdf" style="color: #e4b23e; font-weight: 600; text-decoration: underline;">rhode_island_testimony_mac.pdf</a></p>
 
       <ul>
         <li>Forty people.</li>
@@ -768,6 +814,12 @@
       <p>Apparently clinical pharmacology has been overcomplicating things.</p>
 
       <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
+
+      <!-- bs6.jpeg — placed before the Open Truth section -->
+      <div class="inline-image">
+        <img src="bs6.jpeg" alt="YEAH... THAT'S BULLSHIT">
+        <div class="caption">YEAH... THAT'S BULLSHIT</div>
+      </div>
 
       <h2>Open Truth</h2>
 
@@ -846,12 +898,46 @@
 
     </section>
 
-    <!-- Source note for testimony documents -->
-    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; padding: 20px 24px; margin: 20px 0 40px;">
-      <p style="margin:0; color: #b0c4de; font-size:0.95rem;">
-        <strong style="color: #e4b23e;">Source documents:</strong> Hawaii testimony (hawaii_testimony.PDF), Rhode Island testimony (rhode_island_testimony.pdf), and Ohio testimony (ohio_testimony.pdf) are cited throughout. Each is quoted directly in the article and available for independent review.
+    <!-- PRIMARY SOURCE ARCHIVE -->
+    <section class="archive-section">
+      <h2>Read the Receipts: Testimony & Advocacy Materials</h2>
+      <p class="archive-intro">
+        The documents below are presented so readers can review Haddow's statements in their original context.
+        Descriptions summarize the contents; readers are encouraged to examine the underlying records directly.
       </p>
-    </div>
+      <div class="archive-list">
+        <div class="archive-item">
+          <span class="file-name">hawaii_testimony_mac.PDF</span>
+          <span class="file-desc">Mac Haddow's Hawaii testimony describing FDA's kratom policy as a "decades long crusade" and characterizing FAERS as a "disinformation" database.</span>
+          <a href="hawaii_testimony_mac.PDF" class="file-link">Download →</a>
+        </div>
+        <div class="archive-item">
+          <span class="file-name">rhode_island_testimony_mac.pdf</span>
+          <span class="file-desc">Rhode Island testimony where Haddow quotes the Utah medical examiner on kratom-only deaths, attributes the increase to 7-OH, invokes cheese, and cites NIDA while expanding its message.</span>
+          <a href="rhode_island_testimony_mac.pdf" class="file-link">Download →</a>
+        </div>
+        <div class="archive-item">
+          <span class="file-name">ohio_testimony_mac.pdf</span>
+          <span class="file-desc">Ohio testimony (2022) where Haddow blamed overdoses on adulterants including fentanyl, heroin and morphine, not on pure kratom.</span>
+          <a href="ohio_testimony_mac.pdf" class="file-link">Download →</a>
+        </div>
+        <div class="archive-item">
+          <span class="file-name">kansas_testimony_mac.pdf</span>
+          <span class="file-desc">Kansas testimony containing Haddow's arguments about the FDA dose-finding study and his interpretation of its findings.</span>
+          <a href="kansas_testimony_mac.pdf" class="file-link">Download →</a>
+        </div>
+        <div class="archive-item">
+          <span class="file-name">southdakota_testimony_mac.pdf</span>
+          <span class="file-desc">South Dakota testimony where Haddow urges lawmakers to reject scheduling and preserve access to natural kratom.</span>
+          <a href="southdakota_testimony_mac.pdf" class="file-link">Download →</a>
+        </div>
+        <div class="archive-item">
+          <span class="file-name">maryland_testimony_mac.pdf</span>
+          <span class="file-desc">Maryland testimony presenting Haddow's standard arguments: kratom is safe, FDA is biased, and adverse events are mischaracterized.</span>
+          <a href="maryland_testimony_mac.pdf" class="file-link">Download →</a>
+        </div>
+      </div>
+    </section>
 
     <div class="footer-nav">
       <a class="btn-secondary" href="/">← Back to Home</a>
