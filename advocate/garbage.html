@@ -326,6 +326,49 @@
       color: #e4b23e;
     }
 
+    .doc-box {
+      background: rgba(228,178,62,0.06);
+      border: 1px solid rgba(228,178,62,0.2);
+      border-radius: 4px;
+      padding: 18px 24px;
+      margin: 0 0 24px 0;
+    }
+    .doc-box .doc-label {
+      font-weight: 600;
+      color: #e4b23e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .doc-box .doc-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.05rem;
+      margin: 4px 0 4px;
+    }
+    .doc-box .doc-citation {
+      color: #b0c4de;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .doc-box .doc-desc {
+      color: #c8d6e8;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .doc-box .doc-link {
+      color: #e4b23e;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .doc-box .doc-link:hover {
+      border-bottom-color: #e4b23e;
+    }
+
     .footer-nav {
       display: flex;
       justify-content: space-between;
@@ -384,80 +427,6 @@
     }
     .footer-note a:hover { text-decoration: underline; }
 
-    .archive-section {
-      background: rgba(255,255,255,0.04);
-      padding: 32px 36px;
-      margin: 40px 0;
-      border-radius: 4px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .archive-section h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-      border-left: 4px solid #e4b23e;
-      padding-left: 20px;
-    }
-    .archive-section .archive-intro {
-      font-size: 1.05rem;
-      color: #b0c4de;
-      margin-bottom: 24px;
-      padding-left: 24px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .archive-item {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 8px 16px;
-      padding: 12px 16px;
-      background: rgba(255,255,255,0.03);
-      border-radius: 4px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      transition: background 0.15s;
-    }
-    .archive-item:hover {
-      background: rgba(255,255,255,0.07);
-    }
-    .archive-item .file-name {
-      font-weight: 600;
-      color: #e4b23e;
-      min-width: 130px;
-      font-size: 0.95rem;
-    }
-    .archive-item .file-desc {
-      flex: 1;
-      color: #c8d6e8;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-    .archive-item .file-link {
-      color: #e4b23e;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .archive-item .file-link:hover {
-      border-bottom-color: #e4b23e;
-    }
-    @media (max-width: 700px) {
-      .archive-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-      }
-      .archive-item .file-name { min-width: auto; }
-      .archive-item .file-link { align-self: flex-start; }
-    }
-
     @media print {
       .hero-image-only img { max-height: 400px; }
       .pull-quote, .highlight-box { page-break-inside: avoid; break-inside: avoid; }
@@ -484,6 +453,7 @@
     @media (max-width: 480px) {
       .hero-image-only { min-height: 150px; }
       .hero-image-only img { max-height: 280px; }
+      .doc-box { padding: 14px 16px; }
     }
   </style>
 </head>
@@ -555,6 +525,14 @@
 
       <h2>1. Yue et al. — "Abuse Liability of Mitragynine Assessed With a Self-Administration Procedure in Rats"</h2>
 
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">Abuse Liability of Mitragynine Assessed with a Self-Administration Procedure in Rats</div>
+        <div class="doc-citation">Kai Yue, Theresa A. Kopajtic &amp; Jonathan L. Katz — Psychopharmacology (2018)</div>
+        <div class="doc-desc">Preclinical rat self-administration study examining the abuse liability of mitragynine. The study found that mitragynine did not maintain self-administration above saline under the tested conditions and concluded that the findings suggested limited abuse liability. The authors cautioned against broadly generalizing from the negative self-administration finding and stated that conditions might yet be found under which mitragynine is reliably self-administered.</div>
+        <a href="garbage5.pdf" class="doc-link">Download PDF →</a>
+      </div>
+
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">Kratom isn't addictive.</div>
 
@@ -589,6 +567,14 @@
       <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
 
       <h2>2. Grundmann et al. — "Prevalence and Use Patterns of Kratom in a US Nationally Representative Sample"</h2>
+
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">Prevalence and Use Patterns of Kratom (Mitragyna speciosa Korth.) in a US Nationally Representative Sample</div>
+        <div class="doc-citation">Oliver Grundmann, MeShell Green, Erin Berthold, Saunjoo L. Yoon &amp; Diane Ray — Journal of Psychoactive Drugs (2025)</div>
+        <div class="doc-desc">Cross-sectional survey study reporting a 9.1% kratom-use prevalence estimate from a non-probability survey panel. Of 66,121 people invited, 11,545 began the survey and 1,049 kratom users completed it. The paper acknowledges that the Global Kratom Coalition provided the survey data for analysis and publication.</div>
+        <a href="garbage1.pdf" class="doc-link">Download PDF →</a>
+      </div>
 
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">About 24 million Americans use kratom.</div>
@@ -634,6 +620,14 @@
       <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
 
       <h2>3. Garcia-Romeu, Cox, Smith et al. — "Kratom: User Demographics, Use Patterns, and Implications for the Opioid Epidemic"</h2>
+
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">Kratom (Mitragyna speciosa): User Demographics, Use Patterns, and Implications for the Opioid Epidemic</div>
+        <div class="doc-citation">Albert Garcia-Romeu, David J. Cox, Kirsten E. Smith, Kelly E. Dunn &amp; Roland R. Griffiths — Drug and Alcohol Dependence (2020)</div>
+        <div class="doc-desc">Anonymous online survey of 2,798 kratom users examining use patterns, perceived benefits, adverse effects, withdrawal, and opioid-reduction use. Recruitment included the American Kratom Association and other kratom-oriented online sources; 53% of the final sample learned about the survey through the AKA. The authors explicitly acknowledge that the self-selected convenience sample could favor people positively inclined toward kratom, potentially underestimating adverse effects and overestimating benefits.</div>
+        <a href="garbage2.pdf" class="doc-link">Download PDF →</a>
+      </div>
 
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">Kratom users overwhelmingly report benefits, withdrawal relief and few serious problems.</div>
@@ -681,6 +675,14 @@
 
       <h2>4. Aly & Grundmann — "A Review of Kratom Product Evolution and Its Associated Health Outcomes"</h2>
 
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">A Review of Kratom Product Evolution and Its Associated Health Outcomes</div>
+        <div class="doc-citation">Shereen Aly &amp; Oliver Grundmann — Substance Abuse and Rehabilitation (2026)</div>
+        <div class="doc-desc">Review article examining the evolution of kratom from native leaf into extracts, concentrates, isolates, edibles and other commercial formulations. It discusses dependence, withdrawal, opioid-receptor activity, toxicity, drug interactions and regulation, while generally distinguishing native leaf from higher-concentration products. The review acknowledges physical dependence from leaf products, opioid-like fatalities without clear alternative causes, and potential opioid-mediated toxicity at high alkaloid doses.</div>
+        <a href="garbage3.pdf" class="doc-link">Download PDF →</a>
+      </div>
+
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">Natural leaf kratom is the safe product; concentrates and 7-OH are the real problem.</div>
 
@@ -725,6 +727,14 @@
 
       <h2>5. Reissig et al./FDA — "A Pilot, Dose-Finding, Pharmacodynamic and Pharmacokinetic Study of Orally Administered Botanical Kratom"</h2>
 
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">A Pilot, Dose-Finding, Pharmacodynamic and Pharmacokinetic Study of Orally Administered Botanical Kratom</div>
+        <div class="doc-citation">Chad J. Reissig et al. — Journal of Clinical Psychopharmacology (2026)</div>
+        <div class="doc-desc">FDA-contracted randomized, double-blind, placebo-controlled pilot study of single doses of botanical kratom in 40 recreational polydrug users with prior opioid experience. Kratom produced opioid-like pupillary constriction, measurable 7-hydroxymitragynine exposure, and at 12 g produced subjective effects associated with drugs of abuse, including "drug liking," "good effects," and "high." The authors emphasize that the small sample was insufficient to thoroughly characterize safety and was not powered to detect rare adverse events.</div>
+        <a href="garbage6.pdf" class="doc-link">Download PDF →</a>
+      </div>
+
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">Controlled human testing shows ordinary kratom is safe.</div>
 
@@ -760,6 +770,14 @@
       <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
 
       <h2>6. American Kratom Association — "The Case for the Kratom Consumer Protection Act"</h2>
+
+      <div class="doc-box">
+        <div class="doc-label">Source Document</div>
+        <div class="doc-title">The Case for the Kratom Consumer Protection Act (KCPA)</div>
+        <div class="doc-citation">American Kratom Association — Advocacy Presentation</div>
+        <div class="doc-desc">American Kratom Association advocacy presentation arguing against scheduling kratom and in favor of regulating it through the Kratom Consumer Protection Act. The presentation assembles selected government statements, research findings and researcher quotations to argue that kratom has comparatively low abuse liability and potential harm-reduction value, before presenting the KCPA as "The Solution."</div>
+        <a href="garbage4.pdf" class="doc-link">Download PDF →</a>
+      </div>
 
       <p><strong>What it is being used to say:</strong></p>
       <div class="pull-quote">Here is the scientific case for regulating rather than banning kratom.</div>
@@ -831,60 +849,6 @@
 
       <p><strong>It's what happens when narrow studies, biased samples, preliminary findings and inconvenient limitations are fed through an advocacy machine and come out the other side as certainty.</strong></p>
 
-    </section>
-
-    <!-- PRIMARY SOURCE ARCHIVE -->
-    <section class="archive-section">
-      <h2>Files</h2>
-      <p class="archive-intro">
-        The documents below are presented so readers can examine the source material directly.
-        Descriptions summarize the contents; readers are encouraged to review the underlying records themselves.
-      </p>
-      <div class="archive-list">
-
-        <div class="archive-item">
-          <span class="file-name">hero9.png</span>
-          <span class="file-desc">Open Truth hero image for the Garbage Evidence investigation, illustrating the gap between narrow studies and the sweeping conclusions drawn from them.</span>
-          <a href="hero9.png" class="file-link">View →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage1.pdf</span>
-          <span class="file-desc">Grundmann et al. — "Prevalence and Use Patterns of Kratom in a US Nationally Representative Sample." A non-probability commercial panel survey estimating 9.1% prevalence, extrapolated to approximately 24 million Americans.</span>
-          <a href="garbage1.pdf" class="file-link">Download →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage2.pdf</span>
-          <span class="file-desc">Garcia-Romeu, Cox, Smith et al. — "Kratom: User Demographics, Use Patterns, and Implications for the Opioid Epidemic." A survey of kratom users recruited through websites of interest to kratom users, including the American Kratom Association, Erowid and Reddit.</span>
-          <a href="garbage2.pdf" class="file-link">Download →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage3.pdf</span>
-          <span class="file-desc">Aly & Grundmann — "A Review of Kratom Product Evolution and Its Associated Health Outcomes." A review distinguishing traditional leaf from concentrated products, while documenting metabolism to 7-OH, dependence, withdrawal, toxicity and major unanswered safety questions.</span>
-          <a href="garbage3.pdf" class="file-link">Download →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage4.pdf</span>
-          <span class="file-desc">American Kratom Association — "The Case for the Kratom Consumer Protection Act." An AKA advocacy presentation arguing for the AKA's preferred legislation, featuring selective framing of addiction, mortality and regulatory evidence.</span>
-          <a href="garbage4.pdf" class="file-link">Download →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage5.pdf</span>
-          <span class="file-desc">Yue et al. — "Abuse Liability of Mitragynine Assessed With a Self-Administration Procedure in Rats." A study of six male rats trained to self-administer methamphetamine, then tested with intravenous mitragynine. The rats did not self-administer mitragynine above saline levels.</span>
-          <a href="garbage5.pdf" class="file-link">Download →</a>
-        </div>
-
-        <div class="archive-item">
-          <span class="file-name">garbage6.pdf</span>
-          <span class="file-desc">Reissig et al./FDA — "A Pilot, Dose-Finding, Pharmacodynamic and Pharmacokinetic Study of Orally Administered Botanical Kratom." A small pilot study of 40 recreational polydrug users, with only six active subjects at each kratom dose, finding drug liking, feeling high and circulating 7-OH.</span>
-          <a href="garbage6.pdf" class="file-link">Download →</a>
-        </div>
-
-      </div>
     </section>
 
     <div class="footer-nav">
