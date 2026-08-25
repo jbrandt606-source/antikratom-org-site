@@ -210,22 +210,63 @@
       border-bottom: 2px solid #b42b2b;
     }
 
-    .hero-image-only {
+    .hero-with-overlay {
+      position: relative;
+      min-height: 500px;
       background: #0a0a0a;
       border-bottom: 4px solid #b42b2b;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 400px;
       overflow: hidden;
     }
-    .hero-image-only img {
+    .hero-with-overlay img {
+      position: absolute;
+      inset: 0;
       width: 100%;
-      height: auto;
-      max-height: 700px;
-      object-fit: contain;
-      display: block;
-      background: #0a0a0a;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .hero-overlay h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .hero-overlay h1 span {
+      color: #e4b23e;
+      border-bottom: 4px solid #b42b2b;
+      padding-bottom: 8px;
+    }
+    .hero-overlay .sub {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #d0dcec;
+      margin-top: 16px;
+      background: rgba(0,0,0,0.5);
+      padding: 16px 28px;
+      border-left: 6px solid #e4b23e;
+      display: inline-block;
+    }
+    @media (max-width: 768px) {
+      .hero-with-overlay { min-height: 350px; }
+      .hero-overlay h1 { font-size: 2.4rem; }
+      .hero-overlay .sub { font-size: 1.1rem; padding: 12px 20px; }
+    }
+    @media (max-width: 480px) {
+      .hero-with-overlay { min-height: 280px; }
+      .hero-overlay h1 { font-size: 1.8rem; }
+      .hero-overlay .sub { font-size: 0.95rem; padding: 10px 16px; }
     }
 
     .container {
@@ -452,7 +493,7 @@
     .footer-note a:hover { text-decoration: underline; }
 
     @media print {
-      .hero-image-only img { max-height: 400px; }
+      .hero-with-overlay img { max-height: 400px; }
       .pull-quote, .highlight-box { page-break-inside: avoid; break-inside: avoid; }
       .content-section { page-break-inside: avoid; break-inside: avoid; }
       .no-break { page-break-inside: avoid; break-inside: avoid; }
@@ -471,13 +512,10 @@
       .content-section h2 { font-size: 1.6rem; }
       .content-section p { font-size: 1.05rem; }
       .pull-quote { font-size: 1.1rem; padding: 18px 20px; }
-      .hero-image-only { min-height: 200px; }
-      .hero-image-only img { max-height: 400px; }
       .footer-nav { flex-direction: column; align-items: center; }
     }
     @media (max-width: 480px) {
-      .hero-image-only { min-height: 150px; }
-      .hero-image-only img { max-height: 280px; }
+      .content-section { padding: 18px 14px; }
     }
   </style>
 </head>
@@ -533,15 +571,18 @@
     </div>
   </header>
 
-  <section class="hero-image-only">
+  <!-- Hero with overlay -->
+  <section class="hero-with-overlay">
     <img src="mphero.png" alt="Want to Keep Kratom Legal? Buy a Mass Spectrometer.">
+    <div class="hero-overlay">
+      <h1>Want to Keep <span>Kratom Legal?</span><br>Buy a Mass Spectrometer.</h1>
+      <div class="sub">DEA just made mitragynine pseudoindoxyl a Schedule I controlled substance. Now every state that insists on keeping kratom in gas stations has a new problem: proving the products don't contain it.</div>
+    </div>
   </section>
 
   <div class="container">
 
     <section class="content-section">
-
-      <p class="byline">DEA just made mitragynine pseudoindoxyl a Schedule I controlled substance. Now every state that insists on keeping kratom in gas stations has a new problem: proving the products don't contain it.</p>
 
       <p>For years, the kratom industry has had an answer whenever lawmakers considered prohibition:</p>
 
@@ -750,44 +791,4 @@
         <div class="doc-title">OPMS Gold Liquid Shot — Certificate of Analysis</div>
         <div class="doc-desc">Laboratory report for an OPMS Gold liquid botanical extract showing Mitragynine: 116 mg/unit, 7-Hydroxymitragynine: 0.244 mg/unit, and Mitragynine Pseudoindoxyl: 0.234 mg/unit (0.002% by weight).</div>
         <a href="mp1.jpeg" class="doc-link">View Image →</a>
-      </div>
-
-      <p>And that tiny percentage illustrates exactly why DEA's action has changed the regulatory debate.</p>
-
-      <p>Under a state consumer-protection law, lawmakers might spend hours arguing over whether an alkaloid limit should be 2%, 1%, 0.5% or 0.05%.</p>
-
-      <p>DEA just made that discussion irrelevant for MP.</p>
-
-      <p>There isn't an allowable retail MP percentage in this order.</p>
-
-      <p><strong>MP is Schedule I.</strong></p>
-
-      <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 32px 0;">
-
-      <h2>Okay, State Regulators. Which Products Can the Gas Station Sell?</h2>
-
-      <p>Imagine you're the inspector.</p>
-
-      <p>You walk into a vape shop tomorrow morning.</p>
-
-      <p>On the counter are:</p>
-
-      <ul>
-        <li>a bag of green kratom powder,</li>
-        <li>a bottle of capsules,</li>
-        <li>three extract shots,</li>
-        <li>a package of tablets,</li>
-        <li>and something labeled "premium botanical extract."</li>
-      </ul>
-
-      <p>One contains MP.</p>
-      <p>Another doesn't.</p>
-
-      <p><strong>Go ahead. Pick the illegal one.</strong></p>
-
-      <p>You can't.</p>
-      <p>Neither can the cashier.</p>
-      <p>Neither can the customer.</p>
-      <p>Neither can the legislator who voted for the state's kratom regulations.</p>
-
-      <p>The packaging doesn't answer the question.</p>
+      </
