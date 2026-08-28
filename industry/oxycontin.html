@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
@@ -9,15 +8,66 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
-    gtag('config','G-P31PD1SSTD');
-  </script
-    
+    gtag('config', 'G-MQKC65VZVY', { 'linker': { 'domains': ['mothersagainstherbalabuse.org', 'gasstationheroin.org'] } });
+    gtag('config', 'G-P31PD1SSTD');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack Henningfield · The Industry Playbook</title>
-  <!-- Link to main stylesheet (if any) -->
-  <link rel="stylesheet" href="../../style.css">
+
+  <title>Jack Henningfield · The Industry Playbook | Anti‑Kratom Association</title>
+  <meta name="description" content="From OxyContin to kratom: how the industry's go-to consultant recycled the same arguments to protect profits and delay regulation.">
+  <meta name="keywords" content="Jack Henningfield, OxyContin, Purdue Pharma, kratom lobby, industry playbook, Henningfield testimony, regulatory delay">
+  <link rel="canonical" href="https://antikratom.org/industry/henningfield.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Anti‑Kratom Association">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jack Henningfield · The Industry Playbook">
+  <meta property="og:description" content="From OxyContin to kratom: how the industry's go-to consultant recycled the same arguments to protect profits and delay regulation.">
+  <meta property="og:url" content="https://antikratom.org/industry/henningfield.html">
+  <meta property="og:site_name" content="Anti‑Kratom Association">
+  <meta property="og:image" content="https://antikratom.org/industry.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jack Henningfield · The Industry Playbook">
+  <meta name="twitter:description" content="From OxyContin to kratom: how the industry's go-to consultant recycled the same arguments.">
+  <meta name="twitter:image" content="https://antikratom.org/industry.jpg">
+  <meta name="twitter:site" content="@AntiKratom">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Jack Henningfield · The Industry Playbook",
+    "url": "https://antikratom.org/industry/henningfield.html",
+    "description": "From OxyContin to kratom: how the industry's go-to consultant recycled the same arguments to protect profits and delay regulation.",
+    "author": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association",
+      "url": "https://antikratom.org/"
+    },
+    "datePublished": "2026-08-28",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://antikratom.org/industry/henningfield.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+
   <style>
     /* ----- consistent with industry section theme (dark, red/gold accents) ----- */
     * {
@@ -33,7 +83,7 @@
       line-height: 1.6;
     }
 
-    /* Hero section with industry.jpg (same as other industry pages) */
+    /* Hero section with industry.jpg */
     .hero {
       background: linear-gradient(rgba(10, 18, 28, 0.85), rgba(10, 18, 28, 0.8)), url('../industry.jpg') center center / cover no-repeat;
       color: white;
@@ -213,15 +263,15 @@
     }
 
     .takeaways li::before {
-      content: "⛔";
+      content: ">";
       position: absolute;
       left: 0;
-      top: -2px;
-      font-size: 1.5rem;
       color: #e4b23e;
+      font-weight: 900;
+      font-size: 1.2rem;
     }
 
-    /* Context link (back to industry hub) */
+    /* Context link */
     .context-link {
       background: rgba(180, 43, 43, 0.2);
       padding: 20px;
@@ -256,7 +306,7 @@
       text-decoration: none;
     }
 
-    /* Header (matching site) */
+    /* Header */
     .site-header {
       background-color: #0c151f;
       color: #fff;
@@ -308,14 +358,37 @@
       transition: color 0.2s;
     }
 
-    .nav a:hover {
+    .nav a:hover,
+    .nav a.active {
       color: #e4b23e;
       border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Standard site header (matches homepage/industry pages) -->
   <header class="site-header">
     <div class="header-inner">
       <div class="logo">
@@ -323,50 +396,47 @@
         <span>public health · evidence · action</span>
       </div>
       <nav class="nav">
-        <a href="../../index.html">HOME</a>
-        <a href="../../evidence/index.html">EVIDENCE</a>
-        <a href="../index.html">INDUSTRY</a>
-        <a href="../../fight-back/index.html">FIGHT BACK</a>
-        <a href="../../about/index.html">ABOUT</a>
-        <a href="../../contact/index.html">CONTACT</a>
+        <a href="/">HOME</a>
+        <a href="/evidence/">EVIDENCE</a>
+        <a href="/industry/" class="active">INDUSTRY</a>
+        <a href="/action.html">FIGHT BACK</a>
+        <a href="/congress.html">CONGRESS</a>
+        <a href="/about.html">ABOUT</a>
+        <a href="/contact.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero section with industry.jpg -->
   <section class="hero">
     <div class="hero-container">
       <h1>The <span>Henningfield Playbook</span></h1>
       <p>
-        From OxyContin to kratom: how the industry’s go‑to consultant recycled the same arguments<br>
+        From OxyContin to kratom: how the industry's go-to consultant recycled the same arguments<br>
         to protect profits and delay regulation.
       </p>
       <div class="nav-links">
         <a class="btn btn-primary" href="#takeaways">Takeaways</a>
-        <a class="btn btn-secondary" href="../index.html">Industry Hub</a>
+        <a class="btn btn-secondary" href="/industry/">Industry Hub</a>
       </div>
     </div>
   </section>
 
   <div class="container">
-    <!-- Context link back to main industry page -->
     <div class="context-link">
-      ⚠️ <strong>Exposed:</strong> Jack Henningfield’s testimony in 2004 for Purdue Pharma mirrors today’s kratom lobbying. 
-      <a href="../index.html">Return to Industry Hub →</a>
+      <strong>Exposed:</strong> Jack Henningfield's testimony in 2004 for Purdue Pharma mirrors today's kratom lobbying.
+      <a href="/industry/">Return to Industry Hub →</a>
     </div>
 
-    <!-- Introduction – sharp critique -->
     <section class="content-section">
       <h2>The Consultant Who Wrote the Script</h2>
       <p>
         In February 2004, Dr. Jack Henningfield testified before Congress on behalf of Purdue Pharma, the maker of OxyContin. His message: the problem was complex, deaths involved multiple substances, and aggressive restrictions would only push people to heroin. Twenty years later, Henningfield reappears — this time as a paid consultant for the American Kratom Association — using the same talking points to fight regulation.
       </p>
       <p>
-        This is not coincidence. It’s a deliberate, industry‑funded playbook designed to manufacture doubt, delay action, and keep dangerous products on the market.
+        This is not coincidence. It's a deliberate, industry-funded playbook designed to manufacture doubt, delay action, and keep dangerous products on the market.
       </p>
     </section>
 
-    <!-- Then vs Now table – keep concise, critical -->
     <section class="content-section">
       <h2>The Recycled Arguments</h2>
       <div class="then-now-wrap">
@@ -377,69 +447,73 @@
           <tbody>
             <tr>
               <td><strong>Polydrug deflection</strong></td>
-              <td>“Deaths involve multiple drugs — it’s not just OxyContin.”</td>
-              <td>“Most deaths include other substances; kratom alone is rarely the cause.”</td>
+              <td>"Deaths involve multiple drugs — it's not just OxyContin."</td>
+              <td>"Most deaths include other substances; kratom alone is rarely the cause."</td>
             </tr>
             <tr>
               <td><strong>Substitution scare</strong></td>
-              <td>“Ban OxyContin and users will turn to heroin.”</td>
-              <td>“Schedule kratom and users will turn to fentanyl.”</td>
+              <td>"Ban OxyContin and users will turn to heroin."</td>
+              <td>"Schedule kratom and users will turn to fentanyl."</td>
             </tr>
             <tr>
               <td><strong>Call for more data</strong></td>
-              <td>“Surveillance is incomplete — we need more research before acting.”</td>
-              <td>“Poison center data is misleading; we don’t have the full picture.”</td>
+              <td>"Surveillance is incomplete — we need more research before acting."</td>
+              <td>"Poison center data is misleading; we don't have the full picture."</td>
             </tr>
             <tr>
-              <td><strong>Regulate, don’t prohibit</strong></td>
-              <td>“Risk management, education, monitoring — not bans.”</td>
-              <td>“Industry standards, age limits, alkaloid caps — not scheduling.”</td>
+              <td><strong>Regulate, don't prohibit</strong></td>
+              <td>"Risk management, education, monitoring — not bans."</td>
+              <td>"Industry standards, age limits, alkaloid caps — not scheduling."</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p style="margin-top:20px; color:#e4b23e;">
-        The language changes, the substance stays the same. It’s a blueprint for regulatory delay.
+        The language changes, the substance stays the same. It's a blueprint for regulatory delay.
       </p>
     </section>
 
-    <!-- Sharp critique of the industry’s tactics -->
     <section class="content-section">
       <h2>Why This Matters</h2>
       <p>
-        Henningfield isn’t an independent scientist — he’s a high‑priced consultant who has worked for tobacco companies, opioid manufacturers, and now the kratom trade. His testimony is not science; it’s a litigation‑proof narrative designed to protect corporate interests.
+        Henningfield isn't an independent scientist — he's a high-priced consultant who has worked for tobacco companies, opioid manufacturers, and now the kratom trade. His testimony is not science; it's a litigation-proof narrative designed to protect corporate interests.
       </p>
       <p>
-        When industry repeats “the science isn’t settled,” they don’t want more research — they want no regulation. They exploit uncertainty to keep selling unapproved, untested drugs in gas stations and vape shops.
+        When industry repeats "the science isn't settled," they don't want more research — they want no regulation. They exploit uncertainty to keep selling unapproved, untested drugs in gas stations and vape shops.
       </p>
     </section>
 
-    <!-- Key takeaways (sharp, memorable) -->
     <div id="takeaways" class="takeaways">
-      <h3>⛔ Takeaway Points</h3>
+      <h3>Takeaway Points</h3>
       <ul>
-        <li><strong>The playbook is borrowed:</strong> Henningfield’s kratom testimony mirrors his 2004 OxyContin defense — word for word, tactic for tactic.</li>
-        <li><strong>Polydrug is a smokescreen:</strong> Blaming “other substances” ignores that kratom itself is a psychoactive drug sold without oversight.</li>
-        <li><strong>“Regulation not bans” is a stall:</strong> Industry‑backed “consumer protection” bills create an illusion of safety while preserving market access.</li>
-        <li><strong>Uncertainty ≠ safety:</strong> Repeating “we need more data” is a delay tactic, not a public health position.</li>
+        <li><strong>The playbook is borrowed:</strong> Henningfield's kratom testimony mirrors his 2004 OxyContin defense — word for word, tactic for tactic.</li>
+        <li><strong>Polydrug is a smokescreen:</strong> Blaming "other substances" ignores that kratom itself is a psychoactive drug sold without oversight.</li>
+        <li><strong>"Regulation not bans" is a stall:</strong> Industry-backed "consumer protection" bills create an illusion of safety while preserving market access.</li>
+        <li><strong>Uncertainty is not safety:</strong> Repeating "we need more data" is a delay tactic, not a public health position.</li>
       </ul>
     </div>
 
-    <!-- Link to full analysis (retained) -->
     <section class="content-section">
       <h2>Read the Full Investigation</h2>
       <p>
-        For a detailed breakdown of Henningfield’s testimony, including transcripts and side‑by‑side comparisons, see the complete analysis from Mothers Against Herbal Abuse.
+        For a detailed breakdown of Henningfield's testimony, including transcripts and side-by-side comparisons, see the complete analysis from Mothers Against Herbal Abuse.
       </p>
       <a class="btn btn-primary" href="https://www.mothersagainstherbalabuse.org/supplemental/week10/henningfield-then-and-now.html" target="_blank" style="margin-top:20px; display:inline-block;">
         READ THE FULL ANALYSIS →
       </a>
     </section>
 
-    <!-- Footer navigation -->
     <div class="footer-note">
-      <p><a href="../index.html">← Back to Industry Hub</a> | <a href="../../index.html">Anti‑Kratom Association Home</a></p>
-      
+      <p>
+        <a href="/">Home</a> |
+        <a href="/evidence/">Evidence</a> |
+        <a href="/industry/">Industry</a> |
+        <a href="/action.html">Fight Back</a> |
+        <a href="/congress.html">Congress</a> |
+        <a href="/astroturf.html">Astroturf</a> |
+        <a href="/about.html">About</a>
+      </p>
+      <p style="margin-top:10px;">© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. Expose the Astroturf.</p>
     </div>
   </div>
 </body>
