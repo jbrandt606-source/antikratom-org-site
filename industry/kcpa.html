@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
@@ -9,15 +8,66 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
-    gtag('config','G-P31PD1SSTD');
-  </script
-    
+    gtag('config', 'G-MQKC65VZVY', { 'linker': { 'domains': ['mothersagainstherbalabuse.org', 'gasstationheroin.org'] } });
+    gtag('config', 'G-P31PD1SSTD');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>The KCPA Illusion · Anti‑Kratom Association</title>
-  <!-- Link to main stylesheet (if any) -->
-  <link rel="stylesheet" href="../../style.css">
+  <meta name="description" content="How industry-written 'consumer protection' bills create the appearance of regulation while leaving every real public-health risk untouched.">
+  <meta name="keywords" content="KCPA, Kratom Consumer Protection Act, kratom regulation, industry-written legislation, public health, policy analysis">
+  <link rel="canonical" href="https://antikratom.org/industry/kcpa.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Anti‑Kratom Association">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The KCPA Illusion · Anti‑Kratom Association">
+  <meta property="og:description" content="How industry-written 'consumer protection' bills create the appearance of regulation while leaving every real public-health risk untouched.">
+  <meta property="og:url" content="https://antikratom.org/industry/kcpa.html">
+  <meta property="og:site_name" content="Anti‑Kratom Association">
+  <meta property="og:image" content="https://antikratom.org/industry.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The KCPA Illusion · Anti‑Kratom Association">
+  <meta name="twitter:description" content="How industry-written 'consumer protection' bills create the appearance of regulation while leaving every real public-health risk untouched.">
+  <meta name="twitter:image" content="https://antikratom.org/industry.jpg">
+  <meta name="twitter:site" content="@AntiKratom">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The KCPA Illusion",
+    "url": "https://antikratom.org/industry/kcpa.html",
+    "description": "How industry-written 'consumer protection' bills create the appearance of regulation while leaving every real public-health risk untouched.",
+    "author": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association",
+      "url": "https://antikratom.org/"
+    },
+    "datePublished": "2026-08-28",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://antikratom.org/industry/kcpa.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+
   <style>
     /* ----- consistent with industry section theme (dark, red/gold accents) ----- */
     * {
@@ -162,12 +212,12 @@
     }
 
     .content-section ul li::before {
-      content: "⛔";
+      content: ">";
       position: absolute;
       left: 0;
-      top: -2px;
-      font-size: 1.3rem;
       color: #e4b23e;
+      font-weight: 900;
+      font-size: 1.2rem;
     }
 
     /* Takeaways box */
@@ -198,12 +248,12 @@
     }
 
     .takeaways li::before {
-      content: "⛔";
+      content: ">";
       position: absolute;
       left: 0;
-      top: -2px;
-      font-size: 1.5rem;
       color: #e4b23e;
+      font-weight: 900;
+      font-size: 1.2rem;
     }
 
     /* Context link */
@@ -306,9 +356,33 @@
       transition: color 0.2s;
     }
 
-    .nav a:hover {
+    .nav a:hover,
+    .nav a.active {
       color: #e4b23e;
       border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
@@ -320,12 +394,13 @@
         <span>public health · evidence · action</span>
       </div>
       <nav class="nav">
-        <a href="../../index.html">HOME</a>
-        <a href="../../evidence/index.html">EVIDENCE</a>
-        <a href="../index.html">INDUSTRY</a>
-        <a href="../../fight-back/index.html">FIGHT BACK</a>
-        <a href="../../about/index.html">ABOUT</a>
-        <a href="../../contact/index.html">CONTACT</a>
+        <a href="/">HOME</a>
+        <a href="/evidence/">EVIDENCE</a>
+        <a href="/industry/" class="active">INDUSTRY</a>
+        <a href="/action.html">FIGHT BACK</a>
+        <a href="/congress.html">CONGRESS</a>
+        <a href="/about.html">ABOUT</a>
+        <a href="/contact.html">CONTACT</a>
       </nav>
     </div>
   </header>
@@ -334,20 +409,20 @@
     <div class="hero-container">
       <h1>The <span>KCPA Illusion</span></h1>
       <p>
-        How industry‑written “consumer protection” bills create the appearance of regulation<br>
-        while leaving every real public‑health risk untouched.
+        How industry-written "consumer protection" bills create the appearance of regulation<br>
+        while leaving every real public-health risk untouched.
       </p>
       <div class="nav-links">
         <a class="btn btn-primary" href="#takeaways">The Gaps</a>
-        <a class="btn btn-secondary" href="../index.html">Industry Hub</a>
+        <a class="btn btn-secondary" href="/industry/">Industry Hub</a>
       </div>
     </div>
   </section>
 
   <div class="container">
     <div class="context-link">
-      ⚠️ <strong>Structural deception:</strong> KCPAs are promoted by the American Kratom Association as model legislation — but they’re designed to fail.
-      <a href="../index.html">Return to Industry Hub →</a>
+      <strong>Structural deception:</strong> KCPAs are promoted by the American Kratom Association as model legislation — but they're designed to fail.
+      <a href="/industry/">Return to Industry Hub →</a>
     </div>
 
     <section class="content-section">
@@ -361,28 +436,28 @@
         <li><strong>Purity standards</strong> — with no requirement to track poison center calls, ER visits, or deaths after enactment.</li>
       </ul>
       <p>
-        The underlying assumption — that kratom can be made “safe” through retail rules — is pharmacologically unsupported.
+        The underlying assumption — that kratom can be made "safe" through retail rules — is pharmacologically unsupported.
       </p>
     </section>
 
     <section class="content-section">
       <h2>Case Studies: How KCPAs Fail in Practice</h2>
       
-      <h3>🗽 New York: A Statutory Contradiction</h3>
+      <h3>New York: A Statutory Contradiction</h3>
       <p>
-        New York lawmakers passed a KCPA congratulating themselves for “protecting consumers.” But New York already has a Food, Drug, and Cosmetic Act (Agriculture & Markets Law Article 17) that deems food adulterated if it “bears or contains any added poisonous or deleterious substance which may render it injurious to health.” The FDA has repeatedly stated that kratom products meet this standard. The legislature did not amend or override this existing law — they simply ignored it. The result: kratom can now be legally sold under the KCPA while still technically being illegal to sell as food under state law. That is not clarity; it is legal incoherence.
+        New York lawmakers passed a KCPA congratulating themselves for "protecting consumers." But New York already has a Food, Drug, and Cosmetic Act (Agriculture & Markets Law Article 17) that deems food adulterated if it "bears or contains any added poisonous or deleterious substance which may render it injurious to health." The FDA has repeatedly stated that kratom products meet this standard. The legislature did not amend or override this existing law — they simply ignored it. The result: kratom can now be legally sold under the KCPA while still technically being illegal to sell as food under state law. That is not clarity; it is legal incoherence.
       </p>
       <p>
         Notably, the only pharmacist in the legislature, John T. McDonald III, voted for the bill. A pharmacist is trained to understand adulteration and safety standards. His vote suggests not ignorance, but a choice to prioritize retail regulation over enforcement of existing public health law.
       </p>
       <p><a href="https://www.mothersagainstherbalabuse.org/supplemental/week8/new-york-kratom-statutory-contradiction.html" target="_blank" style="color:#e4b23e;">Read the full New York analysis →</a></p>
 
-      <h3>🏔️ Wyoming: A Fig Leaf, Not a Warning</h3>
+      <h3>Wyoming: A Fig Leaf, Not a Warning</h3>
       <p>
-        Wyoming’s proposed KCPA fusses over packaging, bans candy shapes, sets age limits, and caps alkaloid percentages. It does not, however, require the one thing that would actually inform consumers: a plain warning that the product has opioid-like effects and can cause dependence and withdrawal. The bill uses lawyerly language like “may be habit forming” — an evasion, not a warning.
+        Wyoming's proposed KCPA fusses over packaging, bans candy shapes, sets age limits, and caps alkaloid percentages. It does not, however, require the one thing that would actually inform consumers: a plain warning that the product has opioid-like effects and can cause dependence and withdrawal. The bill uses lawyerly language like "may be habit forming" — an evasion, not a warning.
       </p>
       <p>
-        The 2% cap on 7-hydroxymitragynine sounds reassuring, but people do not dose by chemistry charts; they dose by effect. Dependence does not read statutes. This bill keeps kratom on shelves, lets retailers claim it’s “regulated,” and avoids telling consumers the worst risk. It protects lawmakers from having to say the hard thing out loud.
+        The 2% cap on 7-hydroxymitragynine sounds reassuring, but people do not dose by chemistry charts; they dose by effect. Dependence does not read statutes. This bill keeps kratom on shelves, lets retailers claim it's "regulated," and avoids telling consumers the worst risk. It protects lawmakers from having to say the hard thing out loud.
       </p>
       <p><a href="https://www.mothersagainstherbalabuse.org/supplemental/week10/wyoming-kratom-bill-fig-leaf.html" target="_blank" style="color:#e4b23e;">Read the full Wyoming analysis →</a></p>
     </section>
@@ -390,51 +465,51 @@
     <section class="content-section">
       <h2>Five Structural Frauds Common to All KCPAs</h2>
       
-      <h3>⛔ 1. Labels That Lie by Omission</h3>
+      <h3>1. Labels That Lie by Omission</h3>
       <p>
-        KCPA‑compliant labels disclose ingredients — but not that the product causes opioid‑like dependence. No warning that mitragynine converts in the body to 7‑hydroxymitragynine, a potent μ‑opioid agonist. No mention of withdrawal symptoms: agitation, nausea, insomnia, muscle pain. Consumers see “natural ingredient” and assume safety. The label is a marketing tool, not a health warning.
+        KCPA-compliant labels disclose ingredients — but not that the product causes opioid-like dependence. No warning that mitragynine converts in the body to 7-hydroxymitragynine, a potent μ-opioid agonist. No mention of withdrawal symptoms: agitation, nausea, insomnia, muscle pain. Consumers see "natural ingredient" and assume safety. The label is a marketing tool, not a health warning.
       </p>
 
-      <h3>⛔ 2. The Myth of Predictable Dosing</h3>
+      <h3>2. The Myth of Predictable Dosing</h3>
       <p>
-        KCPAs pretend that if the package says “mitragynine 1%,” the consumer can dose safely. In reality, alkaloid content varies wildly between batches. Users chase effects, build tolerance, increase intake — and the law does nothing to stop it. No medical supervision, no titration, no limit on cumulative consumption.
+        KCPAs pretend that if the package says "mitragynine 1%," the consumer can dose safely. In reality, alkaloid content varies wildly between batches. Users chase effects, build tolerance, increase intake — and the law does nothing to stop it. No medical supervision, no titration, no limit on cumulative consumption.
       </p>
 
-      <h3>⛔ 3. The Metabolic Black Box</h3>
+      <h3>3. The Metabolic Black Box</h3>
       <p>
-        Mitragynine is a prodrug. Its active metabolite, 7‑hydroxymitragynine, is formed inside the user’s body at rates that vary by individual. No label can predict how much opioid activity a person will actually experience. KCPAs ignore this completely.
+        Mitragynine is a prodrug. Its active metabolite, 7-hydroxymitragynine, is formed inside the user's body at rates that vary by individual. No label can predict how much opioid activity a person will actually experience. KCPAs ignore this completely.
       </p>
 
-      <h3>⛔ 4. Zero Accountability</h3>
+      <h3>4. Zero Accountability</h3>
       <p>
-        No KCPA requires manufacturers to report adverse events. No state tracks whether hospitalizations rise or fall after the law passes. Lawmakers celebrate “regulation” while having no data on whether it helps, hurts, or does nothing.
+        No KCPA requires manufacturers to report adverse events. No state tracks whether hospitalizations rise or fall after the law passes. Lawmakers celebrate "regulation" while having no data on whether it helps, hurts, or does nothing.
       </p>
 
-      <h3>⛔ 5. Federal Limbo Ignored</h3>
+      <h3>5. Federal Limbo Ignored</h3>
       <p>
-        Kratom has no FDA‑approved pathway. It is not a lawful dietary ingredient. States that pass KCPAs are stepping into a vacuum, but they lack the tools of federal drug regulation — clinical trials, prescription controls, post‑market surveillance.
+        Kratom has no FDA-approved pathway. It is not a lawful dietary ingredient. States that pass KCPAs are stepping into a vacuum, but they lack the tools of federal drug regulation — clinical trials, prescription controls, post-market surveillance.
       </p>
     </section>
 
     <section id="takeaways" class="takeaways">
-      <h3>⛔ Key Takeaways</h3>
+      <h3>Key Takeaways</h3>
       <ul>
-        <li><strong>KCPAs protect the industry, not the public.</strong> They create a veneer of legitimacy while the same dangerous products stay on the same gas‑station shelves.</li>
-        <li><strong>“Compliant” doesn’t mean safe.</strong> A product can meet every KCPA requirement and still cause addiction, withdrawal, and contribute to overdose deaths.</li>
+        <li><strong>KCPAs protect the industry, not the public.</strong> They create a veneer of legitimacy while the same dangerous products stay on the same gas-station shelves.</li>
+        <li><strong>"Compliant" doesn't mean safe.</strong> A product can meet every KCPA requirement and still cause addiction, withdrawal, and contribute to overdose deaths.</li>
         <li><strong>States are creating legal contradictions.</strong> New York now has a statute that simultaneously regulates kratom sales while leaving older adulteration law on the books — a mess for enforcement.</li>
-        <li><strong>The missing warning is deliberate.</strong> Wyoming’s bill avoids telling consumers the truth about opioid-like withdrawal. An informed consumer is the industry’s biggest threat.</li>
-        <li><strong>No outcomes, no accountability.</strong> States pass these bills without ever measuring whether they reduce harm — because the industry doesn’t want them to.</li>
+        <li><strong>The missing warning is deliberate.</strong> Wyoming's bill avoids telling consumers the truth about opioid-like withdrawal. An informed consumer is the industry's biggest threat.</li>
+        <li><strong>No outcomes, no accountability.</strong> States pass these bills without ever measuring whether they reduce harm — because the industry doesn't want them to.</li>
       </ul>
     </section>
 
     <div class="callout">
-      <p>🔍 “Regulation without outcome measurement is theater. KCPAs are the curtain, and the public is the audience — still exposed to every risk the industry promised to fix.”</p>
+      <p>"Regulation without outcome measurement is theater. KCPAs are the curtain, and the public is the audience — still exposed to every risk the industry promised to fix."</p>
     </div>
 
     <section class="content-section">
       <h2>Read the Full Structural Analysis</h2>
       <p>
-        This critique is drawn from Mothers Against Herbal Abuse’s detailed policy briefs. They examine why KCPAs, by design, cannot resolve the core public‑health threats of unregulated kratom sales.
+        This critique is drawn from Mothers Against Herbal Abuse's detailed policy briefs. They examine why KCPAs, by design, cannot resolve the core public-health threats of unregulated kratom sales.
       </p>
       <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top:20px;">
         <a class="btn btn-primary" href="https://www.mothersagainstherbalabuse.org/supplemental/week10/kcpa-structural-limitations.html" target="_blank">KCPA Structural Limitations →</a>
@@ -444,8 +519,16 @@
     </section>
 
     <div class="footer-note">
-      <p><a href="../index.html">← Back to Industry Hub</a> | <a href="../../index.html">Anti‑Kratom Association Home</a></p>
-      
+      <p>
+        <a href="/">Home</a> |
+        <a href="/evidence/">Evidence</a> |
+        <a href="/industry/">Industry</a> |
+        <a href="/action.html">Fight Back</a> |
+        <a href="/congress.html">Congress</a> |
+        <a href="/astroturf.html">Astroturf</a> |
+        <a href="/about.html">About</a>
+      </p>
+      <p style="margin-top:10px;">© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. Expose the Astroturf.</p>
     </div>
   </div>
 </body>
