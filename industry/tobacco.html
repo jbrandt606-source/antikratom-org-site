@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQKC65VZVY"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P31PD1SSTD"></script>
@@ -9,15 +8,66 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-MQKC65VZVY',{'linker':{'domains':['mothersagainstherbalabuse.org','gasstationheroin.org']}});
-    gtag('config','G-P31PD1SSTD');
-  </script
-    
+    gtag('config', 'G-MQKC65VZVY', { 'linker': { 'domains': ['mothersagainstherbalabuse.org', 'gasstationheroin.org'] } });
+    gtag('config', 'G-P31PD1SSTD');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lessons from Tobacco · Industry Playbook</title>
-  <!-- Link to main stylesheet (if any) -->
-  <link rel="stylesheet" href="../../style.css">
+
+  <title>Lessons from Tobacco · Industry Playbook | Anti‑Kratom Association</title>
+  <meta name="description" content="The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates. Lessons for lawmakers on industry framing, scientific uncertainty, and financial relationships.">
+  <meta name="keywords" content="tobacco playbook, Big Tobacco tactics, kratom industry messaging, scientific uncertainty, industry lobbying, public health policy">
+  <link rel="canonical" href="https://antikratom.org/industry/tobacco-lessons.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Anti‑Kratom Association">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Lessons from Tobacco · Industry Playbook">
+  <meta property="og:description" content="The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates. Lessons for lawmakers on industry framing, scientific uncertainty, and financial relationships.">
+  <meta property="og:url" content="https://antikratom.org/industry/tobacco-lessons.html">
+  <meta property="og:site_name" content="Anti‑Kratom Association">
+  <meta property="og:image" content="https://antikratom.org/industry.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lessons from Tobacco · Industry Playbook">
+  <meta name="twitter:description" content="The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates. Lessons for lawmakers.">
+  <meta name="twitter:image" content="https://antikratom.org/industry.jpg">
+  <meta name="twitter:site" content="@AntiKratom">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Lessons from Tobacco · Industry Playbook",
+    "url": "https://antikratom.org/industry/tobacco-lessons.html",
+    "description": "The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates. Lessons for lawmakers on industry framing, scientific uncertainty, and financial relationships.",
+    "author": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Anti‑Kratom Association",
+      "url": "https://antikratom.org/"
+    },
+    "datePublished": "2026-08-28",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://antikratom.org/industry/tobacco-lessons.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+
   <style>
     /* ----- consistent with industry section theme (dark, red/gold accents) ----- */
     * {
@@ -308,9 +358,33 @@
       transition: color 0.2s;
     }
 
-    .nav a:hover {
+    .nav a:hover,
+    .nav a.active {
       color: #e4b23e;
       border-bottom: 2px solid #b42b2b;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
@@ -322,12 +396,13 @@
         <span>public health · evidence · action</span>
       </div>
       <nav class="nav">
-        <a href="../../index.html">HOME</a>
-        <a href="../../evidence/index.html">EVIDENCE</a>
-        <a href="../index.html">INDUSTRY</a>
-        <a href="../../fight-back/index.html">FIGHT BACK</a>
-        <a href="../../about/index.html">ABOUT</a>
-        <a href="../../contact/index.html">CONTACT</a>
+        <a href="/">HOME</a>
+        <a href="/evidence/">EVIDENCE</a>
+        <a href="/industry/" class="active">INDUSTRY</a>
+        <a href="/action.html">FIGHT BACK</a>
+        <a href="/congress.html">CONGRESS</a>
+        <a href="/about.html">ABOUT</a>
+        <a href="/contact.html">CONTACT</a>
       </nav>
     </div>
   </header>
@@ -336,19 +411,19 @@
     <div class="hero-container">
       <h1>When an Industry <span>Writes the Story</span></h1>
       <p>
-        Lessons from tobacco for today’s policy debates — and why lawmakers should recognize the pattern.
+        Lessons from tobacco for today's policy debates — and why lawmakers should recognize the pattern.
       </p>
       <div class="nav-links">
         <a class="btn btn-primary" href="#patterns">Patterns to Watch</a>
-        <a class="btn btn-secondary" href="../index.html">Industry Hub</a>
+        <a class="btn btn-secondary" href="/industry/">Industry Hub</a>
       </div>
     </div>
   </section>
 
   <div class="container">
     <div class="context-link">
-      ⚠️ <strong>History repeating:</strong> The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates.
-      <a href="../index.html">Return to Industry Hub →</a>
+       <strong>History repeating:</strong> The same messaging tactics used by Big Tobacco for decades are now being deployed in kratom debates.
+      <a href="/industry/">Return to Industry Hub →</a>
     </div>
 
     <!-- Introduction -->
@@ -358,11 +433,11 @@
         When lawmakers confront new consumer products surrounded by competing claims about safety, science, and regulation, history offers a useful guide—particularly the history of the tobacco industry.
       </p>
       <p>
-        For decades, tobacco companies insisted that concerns about cigarettes were exaggerated. They funded research, employed respected experts, and assured policymakers that the science was still evolving. In 1954, major cigarette manufacturers even took out full-page newspaper advertisements titled “A Frank Statement to Cigarette Smokers,” promising the public that they were committed to investigating the health effects of smoking.
+        For decades, tobacco companies insisted that concerns about cigarettes were exaggerated. They funded research, employed respected experts, and assured policymakers that the science was still evolving. In 1954, major cigarette manufacturers even took out full-page newspaper advertisements titled "A Frank Statement to Cigarette Smokers," promising the public that they were committed to investigating the health effects of smoking.
       </p>
       <div class="history-block">
         <p>Behind the reassuring language, however, internal documents later revealed a different strategy. The goal was not necessarily to disprove the risks of smoking but to emphasize uncertainty long enough to delay regulation. One tobacco executive memo summarized the approach bluntly:</p>
-        <p style="font-size:2rem; font-weight:700; color:#e4b23e; text-align:center;">“Doubt is our product.”</p>
+        <p style="font-size:2rem; font-weight:700; color:#e4b23e; text-align:center;">"Doubt is our product."</p>
       </div>
       <p>
         It took decades of litigation and the release of millions of internal industry documents before the full scope of that strategy became clear.
@@ -371,7 +446,7 @@
 
     <!-- Why it matters now -->
     <section class="content-section">
-      <h2>Why This History Matters for Today’s Lawmakers</h2>
+      <h2>Why This History Matters for Today's Lawmakers</h2>
       <p>
         Today, lawmakers across the United States are once again hearing from industry lobbyists, consultants, advocacy groups, and researchers about another controversial consumer product: kratom.
       </p>
@@ -379,7 +454,7 @@
         Supporters argue that the product should remain widely available. Critics raise concerns about safety, contamination, and pharmacological effects. Between those positions sits a familiar policy battlefield—one that looks strikingly similar to earlier debates over tobacco, opioids, and other regulated substances.
       </p>
       <p>
-        The comparison does not mean the products themselves are identical. Tobacco’s harms are established by decades of epidemiological research involving millions of people. Kratom research is still evolving and remains more limited.
+        The comparison does not mean the products themselves are identical. Tobacco's harms are established by decades of epidemiological research involving millions of people. Kratom research is still evolving and remains more limited.
       </p>
       <p>
         <span class="highlight" style="color:#e4b23e; font-weight:600;">But the policy arguments and messaging patterns surrounding the product often echo earlier industry debates.</span>
@@ -393,9 +468,9 @@
     <section id="patterns" class="content-section">
       <h2>Patterns That Should Prompt Careful Scrutiny</h2>
       
-      <h3>⛔ 1. Financial Relationships Between Industry and Research</h3>
+      <h3>1. Financial Relationships Between Industry and Research</h3>
       <p>
-        One of the most important lessons from the tobacco era is that funding relationships matter. Tobacco companies famously funded research organizations and scientists whose work emphasized uncertainty about smoking’s health risks. Many of those researchers testified before regulators and lawmakers while presenting themselves as independent experts.
+        One of the most important lessons from the tobacco era is that funding relationships matter. Tobacco companies famously funded research organizations and scientists whose work emphasized uncertainty about smoking's health risks. Many of those researchers testified before regulators and lawmakers while presenting themselves as independent experts.
       </p>
       <p>
         Modern public health policy now routinely asks a simple question: <strong>Who is funding the research and advocacy surrounding a product?</strong>
@@ -404,7 +479,7 @@
         In any policy debate, lawmakers should expect transparency about financial relationships between industry groups, advocacy organizations, consultants, and researchers. Disclosure does not invalidate research, but it helps policymakers properly evaluate competing claims.
       </p>
 
-      <h3>⛔ 2. Emphasis on Scientific Uncertainty</h3>
+      <h3>2. Emphasis on Scientific Uncertainty</h3>
       <p>
         Another hallmark of tobacco-era messaging was the repeated claim that the science was not yet settled. When early studies linked smoking to cancer, tobacco companies argued that more research was needed before any regulatory action should occur. This strategy delayed meaningful policy responses for years.
       </p>
@@ -415,7 +490,7 @@
         Scientific uncertainty is a normal feature of early research. But history shows that uncertainty can also be emphasized strategically in policy discussions. For lawmakers, the key question becomes whether uncertainty reflects genuine scientific disagreement or a communication strategy that highlights unresolved questions while minimizing existing evidence.
       </p>
 
-      <h3>⛔ 3. Framing Regulation as Prohibition</h3>
+      <h3>3. Framing Regulation as Prohibition</h3>
       <p>
         Tobacco companies also frequently framed proposed regulations as extreme government overreach or the beginning of prohibition. This framing can be powerful in political debates. Lawmakers are understandably cautious about policies that might create black markets or unintended consequences.
       </p>
@@ -423,7 +498,7 @@
         Yet public health history shows that many effective policies—warning labels, advertising restrictions, age limits, and retail regulation—were initially described by industry representatives as radical proposals. When evaluating such arguments today, policymakers may benefit from asking whether the proposed policy truly represents prohibition, or whether it is simply standard consumer product regulation.
       </p>
 
-      <h3>⛔ 4. The Role of Expert Testimony</h3>
+      <h3>4. The Role of Expert Testimony</h3>
       <p>
         Expert testimony plays an important role in shaping regulatory decisions. But the tobacco experience demonstrated that expert authority can sometimes mask underlying financial or institutional relationships.
       </p>
@@ -464,8 +539,8 @@
     <div class="takeaways">
       <h3>A Lesson Written in Public Health History</h3>
       <ul>
-        <li><strong>Few industries have influenced public health policy as profoundly as tobacco.</strong> The eventual recognition of smoking’s harms reshaped how regulators evaluate industry claims, scientific uncertainty, and expert testimony.</li>
-        <li><strong>That history does not predetermine the outcome</strong> of today’s debates about kratom or any other emerging product. But it does provide an important reminder.</li>
+        <li><strong>Few industries have influenced public health policy as profoundly as tobacco.</strong> The eventual recognition of smoking's harms reshaped how regulators evaluate industry claims, scientific uncertainty, and expert testimony.</li>
+        <li><strong>That history does not predetermine the outcome</strong> of today's debates about kratom or any other emerging product. But it does provide an important reminder.</li>
         <li><strong>When industries argue that regulation should wait because the science is uncertain,</strong> lawmakers should ask difficult questions about funding, messaging, and incentives.</li>
         <li><strong>Public health policy works best when those questions are asked early</strong> — before history has the chance to repeat itself.</li>
       </ul>
@@ -475,7 +550,7 @@
     <section class="content-section">
       <h2>Explore the Industry Playbook</h2>
       <p>
-        The tobacco playbook is not just history — it’s being used today. See how these patterns appear in current kratom industry messaging:
+        The tobacco playbook is not just history — it's being used today. See how these patterns appear in current kratom industry messaging:
       </p>
       <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top:20px;">
         <a class="btn btn-primary" href="narrative.html">AKA Claims & Rebuttals</a>
@@ -485,8 +560,16 @@
     </section>
 
     <div class="footer-note">
-      <p><a href="../index.html">← Back to Industry Hub</a> | <a href="../../index.html">Anti‑Kratom Association Home</a></p>
-      
+      <p>
+        <a href="/">Home</a> |
+        <a href="/evidence/">Evidence</a> |
+        <a href="/industry/">Industry</a> |
+        <a href="/action.html">Fight Back</a> |
+        <a href="/congress.html">Congress</a> |
+        <a href="/astroturf.html">Astroturf</a> |
+        <a href="/about.html">About</a>
+      </p>
+      <p style="margin-top:10px;">© 2026 Anti-Kratom Association — Unsafe. Unregulated. Unfit. Expose the Astroturf.</p>
     </div>
   </div>
 </body>
